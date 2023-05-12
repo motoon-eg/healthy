@@ -131,10 +131,74 @@
 		027DDA4F2A0E745F0052818C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				027DDA552A0E76DC0052818C /* Services */,
+				027DDA542A0E76C50052818C /* ReusableViews */,
+				027DDA532A0E76A00052818C /* Utilities */,
+				027DDA512A0E761B0052818C /* Modules */,
+				027DDA502A0E75E60052818C /* Extensions */,
 				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
 				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		027DDA502A0E75E60052818C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		027DDA512A0E761B0052818C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				027DDA522A0E76420052818C /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		027DDA522A0E76420052818C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		027DDA532A0E76A00052818C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		027DDA542A0E76C50052818C /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		027DDA552A0E76DC0052818C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				027DDA572A0E76E90052818C /* Storage */,
+				027DDA562A0E76E40052818C /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		027DDA562A0E76E40052818C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		027DDA572A0E76E90052818C /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
