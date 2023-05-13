@@ -211,6 +211,7 @@
 				027DDA172A0E6A660052818C /* Sources */,
 				027DDA182A0E6A660052818C /* Frameworks */,
 				027DDA192A0E6A660052818C /* Resources */,
+				0296C1152A0FC69E005E3DC8 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -325,6 +326,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0296C1152A0FC69E005E3DC8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "git diff --cached --name-only | grep \"\\.swift\" | while read filename; do\n    echo \"swiftlinting file $filename\";\n    swiftlint lint --path \"$(git rev-parse --show-toplevel)/${filename}\";\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		027DDA172A0E6A660052818C /* Sources */ = {
