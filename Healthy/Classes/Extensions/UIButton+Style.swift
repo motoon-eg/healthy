@@ -11,10 +11,10 @@ import UIKit
 //MARK: - button style -
 //
 extension UIButton {
-    enum buttonStyle {
-        case primaryButton
-        case secondaryButton
-        case disableButton
+    enum ButtonStyle {
+        case primary
+        case secondary
+        case disable
     }
 }
 
@@ -22,14 +22,14 @@ extension UIButton {
 //MARK: - apply button style -
 //
 extension UIButton {
-    func applyButtonStyle(style: buttonStyle) {
+    func applyButtonStyle(style: ButtonStyle) {
         switch style {
-        case .primaryButton:
-            primaryButtonStyle()
-        case .secondaryButton:
-            secondaryButtonStyle()
-        case .disableButton:
-            disableButtonStyle()
+        case .primary:
+            buttonStyleAttributes(style: .primary)
+        case .secondary:
+            buttonStyleAttributes(style: .secondary)
+        case .disable:
+            buttonStyleAttributes(style: .disable)
         }
     }
 }
@@ -38,7 +38,16 @@ extension UIButton {
 //MARK: - button style attribute -
 //
 extension UIButton {
-    private func commonButtonStyle() {
+    private func buttonStyleAttributes(style: ButtonStyle) {
+        switch style {
+        case .primary:
+            backgroundColor = .black
+        case .secondary:
+            backgroundColor = .green
+        case .disable:
+            backgroundColor = .gray
+        }
+        
         tintColor = .white
         titleLabel?.font = UIFont.systemFont(ofSize: 32)
         layer.cornerRadius = 12
@@ -46,20 +55,5 @@ extension UIButton {
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 40),
         ])
-    }
-    
-    private func primaryButtonStyle() {
-        commonButtonStyle()
-        backgroundColor = .black
-    }
-    
-    private func secondaryButtonStyle() {
-        commonButtonStyle()
-        backgroundColor = .green
-    }
-    
-    private func disableButtonStyle() {
-        commonButtonStyle()
-        backgroundColor = .gray
     }
 }
