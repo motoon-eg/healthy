@@ -15,5 +15,21 @@ extension UILabel{
         case subtitle
         case description
     }
+    
+    // MARK:  apply style
+    
+    func applyLabelStyle(style: LabelStyle, fontSize: CGFloat? = nil, weight: UIFont.Weight? = nil){
+        switch style{
+        case .title:
+            <#code#>
+        case .subtitle:
+            <#code#>
+        case .description:
+            <#code#>
+        }
+    }
+    
+
+    
 
 }
