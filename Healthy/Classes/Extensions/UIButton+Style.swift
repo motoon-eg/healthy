@@ -23,14 +23,7 @@ extension UIButton {
 //
 extension UIButton {
     func applyButtonStyle(style: ButtonStyle) {
-        switch style {
-        case .primary:
-            buttonStyleAttributes(style: .primary)
-        case .secondary:
-            buttonStyleAttributes(style: .secondary)
-        case .disable:
-            buttonStyleAttributes(style: .disable)
-        }
+        buttonStyleAttributes(style: style)
     }
 }
 
