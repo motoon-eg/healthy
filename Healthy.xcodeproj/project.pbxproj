@@ -14,6 +14,8 @@
 		027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA352A0E6A680052818C /* HealthyTests.swift */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		C900C2DE2A11FAA900FE2AD0 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C900C2DD2A11FAA900FE2AD0 /* DemoViewController.swift */; };
+		C900C2E02A121D4600FE2AD0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C900C2DF2A121D4600FE2AD0 /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C900C2DD2A11FAA900FE2AD0 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		C900C2DF2A121D4600FE2AD0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		027DDA522A0E76420052818C /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				C900C2DD2A11FAA900FE2AD0 /* DemoViewController.swift */,
+				C900C2DF2A121D4600FE2AD0 /* OnboardingViewController.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -332,7 +338,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
+				C900C2DE2A11FAA900FE2AD0 /* DemoViewController.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
+				C900C2E02A121D4600FE2AD0 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
