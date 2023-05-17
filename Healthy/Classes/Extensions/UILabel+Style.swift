@@ -9,7 +9,7 @@ import UIKit
 
 extension UILabel{
     
-    // MARK:  Stryle tupe
+    // MARK:  Style tupe
     
     enum LabelStyle{
         case title
@@ -31,9 +31,7 @@ extension UILabel{
         case .textFieldTitleLabel:
             textFieldTitleLabelStyle()
         }
-    }
-    
-    
+    }    
     
 }
 
