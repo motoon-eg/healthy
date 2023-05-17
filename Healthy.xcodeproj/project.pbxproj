@@ -14,6 +14,7 @@
 		027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA352A0E6A680052818C /* HealthyTests.swift */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		F39D440D2A14AD810039AEF8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		027DDA4F2A0E745F0052818C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F39D440B2A14ACE30039AEF8 /* Generated */,
 				027DDA552A0E76DC0052818C /* Services */,
 				027DDA542A0E76C50052818C /* ReusableViews */,
 				027DDA532A0E76A00052818C /* Utilities */,
@@ -201,6 +204,14 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		F39D440B2A14ACE30039AEF8 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027DDA452A0E6A680052818C /* Build configuration list for PBXNativeTarget "Healthy" */;
 			buildPhases = (
+				F39D440A2A149CCC0039AEF8 /* SwiftGen */,
 				027DDA172A0E6A660052818C /* Sources */,
 				027DDA182A0E6A660052818C /* Frameworks */,
 				027DDA192A0E6A660052818C /* Resources */,
@@ -347,6 +359,24 @@
 			shellPath = /bin/sh;
 			shellScript = "git diff --cached --name-only | grep \"\\.swift\" | while read filename; do\n    echo \"swiftlinting file $filename\";\n    swiftlint lint --path \"$(git rev-parse --show-toplevel)/${filename}\";\ndone\n";
 		};
+		F39D440A2A149CCC0039AEF8 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/Vendors/SwiftGen/bin/swiftgen\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
+				F39D440D2A14AD810039AEF8 /* UIImage.Generated.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
