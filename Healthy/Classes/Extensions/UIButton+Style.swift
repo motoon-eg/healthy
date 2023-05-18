@@ -28,7 +28,7 @@ extension UIButton {
 // MARK: - Apply button style
 //
 extension UIButton {
-    func applyButtonStyle(style: ButtonStyle) {
+    func applyButtonStyle(_ style: ButtonStyle) {
         backgroundColor = style.buttonColor
         tintColor = .white
         // TODO: [HL-16] Add global fonts
