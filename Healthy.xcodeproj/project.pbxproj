@@ -149,6 +149,7 @@
 		027DDA502A0E75E60052818C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				F39D440D2A14AD810039AEF8 /* UIImage.Generated.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
