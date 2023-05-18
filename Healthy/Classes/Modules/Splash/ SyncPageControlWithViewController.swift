@@ -33,7 +33,7 @@ class  SyncPageControlWithViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
+        onboardingSetup()
         layout()
         style()
     }
@@ -41,7 +41,7 @@ class  SyncPageControlWithViewController: UIPageViewController {
 
 extension  SyncPageControlWithViewController {
     
-    func setup() {
+    func onboardingSetup() {
         dataSource = self
         delegate = self
         
@@ -156,15 +156,15 @@ extension  SyncPageControlWithViewController: UIPageViewControllerDelegate {
     }
     
     private func hideControls() {
-        pageControlBottomAnchor?.constant = -80
-        skipButtonTopAnchor?.constant = -80
-        nextButtonTopAnchor?.constant = -80
+        pageControlBottomAnchor?.constant = CGFloat(Constants.hideControlsInPageControlBottomAnchor)
+        skipButtonTopAnchor?.constant = CGFloat(Constants.hideControlsInSkipButtonTopAnchor)
+        nextButtonTopAnchor?.constant = CGFloat(Constants.hideControlsInNextButtonTopAnchor)
     }
 
     private func showControls() {
-        pageControlBottomAnchor?.constant = 16
-        skipButtonTopAnchor?.constant = 16
-        nextButtonTopAnchor?.constant = 16
+        pageControlBottomAnchor?.constant = CGFloat(Constants.showControlsINPageControlBottomAnchor)
+        skipButtonTopAnchor?.constant = CGFloat(Constants.showControlsINSkipButtonTopAnchor)
+        nextButtonTopAnchor?.constant = CGFloat(Constants.showControlsINNextButtonTopAnchor)
     }
 }
 

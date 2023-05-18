@@ -35,8 +35,8 @@ extension OnboardingViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.alignment = .center
-        stackView.spacing = 20
-        stackView.backgroundColor =  UIColor(red: 139, green: 183, blue: 188, alpha: 0 )
+        stackView.spacing = CGFloat(Constants.stackViewSpacing)
+        stackView.backgroundColor = Constants.stackViewBackground
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         
@@ -70,6 +70,19 @@ struct OnBoardingModel {
        var imageName: String
        var titleText: String
        var subtitleLabel: String
+}
+
+struct Constants {
+    static let hideControlsInPageControlBottomAnchor = -80
+    static let hideControlsInSkipButtonTopAnchor = -80
+    static let hideControlsInNextButtonTopAnchor = -80
+    static let showControlsINPageControlBottomAnchor = 16
+    static let showControlsINSkipButtonTopAnchor = 16
+    static let showControlsINNextButtonTopAnchor = 16
+    
+    static let stackViewSpacing = 20
+    static let stackViewBackground = UIColor(red: 139, green: 183, blue: 188, alpha: 0 )
+    
 }
 
 
