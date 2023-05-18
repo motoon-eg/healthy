@@ -5,5 +5,7 @@ import UIKit.UIImage
 
 extension UIImage {
 
-
+    static var accentColor : UIImage {
+      UIImage(named: "AccentColor")! 
+    }
 }
