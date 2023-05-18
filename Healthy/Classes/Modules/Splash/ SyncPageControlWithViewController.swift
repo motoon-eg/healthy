@@ -1,19 +1,10 @@
-//
-//  OnboardingViewController.swift
-//  Healthy
-//
-//  Created by dodo on 15/05/2023.
-//
-
 
 import UIKit
 
-class DemoViewController: UIPageViewController {
+class  SyncPageControlWithViewController: UIPageViewController {
 
     var pages = [UIViewController]()
-    
-    let skipButton = UIButton()
-    let nextButton = UIButton()
+   
     let pageControl = UIPageControl()
     let initialPage = 0
 
@@ -22,16 +13,33 @@ class DemoViewController: UIPageViewController {
     var skipButtonTopAnchor: NSLayoutConstraint?
     var nextButtonTopAnchor: NSLayoutConstraint?
     
+    private lazy var skipButton : UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Skip", for: .normal)
+       
+        return button
+    }()
+    private lazy var nextButton : UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Next", for: .normal)
+        return button
+    }()
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setup()
-        style()
         layout()
+        style()
     }
 }
 
-extension DemoViewController {
+extension  SyncPageControlWithViewController {
     
     func setup() {
         dataSource = self
@@ -39,41 +47,29 @@ extension DemoViewController {
         
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
 
-        let page1 = OnboardingViewController(imageName: "img1",
-                                             titleText: "Welcome",
-                                             subtitleText: "To Healthy.")
-        let page2 = OnboardingViewController(imageName: "img2",
+        let page1 = OnboardingViewController(model:.init(imageName: "onboarding-img-1",
+                                                   titleText: "Welcome",
+                                                   subtitleLabel: "To Healthy."))
+        let page2 = OnboardingViewController(model:.init(imageName: "onboarding-img-2",
                                              titleText: "",
-                                             subtitleText: "")
-        let page3 = OnboardingViewController(imageName: "img3",
+                                                         subtitleLabel: ""))
+        let page3 = OnboardingViewController(model:.init(imageName: "onboarding-img-3",
                                              titleText: "Have fun",
-                                             subtitleText: "")
-//        let page4 = LoginViewController()
-        
-        pages.append(page1)
-        pages.append(page2)
-        pages.append(page3)
-//        pages.append(page4)
-        
+                                                         subtitleLabel: ""))
+
+        [page1,page2,page3].forEach {pages.append($0)}
+
         setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
     }
     
+    
     func style() {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.currentPageIndicatorTintColor = .black
-        pageControl.pageIndicatorTintColor = .systemGray2
+        pageControl.currentPageIndicatorTintColor = .white
+        pageControl.pageIndicatorTintColor = .black
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = initialPage
-
-        skipButton.translatesAutoresizingMaskIntoConstraints = false
-        skipButton.setTitleColor(.systemBlue, for: .normal)
-        skipButton.setTitle("Skip", for: .normal)
-        skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.setTitleColor(.systemBlue, for: .normal)
-        nextButton.setTitle("Next", for: .normal)
-        nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
+       
     }
     
     func layout() {
@@ -106,7 +102,7 @@ extension DemoViewController {
 
 // MARK: - DataSource
 
-extension DemoViewController: UIPageViewControllerDataSource {
+extension  SyncPageControlWithViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 
@@ -133,7 +129,7 @@ extension DemoViewController: UIPageViewControllerDataSource {
 
 // MARK: - Delegates
 
-extension DemoViewController: UIPageViewControllerDelegate {
+extension  SyncPageControlWithViewController: UIPageViewControllerDelegate {
     
     // How we keep our pageControl in sync with viewControllers
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -174,7 +170,7 @@ extension DemoViewController: UIPageViewControllerDelegate {
 
 // MARK: - Actions
 
-extension DemoViewController {
+extension  SyncPageControlWithViewController {
 
     @objc func pageControlTapped(_ sender: UIPageControl) {
         setViewControllers([pages[sender.currentPage]], direction: .forward, animated: true, completion: nil)

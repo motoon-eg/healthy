@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = window
         
-        window.rootViewController = DemoViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        window.rootViewController =  SyncPageControlWithViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

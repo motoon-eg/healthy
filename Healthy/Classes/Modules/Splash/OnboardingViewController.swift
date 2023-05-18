@@ -1,9 +1,4 @@
-//
-//  OnboardingViewController.swift
-//  Healthy
-//
-//  Created by dodo on 15/05/2023.
-//
+
 
 import UIKit
 
@@ -15,21 +10,20 @@ class OnboardingViewController : UIViewController {
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
     
-    init(imageName: String, titleText: String, subtitleText: String) {
-        super.init(nibName: nil, bundle: nil)
-        imageView.image = UIImage(named: imageName)
-
-        titleLabel.text = titleText
-        subtitleLabel.text = subtitleText
+    init(model: OnBoardingModel) {
+         super.init(nibName: nil, bundle: nil)
+         imageView.image = UIImage(named: model.imageName)
+         titleLabel.text = model.titleText
+         subtitleLabel.text = model.subtitleLabel
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Background")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         style()
         layout()
     }
@@ -57,10 +51,7 @@ extension OnboardingViewController {
     }
         
     func layout() {
-        stackView.addArrangedSubview(imageView)
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(subtitleLabel)
-        
+        [imageView, titleLabel, subtitleLabel].forEach {stackView.addArrangedSubview($0)}
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
@@ -74,4 +65,11 @@ extension OnboardingViewController {
         ])
     }
 }
+
+struct OnBoardingModel {
+       var imageName: String
+       var titleText: String
+       var subtitleLabel: String
+}
+
 

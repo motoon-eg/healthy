@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "img-launch-screen.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "img-launch-screen 1.pdf",
       "idiom" : "universal",
       "scale" : "3x"
     }
