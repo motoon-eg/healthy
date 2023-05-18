@@ -28,36 +28,56 @@ extension UILabel{
     }
 }
 
-extension UILabel{
-    
-    // MARK:  Style attriputes
-    
-    private func applyOnboardingTitleLabelStyle(){
-        textColor = UIColor(red: 0.012, green: 0.012, blue: 0.098, alpha: 1)
-        font = UIFont.systemFont(ofSize: 28, weight: .bold)
+// MARK: - Colors
+
+enum LabelColor {
+    static let deepBlue = UIColor(red: 0.012, green: 0.012, blue: 0.098, alpha: 1)
+    static let midnightBlue = UIColor(red: 0.039, green: 0.145, blue: 0.200, alpha: 1)
+    static let slateGray = UIColor(red: 0.282, green: 0.322, blue: 0.373, alpha: 1)
+}
+// MARK: - Fonts
+
+enum LableFont {
+    static let onBoardingTitle = UIFont.systemFont(ofSize: 28, weight: .bold)
+    static let onBoardingSubtitle = UIFont.systemFont(ofSize: 18, weight: .medium)
+    static let description = UIFont.systemFont(ofSize: 18, weight: .medium)
+    static let textFieldTitle = UIFont.systemFont(ofSize: 20, weight: .medium)
+}
+
+// MARK:  Style Attributes
+extension UILabel {
+    private func applyOnboardingTitleLabelStyle() {
+        // TODO: [HL-4] Add global Color
+        textColor = LabelColor.deepBlue
+        // TODO: [HL-4] Add global fonts
+        font = LableFont.onBoardingTitle
         textAlignment = .center
         numberOfLines = 0
     }
     
-    private func applyOnboardingSubtitleLabelStyle(){
+    private func applyOnboardingSubtitleLabelStyle() {
         textColor = .secondaryLabel
-        font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        // TODO: [HL-4] Add global fonts
+        font = LableFont.onBoardingSubtitle
         textAlignment = .center
         numberOfLines = 0
     }
     
-    private func applyDescriptionLabelStyle(){
-        textColor = UIColor(red: 0.282, green: 0.322, blue: 0.373, alpha: 1)
-        font = UIFont.systemFont(ofSize: 18, weight: .medium)
+    private func applyDescriptionLabelStyle() {
+        // TODO: [HL-4] Add global Color
+        textColor = LabelColor.slateGray
+        // TODO: [HL-4] Add global fonts
+        font = LableFont.description
         textAlignment = .left
         numberOfLines = 0
     }
     
-    private func applyTextFieldTitleLabelStyle(){
-        textColor = UIColor(red: 0.012, green: 0.012, blue: 0.098, alpha: 1)
-        font = UIFont.systemFont(ofSize: 20, weight: .medium)
+    private func applyTextFieldTitleLabelStyle() {
+        // TODO: [HL-4] Add global Color
+        textColor = LabelColor.midnightBlue
+        // TODO: [HL-4] Add global fonts
+        font = LableFont.textFieldTitle
         textAlignment = .left
         numberOfLines = 0
     }
-    
 }
