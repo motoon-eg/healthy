@@ -1,7 +1,4 @@
-
-
 import UIKit
-
 
 // MARK: - Button style
 //
@@ -10,7 +7,7 @@ extension UIButton {
         case primary
         case secondary
         case disable
-        
+
         var buttonColor: UIColor {
             switch self {
             case .primary:
@@ -23,7 +20,6 @@ extension UIButton {
         }
     }
 }
-
 
 // MARK: - Apply button style
 //
@@ -40,7 +36,6 @@ extension UIButton {
         widthConstraint.isActive = true
     }
 }
-
 
 // MARK: - Constants
 //
