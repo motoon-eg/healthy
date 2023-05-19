@@ -224,10 +224,10 @@
 			buildConfigurationList = 027DDA452A0E6A680052818C /* Build configuration list for PBXNativeTarget "Healthy" */;
 			buildPhases = (
 				F39D440A2A149CCC0039AEF8 /* SwiftGen */,
+				0296C1152A0FC69E005E3DC8 /* SwiftLint */,
 				027DDA172A0E6A660052818C /* Sources */,
 				027DDA182A0E6A660052818C /* Frameworks */,
 				027DDA192A0E6A660052818C /* Resources */,
-				0296C1152A0FC69E005E3DC8 /* SwiftLint */,
 			);
 			buildRules = (
 			);
