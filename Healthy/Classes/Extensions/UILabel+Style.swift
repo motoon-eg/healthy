@@ -72,6 +72,7 @@ private enum LabelColor {
     static let midnightBlue = UIColor(red: 0.039, green: 0.145, blue: 0.200, alpha: 1)
     static let slateGray = UIColor(red: 0.282, green: 0.322, blue: 0.373, alpha: 1)
 }
+
 // MARK: - Fonts
 
 private enum LableFont {
