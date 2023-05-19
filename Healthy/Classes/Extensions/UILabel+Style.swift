@@ -1,21 +1,20 @@
-
 import UIKit
 
-extension UILabel{
-    
-    // MARK:  Style
-    
+extension UILabel {
+
+    // MARK: Style
+
     enum Style {
         case onboardingTitle
         case onboardingSubtitle
         case descriptionLabel
         case textFieldTitleLabel
     }
-    
-    // MARK:  Apply Style
-    
-    func applyStyle(_ style: Style){
-        switch style{
+
+    // MARK: Apply Style
+
+    func applyStyle(_ style: Style) {
+        switch style {
         case .onboardingTitle:
             applyOnboardingTitleLabelStyle()
         case .onboardingSubtitle:
@@ -28,7 +27,7 @@ extension UILabel{
     }
 }
 
-// MARK:  Style Attributes
+// MARK: Style Attributes
 private extension UILabel {
     func applyOnboardingTitleLabelStyle() {
         // TODO: [HL-4] Add global Color
@@ -38,7 +37,7 @@ private extension UILabel {
         textAlignment = .center
         numberOfLines = 0
     }
-    
+
     func applyOnboardingSubtitleLabelStyle() {
         textColor = .secondaryLabel
         // TODO: [HL-4] Add global fonts
@@ -46,7 +45,7 @@ private extension UILabel {
         textAlignment = .center
         numberOfLines = 0
     }
-    
+
     func applyDescriptionLabelStyle() {
         // TODO: [HL-4] Add global Color
         textColor = LabelColor.slateGray
@@ -55,7 +54,7 @@ private extension UILabel {
         textAlignment = .left
         numberOfLines = 0
     }
-    
+
     func applyTextFieldTitleLabelStyle() {
         // TODO: [HL-4] Add global Color
         textColor = LabelColor.midnightBlue
@@ -81,4 +80,3 @@ private enum LableFont {
     static let description = UIFont.systemFont(ofSize: 18, weight: .medium)
     static let textFieldTitle = UIFont.systemFont(ofSize: 20, weight: .medium)
 }
-
