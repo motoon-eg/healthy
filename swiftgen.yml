@@ -8,4 +8,10 @@ xcassets:
       - templatePath: SwiftGen-Templates/images.stencil
         output: Classes/Generated/UIImage.Generated.swift
 
+strings:
+  inputs:
+    - Resources/Localization/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Classes/Generated/Strings+Generated.swift
 
