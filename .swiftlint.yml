@@ -1,15 +1,17 @@
 # By default, SwiftLint uses a set of sensible default rules you can adjust:
-disabled_rules: # rule identifiers turned on by default to exclude from running
-  - colon
-  - comma
-  - control_statement
-  
+disabled_rules: # rule identifiers turned on by default to exclude from running  
   # TODOs and FIXMEs should be resolved.
   - todo
   
-opt_in_rules: # some rules are turned off by default, so you need to opt-in
-  - empty_count # Find all the available rules by running: `swiftlint rules`
+# some rules are turned off by default, so you need to opt-in
+opt_in_rules:
+  # Prefer checking isEmpty over comparing count to zero
+  - empty_count
+  
+  # Force casts should be avoided
   - force_cast
+  
+  # Force unwrapping should be avoided
   - force_unwrapping
   
   # Header comments should be consistent with project patterns.
@@ -20,16 +22,13 @@ opt_in_rules: # some rules are turned off by default, so you need to opt-in
   
   # Function parameters should be aligned vertically if they’re in multiple lines in a method call
   - vertical_parameter_alignment_on_call
-  
-# Alternatively, specify all rules explicitly by uncommenting this option:
-# only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
-#   - empty_parameters
-#   - vertical_whitespace
 
-analyzer_rules: # Rules run by `swiftlint analyze`
+# Rules run by `swiftlint analyze`
+analyzer_rules:
   - explicit_self
 
-excluded: # paths to ignore during linting. Takes precedence over `included`.
+# paths to ignore during linting. Takes precedence over `included`.
+excluded:
   - Carthage
   - Pods
 
@@ -38,18 +37,15 @@ allow_zero_lintable_files: false
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
-force_cast: warning # implicitly
+force_cast: warning
 
 force_unwrapping: error
 
 force_try:
-  severity: error # explicitly
+  severity: error
 
-# rules that have both warning and error levels, can set just the warning level
-# implicitly
 line_length: 100
 
-# they can set both implicitly with an array
 type_body_length:
   - 300 # warning
   - 400 # error
