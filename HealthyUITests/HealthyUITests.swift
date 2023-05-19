@@ -1,16 +1,10 @@
-//
-//  HealthyUITests.swift
-//  HealthyUITests
-//
-//  Created by Ahmed M. Hassan on 12/05/2023.
-//
-
 import XCTest
 
 final class HealthyUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // Put setup code here. This method is called before the invocation of each
+        // test method in the class.
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -21,7 +15,8 @@ final class HealthyUITests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        // Put teardown code here. This method is called after the invocation of each
+        // test method in the class.
     }
 
     func testExample() throws {
