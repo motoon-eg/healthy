@@ -12,6 +12,7 @@ extension UILabel {
         case signinSubtitle
         case signupTitle
         case signupSubtitle
+        case textFieldTitleLabel
     }
     
     // MARK: Apply Style
@@ -32,6 +33,8 @@ extension UILabel {
             applySignupTitleLabelStyle()
         case .signupSubtitle:
             applySignupSubtitleLabelStyle()
+        case .textFieldTitleLabel:
+            applyTextFieldTitleLabelStyle()
         }
     }
 }
@@ -86,6 +89,13 @@ private extension UILabel {
         font = LabelFont.signupSubtitle
         textAlignment = .left
     }
+    
+    func applyTextFieldTitleLabelStyle(){
+        textColor =  LabelColor.slateGray
+        // TODO: [HL-4] Add global fonts
+        font = LabelFont.textFieldTitleLabel
+        textAlignment = .left
+    }
 }
 
 // MARK: - Colors
@@ -104,4 +114,5 @@ private enum LabelFont {
     static let signinSubtitle = UIFont.systemFont(ofSize: 20, weight: .regular)
     static let signupTitle = UIFont.systemFont(ofSize: 20, weight: .semibold)
     static let signupSubtitle = UIFont.systemFont(ofSize: 11, weight: .regular)
+    static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
 }
