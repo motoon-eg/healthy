@@ -28,25 +28,9 @@ extension UILabel{
     }
 }
 
-// MARK: - Colors
-
-enum LabelColor {
-    static let deepBlue = UIColor(red: 0.012, green: 0.012, blue: 0.098, alpha: 1)
-    static let midnightBlue = UIColor(red: 0.039, green: 0.145, blue: 0.200, alpha: 1)
-    static let slateGray = UIColor(red: 0.282, green: 0.322, blue: 0.373, alpha: 1)
-}
-// MARK: - Fonts
-
-enum LableFont {
-    static let onBoardingTitle = UIFont.systemFont(ofSize: 28, weight: .bold)
-    static let onBoardingSubtitle = UIFont.systemFont(ofSize: 18, weight: .medium)
-    static let description = UIFont.systemFont(ofSize: 18, weight: .medium)
-    static let textFieldTitle = UIFont.systemFont(ofSize: 20, weight: .medium)
-}
-
 // MARK:  Style Attributes
-extension UILabel {
-    private func applyOnboardingTitleLabelStyle() {
+private extension UILabel {
+    func applyOnboardingTitleLabelStyle() {
         // TODO: [HL-4] Add global Color
         textColor = LabelColor.deepBlue
         // TODO: [HL-4] Add global fonts
@@ -55,7 +39,7 @@ extension UILabel {
         numberOfLines = 0
     }
     
-    private func applyOnboardingSubtitleLabelStyle() {
+    func applyOnboardingSubtitleLabelStyle() {
         textColor = .secondaryLabel
         // TODO: [HL-4] Add global fonts
         font = LableFont.onBoardingSubtitle
@@ -63,7 +47,7 @@ extension UILabel {
         numberOfLines = 0
     }
     
-    private func applyDescriptionLabelStyle() {
+    func applyDescriptionLabelStyle() {
         // TODO: [HL-4] Add global Color
         textColor = LabelColor.slateGray
         // TODO: [HL-4] Add global fonts
@@ -72,7 +56,7 @@ extension UILabel {
         numberOfLines = 0
     }
     
-    private func applyTextFieldTitleLabelStyle() {
+    func applyTextFieldTitleLabelStyle() {
         // TODO: [HL-4] Add global Color
         textColor = LabelColor.midnightBlue
         // TODO: [HL-4] Add global fonts
@@ -81,3 +65,20 @@ extension UILabel {
         numberOfLines = 0
     }
 }
+
+// MARK: - Colors
+
+private enum LabelColor {
+    static let deepBlue = UIColor(red: 0.012, green: 0.012, blue: 0.098, alpha: 1)
+    static let midnightBlue = UIColor(red: 0.039, green: 0.145, blue: 0.200, alpha: 1)
+    static let slateGray = UIColor(red: 0.282, green: 0.322, blue: 0.373, alpha: 1)
+}
+// MARK: - Fonts
+
+private enum LableFont {
+    static let onBoardingTitle = UIFont.systemFont(ofSize: 28, weight: .bold)
+    static let onBoardingSubtitle = UIFont.systemFont(ofSize: 18, weight: .medium)
+    static let description = UIFont.systemFont(ofSize: 18, weight: .medium)
+    static let textFieldTitle = UIFont.systemFont(ofSize: 20, weight: .medium)
+}
+
