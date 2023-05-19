@@ -1,10 +1,3 @@
-//
-//  HealthyUITestsLaunchTests.swift
-//  HealthyUITests
-//
-//  Created by Ahmed M. Hassan on 12/05/2023.
-//
-
 import XCTest
 
 final class HealthyUITestsLaunchTests: XCTestCase {

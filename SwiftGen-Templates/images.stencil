@@ -1,0 +1,15 @@
+import UIKit.UIImage
+
+// This file is generated automatically, Don't ever try to change it 🔫
+// MARK: - Images
+
+// swiftlint:disable force_unwrapping
+extension UIImage {
+  {% for image in catalogs.first.assets %}
+
+    static var {{image.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} : UIImage {
+      UIImage(named: "{{ image.name }}")! 
+    }
+  {% endfor %}
+  
+}
