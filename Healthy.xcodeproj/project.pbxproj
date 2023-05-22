@@ -14,8 +14,11 @@
 		027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA352A0E6A680052818C /* HealthyTests.swift */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		02BBEE3A2A17BA20008E1BC0 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBEE392A17BA20008E1BC0 /* Strings+Generated.swift */; };
+		207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 207FF8FF2A167F9100E4BC76 /* Localizable.strings */; };
 		6DDA138D2A1109E8004390D4 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6DDA138C2A1109E8004390D4 /* Factory */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
+		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02BBEE392A17BA20008E1BC0 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		207FF8FF2A167F9100E4BC76 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +133,7 @@
 		027DDA4E2A0E74490052818C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				207FF8FE2A167E7C00E4BC76 /* Localization */,
 				027DDA272A0E6A680052818C /* Assets.xcassets */,
 				027DDA2C2A0E6A680052818C /* Info.plist */,
 				027DDA292A0E6A680052818C /* LaunchScreen.storyboard */,
@@ -152,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
+				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,9 +217,18 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		207FF8FE2A167E7C00E4BC76 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				207FF8FF2A167F9100E4BC76 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				02BBEE392A17BA20008E1BC0 /* Strings+Generated.swift */,
 				F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */,
 			);
 			path = Generated;
@@ -224,10 +242,10 @@
 			buildConfigurationList = 027DDA452A0E6A680052818C /* Build configuration list for PBXNativeTarget "Healthy" */;
 			buildPhases = (
 				F39D440A2A149CCC0039AEF8 /* SwiftGen */,
+				0296C1152A0FC69E005E3DC8 /* SwiftLint */,
 				027DDA172A0E6A660052818C /* Sources */,
 				027DDA182A0E6A660052818C /* Frameworks */,
 				027DDA192A0E6A660052818C /* Resources */,
-				0296C1152A0FC69E005E3DC8 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -329,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				027DDA2B2A0E6A680052818C /* LaunchScreen.storyboard in Resources */,
+				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,10 +386,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "git diff --cached --name-only | grep \"\\.swift\" | while read filename; do\n    echo \"swiftlinting file $filename\";\n    swiftlint lint --path \"$(git rev-parse --show-toplevel)/${filename}\";\ndone\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint --strict\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		F39D440A2A149CCC0039AEF8 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -394,10 +414,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BBEE3A2A17BA20008E1BC0 /* Strings+Generated.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
-				F39D440D2A14AD810039AEF8 /* UIImage.Generated.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
+				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
