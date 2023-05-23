@@ -3,6 +3,10 @@ disabled_rules: # rule identifiers turned on by default to exclude from running
   # TODOs and FIXMEs should be resolved.
   - todo
   
+  # swiftlint:disable commands should be re-enabled before the end of the file
+  # Needed for auto generated files from templates
+  - blanket_disable_command
+  
 # some rules are turned off by default, so you need to opt-in
 opt_in_rules:
   # Prefer checking isEmpty over comparing count to zero
