@@ -37,4 +37,4 @@ private final class BundleToken {
     #endif
   }()
 }
-// swiftlint:enable convenience_type
+// swiftlint:enable all
