@@ -13,87 +13,51 @@ extension UILabel {
         case signupTitle
         case signupSubtitle
         case textFieldTitleLabel
-    }
-    
-    // MARK: Apply Style
-    
-    func applyStyle(_ style: Style) {
-        switch style {
-        case .splashHeaderLabel:
-            applySplashHeaderLabelStyle()
-        case .splashTitle:
-            applySplashTitleLabelStyle()
-        case .splashSubtitle:
-            applySplashSubtitleLabelStyle()
-        case .signinTitle:
-            applySigninTitleLabelStyle()
-        case .signinSubtitle:
-            applySigninSubtitleLabelStyle()
-        case .signupTitle:
-            applySignupTitleLabelStyle()
-        case .signupSubtitle:
-            applySignupSubtitleLabelStyle()
-        case .textFieldTitleLabel:
-            applyTextFieldTitleLabelStyle()
+        
+        var labelTextColor: UIColor {
+            switch self {
+            case .splashHeaderLabel, .splashTitle, .splashSubtitle:
+                return .white
+            case .signinTitle, .signupTitle:
+                return .black
+            case .signinSubtitle, .signupSubtitle, .textFieldTitleLabel:
+                // TODO: [HL-4] Add global Color
+                return LabelColor.slateGray
+            }
         }
+        
+        // TODO: [HL-4] Add global fonts
+        var labelFont: UIFont {
+            switch self {
+            case .splashHeaderLabel:
+                return LabelFont.splashHeaderLabel
+            case .splashTitle:
+                return LabelFont.splashTitle
+            case .splashSubtitle:
+                return LabelFont.splashSubtitle
+            case .signinTitle:
+                return LabelFont.signinTitle
+            case .signinSubtitle:
+                return LabelFont.signinSubtitle
+            case .signupTitle:
+                return LabelFont.signupTitle
+            case .signupSubtitle:
+                return LabelFont.signupSubtitle
+            case .textFieldTitleLabel:
+                return LabelFont.textFieldTitleLabel
+            }
+        }
+        
     }
+    
 }
 
 // MARK: Style Attributes
-private extension UILabel {
-    func applySplashHeaderLabelStyle() {
-        textColor = .white
+extension UILabel {
+    func applyStyle(_ style: Style) {
+        textColor = style.labelTextColor
         // TODO: [HL-4] Add global fonts
-        font = LabelFont.splashHearderLabel
-        textAlignment = .center
-    }
-    
-    func applySplashTitleLabelStyle() {
-        textColor = .white
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.splashTitle
-        textAlignment = .center
-    }
-    
-    func applySplashSubtitleLabelStyle() {
-        textColor = .white
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.splashSubtitle
-        textAlignment = .center
-    }
-    //
-    func applySigninTitleLabelStyle() {
-        textColor = .black
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.signinTitle
-        textAlignment = .left
-    }
-    
-    func applySigninSubtitleLabelStyle() {
-        textColor = LabelColor.slateGray
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.signinSubtitle
-        textAlignment = .left
-    }
-    
-    func applySignupTitleLabelStyle() {
-        textColor = .black
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.signupTitle
-        textAlignment = .left
-    }
-    
-    func applySignupSubtitleLabelStyle() {
-        textColor =  LabelColor.slateGray
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.signupSubtitle
-        textAlignment = .left
-    }
-    
-    func applyTextFieldTitleLabelStyle(){
-        textColor =  LabelColor.slateGray
-        // TODO: [HL-4] Add global fonts
-        font = LabelFont.textFieldTitleLabel
+        font = style.labelFont
         textAlignment = .left
     }
 }
@@ -107,7 +71,7 @@ private enum LabelColor {
 // MARK: - Fonts
 
 private enum LabelFont {
-    static let splashHearderLabel = UIFont.systemFont(ofSize: 18, weight: .semibold)
+    static let splashHeaderLabel = UIFont.systemFont(ofSize: 18, weight: .semibold)
     static let splashTitle = UIFont.systemFont(ofSize: 50, weight: .semibold)
     static let splashSubtitle = UIFont.systemFont(ofSize: 16, weight: .regular)
     static let signinTitle = UIFont.systemFont(ofSize: 30, weight: .semibold)
