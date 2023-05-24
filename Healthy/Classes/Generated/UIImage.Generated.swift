@@ -10,11 +10,11 @@ extension UIImage {
       UIImage(named: "AccentColor")!
     }
 
-    static var logoImg: UIImage {
-      UIImage(named: "logo-img")!
+    static var images: UIImage {
+      UIImage(named: "images")!
     }
 
-    static var splashScreen: UIImage {
-      UIImage(named: "splash-screen")!
+    static var logoImg: UIImage {
+      UIImage(named: "logo-img")!
     }
 }

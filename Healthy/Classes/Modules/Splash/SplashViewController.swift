@@ -4,7 +4,11 @@ import UIKit
 
         // MARK: Outlets
 
-      @IBOutlet private weak var getStartButton: UIButton!
+      @IBOutlet private weak var startCookingButton: UIButton!
+      @IBOutlet private weak var logoCaptionLabel: UILabel!
+      @IBOutlet private weak var headerTitleLabel: UILabel!
+      @IBOutlet weak var headerCaptionLabel: UILabel!
+
       // MARK: Properties
 
         private let viewModel: SplashViewModelType
@@ -33,7 +37,9 @@ import UIKit
     // MARK: - Actions
 
   private extension SplashViewController {
-        @IBAction func didTapGetStart(_ sender: Any) {
+        @IBAction func didTapStartCooking(_ sender: Any) {
+//            let secondView = loginVC(nibName: "loginVC", bundle: nil)
+//                   self.navigationController?.pushViewController(secondView, animated: true)
         }
 
     }
@@ -42,7 +48,8 @@ import UIKit
 
     extension SplashViewController {
         func configureAppearance() {
-            getStartButton.applyButtonStyle(.primary)
+            startCookingButton.applyButtonStyle(.primary)
+          //  headerTitleLabel.applyStyle(.onboardingTitle)
         }
     }
 
