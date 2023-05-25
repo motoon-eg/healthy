@@ -19,6 +19,10 @@
 		6DDA138D2A1109E8004390D4 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6DDA138C2A1109E8004390D4 /* Factory */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F032A2022AA0028FC4B /* HealthyValidator .swift */; };
+		B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */; };
+		B8574F092A20237A0028FC4B /* HealthyPassValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */; };
+		B8574F0B2A2023960028FC4B /* HealthyEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		207FF8FF2A167F9100E4BC76 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		B8574F032A2022AA0028FC4B /* HealthyValidator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthyValidator .swift"; sourceTree = "<group>"; };
+		B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthyValidationRule .swift"; sourceTree = "<group>"; };
+		B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyPassValidator.swift; sourceTree = "<group>"; };
+		B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyEmailValidator.swift; sourceTree = "<group>"; };
 		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +190,8 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B8574F072A2023570028FC4B /* Validator */,
+				B8574F022A2022870028FC4B /* ValidatorProtocol */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -222,6 +232,24 @@
 				207FF8FF2A167F9100E4BC76 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		B8574F022A2022870028FC4B /* ValidatorProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				B8574F032A2022AA0028FC4B /* HealthyValidator .swift */,
+				B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */,
+			);
+			path = ValidatorProtocol;
+			sourceTree = "<group>";
+		};
+		B8574F072A2023570028FC4B /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */,
+				B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
@@ -414,8 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				02BBEE3A2A17BA20008E1BC0 /* Strings+Generated.swift in Sources */,
+				B8574F092A20237A0028FC4B /* HealthyPassValidator.swift in Sources */,
+				B8574F0B2A2023960028FC4B /* HealthyEmailValidator.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
+				B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
+				B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 			);
