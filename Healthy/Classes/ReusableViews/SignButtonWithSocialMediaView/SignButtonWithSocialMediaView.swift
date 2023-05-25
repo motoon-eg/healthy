@@ -4,10 +4,11 @@ class SignButtonWithSocialMediaView: UIView {
 
     // MARK: - IBOutlet
 
-    @IBOutlet weak private var contentView: UIView!
-    @IBOutlet weak private var signinButton: UIButton!
-    @IBOutlet weak private var googleButton: UIButton!
-    @IBOutlet weak private var facebookButton: UIButton!
+    @IBOutlet weak private(set) var contentView: UIView!
+    @IBOutlet weak private(set) var signinButton: UIButton!
+    @IBOutlet weak private(set) var googleButton: UIButton!
+    @IBOutlet weak private(set) var facebookButton: UIButton!
+    @IBOutlet private(set) var mediaBackgroundViews: [UIView]!
 
     // MARK: - Init
 
@@ -26,17 +27,14 @@ class SignButtonWithSocialMediaView: UIView {
     private func initView() {
         loadNibView()
         addSubview(contentView)
-        contentView.frame = self.bounds
+        contentView.fillSuperview()
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         setupDesign()
     }
 
     private func setupDesign() {
         signinButton.applyButtonStyle(.primary)
-
-        // MARK: - feat: [HL-4] Add Button styling for media button
-        // TODO: - Apply the media button style
-
+        mediaBackgroundViews.forEach { $0.setupDefaultShadow()}
     }
 }
 
@@ -54,6 +52,28 @@ extension SignButtonWithSocialMediaView {
 }
 
 // MARK: - UIView extension
+
+private extension UIView {
+    func setupDefaultShadow() {
+        layer.cornerRadius = 10
+
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.1
+        layer.shadowRadius = 6.0
+    }
+
+    func fillSuperview(padding: UIEdgeInsets = .zero) {
+        translatesAutoresizingMaskIntoConstraints = false
+        guard let superview = superview else {return}
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor, constant: padding.top),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -padding.bottom),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding.left),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding.right)
+        ])
+    }
+}
 
 private extension UIView {
 

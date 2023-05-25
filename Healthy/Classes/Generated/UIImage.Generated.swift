@@ -10,11 +10,11 @@ extension UIImage {
       UIImage(named: "AccentColor")!
     }
 
-    static var facebook: UIImage {
-      UIImage(named: "facebook")!
+    static var facebookIcon: UIImage {
+      UIImage(named: "facebook_icon")!
     }
 
-    static var google: UIImage {
-      UIImage(named: "google")!
+    static var googleIcon: UIImage {
+      UIImage(named: "google_icon")!
     }
 }
