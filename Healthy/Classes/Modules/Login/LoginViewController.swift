@@ -5,11 +5,9 @@ final class LoginViewController: UIViewController {
     // MARK: Outlets
 
     @IBOutlet private(set) weak var emailTextFieldLabel: UILabel!
-    @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
-    
     @IBOutlet private(set) weak var emailTextField: UITextField!
+    @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
     @IBOutlet private(set) weak var passwordTextField: UITextField!
-    
     @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
     @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
