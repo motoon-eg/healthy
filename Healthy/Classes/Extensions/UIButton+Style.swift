@@ -8,7 +8,7 @@ extension UIButton {
         case plainGold
         
         // TODO: [HL-4] Add global Color
-        var buttonBackgroundColor: UIColor? {
+        fileprivate var buttonBackgroundColor: UIColor? {
             switch self {
             case .primary:
                 return ButtonColors.lightGreen
@@ -18,7 +18,7 @@ extension UIButton {
         }
         
         // TODO: [HL-4] Add global Color
-        var buttonTextColor: UIColor? {
+        fileprivate var buttonTextColor: UIColor? {
             switch self {
             case .primary:
                 return .white
@@ -28,7 +28,7 @@ extension UIButton {
         }
         
         // TODO: [HL-16] Add global fonts
-        var buttonFont: UIFont? {
+        fileprivate var buttonFont: UIFont? {
             switch self {
             case .primary:
                 return UIFont.preferredFont(forTextStyle: .callout, compatibleWith: .none)
