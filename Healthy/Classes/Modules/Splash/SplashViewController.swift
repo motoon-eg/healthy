@@ -39,7 +39,7 @@ import UIKit
   private extension SplashViewController {
         @IBAction func didTapStartCooking(_ sender: Any) {
 //            let secondView = loginVC(nibName: "loginVC", bundle: nil)
-//                   self.navigationController?.pushViewController(secondView, animated: true)
+//            self.navigationController?.pushViewController(secondView, animated: true)
         }
 
     }

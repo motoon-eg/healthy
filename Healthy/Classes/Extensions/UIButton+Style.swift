@@ -34,6 +34,9 @@ extension UIButton {
         let widthConstraint = heightAnchor.constraint(equalToConstant: Constants.defaultHeight)
         widthConstraint.priority = .defaultHigh
         widthConstraint.isActive = true
+        print(widthConstraint)
+        print(Constants.defaultHeight)
+        print(heightAnchor.constraint(equalToConstant: Constants.defaultHeight))
     }
 }
 
