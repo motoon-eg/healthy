@@ -34,7 +34,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureApperance()
+        configureAppearance()
     }
 
 }
@@ -48,7 +48,7 @@ private extension LoginViewController {
 // MARK: - Configurations
 
 private extension LoginViewController {
-    func configureApperance() {
+    func configureAppearance() {
         emailTextFieldLabel.applyStyle(.textFieldTitleLabel)
         passwordTextFieldLabel.applyStyle(.textFieldTitleLabel)
         signInButton.applyButtonStyle(.primary)
