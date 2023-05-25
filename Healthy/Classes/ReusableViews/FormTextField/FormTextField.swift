@@ -3,20 +3,36 @@ import UIKit
 
 class FormTextField: UIView {
     
-    // MARK: - Outlets
-    //
+    // MARK: Outlets
     
-    @IBOutlet weak private var contentView: UIView!
-    @IBOutlet weak private var titleLabel: UILabel!
-    @IBOutlet weak private var inputTextField: UITextField!
-    @IBOutlet weak private var errorLabel: UILabel!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var inputTextField: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
     
-    // MARK: - Properties
-    //
-    var text: ((String)->())?
+    // MARK: Properties
     
-    // MARK: - init
-    //
+    private var onChange: (String) -> () =  { _ in }
+    
+    var title: String = "" {
+        didSet {
+            self.titleLabel.text = title
+        }
+    }
+    
+    var placeholder: String = "" {
+        didSet {
+            self.inputTextField.placeholder = placeholder
+        }
+    }
+    
+    var keyboardType: UIKeyboardType = .default {
+        didSet {
+            self.inputTextField.keyboardType = keyboardType
+        }
+    }
+    
+    // MARK: Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,50 +45,46 @@ class FormTextField: UIView {
     }
     
     private func initView() {
-        Bundle.main.loadNibNamed(FormTextFieldResources.nibName, owner: self, options: nil)
+        Bundle.main.loadNibNamed(FormTextField.reusableIdentifier, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        setupDesign()
-        bindToTextFieldsChanges()
+        configureLayout()
+        bindTextFieldChanges()
     }
 }
 
-// MARK: - configure
-//
+// MARK: Internal Handlers
 
 extension FormTextField {
-    func configure(title: String, placeholder: String?, type: UIKeyboardType) {
-        self.titleLabel.text = title
-        self.inputTextField.placeholder = placeholder
-        self.inputTextField.keyboardType = type
-    }
-    
     func setError(_ errorText: String) {
-        self.errorLabel.isHidden = false
+        self.errorLabel.text = ""
         self.errorLabel.text = errorText
     }
+    
+    func onChange(_ onChange: @escaping (String) -> Void) {
+        self.onChange = onChange
+    }
 }
 
-// MARK: - Private Handlers
-//
+// MARK: Private Handlers
 
 extension FormTextField {
-    private func setupDesign() {
+    private func configureLayout() {
         titleLabel.applyStyle(.textFieldTitleLabel)
         inputTextField.applyTextFieldStyle(.primary)
         
-        // waiting for design of error label style
-        //MARK: - feat: [HL-4] Add UI label styling new design
+        // Waiting for the design of the error label style
+        // TODO: - feat: [HL-4] Add UI label styling new design
         errorLabel.textColor = .red
     }
     
-    private func bindToTextFieldsChanges() {
+    private func bindTextFieldChanges() {
         inputTextField.addTarget(self, action: #selector(textEditingChanged), for: .editingChanged)
     }
     
     @objc private func textEditingChanged() {
-        self.errorLabel.isHidden = true
-        text?(self.inputTextField.text ?? "")
+        self.errorLabel.text = ""
+        onChange(self.inputTextField.text ?? "")
     }
 }

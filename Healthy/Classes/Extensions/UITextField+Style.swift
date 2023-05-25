@@ -1,15 +1,15 @@
 import UIKit
 
-// MARK: - TextField style
-//
+// MARK: TextField style
+
 extension UITextField {
     enum TextFieldStyle {
         case primary
     }
 }
 
-// MARK: - Apply textfield style
-//
+// MARK: Apply textfield style
+
 extension UITextField {
     func applyTextFieldStyle(_ style: TextFieldStyle) {
         NSLayoutConstraint.activate([
@@ -27,8 +27,8 @@ extension UITextField {
     }
 }
 
-// MARK: - set right / left padding to text field
-//
+// MARK: set right / left padding to text field
+
 extension UITextField {
     private func setLeftPaddingPoints(_ amount: CGFloat = Constants.defaultPadding) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
@@ -43,14 +43,15 @@ extension UITextField {
     }
 }
 
-// MARK: - Constants
-//
+// MARK: Constants
+
 private extension UITextField {
     enum Constants {
         static let defaultCornerRadius: CGFloat = 10.0
         static let defaultHeight: CGFloat = 55.0
         static let defaultPadding: CGFloat = 12.0
         static let defaultBorderWidth: CGFloat = 1.5
+        // TODO: [HL-4] Add global Color
         static let defaultBorderColor: UIColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 1)
     }
 }
