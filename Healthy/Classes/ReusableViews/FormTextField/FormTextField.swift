@@ -1,4 +1,3 @@
-
 import UIKit
 
 class FormTextField: UIView {
@@ -32,6 +31,12 @@ class FormTextField: UIView {
         }
     }
     
+    var error: String = "" {
+        didSet {
+            self.errorLabel.text = error
+        }
+    }
+    
     // MARK: Init
     
     override init(frame: CGRect) {
@@ -57,11 +62,6 @@ class FormTextField: UIView {
 // MARK: Internal Handlers
 
 extension FormTextField {
-    func setError(_ errorText: String) {
-        self.errorLabel.text = ""
-        self.errorLabel.text = errorText
-    }
-    
     func onChange(_ onChange: @escaping (String) -> Void) {
         self.onChange = onChange
     }

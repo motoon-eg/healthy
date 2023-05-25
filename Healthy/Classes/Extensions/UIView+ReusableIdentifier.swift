@@ -1,16 +1,10 @@
-//
-//  UIView+ReusableIdentifier.swift
-//  Healthy
-//
-//  Created by Ahmed Nasr on 25/05/2023.
-//
-
 import UIKit
 
 
 // MARK: UIView+Reusable Identifier
 
 extension UIView {
+    /// returns a String value, which is the class name of the UIView subclass that it is called on.
     static var reusableIdentifier: String {
         String("\(Self.self)")
     }
