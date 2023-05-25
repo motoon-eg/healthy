@@ -244,10 +244,10 @@
 		6DF525042A1E849F0027502C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
-				6DF525092A1E854B0027502C /* LoginViewModel.swift */,
 				6DF525072A1E84FD0027502C /* LoginViewController.swift */,
 				6DF525052A1E84C80027502C /* LoginViewController.xib */,
+				6DF525092A1E854B0027502C /* LoginViewModel.swift */,
+				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
