@@ -157,7 +157,6 @@
 				027DDA532A0E76A00052818C /* Utilities */,
 				027DDA512A0E761B0052818C /* Modules */,
 				027DDA502A0E75E60052818C /* Extensions */,
-				6DF525032A1E84640027502C /* Scenes */,
 				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
 				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
 			);
@@ -177,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				027DDA522A0E76420052818C /* Splash */,
+				6DF525042A1E849F0027502C /* Login */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -231,14 +231,6 @@
 				207FF8FF2A167F9100E4BC76 /* Localizable.strings */,
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		6DF525032A1E84640027502C /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				6DF525042A1E849F0027502C /* Login */,
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		6DF525042A1E849F0027502C /* Login */ = {
