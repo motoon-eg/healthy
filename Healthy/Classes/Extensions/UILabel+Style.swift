@@ -1,9 +1,9 @@
 import UIKit
 
 extension UILabel {
-    
+
     // MARK: Style
-    
+
     enum Style {
         case splashHeaderLabel
         case splashTitle
@@ -13,7 +13,7 @@ extension UILabel {
         case signupTitle
         case signupSubtitle
         case textFieldTitleLabel
-        
+
         var labelTextColor: UIColor {
             switch self {
             case .splashHeaderLabel, .splashTitle, .splashSubtitle:
@@ -25,7 +25,7 @@ extension UILabel {
                 return LabelColor.slateGray
             }
         }
-        
+
         // TODO: [HL-4] Add global fonts
         var labelFont: UIFont {
             switch self {
@@ -47,9 +47,9 @@ extension UILabel {
                 return LabelFont.textFieldTitleLabel
             }
         }
-        
+
     }
-    
+
 }
 
 // MARK: Style Attributes
