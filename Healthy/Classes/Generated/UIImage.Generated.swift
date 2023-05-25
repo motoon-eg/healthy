@@ -6,15 +6,15 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
-    static var accentColor : UIImage {
-      UIImage(named: "AccentColor")! 
+    static var accentColor: UIImage {
+      UIImage(named: "AccentColor")!
     }
 
-    static var icCheckboxNotSelected : UIImage {
-      UIImage(named: "ic_checkbox_not_selected")! 
+    static var icCheckboxNotSelected: UIImage {
+      UIImage(named: "ic_checkbox_not_selected")!
     }
 
-    static var icCheckboxSelected : UIImage {
-      UIImage(named: "ic_checkbox_selected")! 
+    static var icCheckboxSelected: UIImage {
+      UIImage(named: "ic_checkbox_selected")!
     }
 }
