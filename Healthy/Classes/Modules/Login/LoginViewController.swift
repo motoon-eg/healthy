@@ -36,7 +36,6 @@ final class LoginViewController: UIViewController {
 
         configureAppearance()
     }
-
 }
 
 // MARK: - Actions
