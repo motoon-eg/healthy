@@ -1,5 +1,3 @@
-//  ___FILEHEADER___
-
 import Foundation
 
 /// ___VARIABLE_productName___ Input & Output

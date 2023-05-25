@@ -1,5 +1,3 @@
-//  ___FILEHEADER___
-
 import Foundation
 
 // MARK: ___FILEBASENAMEASIDENTIFIER___
