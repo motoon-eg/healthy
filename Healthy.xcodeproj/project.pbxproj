@@ -55,6 +55,7 @@
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
+		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
