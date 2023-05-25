@@ -48,9 +48,9 @@ extension UIButton {
         tintColor = style.buttonTextColor
         layer.cornerRadius = Constants.defaultCornerRadius
         layer.masksToBounds = true
-        let widthConstraint = heightAnchor.constraint(equalToConstant: Constants.defaultHeight)
-        widthConstraint.priority = .defaultHigh
-        widthConstraint.isActive = true
+        let heightConstraint = heightAnchor.constraint(equalToConstant: Constants.defaultHeight)
+        heightConstraint.priority = .defaultHigh
+        heightConstraint.isActive = true
     }
 }
 
