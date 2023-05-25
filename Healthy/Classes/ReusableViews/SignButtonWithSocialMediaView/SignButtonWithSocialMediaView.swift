@@ -28,7 +28,6 @@ class SignButtonWithSocialMediaView: UIView {
         loadNibView()
         addSubview(contentView)
         contentView.fillSuperview()
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         setupDesign()
     }
 
@@ -51,21 +50,26 @@ extension SignButtonWithSocialMediaView {
     }
 }
 
-// MARK: - UIView extension
+// MARK: - UIView Shadow
 
 private extension UIView {
     func setupDefaultShadow() {
         layer.cornerRadius = 10
-
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0)
         layer.shadowOpacity = 0.1
         layer.shadowRadius = 6.0
     }
+}
 
+// MARK: - UIView fill to Edge
+
+private extension UIView {
     func fillSuperview(padding: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
+
         guard let superview = superview else {return}
+
         NSLayoutConstraint.activate([
             topAnchor.constraint(equalTo: superview.topAnchor, constant: padding.top),
             bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -padding.bottom),
@@ -74,6 +78,8 @@ private extension UIView {
         ])
     }
 }
+
+// MARK: - UIView load nib
 
 private extension UIView {
 
