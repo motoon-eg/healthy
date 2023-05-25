@@ -9,4 +9,12 @@ extension UIImage {
     static var accentColor: UIImage {
       UIImage(named: "AccentColor")!
     }
+
+    static var facebook: UIImage {
+      UIImage(named: "facebook")!
+    }
+
+    static var google: UIImage {
+      UIImage(named: "google")!
+    }
 }
