@@ -43,6 +43,7 @@ final class LoginViewController: UIViewController {
 
 private extension LoginViewController {
     @IBAction func didTapSignIn(_ sender: Any) {}
+    @IBAction func didTapSignUp(_ sender: Any) {}
 }
 
 // MARK: - Configurations

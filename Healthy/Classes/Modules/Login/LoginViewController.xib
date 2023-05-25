@@ -154,6 +154,9 @@
                                             <rect key="frame" x="161" y="0.0" width="81.666666666666686" height="34.333333333333336"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
+                                            <connections>
+                                                <action selector="didTapSignUp:" destination="-1" eventType="touchUpInside" id="uF4-tv-dfq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
