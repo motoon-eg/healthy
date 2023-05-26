@@ -43,9 +43,9 @@ public enum HealthyValidationRule {
             case .matching(value: _, regex: _):
                 return "incorrect Format"
             case .numericOnly(value: _):
-                return "numeric Error"
+                return "Please enter a valid number"
             case .decimal(value: _):
-                return "not a Number"
+                return "Please enter a valid number"
             case .charCount(value: _, minCount: let minCount, maxCount: let maxCount):
                 if let minimum = minCount, let maximum = maxCount {
                     if minimum == maximum {
@@ -68,9 +68,9 @@ public enum HealthyValidationRule {
                 guard let doubleValue = Double(value) else { return nil }
 
                 if doubleValue > max {
-                    return  "incorrect Amount Max"
+                    return  "value exceeds maximum allowed value"
                 } else if doubleValue < min {
-                    return  "incorrect Amount Min"
+                    return  "value fails to reach the minimum allowed value"
                 }
                 return nil
             }
