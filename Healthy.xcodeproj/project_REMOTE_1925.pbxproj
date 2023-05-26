@@ -23,10 +23,6 @@
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
-		B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F032A2022AA0028FC4B /* HealthyValidator .swift */; };
-		B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */; };
-		B8574F092A20237A0028FC4B /* HealthyPassValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */; };
-		B8574F0B2A2023960028FC4B /* HealthyEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +62,6 @@
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
-		B8574F032A2022AA0028FC4B /* HealthyValidator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthyValidator .swift"; sourceTree = "<group>"; };
-		B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthyValidationRule .swift"; sourceTree = "<group>"; };
-		B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyPassValidator.swift; sourceTree = "<group>"; };
-		B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyEmailValidator.swift; sourceTree = "<group>"; };
 		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,8 +192,6 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				B8574F072A2023570028FC4B /* Validator */,
-				B8574F022A2022870028FC4B /* ValidatorProtocol */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -242,24 +232,6 @@
 				207FF8FF2A167F9100E4BC76 /* Localizable.strings */,
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		B8574F022A2022870028FC4B /* ValidatorProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				B8574F032A2022AA0028FC4B /* HealthyValidator .swift */,
-				B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */,
-			);
-			path = ValidatorProtocol;
-			sourceTree = "<group>";
-		};
-		B8574F072A2023570028FC4B /* Validator */ = {
-			isa = PBXGroup;
-			children = (
-				B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */,
-				B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		6DF525042A1E849F0027502C /* Login */ = {
@@ -465,13 +437,9 @@
 			files = (
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				02BBEE3A2A17BA20008E1BC0 /* Strings+Generated.swift in Sources */,
-				B8574F092A20237A0028FC4B /* HealthyPassValidator.swift in Sources */,
-				B8574F0B2A2023960028FC4B /* HealthyEmailValidator.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
-				B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
-				B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,

@@ -244,6 +244,7 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		B8574F022A2022870028FC4B /* ValidatorProtocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,9 +260,8 @@
 				B8574F082A20237A0028FC4B /* HealthyPassValidator.swift */,
 				B8574F0A2A2023960028FC4B /* HealthyEmailValidator.swift */,
 			);
-			path = Login;
-			sourceTree = "<group>";
-		};
+			path = Validator;
+=======
 		6DF525042A1E849F0027502C /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +271,7 @@
 				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
 			);
 			path = Login;
+>>>>>>> develop
 			sourceTree = "<group>";
 		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
@@ -465,9 +466,12 @@
 			files = (
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				02BBEE3A2A17BA20008E1BC0 /* Strings+Generated.swift in Sources */,
+<<<<<<< HEAD
 				B8574F092A20237A0028FC4B /* HealthyPassValidator.swift in Sources */,
 				B8574F0B2A2023960028FC4B /* HealthyEmailValidator.swift in Sources */,
+=======
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
+>>>>>>> develop
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
