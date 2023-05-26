@@ -112,7 +112,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS7-JJ-mJ6">
                                                             <rect key="frame" x="-7.6666666666666714" y="0.0" width="60" height="50"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="google_icon" title="">
+                                                            <buttonConfiguration key="configuration" style="plain" image="icon-google" title="">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="7"/>
                                                             </buttonConfiguration>
                                                         </button>
@@ -129,7 +129,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnC-MF-l4r">
                                                             <rect key="frame" x="-8" y="0.0" width="60" height="50"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" image="facebook_icon" title="">
+                                                            <buttonConfiguration key="configuration" style="plain" image="icon-facebook" title="">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                             </buttonConfiguration>
                                                         </button>
@@ -173,8 +173,8 @@
         </view>
     </objects>
     <resources>
-        <image name="facebook_icon" width="36" height="36"/>
-        <image name="google_icon" width="36" height="36"/>
+        <image name="icon-facebook" width="36" height="36"/>
+        <image name="icon-google" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

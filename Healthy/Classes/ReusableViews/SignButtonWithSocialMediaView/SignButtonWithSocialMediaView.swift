@@ -1,14 +1,14 @@
 import UIKit
 
-class SignButtonWithSocialMediaView: UIView {
+final class SignButtonWithSocialMediaView: UIView {
 
     // MARK: - IBOutlet
 
-    @IBOutlet weak private(set) var contentView: UIView!
-    @IBOutlet weak private(set) var signinButton: UIButton!
-    @IBOutlet weak private(set) var googleButton: UIButton!
-    @IBOutlet weak private(set) var facebookButton: UIButton!
-    @IBOutlet private(set) var mediaBackgroundViews: [UIView]!
+    @IBOutlet weak private var contentView: UIView!
+    @IBOutlet weak private var signinButton: UIButton!
+    @IBOutlet weak private var googleButton: UIButton!
+    @IBOutlet weak private var facebookButton: UIButton!
+    @IBOutlet private var mediaBackgroundViews: [UIView]!
 
     // MARK: - Init
 
@@ -40,55 +40,20 @@ class SignButtonWithSocialMediaView: UIView {
 // MARK: - configure
 
 extension SignButtonWithSocialMediaView {
-    enum SignButtonTitle: String {
-        case signin = "Sign In"
-        case signup = "Sign Up"
+    enum SignButtonTitle {
+        case signin
+        case signup
+
+        var title: String {
+            switch self {
+            case .signin: return L10n.Signin.buttonTitle
+            case .signup: return L10n.Signup.buttonTitle
+            }
+        }
+
     }
 
     func configure(buttonTitle: SignButtonTitle) {
-        signinButton.setTitle(buttonTitle.rawValue, for: .normal)
+        signinButton.setTitle(buttonTitle.title, for: .normal)
     }
-}
-
-// MARK: - UIView Shadow
-
-private extension UIView {
-    func setupDefaultShadow() {
-        layer.cornerRadius = 10
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 0)
-        layer.shadowOpacity = 0.1
-        layer.shadowRadius = 6.0
-    }
-}
-
-// MARK: - UIView fill to Edge
-
-private extension UIView {
-    func fillSuperview(padding: UIEdgeInsets = .zero) {
-        translatesAutoresizingMaskIntoConstraints = false
-
-        guard let superview = superview else {return}
-
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: superview.topAnchor, constant: padding.top),
-            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -padding.bottom),
-            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding.left),
-            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding.right)
-        ])
-    }
-}
-
-// MARK: - UIView load nib
-
-private extension UIView {
-
-    static var reusableIdentifier: String {
-        String("\(Self.self)")
-    }
-
-    func loadNibView() {
-        Bundle.main.loadNibNamed(Self.reusableIdentifier, owner: self)
-    }
-
 }

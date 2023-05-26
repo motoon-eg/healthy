@@ -24,6 +24,8 @@
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */; };
 		B21570AA2A209E6800C80A0C /* SignButtonWithSocialMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */; };
+		B21570AC2A20A5A700C80A0C /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21570AB2A20A5A700C80A0C /* UIView+Helpers.swift */; };
+		B21570AE2A20A6BF00C80A0C /* SignButtonWithSocialMediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21570AD2A20A6BF00C80A0C /* SignButtonWithSocialMediaViewModel.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,8 @@
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignButtonWithSocialMediaView.swift; sourceTree = "<group>"; };
 		B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignButtonWithSocialMediaView.xib; sourceTree = "<group>"; };
+		B21570AB2A20A5A700C80A0C /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
+		B21570AD2A20A6BF00C80A0C /* SignButtonWithSocialMediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignButtonWithSocialMediaViewModel.swift; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +176,7 @@
 			children = (
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
 				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
+				B21570AB2A20A5A700C80A0C /* UIView+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 			children = (
 				B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */,
 				B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */,
+				B21570AD2A20A6BF00C80A0C /* SignButtonWithSocialMediaViewModel.swift */,
 			);
 			path = SignButtonWithSocialMediaView;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21570AC2A20A5A700C80A0C /* UIView+Helpers.swift in Sources */,
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				02BBEE3A2A17BA20008E1BC0 /* Strings+Generated.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
@@ -456,6 +463,7 @@
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
+				B21570AE2A20A6BF00C80A0C /* SignButtonWithSocialMediaViewModel.swift in Sources */,
 				B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 			);
