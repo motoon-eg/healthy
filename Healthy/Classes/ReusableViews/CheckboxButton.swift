@@ -3,8 +3,8 @@ import UIKit
 class CheckboxButton: UIButton {
 
     // Images
-    let checkedImage = UIImage.icCheckboxSelected
-    let uncheckedImage = UIImage.icCheckboxNotSelected
+    private let checkedImage = UIImage.icCheckboxSelected
+    private let uncheckedImage = UIImage.icCheckboxNotSelected
 
     // Bool property
     var isChecked: Bool = false {
