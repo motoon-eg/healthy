@@ -4,7 +4,11 @@ import UIKit
 
         // MARK: Outlets
 
-      @IBOutlet private weak var getStartButton: UIButton!
+      @IBOutlet private weak var startCookingButton: UIButton!
+      @IBOutlet private weak var logoCaptionLabel: UILabel!
+      @IBOutlet private weak var headerTitleLabel: UILabel!
+      @IBOutlet private weak var headerCaptionLabel: UILabel!
+
       // MARK: Properties
 
         private let viewModel: SplashViewModelType
@@ -33,7 +37,8 @@ import UIKit
     // MARK: - Actions
 
   private extension SplashViewController {
-        @IBAction func didTapGetStart(_ sender: Any) {
+        @IBAction func didTapStartCooking(_ sender: Any) {
+
         }
 
     }
@@ -42,7 +47,10 @@ import UIKit
 
     extension SplashViewController {
         func configureAppearance() {
-            getStartButton.applyButtonStyle(.primary)
+            logoCaptionLabel.applyStyle(.splashHeaderLabel)
+            headerTitleLabel.applyStyle(.splashTitle)
+            logoCaptionLabel.applyStyle(.splashSubtitle)
+            startCookingButton.applyButtonStyle(.primary)
         }
     }
 

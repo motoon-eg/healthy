@@ -6,7 +6,7 @@ extension UIButton {
     enum ButtonStyle {
         case primary
         case plainGold
-        
+
         // TODO: [HL-4] Add global Color
         fileprivate var buttonBackgroundColor: UIColor? {
             switch self {
@@ -16,7 +16,7 @@ extension UIButton {
                 return nil
             }
         }
-        
+
         // TODO: [HL-4] Add global Color
         fileprivate var buttonTextColor: UIColor? {
             switch self {
@@ -26,7 +26,7 @@ extension UIButton {
                 return ButtonColors.gold
             }
         }
-        
+
         // TODO: [HL-16] Add global fonts
         fileprivate var buttonFont: UIFont? {
             switch self {
