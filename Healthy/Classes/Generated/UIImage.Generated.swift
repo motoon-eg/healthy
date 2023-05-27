@@ -13,8 +13,4 @@ extension UIImage {
     static var images: UIImage {
       UIImage(named: "images")!
     }
-
-    static var logoImg: UIImage {
-      UIImage(named: "logo-img")!
-    }
 }

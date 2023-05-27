@@ -7,7 +7,7 @@ import UIKit
       @IBOutlet private weak var startCookingButton: UIButton!
       @IBOutlet private weak var logoCaptionLabel: UILabel!
       @IBOutlet private weak var headerTitleLabel: UILabel!
-      @IBOutlet weak var headerCaptionLabel: UILabel!
+      @IBOutlet private weak var headerCaptionLabel: UILabel!
 
       // MARK: Properties
 
@@ -38,8 +38,7 @@ import UIKit
 
   private extension SplashViewController {
         @IBAction func didTapStartCooking(_ sender: Any) {
-//            let secondView = loginVC(nibName: "loginVC", bundle: nil)
-//            self.navigationController?.pushViewController(secondView, animated: true)
+
         }
 
     }
@@ -48,8 +47,10 @@ import UIKit
 
     extension SplashViewController {
         func configureAppearance() {
+            logoCaptionLabel.applyStyle(.splashHeaderLabel)
+            headerTitleLabel.applyStyle(.splashTitle)
+            logoCaptionLabel.applyStyle(.splashSubtitle)
             startCookingButton.applyButtonStyle(.primary)
-          //  headerTitleLabel.applyStyle(.onboardingTitle)
         }
     }
 
