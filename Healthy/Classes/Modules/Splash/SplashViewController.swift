@@ -38,6 +38,9 @@ import UIKit
 
   private extension SplashViewController {
         @IBAction func didTapStartCooking(_ sender: Any) {
+            if let  login = Bundle.main.loadNibNamed("LoginViewController", owner: self, options: nil)?.first as? LoginViewController {
+                self.navigationController?.pushViewController(login, animated: true)
+            }
 
         }
 
