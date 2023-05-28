@@ -8,7 +8,7 @@ final class CreateAccountViewModel {
   private var confirmPassword: String = ""
   private var isChecked: Bool  = false
   private var onButtonEnabled: (Bool) -> Void = { _ in }
-  
+
   // MARK: Error Messages
   var namePrompt: String {
     if !username.isEmpty && username.isValidName {
@@ -17,23 +17,23 @@ final class CreateAccountViewModel {
       return "Is not valid name."
     }
   }
-  
+
   var emailPrompt: String {
-    if !email.isEmpty {
+    if !email.isEmpty && HealthyEmailValidator().isValid(true) {
       return ""
     } else {
       return "enter a valid email address"
     }
   }
-  
+
   var passwordPrompt: String {
-    if !password.isEmpty {
+    if !password.isEmpty && HealthyPassValidator().isValid(true) {
       return ""
     } else {
       return "must be between 8 and 15 characters"
     }
   }
-  
+
   var confirmPWPrompt: String {
     if !confirmPassword.isEmpty || confirmPassword == password {
       return ""
@@ -50,22 +50,22 @@ extension CreateAccountViewModel: CreateAccountViewModelInput {
     username = text
     updateEnabledStateButton()
   }
-  
+
   func updateEmail(_ text: String) {
     email = text
     updateEnabledStateButton()
   }
-  
+
   func updatePassword(_ text: String) {
     password = text
     updateEnabledStateButton()
   }
-  
+
   func updateConfirmPassword(_ text: String) {
     confirmPassword = text
     updateEnabledStateButton()
   }
-  
+
   func updateAcceptTermsAndConditions(_ isChecked: Bool) {
     self.isChecked = isChecked
     updateEnabledStateButton()
@@ -84,14 +84,14 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
 private extension CreateAccountViewModel {
   func updateEnabledStateButton() {
     let isUsernameValid = !username.isEmpty && username.isValidName
-    let isEmailValid = !email.isEmpty
-    let isPasswordValid = !password.isEmpty
+    let isEmailValid = !email.isEmpty && HealthyEmailValidator().isValid(true)
+    let isPasswordValid = !password.isEmpty && HealthyPassValidator().isValid(true)
     let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
     let isAcceptTermsAndConditionsChecked = (isChecked == true)
     let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
     &&  isConfirmPasswordValid
     && isAcceptTermsAndConditionsChecked
-    
+
     onButtonEnabled(isButtonEnabled)
   }
 }
