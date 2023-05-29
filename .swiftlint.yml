@@ -35,7 +35,7 @@ analyzer_rules:
 excluded:
   - Carthage
   - Pods
-  - MVVM-Template
+  - Templates
 
 # If true, SwiftLint will not fail if no lintable files are found.
 allow_zero_lintable_files: false
