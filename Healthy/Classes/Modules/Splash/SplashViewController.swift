@@ -4,10 +4,10 @@ import UIKit
 
         // MARK: Outlets
 
-      @IBOutlet private weak var startCookingButton: UIButton!
-      @IBOutlet private weak var logoCaptionLabel: UILabel!
-      @IBOutlet private weak var headerTitleLabel: UILabel!
-      @IBOutlet private weak var headerCaptionLabel: UILabel!
+      @IBOutlet private (set) weak var startCookingButton: UIButton!
+      @IBOutlet private (set) weak var logoCaptionLabel: UILabel!
+      @IBOutlet private (set) weak var headerTitleLabel: UILabel!
+      @IBOutlet private (set) weak var headerCaptionLabel: UILabel!
 
       // MARK: Properties
 
@@ -31,24 +31,20 @@ import UIKit
             super.viewDidLoad()
             configureAppearance()
         }
-
   }
 
     // MARK: - Actions
 
-  private extension SplashViewController {
-        @IBAction func didTapStartCooking(_ sender: Any) {
-            if let  login = Bundle.main.loadNibNamed("LoginViewController", owner: self, options: nil)?.first as? LoginViewController {
-                self.navigationController?.pushViewController(login, animated: true)
-            }
-
+private extension SplashViewController {
+    @IBAction func didTapStartCooking(_ sender: Any) {
+        if let  login = Bundle.main.loadNibNamed("LoginViewController", owner: self, options: nil)?.first as? LoginViewController {
+             self.navigationController?.pushViewController(login, animated: true)
         }
-
     }
-
+}
     // MARK: - Configurations
 
-    extension SplashViewController {
+private extension SplashViewController {
         func configureAppearance() {
             logoCaptionLabel.applyStyle(.splashHeaderLabel)
             headerTitleLabel.applyStyle(.splashTitle)
@@ -59,4 +55,4 @@ import UIKit
 
     // MARK: - Private Handlers
 
-    private extension SplashViewController {}
+private extension SplashViewController {}
