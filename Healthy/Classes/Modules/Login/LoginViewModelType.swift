@@ -9,7 +9,7 @@ protocol LoginViewModelInput {
     func updatePassword(_ text: String)
 }
 
-//MARK: Updates
+// MARK: Updates
 
 protocol LoginViewModelOutput {
     func bindLoadingIndicator(state: @escaping (Bool) -> Void)
