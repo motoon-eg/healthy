@@ -11,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="y6L-fE-jmB" id="w9v-gy-bfm"/>
-                <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="x0D-h0-djv"/>
-                <outlet property="forgotPasswordButton" destination="O2G-2d-u81" id="2gB-8i-v6z"/>
-                <outlet property="passwordTextField" destination="TCv-gO-mrb" id="vZs-l9-x3i"/>
-                <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="V8o-Mp-VNw"/>
-                <outlet property="signInButton" destination="I1J-oM-dkd" id="ae6-O4-4PL"/>
-                <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="7xH-oU-MzU"/>
-                <outlet property="signUpButton" destination="KEs-vw-Rzk" id="pfi-wR-Jin"/>
+                <outlet property="emailTextField" destination="y6L-fE-jmB" id="gqq-Zr-fLh"/>
+                <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="WRy-bS-Mdf"/>
+                <outlet property="forgotPasswordButton" destination="O2G-2d-u81" id="AwC-8a-jjD"/>
+                <outlet property="passwordTextField" destination="TCv-gO-mrb" id="LoA-CT-MPs"/>
+                <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
+                <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
+                <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="wRv-wr-MX2"/>
+                <outlet property="signUpButton" destination="KEs-vw-Rzk" id="X5I-Xh-lYt"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eJi-Nv-XUw"/>
             </connections>
         </placeholder>
@@ -106,7 +106,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Sign In"/>
                                             <connections>
-                                                <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="vOj-j9-qHd"/>
+                                                <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="PNu-gF-PYf"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____ or sign in with ____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kat-yT-6EX">
@@ -120,7 +120,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wBq-h2-a9r" userLabel="Sign In options Stack View">
                                     <rect key="frame" x="110" y="605" width="113" height="44"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-Mr-YAF" customClass="GIDSignInButton">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-Mr-YAF" userLabel="Google Button" customClass="GIDSignInButton">
                                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <accessibility key="accessibilityConfiguration">
@@ -131,7 +131,7 @@
                                                 <constraint firstAttribute="height" constant="44" id="SEJ-JQ-9Cv"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="WN9-1z-zPN"/>
+                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="asq-w7-g4Q"/>
                                             </connections>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button">
@@ -159,7 +159,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
                                             <connections>
-                                                <action selector="didTapSignUp:" destination="-1" eventType="touchUpInside" id="uF4-tv-dfq"/>
+                                                <action selector="didTapSignUp:" destination="-1" eventType="touchUpInside" id="9du-Lq-SeW"/>
                                             </connections>
                                         </button>
                                     </subviews>
