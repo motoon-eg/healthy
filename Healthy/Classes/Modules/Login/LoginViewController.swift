@@ -1,4 +1,5 @@
 import UIKit
+import GoogleSignIn
 
 final class LoginViewController: UIViewController {
 
@@ -10,7 +11,6 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var passwordTextField: UITextField!
     @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
-    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
 
@@ -42,7 +42,16 @@ final class LoginViewController: UIViewController {
 
 private extension LoginViewController {
     @IBAction func didTapSignIn(_ sender: Any) {}
+
     @IBAction func didTapSignUp(_ sender: Any) {}
+
+    @IBAction func didTapSignInWithGoogle(_ sender: Any) {
+      GIDSignIn.sharedInstance.signIn(withPresenting: self) { _, error in
+        guard error == nil else { return }
+
+        // If sign in succeeded, display the app's main content View.
+      }
+    }
 }
 
 // MARK: - Configurations
@@ -52,7 +61,6 @@ private extension LoginViewController {
         emailTextFieldLabel.applyStyle(.textFieldTitleLabel)
         passwordTextFieldLabel.applyStyle(.textFieldTitleLabel)
         signInButton.applyButtonStyle(.primary)
-        signInWithGoogleButton.applyButtonStyle(.plainGold)
         signInWithFacebookButton.applyButtonStyle(.plainGold)
     }
 }
