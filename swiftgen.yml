@@ -1,17 +1,23 @@
 input_dir: Healthy/
-output_dir: Healthy/
+output_dir: Healthy/Classes/Generated/
 
 xcassets:
   - inputs:
       - Resources/
     outputs:
       - templatePath: SwiftGen-Templates/images.stencil
-        output: Classes/Generated/UIImage.Generated.swift
+        output: UIImage.Generated.swift
+        
+  - inputs:
+      - Resources/Colors.xcassets
+    outputs:
+      - templatePath: SwiftGen-Templates/Colors.stencil
+        output:  UIColors+Generated.swift
 
 strings:
   inputs:
     - Resources/Localization/Localizable.strings
   outputs:
     - templateName: structured-swift5
-      output: Classes/Generated/Strings+Generated.swift
+      output: Strings+Generated.swift
 
