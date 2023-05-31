@@ -7,10 +7,10 @@ import UIKit.UIImage
 extension UIImage {
 
     static var accentColor: UIImage {
-        UIImage(named: "AccentColor")!
+      UIImage(named: "AccentColor")!
     }
 
     static var images: UIImage {
-        UIImage(named: "images")!
+      UIImage(named: "images")!
     }
 }
