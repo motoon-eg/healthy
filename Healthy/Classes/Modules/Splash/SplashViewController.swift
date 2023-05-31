@@ -1,58 +1,58 @@
 import UIKit
 
-  final class SplashViewController: UIViewController {
+final class SplashViewController: UIViewController {
 
-        // MARK: Outlets
+    // MARK: Outlets
 
-      @IBOutlet private (set) weak var startCookingButton: UIButton!
-      @IBOutlet private (set) weak var logoCaptionLabel: UILabel!
-      @IBOutlet private (set) weak var headerTitleLabel: UILabel!
-      @IBOutlet private (set) weak var headerCaptionLabel: UILabel!
+    @IBOutlet private (set) weak var startCookingButton: UIButton!
+    @IBOutlet private (set) weak var logoCaptionLabel: UILabel!
+    @IBOutlet private (set) weak var headerTitleLabel: UILabel!
+    @IBOutlet private (set) weak var headerCaptionLabel: UILabel!
 
-      // MARK: Properties
+    // MARK: Properties
 
-        private let viewModel: SplashViewModelType
+    private let viewModel: SplashViewModelType
 
-        // MARK: Init
+    // MARK: Init
 
-        init(viewModel: SplashViewModelType) {
-            self.viewModel = viewModel
-            super.init(nibName: nil, bundle: nil)
-        }
+    init(viewModel: SplashViewModelType) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
 
-        @available(*, unavailable)
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
-        // MARK: Lifecycle
+    // MARK: Lifecycle
 
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            configureAppearance()
-        }
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureAppearance()
+    }
+}
 
-    // MARK: - Actions
+// MARK: - Actions
 
 private extension SplashViewController {
     @IBAction func didTapStartCooking(_ sender: Any) {
-        if let  login = Bundle.main.loadNibNamed("LoginViewController", owner: self, options: nil)?.first as? LoginViewController {
-             self.navigationController?.pushViewController(login, animated: true)
+        if let login = Bundle.main.loadNibNamed("LoginViewController", owner: self, options: nil)?.first as? LoginViewController {
+            self.navigationController?.pushViewController(login, animated: true)
         }
     }
 }
-    // MARK: - Configurations
+// MARK: - Configurations
 
 private extension SplashViewController {
-        func configureAppearance() {
-            logoCaptionLabel.applyStyle(.splashHeaderLabel)
-            headerTitleLabel.applyStyle(.splashTitle)
-            logoCaptionLabel.applyStyle(.splashSubtitle)
-            startCookingButton.applyButtonStyle(.primary)
-        }
+    func configureAppearance() {
+        logoCaptionLabel.applyStyle(.splashHeaderLabel)
+        headerTitleLabel.applyStyle(.splashTitle)
+        logoCaptionLabel.applyStyle(.splashSubtitle)
+        startCookingButton.applyButtonStyle(.primary)
     }
+}
 
-    // MARK: - Private Handlers
+// MARK: - Private Handlers
 
 private extension SplashViewController {}
