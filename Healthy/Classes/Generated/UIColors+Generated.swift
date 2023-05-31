@@ -3,7 +3,6 @@ import UIKit.UIColor
 // this is automatic generated file please don't edit it 🗡️
 // MARK: - Colors
 
-// swiftlint:disable force_unwrapping
 extension UIColor {
 
       static var black100: UIColor {
