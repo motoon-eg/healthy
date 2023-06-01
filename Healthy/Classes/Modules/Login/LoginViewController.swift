@@ -1,5 +1,4 @@
 import UIKit
-import GoogleSignIn
 
 final class LoginViewController: UIViewController {
 
