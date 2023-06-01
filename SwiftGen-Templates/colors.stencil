@@ -4,11 +4,10 @@ import UIKit.UIColor
 // MARK: - Colors
 
 extension UIColor {
-    {% for color in catalogs.first.assets %}
+  {% for color in catalogs.first.assets %}
 
-      static var {{color.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}: UIColor {
-        UIColor(named: "{{ color.name }}")!
-      }
-    {% endfor %}
-
-  }
+    static var {{color.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}: UIColor {
+      UIColor(named: "{{ color.name }}")!
+    }
+  {% endfor %}
+}

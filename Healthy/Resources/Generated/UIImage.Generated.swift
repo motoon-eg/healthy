@@ -6,11 +6,7 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
-    static var accentColor: UIImage {
-      UIImage(named: "AccentColor")!
-    }
-
-    static var images: UIImage {
-      UIImage(named: "images")!
+    static var accentColor : UIImage {
+      UIImage(named: "AccentColor")! 
     }
 }

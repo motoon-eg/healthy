@@ -36,7 +36,8 @@ excluded:
   - Carthage
   - Pods
   - Templates
-
+  - Healthy/Resources/Generated/
+  
 # If true, SwiftLint will not fail if no lintable files are found.
 allow_zero_lintable_files: false
 
