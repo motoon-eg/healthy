@@ -40,7 +40,7 @@ extension AppDelegate {
     }
 }
 
-//MARK: - Helper Methods
+// MARK: - Helper Methods
 
 private extension AppDelegate {
     func gidSignInConfiguration() {

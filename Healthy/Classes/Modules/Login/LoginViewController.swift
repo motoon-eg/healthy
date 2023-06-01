@@ -17,6 +17,7 @@ final class LoginViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: LoginViewModelType
+    private var authService: Authentication!
 
     // MARK: Init
 
@@ -33,6 +34,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        authService = GooglSignInAuthenticatorAdapter(view: self)
 
         configureAppearance()
     }
@@ -46,14 +48,14 @@ private extension LoginViewController {
     @IBAction func didTapSignUp(_ sender: Any) {}
 
     @IBAction func didTapSignInWithGoogle(_ sender: Any) {
-      GIDSignIn.sharedInstance.signIn(withPresenting: self) { _, error in
-        guard error == nil else {
-            debugPrint("Error \(String(describing: error?.localizedDescription))")
-            return
+        authService.signIn { result in
+            switch result {
+            case let .success(data):
+                debugPrint(data)
+            case let .failure(error):
+                debugPrint(error)
+            }
         }
-
-        // If sign in succeeded, display the app's main content View.
-      }
     }
 }
 
