@@ -1,4 +1,3 @@
-// swiftlint:disable line_length
 import UIKit
 
 @main
@@ -31,3 +30,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+// swiftlint:enable line_length
