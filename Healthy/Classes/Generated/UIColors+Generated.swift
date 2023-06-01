@@ -6,24 +6,24 @@ import UIKit.UIColor
 // swiftlint:disable force_unwrapping
 extension UIColor {
 
-      static var black: UIColor {
-        UIColor(named: "Black")!
+      static var black100: UIColor {
+        UIColor(named: "Black 100")!
       }
 
-      static var gray1: UIColor {
-        UIColor(named: "Gray 1")!
+      static var black20: UIColor {
+        UIColor(named: "Black 20")!
       }
 
-      static var gray2: UIColor {
-        UIColor(named: "Gray 2")!
+      static var black40: UIColor {
+        UIColor(named: "Black 40")!
       }
 
-      static var gray3: UIColor {
-        UIColor(named: "Gray 3")!
+      static var black60: UIColor {
+        UIColor(named: "Black 60")!
       }
 
-      static var gray4: UIColor {
-        UIColor(named: "Gray 4")!
+      static var black80: UIColor {
+        UIColor(named: "Black 80")!
       }
 
       static var primary100: UIColor {
