@@ -35,6 +35,7 @@ analyzer_rules:
 excluded:
   - Carthage
   - Pods
+  - Templates
 
 # If true, SwiftLint will not fail if no lintable files are found.
 allow_zero_lintable_files: false
@@ -48,7 +49,7 @@ force_unwrapping: error
 force_try:
   severity: error
 
-line_length: 100
+line_length: 150
 
 type_body_length:
   - 300 # warning
