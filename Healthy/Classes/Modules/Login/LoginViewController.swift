@@ -47,7 +47,10 @@ private extension LoginViewController {
 
     @IBAction func didTapSignInWithGoogle(_ sender: Any) {
       GIDSignIn.sharedInstance.signIn(withPresenting: self) { _, error in
-        guard error == nil else { return }
+        guard error == nil else {
+            debugPrint("Error \(String(describing: error?.localizedDescription))")
+            return
+        }
 
         // If sign in succeeded, display the app's main content View.
       }
