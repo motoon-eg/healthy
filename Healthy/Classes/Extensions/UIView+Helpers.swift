@@ -1,33 +1,37 @@
 import UIKit
 
-// MARK: UIView+Helpers
+// MARK: - UIView extension
 
 extension UIView {
-    /// Use this method to add and fill anysubview to the superview
-    func fillSubview(_ subview: UIView) {
-        subview.translatesAutoresizingMaskIntoConstraints = false
 
-        NSLayoutConstraint.activate([
-            subview.leadingAnchor.constraint(equalTo: leadingAnchor),
-            subview.trailingAnchor.constraint(equalTo: trailingAnchor),
-            subview.topAnchor.constraint(equalTo: topAnchor),
-            subview.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+    static var reusableIdentifier: String {
+        String("\(Self.self)")
     }
 
-    /// Loads a view from a nib file and adds it as a subview to the current view instance..
-    func loadViewFromNib(bundle: Bundle? = nil) {
-        let nibName = String(describing: Self.self)
-        let bundle = Bundle(for: Self.self)
-        let nib = UINib(nibName: nibName, bundle: bundle)
+    func loadNibView() {
+        Bundle.main.loadNibNamed(Self.reusableIdentifier, owner: self)
+    }
 
-        guard let contentView = nib.instantiate(withOwner: self).first as? UIView else {
-            assertionFailure("unable to find the content view")
-            return
-        }
+}
 
-        contentView.frame = bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        addSubview(contentView)
+extension UIView {
+    func setupDefaultShadow() {
+        layer.cornerRadius = 10
+
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 0.1
+        layer.shadowRadius = 6.0
+    }
+
+    func fillSuperview(padding: UIEdgeInsets = .zero) {
+        translatesAutoresizingMaskIntoConstraints = false
+        guard let superview = superview else {return}
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor, constant: padding.top),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -padding.bottom),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: padding.left),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -padding.right)
+        ])
     }
 }
