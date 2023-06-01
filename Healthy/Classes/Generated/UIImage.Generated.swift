@@ -9,4 +9,12 @@ extension UIImage {
     static var accentColor: UIImage {
       UIImage(named: "AccentColor")!
     }
+
+    static var backgroundSplash: UIImage {
+      UIImage(named: "background-splash")!
+    }
+
+    static var iconSplash: UIImage {
+      UIImage(named: "icon-splash")!
+    }
 }

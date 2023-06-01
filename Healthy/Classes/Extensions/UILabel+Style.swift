@@ -58,7 +58,7 @@ extension UILabel {
         textColor = style.labelTextColor
         // TODO: [HL-4] Add global fonts
         font = style.labelFont
-        textAlignment = .left
+
     }
 }
 
