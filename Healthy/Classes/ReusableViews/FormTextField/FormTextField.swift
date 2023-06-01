@@ -13,30 +13,6 @@ class FormTextField: UIView {
     
     private var onChange: (String) -> () =  { _ in }
     
-    var title: String = "" {
-        didSet {
-            self.titleLabel.text = title
-        }
-    }
-    
-    var placeholder: String = "" {
-        didSet {
-            self.inputTextField.placeholder = placeholder
-        }
-    }
-    
-    var keyboardType: UIKeyboardType = .default {
-        didSet {
-            self.inputTextField.keyboardType = keyboardType
-        }
-    }
-    
-    var error: String = "" {
-        didSet {
-            self.errorLabel.text = error
-        }
-    }
-    
     // MARK: Init
     
     override init(frame: CGRect) {
@@ -50,16 +26,64 @@ class FormTextField: UIView {
     }
     
     private func initView() {
+        loadContentViewFromNib()
+        configureLayout()
+        configureTextFieldObserver()
+    }
+    
+    private func loadContentViewFromNib() {
         Bundle.main.loadNibNamed(FormTextField.reusableIdentifier, owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        configureLayout()
-        bindTextFieldChanges()
     }
 }
 
-// MARK: Internal Handlers
+// MARK: Getters & Setters properties
+
+extension FormTextField {
+    var title: String {
+        get {
+            return self.titleLabel.text ?? ""
+        }
+        
+        set {
+            self.titleLabel.text = newValue
+        }
+    }
+    
+    var placeholder: String {
+        get {
+            return self.inputTextField.placeholder ?? ""
+        }
+        
+        set {
+            self.inputTextField.placeholder = newValue
+        }
+    }
+    
+    var keyboardType: UIKeyboardType {
+        get {
+            return self.inputTextField.keyboardType
+        }
+        
+        set {
+            self.inputTextField.keyboardType = newValue
+        }
+    }
+    
+    var error: String {
+        get {
+            return self.errorLabel.text ?? ""
+        }
+        
+        set {
+            self.errorLabel.text = newValue
+        }
+    }
+}
+
+// MARK: Handlers
 
 extension FormTextField {
     func onChange(_ onChange: @escaping (String) -> Void) {
@@ -79,7 +103,7 @@ extension FormTextField {
         errorLabel.textColor = .red
     }
     
-    private func bindTextFieldChanges() {
+    private func configureTextFieldObserver() {
         inputTextField.addTarget(self, action: #selector(textEditingChanged), for: .editingChanged)
     }
     

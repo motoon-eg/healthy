@@ -19,11 +19,11 @@ extension UITextField {
         layer.cornerRadius = Constants.defaultCornerRadius
         layer.borderWidth = Constants.defaultBorderWidth
         layer.borderColor = Constants.defaultBorderColor.cgColor
+        borderStyle = .none
         
+        // Workaround for adding leading & training spaces
         setLeftPaddingPoints()
         setRightPaddingPoints()
-        
-        layer.masksToBounds = true
     }
 }
 
