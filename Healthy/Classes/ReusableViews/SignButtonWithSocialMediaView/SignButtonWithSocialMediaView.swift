@@ -25,7 +25,7 @@ final class SignButtonWithSocialMediaView: UIView {
     // MARK: - Configure Layout
 
     private func initView() {
-        loadViewFromNib()
+        loadNibView()
         configureLayout()
     }
 
