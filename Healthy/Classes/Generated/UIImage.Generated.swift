@@ -10,16 +10,16 @@ extension UIImage {
       UIImage(named: "AccentColor")!
     }
 
+    static var backgroundSplash: UIImage {
+      UIImage(named: "background-splash")!
+    }
+
     static var iconFacebook: UIImage {
       UIImage(named: "icon-facebook")!
     }
 
     static var iconGoogle: UIImage {
       UIImage(named: "icon-google")!
-    }
-    
-    static var backgroundSplash: UIImage {
-      UIImage(named: "background-splash")!
     }
 
     static var iconSplash: UIImage {

@@ -22,38 +22,14 @@ final class SignButtonWithSocialMediaView: UIView {
         initView()
     }
 
-    // MARK: - Setup UI
+    // MARK: - Configure Layout
 
     private func initView() {
-        loadNibView()
-        addSubview(contentView)
-        contentView.fillSuperview()
-        setupDesign()
+        loadViewFromNib()
+        configureLayout()
     }
 
-    private func setupDesign() {
+    private func configureLayout() {
         signinButton.applyButtonStyle(.primary)
-        mediaBackgroundViews.forEach { $0.setupDefaultShadow()}
-    }
-}
-
-// MARK: - configure
-
-extension SignButtonWithSocialMediaView {
-    enum SignButtonTitle {
-        case signin
-        case signup
-
-        var title: String {
-            switch self {
-            case .signin: return L10n.Signin.buttonTitle
-            case .signup: return L10n.Signup.buttonTitle
-            }
-        }
-
-    }
-
-    func configure(buttonTitle: SignButtonTitle) {
-        signinButton.setTitle(buttonTitle.title, for: .normal)
     }
 }
