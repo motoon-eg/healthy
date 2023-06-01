@@ -21,6 +21,10 @@ extension LoginViewModel: LoginViewModelInput {
         password = text
         updateStateButton()
     }
+    
+    func login() {
+        // TODO: Call networking for login.
+    }
 }
 
 // MARK: Output
@@ -42,20 +46,17 @@ extension LoginViewModel: LoginViewModelOutput {
     func bindLoginStatus(status: @escaping (Bool) -> Void) {
         onLoginStatus = status
     }
-    
-    func login() {
-        // TODO: Call networking for login.
-    }
 }
 
 // MARK: Private Handlers
 
 private extension LoginViewModel {
     func updateStateButton() {
+        // TODO: [HL-22] Create validator with ability to validate email & password.
         let emailIsValid = !email.isEmpty
         let passwordIsValid = !password.isEmpty && password.count >= 6
-        let buttonIsEnable = emailIsValid && passwordIsValid
+        let buttonIsEnabled = emailIsValid && passwordIsValid
         
-        onButtonEnabled(buttonIsEnable)
+        onButtonEnabled(buttonIsEnabled)
     }
 }
