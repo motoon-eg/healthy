@@ -7,22 +7,22 @@ import UIKit.UIImage
 extension UIImage {
 
     static var accentColor: UIImage {
-      UIImage(named: "AccentColor")!
+      UIImage(named: "AccentColor")! 
     }
 
     static var backgroundSplash: UIImage {
-      UIImage(named: "background-splash")!
+      UIImage(named: "background-splash")! 
     }
 
     static var iconFacebook: UIImage {
-      UIImage(named: "icon-facebook")!
+      UIImage(named: "icon-facebook")! 
     }
 
     static var iconGoogle: UIImage {
-      UIImage(named: "icon-google")!
+      UIImage(named: "icon-google")! 
     }
 
     static var iconSplash: UIImage {
-      UIImage(named: "icon-splash")!
+      UIImage(named: "icon-splash")! 
     }
 }
