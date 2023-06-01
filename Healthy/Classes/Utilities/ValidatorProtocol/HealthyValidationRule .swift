@@ -40,11 +40,11 @@ public enum HealthyValidationRule {
     var validationError: String? {
         if !isValid {
             switch self {
-            case .matching(value: _, regex: _):
+            case .matching:
                 return "incorrect Format"
-            case .numericOnly(value: _):
+            case .numericOnly:
                 return "Please enter a valid number"
-            case .decimal(value: _):
+            case .decimal:
                 return "Please enter a valid number"
             case .charCount(value: _, minCount: let minCount, maxCount: let maxCount):
                 if let minimum = minCount, let maximum = maxCount {
