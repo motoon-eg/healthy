@@ -16,7 +16,8 @@
 		027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA352A0E6A680052818C /* HealthyTests.swift */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
-		207C4D852A265F9200AD5B76 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		02AAFC9A2A293B8500BB2D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BF881C2A21350300F12A40 /* LaunchScreen.storyboard */; };
+		02AAFC9C2A29414100BB2D0A /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AAFC9B2A29414100BB2D0A /* UIView+Helpers.swift */; };
 		207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 207FF8FF2A167F9100E4BC76 /* Localizable.strings */; };
 		6DDA138D2A1109E8004390D4 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6DDA138C2A1109E8004390D4 /* Factory */; };
 		6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF525052A1E84C80027502C /* LoginViewController.xib */; };
@@ -24,7 +25,13 @@
 		6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525092A1E854B0027502C /* LoginViewModel.swift */; };
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
+		B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */; };
+		B21570AA2A209E6800C80A0C /* SignButtonWithSocialMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE27792A1B330200AD5923 /* SplashViewController.swift */; };
+		C9FE277C2A1B330200AD5923 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FE277A2A1B330200AD5923 /* SplashViewController.xib */; };
+		C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE277D2A1B341200AD5923 /* SplashViewModel.swift */; };
+		C9FE27802A1B34E000AD5923 /* SplashViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE277F2A1B34E000AD5923 /* SplashViewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +59,13 @@
 		027DDA1E2A0E6A660052818C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DDA202A0E6A660052818C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		027DDA272A0E6A680052818C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		027DDA2A2A0E6A680052818C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027DDA2C2A0E6A680052818C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027DDA312A0E6A680052818C /* HealthyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA352A0E6A680052818C /* HealthyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyTests.swift; sourceTree = "<group>"; };
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02AAFC9B2A29414100BB2D0A /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
 		20376AA82A2663F8004BF0BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		207FF8FF2A167F9100E4BC76 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6DF525052A1E84C80027502C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -66,7 +73,14 @@
 		6DF525092A1E854B0027502C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignButtonWithSocialMediaView.swift; sourceTree = "<group>"; };
+		B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignButtonWithSocialMediaView.xib; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		C9BF881C2A21350300F12A40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9FE27792A1B330200AD5923 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		C9FE277A2A1B330200AD5923 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		C9FE277D2A1B341200AD5923 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		C9FE277F2A1B34E000AD5923 /* SplashViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,12 +158,12 @@
 		027DDA4E2A0E74490052818C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9BF881C2A21350300F12A40 /* LaunchScreen.storyboard */,
 				F39D440B2A14ACE30039AEF8 /* Generated */,
 				207FF8FE2A167E7C00E4BC76 /* Localization */,
 				027DDA272A0E6A680052818C /* Assets.xcassets */,
 				20376AA82A2663F8004BF0BF /* Colors.xcassets */,
 				027DDA2C2A0E6A680052818C /* Info.plist */,
-				027DDA292A0E6A680052818C /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -157,13 +171,13 @@
 		027DDA4F2A0E745F0052818C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
 				027DDA502A0E75E60052818C /* Extensions */,
 				027DDA512A0E761B0052818C /* Modules */,
 				027DDA542A0E76C50052818C /* ReusableViews */,
-				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
 				027DDA552A0E76DC0052818C /* Services */,
 				027DDA532A0E76A00052818C /* Utilities */,
+				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
+				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 			children = (
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
 				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
+				02AAFC9B2A29414100BB2D0A /* UIView+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +204,10 @@
 		027DDA522A0E76420052818C /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				C9FE27792A1B330200AD5923 /* SplashViewController.swift */,
+				C9FE277A2A1B330200AD5923 /* SplashViewController.xib */,
+				C9FE277D2A1B341200AD5923 /* SplashViewModel.swift */,
+				C9FE277F2A1B34E000AD5923 /* SplashViewModelType.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -203,6 +222,7 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -247,6 +267,15 @@
 				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
+			isa = PBXGroup;
+			children = (
+				B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */,
+				B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */,
+			);
+			path = SignButtonWithSocialMediaView;
 			sourceTree = "<group>";
 		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
@@ -373,7 +402,10 @@
 			files = (
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
+				B21570AA2A209E6800C80A0C /* SignButtonWithSocialMediaView.xib in Resources */,
+				02AAFC9A2A293B8500BB2D0A /* LaunchScreen.storyboard in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
+				C9FE277C2A1B330200AD5923 /* SplashViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +429,7 @@
 		0296C1152A0FC69E005E3DC8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -444,11 +476,15 @@
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
+				C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */,
+				C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */,
+				C9FE27802A1B34E000AD5923 /* SplashViewModelType.swift in Sources */,
 				02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
+				02AAFC9C2A29414100BB2D0A /* UIView+Helpers.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
+				B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */,
 				02789D652A294DFE001ABF72 /* Strings.Generated.swift in Sources */,
-				207C4D852A265F9200AD5B76 /* (null) in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,17 +520,6 @@
 			targetProxy = 027DDA3C2A0E6A680052818C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		027DDA292A0E6A680052818C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				027DDA2A2A0E6A680052818C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		027DDA432A0E6A680052818C /* Debug */ = {
@@ -622,7 +647,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Healthy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -651,7 +676,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Healthy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
