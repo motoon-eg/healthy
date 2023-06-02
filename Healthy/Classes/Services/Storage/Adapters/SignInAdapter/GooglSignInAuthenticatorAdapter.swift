@@ -1,5 +1,5 @@
 import Foundation
- import GoogleSignIn
+import GoogleSignIn
 
 enum SingInAuthenticationError: Error {
     case failedToSignIn
