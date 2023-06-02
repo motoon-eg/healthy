@@ -28,6 +28,7 @@
 		6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525072A1E84FD0027502C /* LoginViewController.swift */; };
 		6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525092A1E854B0027502C /* LoginViewModel.swift */; };
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
+		6DFC9F682A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */; };
 		B21570AA2A209E6800C80A0C /* SignButtonWithSocialMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */; };
@@ -77,6 +78,7 @@
 		6DF525072A1E84FD0027502C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DF525092A1E854B0027502C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglSignInAuthenticatorAdapter.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignButtonWithSocialMediaView.swift; sourceTree = "<group>"; };
 		B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignButtonWithSocialMediaView.xib; sourceTree = "<group>"; };
@@ -222,8 +224,8 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6DFC9F652A2AA4F000686E7C /* Adapters */,
 				6D611BA02A29A12F00A1FC65 /* Authentication */,
-				6D611B932A299B4100A1FC65 /* Adapters */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -267,22 +269,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		6D611B932A299B4100A1FC65 /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				6D611B942A299B4D00A1FC65 /* SignInAdapter */,
-			);
-			name = Adapters;
-			path = ../Services/Storage/Adapters;
-			sourceTree = "<group>";
-		};
-		6D611B942A299B4D00A1FC65 /* SignInAdapter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignInAdapter;
-			sourceTree = "<group>";
-		};
 		6D611BA02A29A12F00A1FC65 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +286,22 @@
 				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6DFC9F652A2AA4F000686E7C /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				6DFC9F662A2AA4FB00686E7C /* SignInAdapter */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		6DFC9F662A2AA4FB00686E7C /* SignInAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */,
+			);
+			path = SignInAdapter;
 			sourceTree = "<group>";
 		};
 		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
@@ -519,6 +521,7 @@
 				C9FE27802A1B34E000AD5923 /* SplashViewModelType.swift in Sources */,
 				02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
+				6DFC9F682A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift in Sources */,
 				02AAFC9C2A29414100BB2D0A /* UIView+Helpers.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */,
