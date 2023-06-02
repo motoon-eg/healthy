@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		025CD41A2A210F89002814D9 /* String+ValidName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD4192A210F89002814D9 /* String+ValidName.swift */; };
 		025CD41C2A21101A002814D9 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */; };
 		025CD41E2A211066002814D9 /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41D2A211066002814D9 /* CreateAccountviewModelType.swift */; };
 		027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
@@ -54,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		025CD4192A210F89002814D9 /* String+ValidName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ValidName.swift"; sourceTree = "<group>"; };
 		025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		025CD41D2A211066002814D9 /* CreateAccountviewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountviewModelType.swift; sourceTree = "<group>"; };
 		027DDA1B2A0E6A660052818C /* Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,7 +187,6 @@
 			children = (
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
 				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
-				025CD4192A210F89002814D9 /* String+ValidName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,7 +481,6 @@
 			files = (
 				025CD41E2A211066002814D9 /* CreateAccountviewModelType.swift in Sources */,
 				2044577D2A2007830009CB67 /* UIImage.Generated.swift in Sources */,
-				025CD41A2A210F89002814D9 /* String+ValidName.swift in Sources */,
 				208E7A092A1F550C0067C731 /* CreateAccountViewController.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
 				025CD41C2A21101A002814D9 /* CreateAccountViewModel.swift in Sources */,
