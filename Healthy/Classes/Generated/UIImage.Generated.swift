@@ -10,11 +10,15 @@ extension UIImage {
       UIImage(named: "AccentColor")!
     }
 
-    static var icCheckboxNotSelected: UIImage {
-      UIImage(named: "ic_checkbox_not_selected")!
+    static var appColors: UIImage {
+      UIImage(named: "AppColors")!
     }
 
-    static var icCheckboxSelected: UIImage {
-      UIImage(named: "ic_checkbox_selected")!
+    static var iconCheckboxNotSelected: UIImage {
+      UIImage(named: "icon_checkbox_not_selected")!
+    }
+
+    static var iconCheckboxSelected: UIImage {
+      UIImage(named: "icon_checkbox_selected")!
     }
 }
