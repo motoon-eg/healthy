@@ -9,38 +9,6 @@ final class CreateAccountViewModel {
   private var isChecked: Bool  = false
   private var onButtonEnabled: (Bool) -> Void = { _ in }
 
-  // MARK: Error Messages
-  var namePrompt: String {
-    if !username.isEmpty && username.isValidName {
-      return ""
-    } else {
-      return "Is not valid name."
-    }
-  }
-
-  var emailPrompt: String {
-    if !email.isEmpty && HealthyEmailValidator().isValid(true) {
-      return ""
-    } else {
-      return "enter a valid email address"
-    }
-  }
-
-  var passwordPrompt: String {
-    if !password.isEmpty && HealthyPassValidator().isValid(true) {
-      return ""
-    } else {
-      return "must be between 8 and 15 characters"
-    }
-  }
-
-  var confirmPWPrompt: String {
-    if !confirmPassword.isEmpty || confirmPassword == password {
-      return ""
-    } else {
-      return "password fields do not match"
-    }
-  }
 }
 
 // MARK: CreateAccountViewModelInput
@@ -83,15 +51,15 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
 // MARK: Private Handlers
 private extension CreateAccountViewModel {
   func updateEnabledStateButton() {
-    let isUsernameValid = !username.isEmpty && username.isValidName
-    let isEmailValid = !email.isEmpty && HealthyEmailValidator().isValid(true)
-    let isPasswordValid = !password.isEmpty && HealthyPassValidator().isValid(true)
-    let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
-    let isAcceptTermsAndConditionsChecked = (isChecked == true)
-    let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
-    &&  isConfirmPasswordValid
-    && isAcceptTermsAndConditionsChecked
+      let isUsernameValid = !username.isEmpty
+      let isEmailValid = !email.isEmpty && HealthyEmailValidator().isValid(true)
+      let isPasswordValid = !password.isEmpty && HealthyPassValidator().isValid(true)
+      let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
 
-    onButtonEnabled(isButtonEnabled)
-  }
+      let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
+          && isConfirmPasswordValid
+          && isChecked
+      onButtonEnabled(isButtonEnabled)
+    }
 }
+
