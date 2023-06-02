@@ -1,1 +1,3 @@
 'app.title' = "Healthy";
+'signin.buttonTitle' = "Sign In";
+'signup.buttonTitle' = "Sign Up";
