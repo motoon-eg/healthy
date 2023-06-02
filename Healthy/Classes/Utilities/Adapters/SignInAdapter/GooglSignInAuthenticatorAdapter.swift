@@ -8,6 +8,7 @@ import GoogleSignIn
  final class GooglSignInAuthenticatorAdapter: Authentication {
 
      // MARK: Authentication Methods
+
      func performLogin(withPresenting viewController: UIViewController) async throws -> AuthenticatedUser {
          try await withCheckedThrowingContinuation { continuation in
              GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { _, error in

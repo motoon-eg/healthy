@@ -29,6 +29,7 @@
 		6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525092A1E854B0027502C /* LoginViewModel.swift */; };
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
 		6DFC9F682A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */; };
+		6DFC9F6B2A2AAD4200686E7C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B21570A92A209E6800C80A0C /* SignButtonWithSocialMediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */; };
 		B21570AA2A209E6800C80A0C /* SignButtonWithSocialMediaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */; };
@@ -105,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFC9F6B2A2AAD4200686E7C /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +127,7 @@
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
 				027DDA1C2A0E6A660052818C /* Products */,
+				6DFC9F692A2AAD4200686E7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,6 +307,13 @@
 			path = SignInAdapter;
 			sourceTree = "<group>";
 		};
+		6DFC9F692A2AAD4200686E7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +374,9 @@
 				027DDA332A0E6A680052818C /* PBXTargetDependency */,
 			);
 			name = HealthyTests;
+			packageProductDependencies = (
+				6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */,
+			);
 			productName = HealthyTests;
 			productReference = 027DDA312A0E6A680052818C /* HealthyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -744,7 +757,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -764,7 +777,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -886,6 +899,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6DDA138B2A1109E8004390D4 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
