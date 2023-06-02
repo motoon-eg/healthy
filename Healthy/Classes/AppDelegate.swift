@@ -6,7 +6,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        gidSignInConfiguration()
+        configureGoogleSignin()
         return true
     }
 
@@ -43,8 +43,8 @@ extension AppDelegate {
 // MARK: - Helper Methods
 
 private extension AppDelegate {
-    func gidSignInConfiguration() {
-        let config = GIDConfiguration(clientID: Constatns.clientID)
+    func configureGoogleSignin() {
+        let config = GIDConfiguration(clientID: Constatns.googleClientId)
         GIDSignIn.sharedInstance.configuration = config
     }
 }
@@ -53,7 +53,8 @@ private extension AppDelegate {
 
 private extension AppDelegate {
     enum Constatns {
-        static let clientID = "500241227951-jfe9f5o8li3l753c2146hqfru8aaa7o5.apps.googleusercontent.com"
+        // TODO: [HL-29] Update the app client id
+        static let googleClientId = "500241227951-jfe9f5o8li3l753c2146hqfru8aaa7o5.apps.googleusercontent.com"
     }
 }
 // swiftlint:enable line_length

@@ -11,12 +11,12 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
+    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
 
     // MARK: Properties
 
     private let viewModel: LoginViewModelType
-    private var authService: Authentication!
 
     // MARK: Init
 
@@ -33,7 +33,6 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        authService = GooglSignInAuthenticatorAdapter(view: self)
 
         configureAppearance()
     }
@@ -46,16 +45,7 @@ private extension LoginViewController {
 
     @IBAction func didTapSignUp(_ sender: Any) {}
 
-    @IBAction func didTapSignInWithGoogle(_ sender: Any) {
-        authService.signIn { result in
-            switch result {
-            case let .success(data):
-                debugPrint(data)
-            case let .failure(error):
-                debugPrint(error)
-            }
-        }
-    }
+    @IBAction func didTapSignInWithGoogle(_ sender: Any) {}
 }
 
 // MARK: - Configurations

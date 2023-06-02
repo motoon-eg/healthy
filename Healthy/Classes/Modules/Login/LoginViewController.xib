@@ -18,6 +18,7 @@
                 <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
                 <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
                 <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="wRv-wr-MX2"/>
+                <outlet property="signInWithGoogleButton" destination="cN6-Mr-YAF" id="eoe-7W-PfZ"/>
                 <outlet property="signUpButton" destination="KEs-vw-Rzk" id="X5I-Xh-lYt"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eJi-Nv-XUw"/>
             </connections>

@@ -1,6 +1,12 @@
 import Foundation
 
+// MARK: LoginViewModel
+
 final class LoginViewModel {
+
+    // MARK: Properties
+
+    private lazy var authService: Authentication = GooglSignInAuthenticatorAdapter()
 
 }
 
