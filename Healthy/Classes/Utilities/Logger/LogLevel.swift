@@ -1,4 +1,5 @@
 import Foundation
+
 public enum LogLevel {
     case verbose
     case debug

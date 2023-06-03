@@ -33,7 +33,6 @@
 		C96520CF2A2B72B900FACCC0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CA2A2B72B800FACCC0 /* Logger.swift */; };
 		C96520D02A2B72B900FACCC0 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CB2A2B72B800FACCC0 /* LogLevel.swift */; };
 		C96520D12A2B72B900FACCC0 /* FileSystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */; };
-		C96520D22A2B72B900FACCC0 /* String+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CD2A2B72B800FACCC0 /* String+Helpers.swift */; };
 		C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE27792A1B330200AD5923 /* SplashViewController.swift */; };
 		C9FE277C2A1B330200AD5923 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FE277A2A1B330200AD5923 /* SplashViewController.xib */; };
 		C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE277D2A1B341200AD5923 /* SplashViewModel.swift */; };
@@ -86,7 +85,6 @@
 		C96520CA2A2B72B800FACCC0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C96520CB2A2B72B800FACCC0 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemLogger.swift; sourceTree = "<group>"; };
-		C96520CD2A2B72B800FACCC0 /* String+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helpers.swift"; sourceTree = "<group>"; };
 		C9BF881C2A21350300F12A40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9FE27792A1B330200AD5923 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C9FE277A2A1B330200AD5923 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 				C96520CA2A2B72B800FACCC0 /* Logger.swift */,
 				C96520CB2A2B72B800FACCC0 /* LogLevel.swift */,
 				C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */,
-				C96520CD2A2B72B800FACCC0 /* String+Helpers.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -496,7 +493,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96520D22A2B72B900FACCC0 /* String+Helpers.swift in Sources */,
 				02789D672A294DFE001ABF72 /* UIColors.Generated.swift in Sources */,
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
