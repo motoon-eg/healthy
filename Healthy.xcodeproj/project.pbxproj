@@ -498,6 +498,7 @@
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
+				B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */,
 				C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */,
 				C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */,
 				C96520D02A2B72B900FACCC0 /* LogLevel.swift in Sources */,
