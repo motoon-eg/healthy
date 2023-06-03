@@ -1,18 +1,9 @@
-//
-//  HealthyPassValidator.swift
-//  Healthy
-//
-//
-
 import Foundation
-public class HealthyPassValidator: HealthyValidator {
-    public init() {
-    }
-    public func getValidationRules(for value: String) -> [HealthyValidationRule] {
-        let regex = "(?=^(?:(?!%).)*$)(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9\\p{Graph}]+$"
-        return [
-            .matching(value: value, regex: regex),
-            .charCount(value: value, minCount: 7, maxCount: 20)
-        ]
-    }
+
+struct PasswordValidator: Validator {
+    let validationRules: [ValidationRule] = [
+        RegexValidationRule(field: "Password",
+                            regex: "(?=^(?:(?!%).)*$)(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9\\p{Graph}]+$"),
+        CharacterCountValidationRule(minCount: 7, maxCount: 20)
+    ]
 }

@@ -1,38 +1,27 @@
-//
-//  HealthyValidator .swift
-//  Healthy
-//
-//
-
 import Foundation
-public protocol HealthyValidator {
-     func getValidationRules(for _: String) -> [HealthyValidationRule]
-     func isValid(_ value: Any?) -> Bool
-     func validationErrors(_ value: Any?) -> [String]
+
+protocol Validator {
+    typealias ValueType = String
+    /// An array of validation rules that apply to the data being validated.
+    var validationRules: [ValidationRule] { get }
+    /// Validates a given value and throw error if any
+    func validate(_ value: ValueType) throws
+    /// Validates whether a given value is considered valid according to the validation rules.
+    func hasValidValue(_ value: ValueType) -> Bool
 }
 
-public extension HealthyValidator {
-     func isValid(_ value: Any?) -> Bool {
-        guard let value = value as? String else { return false }
-        var isValid = true
-        getValidationRules(for: value).forEach { rule in
-            if !rule.isValid {
-                isValid = false
-            }
+extension Validator {
+    func validate(_ value: ValueType) throws {
+        for validationRule in validationRules {
+            try validationRule.validate(value)
         }
-
-        return isValid
     }
-
-     func validationErrors(_ value: Any?) -> [String] {
-        guard let value = value as? String else { return [] }
-        var validationErrors: [String] = []
-        getValidationRules(for: value).forEach { rule in
-            if let error = rule.validationError {
-                validationErrors.append(error)
-            }
+    func hasValidValue(_ value: ValueType) -> Bool {
+        do {
+            try validate(value)
+            return true
+        } catch {
+            return false
         }
-
-        return validationErrors
     }
 }

@@ -1,80 +1,103 @@
-//
-//  HealthyValidationRule .swift
-//  Healthy
-//
-
-//
-
 import Foundation
-public enum HealthyValidationRule {
 
-    case matching(value: String, regex: String?)
-    case numericOnly(value: String)
-    case decimal(value: String)
-    case charCount(value: String, minCount: Int?, maxCount: Int?)
-    case firstChar(value: String, chars: [Character])
-    case withinLimits(value: String, min: Double, max: Double)
+protocol ValidationRule {
+    typealias ValueType = String
 
-    var isValid: Bool {
-        switch self {
-        case .matching(value: let value, regex: let regex):
-            guard let regex = regex else { return true }
-            return value.range(of: regex,
-                               options: .regularExpression,
-                               range: nil, locale: nil) != nil
-        case .numericOnly(value: let value):
-            return value.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
-        case .decimal(value: let value):
-            return Double(value) != nil
-        case .charCount(value: let value, minCount: let minCount, maxCount: let maxCount):
-            return (value.count >= minCount ?? Int.min) && (value.count <= maxCount ?? Int.max)
-        case .firstChar(value: let value, chars: let chars):
-            guard let firstChar = value.first else { return false }
-            return chars.contains(firstChar)
-        case .withinLimits(value: let value, min: let min, max: let max):
-            guard let doubleValue = Double(value) else { return false }
-            return doubleValue >= min && doubleValue <= max
+    func validate(_ value: ValueType) throws
+}
+
+struct ValidationError: LocalizedError {
+    let errorDescription: String?
+}
+
+struct RegexValidationRule: ValidationRule {
+    let field: String
+    let regex: String
+
+    func validate(_ value: String) throws {
+        guard value.range(of: regex,
+                          options: .regularExpression,
+                          range: nil,
+                          locale: nil) != nil else {
+            throw ValidationError(errorDescription: "The \(field) is not valid")
         }
     }
+}
 
-    var validationError: String? {
-        if !isValid {
-            switch self {
-            case .matching(value: _, regex: _):
-                return "incorrect Format"
-            case .numericOnly(value: _):
-                return "Please enter a valid number"
-            case .decimal(value: _):
-                return "Please enter a valid number"
-            case .charCount(value: _, minCount: let minCount, maxCount: let maxCount):
-                if let minimum = minCount, let maximum = maxCount {
-                    if minimum == maximum {
-                        return  "incorrect Length Exactly \(minimum)"
-                    } else {
-                        return  "incorrect Length Min Max \(minimum), \(maximum)"
-                    }
-                } else if let minimum = minCount {
-                    return  "incorrect Length Min \(minimum)"
-                } else if let maximum = maxCount {
-                    return  "incorrect Length Max \(maximum)"
+struct NumbericValidationRule: ValidationRule {
+    let field: String
+
+    func validate(_ value: ValueType) throws {
+        if value.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) != nil {
+            throw ValidationError(errorDescription: "\(field) should contain numbers only")
+        }
+    }
+}
+
+struct DecimalValidationRule: ValidationRule {
+    let field: String
+
+    func validate(_ value: ValueType) throws {
+        if Double(value) == nil {
+            throw ValidationError(errorDescription: "\(field) should contain Decimals only")
+        }
+    }
+}
+
+struct CharacterCountValidationRule: ValidationRule {
+    let minCount: Int?
+    let maxCount: Int?
+
+    func validate(_ value: ValueType) throws {
+
+        if !((value.count >= minCount ?? Int.min) && (value.count <= maxCount ?? Int.max)) {
+            var errorMsg = ""
+            if let minimum = minCount, let maximum = maxCount {
+                if minimum == maximum {
+                    errorMsg = "incorrect Length Exactly \(minimum)"
+                } else {
+                    errorMsg = "incorrect Length Min Max \(minimum), \(maximum)"
                 }
-                return nil
-            case .firstChar(value: _, chars: let chars):
-                let stringArray = chars.map({ return String($0) })
-                let prefixes = stringArray.joined(separator: ", ")
-                return  "incorrect Prefix \(prefixes)"
+            } else if let minimum = minCount {
+                errorMsg = "incorrect Length Min \(minimum)"
+            } else if let maximum = maxCount {
+                errorMsg = "incorrect Length Max \(maximum)"
+            }
+            throw ValidationError(errorDescription: errorMsg)
+        }
+    }
+}
 
-            case .withinLimits(value: let value, min: let min, max: let max):
-                guard let doubleValue = Double(value) else { return nil }
+struct FirstCharValidationRule: ValidationRule {
+    let field: String
+    let chars: [Character]
 
-                if doubleValue > max {
-                    return  "value exceeds maximum allowed value"
-                } else if doubleValue < min {
-                    return  "value fails to reach the minimum allowed value"
-                }
-                return nil
+    func validate(_ value: ValueType) throws {
+        guard let firstChar = value.first else { return }
+        if !chars.contains(firstChar) {
+            let stringArray = chars.map({ return String($0) })
+            let prefixes = stringArray.joined(separator: ", ")
+            throw ValidationError(errorDescription: "incorrect Prefix \(prefixes)")
+        }
+    }
+}
+
+struct WithinLimitsValidationRule: ValidationRule {
+    let field: String
+    let min: Double
+    let max: Double
+
+    func validate(_ value: ValueType) throws {
+        guard let doubleValue = Double(value) else { return }
+
+        if !(doubleValue >= min && doubleValue <= max) {
+            guard let doubleValue = Double(value) else { return }
+
+            if doubleValue > max {
+                throw ValidationError(errorDescription: "value exceeds maximum allowed value")
+            } else if doubleValue < min {
+                throw ValidationError(errorDescription: "value fails to reach the minimum allowed value")
             }
         }
-        return nil
     }
 }
