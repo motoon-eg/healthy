@@ -7,22 +7,34 @@ import UIKit.UIImage
 extension UIImage {
 
     static var accentColor: UIImage {
-      UIImage(named: "AccentColor")! 
+      UIImage(named: "AccentColor")!
+    }
+
+    static var appColors: UIImage {
+      UIImage(named: "AppColors")!
     }
 
     static var backgroundSplash: UIImage {
-      UIImage(named: "background-splash")! 
+      UIImage(named: "background-splash")!
+    }
+
+    static var iconCheckboxNotSelected: UIImage {
+      UIImage(named: "icon-checkbox-not-selected")!
+    }
+
+    static var iconCheckboxSelected: UIImage {
+      UIImage(named: "icon-checkbox-selected")!
     }
 
     static var iconFacebook: UIImage {
-      UIImage(named: "icon-facebook")! 
+      UIImage(named: "icon-facebook")!
     }
 
     static var iconGoogle: UIImage {
-      UIImage(named: "icon-google")! 
+      UIImage(named: "icon-google")!
     }
 
     static var iconSplash: UIImage {
-      UIImage(named: "icon-splash")! 
+      UIImage(named: "icon-splash")!
     }
 }
