@@ -34,8 +34,8 @@
 		6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525072A1E84FD0027502C /* LoginViewController.swift */; };
 		6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525092A1E854B0027502C /* LoginViewModel.swift */; };
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
-		6DFC9F682A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */; };
 		6DFC9F6B2A2AAD4200686E7C /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */; };
+		6DFEC61A2A2E84190090B2E2 /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6192A2E84190090B2E2 /* GoogleLoginAuthenticator.swift */; };
 		7918F03E2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */; };
 		79311FCE2A191D2D00764707 /* FormTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79311FCD2A191D2D00764707 /* FormTextField.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
@@ -97,6 +97,7 @@
 		6DF525092A1E854B0027502C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglSignInAuthenticatorAdapter.swift; sourceTree = "<group>"; };
+		6DFEC6192A2E84190090B2E2 /* GoogleLoginAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginAuthenticator.swift; sourceTree = "<group>"; };
 		7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifier.swift"; sourceTree = "<group>"; };
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
@@ -164,7 +165,7 @@
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
 				027DDA1C2A0E6A660052818C /* Products */,
-				6DFC9F692A2AAD4200686E7C /* Frameworks */,
+				6DFEC6162A2E83020090B2E2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,7 +267,6 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6DFC9F652A2AA4F000686E7C /* Adapters */,
 				6D611BA02A29A12F00A1FC65 /* Authentication */,
 				C96520C82A2B72B800FACCC0 /* Logger */,
 				023987FD2A2E6FDE00E04F0D /* Validators */,
@@ -319,6 +319,7 @@
 			children = (
 				6D611B972A299B7A00A1FC65 /* AuthenticationProtocol.swift */,
 				6D8B168B2A2B798D007A9DFB /* AuthenticatedUser.swift */,
+				6DFEC61B2A2E892E0090B2E2 /* Login */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -330,6 +331,22 @@
 				6DF525052A1E84C80027502C /* LoginViewController.xib */,
 				6DF525092A1E854B0027502C /* LoginViewModel.swift */,
 				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6DFEC6162A2E83020090B2E2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6DFC9F672A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		6DFEC61B2A2E892E0090B2E2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6DFEC6192A2E84190090B2E2 /* GoogleLoginAuthenticator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -570,18 +587,17 @@
 				023988042A2E734000E04F0D /* SplashViewModelType.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
+				6DFEC61A2A2E84190090B2E2 /* GoogleLoginAuthenticator.swift in Sources */,
 				023988032A2E722600E04F0D /* ValidationError.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				6D8B168C2A2B798D007A9DFB /* AuthenticatedUser.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				6D611B982A299B7A00A1FC65 /* AuthenticationProtocol.swift in Sources */,
-				C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */,
-				C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */,
-				C9FE27802A1B34E000AD5923 /* SplashViewModelType.swift in Sources */,
+				C9FE277E2A1B341200AD5923 /* (null) in Sources */,
+				C9FE277B2A1B330200AD5923 /* (null) in Sources */,
+				C9FE27802A1B34E000AD5923 /* (null) in Sources */,
 				02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
-				6DFC9F682A2AA51200686E7C /* GooglSignInAuthenticatorAdapter.swift in Sources */,
-				02AAFC9C2A29414100BB2D0A /* UIView+Helpers.swift in Sources */,
 				B8574F062A2022E80028FC4B /* ValidationRule.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				C9FE277E2A1B341200AD5923 /* (null) in Sources */,
