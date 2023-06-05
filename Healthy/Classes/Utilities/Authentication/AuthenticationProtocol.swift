@@ -1,5 +1,3 @@
-import UIKit
-
- public protocol Authentication {
+public protocol Authentication {
      func performLogin() async throws -> AuthenticatedUser
  }
