@@ -25,6 +25,8 @@ class FormTextField: UIView {
         initView()
     }
 
+    // MARK: Configurations
+
     private func initView() {
         loadContentViewFromNib()
         configureLayout()
