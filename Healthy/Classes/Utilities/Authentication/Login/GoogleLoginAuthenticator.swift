@@ -29,7 +29,7 @@ final class GoogleSignInAuthenticator: Authentication {
                     return
                 }
                 continuation.resume(returning: AuthenticatedUser(id: userID, name: user.name, email: user.email,
-                                                                 pictureURL: user.imageURL(withDimension: Constatns.duration)))
+                                                                 imageURL: user.imageURL(withDimension: Constatns.duration)))
             }
         }
     }

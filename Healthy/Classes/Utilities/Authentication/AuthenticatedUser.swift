@@ -4,5 +4,5 @@ public struct AuthenticatedUser {
     let id: String
     let name: String
     let email: String
-    let pictureURL: URL?
+    let imageURL: URL?
 }
