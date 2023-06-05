@@ -1,6 +1,5 @@
 import UIKit
 
-
 // MARK: UIView+Reusable Identifier
 
 extension UIView {

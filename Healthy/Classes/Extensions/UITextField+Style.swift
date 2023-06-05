@@ -13,14 +13,14 @@ extension UITextField {
 extension UITextField {
     func applyTextFieldStyle(_ style: TextFieldStyle) {
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: Constants.defaultHeight),
+            heightAnchor.constraint(equalToConstant: Constants.defaultHeight)
         ])
-        
+
         layer.cornerRadius = Constants.defaultCornerRadius
         layer.borderWidth = Constants.defaultBorderWidth
         layer.borderColor = Constants.defaultBorderColor.cgColor
         borderStyle = .none
-        
+
         // Workaround for adding leading & training spaces
         setLeftPaddingPoints()
         setRightPaddingPoints()
@@ -35,7 +35,7 @@ extension UITextField {
         self.leftView = paddingView
         self.leftViewMode = .always
     }
-    
+
     private func setRightPaddingPoints(_ amount: CGFloat = Constants.defaultPadding) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.rightView = paddingView
@@ -55,5 +55,3 @@ private extension UITextField {
         static let defaultBorderColor: UIColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 1)
     }
 }
-
-
