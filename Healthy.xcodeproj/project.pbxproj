@@ -26,14 +26,22 @@
 		6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525072A1E84FD0027502C /* LoginViewController.swift */; };
 		6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525092A1E854B0027502C /* LoginViewModel.swift */; };
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
+		7918F03E2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */; };
+		79311FCE2A191D2D00764707 /* FormTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79311FCD2A191D2D00764707 /* FormTextField.xib */; };
+		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
+		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		C96520CE2A2B72B900FACCC0 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520C92A2B72B800FACCC0 /* Logging.swift */; };
+		C96520CF2A2B72B900FACCC0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CA2A2B72B800FACCC0 /* Logger.swift */; };
+		C96520D02A2B72B900FACCC0 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CB2A2B72B800FACCC0 /* LogLevel.swift */; };
+		C96520D12A2B72B900FACCC0 /* FileSystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */; };
+		C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE27792A1B330200AD5923 /* SplashViewController.swift */; };
+		C9FE277C2A1B330200AD5923 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9FE277A2A1B330200AD5923 /* SplashViewController.xib */; };
+		C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE277D2A1B341200AD5923 /* SplashViewModel.swift */; };
+		C9FE27802A1B34E000AD5923 /* SplashViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE277F2A1B34E000AD5923 /* SplashViewModelType.swift */; };
 		B8574F042A2022AA0028FC4B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F032A2022AA0028FC4B /* Validator.swift */; };
 		B8574F062A2022E80028FC4B /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F052A2022E80028FC4B /* ValidationRule.swift */; };
-		B881C2D82A2B89A500D03580 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D42A2B89A500D03580 /* SplashViewController.swift */; };
-		B881C2D92A2B89A500D03580 /* SplashViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D52A2B89A500D03580 /* SplashViewModelType.swift */; };
-		B881C2DA2A2B89A500D03580 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D62A2B89A500D03580 /* SplashViewModel.swift */; };
-		B881C2DB2A2B89A500D03580 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881C2D72A2B89A500D03580 /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +85,16 @@
 		6DF525072A1E84FD0027502C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DF525092A1E854B0027502C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifier.swift"; sourceTree = "<group>"; };
+		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
+		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		C96520C92A2B72B800FACCC0 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		C96520CA2A2B72B800FACCC0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		C96520CB2A2B72B800FACCC0 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemLogger.swift; sourceTree = "<group>"; };
 		B8574F032A2022AA0028FC4B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		B8574F052A2022E80028FC4B /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		B881C2D42A2B89A500D03580 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +221,9 @@
 			children = (
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
 				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
+				79311FD72A19214700764707 /* UITextField+Style.swift */,
+				02AAFC9B2A29414100BB2D0A /* UIView+Helpers.swift */,
+				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -232,6 +251,7 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C96520C82A2B72B800FACCC0 /* Logger */,
 				023987FD2A2E6FDE00E04F0D /* Validators */,
 			);
 			path = Utilities;
@@ -240,6 +260,8 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
+				79311FCC2A191C8E00764707 /* FormTextField */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -284,6 +306,35 @@
 				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		79311FCC2A191C8E00764707 /* FormTextField */ = {
+			isa = PBXGroup;
+			children = (
+				79311FCD2A191D2D00764707 /* FormTextField.xib */,
+				79311FCF2A191D3700764707 /* FormTextField.swift */,
+			);
+			path = FormTextField;
+			sourceTree = "<group>";
+		};
+		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
+			isa = PBXGroup;
+			children = (
+				B21570A72A209E6800C80A0C /* SignButtonWithSocialMediaView.swift */,
+				B21570A82A209E6800C80A0C /* SignButtonWithSocialMediaView.xib */,
+			);
+			path = SignButtonWithSocialMediaView;
+			sourceTree = "<group>";
+		};
+		C96520C82A2B72B800FACCC0 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */,
+				C96520CA2A2B72B800FACCC0 /* Logger.swift */,
+				C96520C92A2B72B800FACCC0 /* Logging.swift */,
+				C96520CB2A2B72B800FACCC0 /* LogLevel.swift */,
+			);
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
@@ -413,6 +464,7 @@
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 				B881C2DB2A2B89A500D03580 /* SplashViewController.xib in Resources */,
 				023985592A29FFAB0081A165 /* Colors.xcassets in Resources */,
+				79311FCE2A191D2D00764707 /* FormTextField.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint --strict\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if git diff --name-only --cached | grep -q \"\\.swift$\"; then\n  swiftlint lint --path $(git diff --name-only --cached | grep \"\\.swift$\")\nelse\n  echo \"No Swift files changed\"\nfi\n";
 		};
 		F39D440A2A149CCC0039AEF8 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -483,19 +535,29 @@
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				023988012A2E701000E04F0D /* EmailValidator.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
+				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
+				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				023988032A2E722600E04F0D /* ValidationError.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				B8574F062A2022E80028FC4B /* ValidationRule.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
+				C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */,
+				C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */,
+				C96520D02A2B72B900FACCC0 /* LogLevel.swift in Sources */,
+				C9FE27802A1B34E000AD5923 /* SplashViewModelType.swift in Sources */,
+				C96520CF2A2B72B900FACCC0 /* Logger.swift in Sources */,
 				B8574F042A2022AA0028FC4B /* Validator.swift in Sources */,
-				B881C2D82A2B89A500D03580 /* SplashViewController.swift in Sources */,
 				02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */,
 				B881C2DA2A2B89A500D03580 /* SplashViewModel.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
+				02AAFC9C2A29414100BB2D0A /* UIView+Helpers.swift in Sources */,
+				7918F03E2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				B881C2D92A2B89A500D03580 /* SplashViewModelType.swift in Sources */,
 				02789D652A294DFE001ABF72 /* Strings.Generated.swift in Sources */,
+				C96520D12A2B72B900FACCC0 /* FileSystemLogger.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
+				C96520CE2A2B72B900FACCC0 /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
