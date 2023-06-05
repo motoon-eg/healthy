@@ -12,10 +12,9 @@ import UIKit
 /// ```
 ///
 class CheckboxButton: UIButton {
-    
-    
+
     // MARK: - Properties
-    
+
     /// A boolean property to indicate if the checkbox is checked or not.
     ///
     /// The image of the checkbox button is updated accordingly when the value of this property is set.
@@ -28,17 +27,16 @@ class CheckboxButton: UIButton {
             self.setImage(image, for: UIControl.State.normal)
         }
     }
-    
+
     // MARK: - Lifecycle
-    
+
     override func awakeFromNib() {
         self.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
         self.isChecked = false
     }
-    
-    
+
     // MARK: - Actions
-    
+
     /// Toggles the `isChecked` state when the button is clicked
     ///
     @objc private func buttonClicked(sender: UIButton) {
