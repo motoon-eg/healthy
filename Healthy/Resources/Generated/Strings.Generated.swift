@@ -14,6 +14,20 @@ internal enum L10n {
     /// Healthy
     internal static let title = L10n.tr("Localizable", "app.title", fallback: "Healthy")
   }
+  internal enum Common {
+    /// Email
+    internal static let email = L10n.tr("Localizable", "common.email", fallback: "Email")
+    /// Password
+    internal static let password = L10n.tr("Localizable", "common.password", fallback: "Password")
+  }
+  internal enum Signin {
+    /// Sign In
+    internal static let buttonTitle = L10n.tr("Localizable", "signin.buttonTitle", fallback: "Sign In")
+  }
+  internal enum Signup {
+    /// Sign Up
+    internal static let buttonTitle = L10n.tr("Localizable", "signup.buttonTitle", fallback: "Sign Up")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
