@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		023985592A29FFAB0081A165 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
+		023988002A2E701000E04F0D /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023987FE2A2E701000E04F0D /* PasswordValidator.swift */; };
+		023988012A2E701000E04F0D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023987FF2A2E701000E04F0D /* EmailValidator.swift */; };
+		023988032A2E722600E04F0D /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023988022A2E722600E04F0D /* ValidationError.swift */; };
 		02789D652A294DFE001ABF72 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D602A294DFE001ABF72 /* Strings.Generated.swift */; };
 		02789D672A294DFE001ABF72 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D622A294DFE001ABF72 /* UIColors.Generated.swift */; };
 		02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D642A294DFE001ABF72 /* UIImage.Generated.swift */; };
@@ -25,14 +28,12 @@
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
-		B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F032A2022AA0028FC4B /* HealthyValidator .swift */; };
-		B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */; };
+		B8574F042A2022AA0028FC4B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F032A2022AA0028FC4B /* Validator.swift */; };
+		B8574F062A2022E80028FC4B /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F052A2022E80028FC4B /* ValidationRule.swift */; };
 		B881C2D82A2B89A500D03580 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D42A2B89A500D03580 /* SplashViewController.swift */; };
 		B881C2D92A2B89A500D03580 /* SplashViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D52A2B89A500D03580 /* SplashViewModelType.swift */; };
 		B881C2DA2A2B89A500D03580 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D62A2B89A500D03580 /* SplashViewModel.swift */; };
 		B881C2DB2A2B89A500D03580 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881C2D72A2B89A500D03580 /* SplashViewController.xib */; };
-		B88CDB6B2A20B3590033DA3A /* HealthyPassValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CDB692A20B3590033DA3A /* HealthyPassValidator.swift */; };
-		B88CDB6C2A20B3590033DA3A /* HealthyEmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CDB6A2A20B3590033DA3A /* HealthyEmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023987FE2A2E701000E04F0D /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		023987FF2A2E701000E04F0D /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		023988022A2E722600E04F0D /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		02789D602A294DFE001ABF72 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
 		02789D622A294DFE001ABF72 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
 		02789D642A294DFE001ABF72 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
@@ -75,14 +79,12 @@
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
-		B8574F032A2022AA0028FC4B /* HealthyValidator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthyValidator .swift"; sourceTree = "<group>"; };
-		B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthyValidationRule .swift"; sourceTree = "<group>"; };
+		B8574F032A2022AA0028FC4B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		B8574F052A2022E80028FC4B /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		B881C2D42A2B89A500D03580 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B881C2D52A2B89A500D03580 /* SplashViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModelType.swift; sourceTree = "<group>"; };
 		B881C2D62A2B89A500D03580 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		B881C2D72A2B89A500D03580 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		B88CDB692A20B3590033DA3A /* HealthyPassValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthyPassValidator.swift; path = Healthy/Classes/Utilities/Validator/HealthyPassValidator.swift; sourceTree = SOURCE_ROOT; };
-		B88CDB6A2A20B3590033DA3A /* HealthyEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthyEmailValidator.swift; path = Healthy/Classes/Utilities/Validator/HealthyEmailValidator.swift; sourceTree = SOURCE_ROOT; };
 		C9BF881C2A21350300F12A40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023987FD2A2E6FDE00E04F0D /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				023987FF2A2E701000E04F0D /* EmailValidator.swift */,
+				023987FE2A2E701000E04F0D /* PasswordValidator.swift */,
+				B8574F052A2022E80028FC4B /* ValidationRule.swift */,
+				B8574F032A2022AA0028FC4B /* Validator.swift */,
+				023988022A2E722600E04F0D /* ValidationError.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		027DDA122A0E6A660052818C = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +232,7 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				B8574F022A2022870028FC4B /* ValidatorProtocol */,
+				023987FD2A2E6FDE00E04F0D /* Validators */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -270,17 +284,6 @@
 				6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		B8574F022A2022870028FC4B /* ValidatorProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				B88CDB6A2A20B3590033DA3A /* HealthyEmailValidator.swift */,
-				B88CDB692A20B3590033DA3A /* HealthyPassValidator.swift */,
-				B8574F032A2022AA0028FC4B /* HealthyValidator .swift */,
-				B8574F052A2022E80028FC4B /* HealthyValidationRule .swift */,
-			);
-			path = ValidatorProtocol;
 			sourceTree = "<group>";
 		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
@@ -476,14 +479,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				02789D672A294DFE001ABF72 /* UIColors.Generated.swift in Sources */,
+				023988002A2E701000E04F0D /* PasswordValidator.swift in Sources */,
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
-				B88CDB6C2A20B3590033DA3A /* HealthyEmailValidator.swift in Sources */,
-				B88CDB6B2A20B3590033DA3A /* HealthyPassValidator.swift in Sources */,
+				023988012A2E701000E04F0D /* EmailValidator.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
+				023988032A2E722600E04F0D /* ValidationError.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
-				B8574F062A2022E80028FC4B /* HealthyValidationRule .swift in Sources */,
+				B8574F062A2022E80028FC4B /* ValidationRule.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
-				B8574F042A2022AA0028FC4B /* HealthyValidator .swift in Sources */,
+				B8574F042A2022AA0028FC4B /* Validator.swift in Sources */,
 				B881C2D82A2B89A500D03580 /* SplashViewController.swift in Sources */,
 				02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */,
 				B881C2DA2A2B89A500D03580 /* SplashViewModel.swift in Sources */,

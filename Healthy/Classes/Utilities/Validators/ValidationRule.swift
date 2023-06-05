@@ -1,14 +1,14 @@
 import Foundation
 
+// MARK: Validation Rules
+
 protocol ValidationRule {
     typealias ValueType = String
 
     func validate(_ value: ValueType) throws
 }
 
-struct ValidationError: LocalizedError {
-    let errorDescription: String?
-}
+// MARK: Available Validation Rules
 
 struct RegexValidationRule: ValidationRule {
     let field: String
