@@ -14,11 +14,27 @@ extension UIImage {
       UIImage(named: "AppColors")!
     }
 
+    static var backgroundSplash: UIImage {
+      UIImage(named: "background-splash")!
+    }
+
     static var iconCheckboxNotSelected: UIImage {
-      UIImage(named: "icon_checkbox_not_selected")!
+      UIImage(named: "icon-checkbox-not-selected")!
     }
 
     static var iconCheckboxSelected: UIImage {
-      UIImage(named: "icon_checkbox_selected")!
+      UIImage(named: "icon-checkbox-selected")!
+    }
+
+    static var iconFacebook: UIImage {
+      UIImage(named: "icon-facebook")!
+    }
+
+    static var iconGoogle: UIImage {
+      UIImage(named: "icon-google")!
+    }
+
+    static var iconSplash: UIImage {
+      UIImage(named: "icon-splash")!
     }
 }

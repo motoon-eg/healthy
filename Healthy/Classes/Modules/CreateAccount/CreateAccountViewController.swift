@@ -1,15 +1,24 @@
-import UIKit
 // MARK: - CreateAccountViewController
 final class CreateAccountViewController: UIViewController {
 
     // MARK: Outlets
-    @IBOutlet private weak var nameTextField: UITextField!
-    @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var confirmPasswordTextField: UITextField!
-    @IBOutlet private weak var checkBoxButton: CheckboxButton!
-    @IBOutlet private weak var signInTextLabel: UILabel!
-    @IBOutlet private weak var signUpButton: UIButton!
+    @IBOutlet private (set) weak var parentVerticalStackView: UIStackView!
+
+    @IBOutlet private (set) weak var nameTextField: UITextField!
+
+    @IBOutlet private (set) weak var emailTextField: UITextField!
+
+    @IBOutlet private (set) weak var passwordTextField: UITextField!
+
+    @IBOutlet private (set) weak var confirmPasswordContainerView: UIView!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+
+    @IBOutlet private (set) weak var termsAndConditionsHorizontalStackView: UIStackView!
+    @IBOutlet private (set) weak var checkBoxButton: CheckboxButton!
+    @IBOutlet private (set) weak var acceptTermsTextLabel: UILabel!
+
+    @IBOutlet private (set) weak var signInTextLabel: UILabel!
+    @IBOutlet private (set) weak var signUpButton: UIButton!
 
     // MARK: Properties
 
