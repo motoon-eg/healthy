@@ -10,6 +10,8 @@ extension LoginViewModel: LoginViewModelInput {
     func performSignIn() {}
     func performSignUp() {}
     func performForgetPassword() {}
+    func performSignInWithGoogle() {}
+    func performSignInWithFacebook() {}
 }
 
 // MARK: Output

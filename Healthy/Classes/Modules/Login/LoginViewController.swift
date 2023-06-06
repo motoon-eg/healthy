@@ -52,6 +52,14 @@ extension LoginViewController {
     @IBAction func didTapForgetPassowrd(_ sender: Any) {
         viewModel.performForgetPassword()
     }
+    
+    @IBAction func didTapSignInWithGoogle(_ sender: Any) {
+        viewModel.performSignInWithGoogle()
+    }
+    
+    @IBAction func didTapSignInWithFacebook(_ sender: Any) {
+        viewModel.performSignInWithFacebook()
+    }
 }
 
 // MARK: - Configurations

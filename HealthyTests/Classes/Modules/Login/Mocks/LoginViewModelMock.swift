@@ -18,4 +18,16 @@ final class LoginViewModelMock: LoginViewModelType {
     func performSignUp() {
         performSignUpCallCount += 1
     }
+    
+    // Sign-in with Google Spy
+    private(set) var performSignInWithGoogleCallCount: Int = .zero
+    func performSignInWithGoogle() {
+        performSignInWithGoogleCallCount += 1
+    }
+    
+    // Sign-with Facebook Spy
+    private(set) var performSignInWithFacebookCallCount: Int = .zero
+    func performSignInWithFacebook() {
+        performSignInWithFacebookCallCount += 1
+    }
 }

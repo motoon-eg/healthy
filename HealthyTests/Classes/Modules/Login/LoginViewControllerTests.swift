@@ -74,6 +74,32 @@ final class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(forgetPasswordButtonActions.count, 1)
         XCTAssertEqual(forgetPasswordButtonActions.first, "didTapForgetPassowrd:")
     }
+    
+    func test_whenLoginViewControllerCreated_shouldHasSignInWithGoogleButtonAndAction() throws {
+        // Given
+        let signInWithGoogleButton = try XCTUnwrap(sut.signInWithGoogleButton, "SigninWithGoogle button is not connected to an IBOutlet")
+
+        // When
+        let signInWithGoogleButtonActions = try XCTUnwrap(signInWithGoogleButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
+                                                        "SignInWithGoogle button doesn't has any actions assigned to it.")
+
+        // Then
+        XCTAssertEqual(signInWithGoogleButtonActions.count, 1)
+        XCTAssertEqual(signInWithGoogleButtonActions.first, "didTapSignInWithGoogle:")
+    }
+    
+    func test_whenLoginViewControllerCreated_shouldHasSignInWithFacebookButtonAndAction() throws {
+        // Given
+        let signInWithFacebookButton = try XCTUnwrap(sut.forgetPasswordButton, "SignInWithFacebook button button is not connected to an IBOutlet")
+
+        // When
+        let signInWithFacebookButtonActions = try XCTUnwrap(signInWithFacebookButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
+                                                        "SignInWithFacebook button doesn't has any actions assigned to it.")
+
+        // Then
+        XCTAssertEqual(signInWithFacebookButtonActions.count, 1)
+        XCTAssertEqual(signInWithFacebookButtonActions.first, "didTapForgetPassowrd:")
+    }
 
     func test_didTapSignIn_shouldCallViewModelPerformSignIn() {
         // When
@@ -97,6 +123,22 @@ final class LoginViewControllerTests: XCTestCase {
 
         // Then
         XCTAssertEqual(loginViewModelMock.performForgetPasswordCount, 1)
+    }
+    
+    func test_didTapSignInWithGoogle_shouldCallViewModelPerformSignInWithGoogle() {
+        // When
+        sut.didTapSignInWithGoogle(UIButton())
+
+        // Then
+        XCTAssertEqual(loginViewModelMock.performSignInWithGoogleCallCount, 1)
+    }
+    
+    func test_didTapSignInWithFacebook_shouldCallViewModelPerformSignInWithFacebook() {
+        // When
+        sut.didTapSignInWithFacebook(UIButton())
+
+        // Then
+        XCTAssertEqual(loginViewModelMock.performSignInWithFacebookCallCount, 1)
     }
 
 }
