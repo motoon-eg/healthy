@@ -87,28 +87,28 @@ private extension LoginViewController {
 
 private extension LoginViewController {
     func bindLoadingIndicator() {
-        viewModel.bindLoadingIndicator { [weak self] state in
+        viewModel.onLoadingIndicator { [weak self] state in
             guard let _ = self else { return }
             // TODO: Update loading state.
         }
     }
     
     func bindErrorMessage() {
-        viewModel.bindErrorMessage { [weak self] message in
+        viewModel.onErrorMessage { [weak self] message in
             guard let _ = self else { return }
             // TODO: Show error message.
         }
     }
     
     func bindButtonState() {
-        viewModel.bindButtonEnabled { [weak self] isEnabled in
+        viewModel.onButtonEnabled { [weak self] isEnabled in
             guard let self = self else { return }
             self.signInButton.isEnabled = isEnabled
         }
     }
     
     func bindLoginStatus() {
-        viewModel.bindLoginStatus { [weak self] status in
+        viewModel.onLoginStatus { [weak self] status in
             guard let _ = self else { return }
             
             switch status {

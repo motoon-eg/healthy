@@ -30,20 +30,20 @@ extension LoginViewModel: LoginViewModelInput {
 // MARK: Output
 
 extension LoginViewModel: LoginViewModelOutput {
-    func bindLoadingIndicator(state: @escaping (Bool) -> Void) {
+    func onLoadingIndicator(state: @escaping (Bool) -> Void) {
         onLoadingState = state
     }
     
-    func bindErrorMessage(message: @escaping (String) -> Void) {
+    func onErrorMessage(message: @escaping (String) -> Void) {
         onErrorMessage = message
     }
     
-    func bindButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
+    func onButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
         onButtonEnabled = onEnabled
         updateStateButton()
     }
     
-    func bindLoginStatus(status: @escaping (Bool) -> Void) {
+    func onLoginStatus(status: @escaping (Bool) -> Void) {
         onLoginStatus = status
     }
 }

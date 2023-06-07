@@ -9,8 +9,8 @@ protocol LoginViewModelInput {
 }
 
 protocol LoginViewModelOutput {
-    func bindLoadingIndicator(state: @escaping (Bool) -> Void)
-    func bindErrorMessage(message: @escaping (String) -> Void)
-    func bindButtonEnabled(onEnabled: @escaping (Bool) -> Void)
-    func bindLoginStatus(status: @escaping (Bool) -> Void)
+    func onLoadingIndicator(state: @escaping (Bool) -> Void)
+    func onErrorMessage(message: @escaping (String) -> Void)
+    func onButtonEnabled(onEnabled: @escaping (Bool) -> Void)
+    func onLoginStatus(status: @escaping (Bool) -> Void)
 }
