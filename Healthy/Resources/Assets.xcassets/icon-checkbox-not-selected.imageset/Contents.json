@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_checkbox_not_selected.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
