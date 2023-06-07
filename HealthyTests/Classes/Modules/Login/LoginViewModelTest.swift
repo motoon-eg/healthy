@@ -1,35 +1,93 @@
-//
-//  LoginViewModelTest.swift
-//  HealthyTests
-//
-//  Created by Ahmed Nasr on 07/06/2023.
-//
-
 import XCTest
+@testable import Healthy
 
 final class LoginViewModelTest: XCTestCase {
 
-    override func setUpWithError() throws {
+    // MARK: Properties
+    
+    private var viewModel: LoginViewModel!
+    
+    // MARK: Lifecycle
+    
+    override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewModel = LoginViewModel()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // MARK: Tests
+    
+    func test_onButtonEnabled_whenEmailAndPasswordIsEmpty_shouldBeDisabled() {
+        // Given
+        var isEnabled: Bool?
+        viewModel.onButtonEnabled { _isEnabled in
+            isEnabled = _isEnabled
         }
+        
+        // When
+        viewModel.updateEmail("")
+        viewModel.updatePassword("")
+        
+        // Then
+        XCTAssertFalse(isEnabled == true)
     }
-
+    
+    func test_onButtonEnabled_whenEmailOnlyIsEmpty_shouldBeDisabled() {
+        // Given
+        var isEnabled: Bool?
+        viewModel.onButtonEnabled { _isEnabled in
+            isEnabled = _isEnabled
+        }
+        
+        // When
+        viewModel.updateEmail("")
+        viewModel.updatePassword("sample password")
+        
+        // Then
+        XCTAssertFalse(isEnabled == true)
+    }
+    
+    func test_onButtonEnabled_whenPasswordOnlyIsEmpty_shouldBeDisabled() {
+        // Given
+        var isEnabled: Bool?
+        viewModel.onButtonEnabled { _isEnabled in
+            isEnabled = _isEnabled
+        }
+        
+        // When
+        viewModel.updateEmail("sample email")
+        viewModel.updatePassword("")
+        
+        // Then
+        XCTAssertFalse(isEnabled == true)
+    }
+    
+    func test_onButtonEnabled_whenPasswordLessThan6Digit_shouldBeDisabled() {
+        // Given
+        var isEnabled: Bool?
+        viewModel.onButtonEnabled { _isEnabled in
+            isEnabled = _isEnabled
+        }
+        
+        // When
+        viewModel.updateEmail("sample email")
+        viewModel.updatePassword("123")
+        
+        // Then
+        XCTAssertFalse(isEnabled == true)
+    }
+    
+    func test_onButtonEnabled_whenEmailAndPasswordIsCorrect_shouldBeEnabled() {
+        // Given
+        var isEnabled: Bool?
+        viewModel.onButtonEnabled { _isEnabled in
+            isEnabled = _isEnabled
+        }
+        
+        // When
+        viewModel.updateEmail("sample email")
+        viewModel.updatePassword("sample password")
+        
+        // Then
+        XCTAssertTrue(isEnabled == true)
+    }
 }
