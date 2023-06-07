@@ -37,6 +37,7 @@
 		79311FCE2A191D2D00764707 /* FormTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79311FCD2A191D2D00764707 /* FormTextField.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
+		797713F72A3094BD00B8B0CB /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797713F62A3094BD00B8B0CB /* LoginViewModelTest.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B8574F042A2022AA0028FC4B /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8574F032A2022AA0028FC4B /* Validator.swift */; };
@@ -98,6 +99,7 @@
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
+		797713F62A3094BD00B8B0CB /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B8574F032A2022AA0028FC4B /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		027DDA342A0E6A680052818C /* HealthyTests */ = {
 			isa = PBXGroup;
 			children = (
+				797713ED2A3093C200B8B0CB /* Classes */,
 				027DDA352A0E6A680052818C /* HealthyTests.swift */,
 			);
 			path = HealthyTests;
@@ -334,6 +337,30 @@
 				79311FCF2A191D3700764707 /* FormTextField.swift */,
 			);
 			path = FormTextField;
+			sourceTree = "<group>";
+		};
+		797713ED2A3093C200B8B0CB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				797713EE2A3093C600B8B0CB /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		797713EE2A3093C600B8B0CB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				797713EF2A3093CB00B8B0CB /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		797713EF2A3093CB00B8B0CB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				797713F62A3094BD00B8B0CB /* LoginViewModelTest.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
@@ -585,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797713F72A3094BD00B8B0CB /* LoginViewModelTest.swift in Sources */,
 				027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
