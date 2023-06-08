@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 final class LoginViewController: UIViewController {
 
@@ -17,7 +18,8 @@ final class LoginViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: LoginViewModelType
-
+    private var subscriptions: Set<AnyCancellable> = []
+    
     // MARK: Init
 
     init(viewModel: LoginViewModelType) {
@@ -87,28 +89,31 @@ private extension LoginViewController {
 
 private extension LoginViewController {
     func bindLoadingIndicator() {
-        viewModel.onLoadingIndicator { [weak self] state in
+        viewModel.isLoadingIndicatorPublisher.sink { [weak self] isLoading in
             guard let _ = self else { return }
-            // TODO: Update loading state.
-        }
+            
+            // TODO: Show loading indicator.
+            
+        }.store(in: &subscriptions)
     }
     
     func bindErrorMessage() {
-        viewModel.onErrorMessage { [weak self] message in
+        viewModel.isShowErrorMessagePublisher.sink { [weak self] message in
             guard let _ = self else { return }
+            
             // TODO: Show error message.
-        }
+            
+        }.store(in: &subscriptions)
     }
     
     func bindButtonState() {
-        viewModel.onButtonEnabled { [weak self] isEnabled in
-            guard let self = self else { return }
-            self.signInButton.isEnabled = isEnabled
-        }
+        viewModel.isLoginEnabledPublisher
+            .assign(to: \.isEnabled, on: signInButton)
+            .store(in: &subscriptions)
     }
     
     func bindLoginStatus() {
-        viewModel.onLoginStatus { [weak self] status in
+        viewModel.isLoginStatusPublisher.sink { [weak self] status in
             guard let _ = self else { return }
             
             switch status {
@@ -119,7 +124,7 @@ private extension LoginViewController {
                 // TODO: Make action when login fail.
                 break
             }
-        }
+        }.store(in: &subscriptions)
     }
 }
 
