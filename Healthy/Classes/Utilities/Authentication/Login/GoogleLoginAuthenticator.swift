@@ -5,19 +5,19 @@ enum SignInAuthenticationError: Error {
 }
 
 final class GoogleSignInAuthenticator: Authentication {
-
+    
     // MARK: Properties
-
+    
     let viewController: UIViewController
-
+    
     // MARK: Init
-
+    
     init(viewController: UIViewController) {
         self.viewController = viewController
     }
-
+    
     // MARK: Authentication
-
+    
     func performLogin() async throws -> AuthenticatedUser {
         try await withCheckedThrowingContinuation { continuation in
             GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { result, error in
@@ -28,18 +28,22 @@ final class GoogleSignInAuthenticator: Authentication {
                     continuation.resume(throwing: SignInAuthenticationError.invalidUser)
                     return
                 }
-                continuation.resume(returning: AuthenticatedUser(id: userID, name: user.name, email: user.email,
-                                                                 imageURL: user.imageURL(withDimension: Constatns.duration)))
+                let authenticatedUser = AuthenticatedUser(
+                    id: userID, name: user.name,
+                    email: user.email,
+                    imageURL: user.imageURL(withDimension: Constants.imageDimensions)
+                )
+                continuation.resume(returning: authenticatedUser)
             }
         }
     }
-
+    
 }
 
-// MARK: Constatns
+// MARK: Constants
 
 private extension GoogleSignInAuthenticator {
-    enum Constatns {
-        static let duration: UInt = 320
+    enum Constants {
+        static let imageDimensions: UInt = 320
     }
 }
