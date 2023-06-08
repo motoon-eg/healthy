@@ -1,3 +1,5 @@
+import Foundation
+
 typealias LoginViewModelType = LoginViewModelInput & LoginViewModelOutput
 
 protocol LoginViewModelInput {
@@ -9,5 +11,8 @@ protocol LoginViewModelInput {
 }
 
 protocol LoginViewModelOutput {
-
+    func onLoadingIndicator(state: @escaping (Bool) -> Void)
+    func onErrorMessage(message: @escaping (String) -> Void)
+    func onButtonEnabled(onEnabled: @escaping (Bool) -> Void)
+    func onLoginStatus(status: @escaping (Bool) -> Void)
 }
