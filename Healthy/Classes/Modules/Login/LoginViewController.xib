@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="y6L-fE-jmB" id="w9v-gy-bfm"/>
-                <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="2HJ-oI-D0W"/>
-                <outlet property="forgetPasswordButton" destination="O2G-2d-u81" id="2gB-8i-v6z"/>
-                <outlet property="passwordTextField" destination="TCv-gO-mrb" id="vZs-l9-x3i"/>
-                <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="V8o-Mp-VNw"/>
-                <outlet property="signInButton" destination="I1J-oM-dkd" id="ae6-O4-4PL"/>
-                <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="7xH-oU-MzU"/>
-                <outlet property="signInWithGoogleButton" destination="FAj-BP-GJf" id="Mcl-0g-BZb"/>
-                <outlet property="signUpButton" destination="KEs-vw-Rzk" id="pfi-wR-Jin"/>
+                <outlet property="emailTextField" destination="y6L-fE-jmB" id="gqq-Zr-fLh"/>
+                <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="WRy-bS-Mdf"/>
+                <outlet property="forgotPasswordButton" destination="O2G-2d-u81" id="AwC-8a-jjD"/>
+                <outlet property="passwordTextField" destination="TCv-gO-mrb" id="LoA-CT-MPs"/>
+                <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
+                <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
+                <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="wRv-wr-MX2"/>
+                <outlet property="signInWithGoogleButton" destination="cN6-Mr-YAF" id="eoe-7W-PfZ"/>
+                <outlet property="signUpButton" destination="KEs-vw-Rzk" id="X5I-Xh-lYt"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eJi-Nv-XUw"/>
             </connections>
         </placeholder>
@@ -134,12 +134,10 @@
                                                 <constraint firstAttribute="width" secondItem="cN6-Mr-YAF" secondAttribute="height" multiplier="1:1" id="Gel-Ns-YFb"/>
                                                 <constraint firstAttribute="height" constant="44" id="SEJ-JQ-9Cv"/>
                                             </constraints>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="die.face.1.fill" catalog="system"/>
                                             <connections>
-                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="GIu-UZ-r5u"/>
+                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="asq-w7-g4Q"/>
                                             </connections>
-                                        </button>
+                                        </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button">
                                             <rect key="frame" x="69" y="0.0" width="44" height="44"/>
                                             <constraints>
