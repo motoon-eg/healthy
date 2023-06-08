@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: LoginViewModel
+
 final class LoginViewModel {
     private var email: String = ""
     private var password: String = ""

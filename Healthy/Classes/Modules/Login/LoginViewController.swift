@@ -10,8 +10,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var passwordTextField: UITextField!
     @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
-    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
+    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
 
     // MARK: Properties
@@ -50,6 +50,8 @@ private extension LoginViewController {
     }
     
     @IBAction func didTapSignUp(_ sender: Any) {}
+
+    @IBAction func didTapSignInWithGoogle(_ sender: Any) {}
 }
 
 // MARK: - Configurations
@@ -59,8 +61,7 @@ private extension LoginViewController {
         emailTextFieldLabel.applyStyle(.textFieldTitleLabel)
         passwordTextFieldLabel.applyStyle(.textFieldTitleLabel)
         signInButton.applyButtonStyle(.primary)
-        signInWithGoogleButton.applyButtonStyle(.primary)
-        signInWithFacebookButton.applyButtonStyle(.primary)
+        signInWithFacebookButton.applyButtonStyle(.plainGold)
     }
 }
 
