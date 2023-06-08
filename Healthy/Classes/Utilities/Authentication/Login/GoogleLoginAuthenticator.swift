@@ -8,7 +8,9 @@ final class GoogleSignInAuthenticator: Authentication {
     
     // MARK: Properties
     
-    let viewController: UIViewController
+    private let viewController: UIViewController
+    private let sharedInstance: GIDSignIn = .sharedInstance
+    
     
     // MARK: Init
     
@@ -20,7 +22,7 @@ final class GoogleSignInAuthenticator: Authentication {
     
     func performLogin() async throws -> AuthenticatedUser {
         try await withCheckedThrowingContinuation { continuation in
-            GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { result, error in
+            sharedInstance.signIn(withPresenting: viewController) { result, error in
                 guard error == nil,
                       let result,
                       let user = result.user.profile,
