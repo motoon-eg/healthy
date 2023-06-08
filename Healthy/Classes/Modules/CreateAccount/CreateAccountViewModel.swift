@@ -6,13 +6,12 @@ final class CreateAccountViewModel {
   private var email: String = ""
   private var password: String = ""
   private var confirmPassword: String = ""
-  private var isChecked: Bool  = false
+  private var isChecked: Bool = false
   private var onButtonEnabled: (Bool) -> Void = { _ in }
 
 }
 
 // MARK: CreateAccountViewModelInput
-// TODO: ... add validation on email & Password
 extension CreateAccountViewModel: CreateAccountViewModelInput {
   func updateUsername(_ text: String) {
     username = text
@@ -52,7 +51,8 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
 private extension CreateAccountViewModel {
   func updateEnabledStateButton() {
       let isUsernameValid = !username.isEmpty
-      let isEmailValid = !email.isEmpty &&  EmailValidator().hasValidValue(email)
+      // TODO: [HL-20] Add email validator
+      let isEmailValid = !email.isEmpty
       let isPasswordValid = !password.isEmpty && PasswordValidator().hasValidValue(password)
       let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
 

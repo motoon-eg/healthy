@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		021212452A2F717A002D9079 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021212442A2F717A002D9079 /* ValidationRule.swift */; };
 		021212472A2F7183002D9079 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021212462A2F7183002D9079 /* Validator.swift */; };
+		0212124B2A31C2BE002D9079 /* CreateAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212124A2A31C2BE002D9079 /* CreateAccountViewModelTests.swift */; };
 		023985592A29FFAB0081A165 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		023988002A2E701000E04F0D /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023987FE2A2E701000E04F0D /* PasswordValidator.swift */; };
 		023988012A2E701000E04F0D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023987FF2A2E701000E04F0D /* EmailValidator.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		021212442A2F717A002D9079 /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
 		021212462A2F7183002D9079 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0212124A2A31C2BE002D9079 /* CreateAccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelTests.swift; sourceTree = "<group>"; };
 		023987FE2A2E701000E04F0D /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		023987FF2A2E701000E04F0D /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		023988022A2E722600E04F0D /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
@@ -158,6 +160,22 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		021212482A31C22D002D9079 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				021212492A31C245002D9079 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		021212492A31C245002D9079 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0212124A2A31C2BE002D9079 /* CreateAccountViewModelTests.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		023987FD2A2E6FDE00E04F0D /* Validators */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +221,7 @@
 		027DDA342A0E6A680052818C /* HealthyTests */ = {
 			isa = PBXGroup;
 			children = (
+				021212482A31C22D002D9079 /* Classes */,
 				027DDA352A0E6A680052818C /* HealthyTests.swift */,
 			);
 			path = HealthyTests;
@@ -613,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0212124B2A31C2BE002D9079 /* CreateAccountViewModelTests.swift in Sources */,
 				027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -834,7 +854,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -854,7 +874,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,6 +893,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -891,6 +912,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
