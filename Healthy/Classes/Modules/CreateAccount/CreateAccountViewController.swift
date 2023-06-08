@@ -69,7 +69,7 @@ private extension CreateAccountViewController {
     }
 }
 
-// MARK: - Private Handlers
+// MARK: - Actions
 private extension CreateAccountViewController {
     @objc func textDidChange(_ sender: UITextField) {
         guard let text = sender.text else { return }

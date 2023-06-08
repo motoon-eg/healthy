@@ -50,13 +50,14 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
 private extension CreateAccountViewModel {
     func updateEnabledStateButton() {
         let isUsernameValid = !username.isEmpty
-        let isEmailValid = !email.isEmpty &&  EmailValidator().hasValidValue(email)
+        // TODO: [HL-20] Add email validator
+        let isEmailValid = !email.isEmpty
         let isPasswordValid = !password.isEmpty && PasswordValidator().hasValidValue(password)
         let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
-        
+
         let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
-        && isConfirmPasswordValid
-        && isChecked
+            && isConfirmPasswordValid
+            && isChecked
         onButtonEnabled(isButtonEnabled)
     }
 }
