@@ -18,6 +18,14 @@ extension UIImage {
       UIImage(named: "background-splash")! 
     }
 
+    static var iconCheckboxNotSelected: UIImage {
+      UIImage(named: "icon-checkbox-not-selected")! 
+    }
+
+    static var iconCheckboxSelected: UIImage {
+      UIImage(named: "icon-checkbox-selected")! 
+    }
+
     static var iconFacebook: UIImage {
       UIImage(named: "icon-facebook")! 
     }
@@ -28,13 +36,5 @@ extension UIImage {
 
     static var iconSplash: UIImage {
       UIImage(named: "icon-splash")! 
-    }
-
-    static var iconCheckboxNotSelected: UIImage {
-      UIImage(named: "icon_checkbox_not_selected")! 
-    }
-
-    static var iconCheckboxSelected: UIImage {
-      UIImage(named: "icon_checkbox_selected")! 
     }
 }
