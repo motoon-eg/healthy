@@ -39,7 +39,6 @@ final class GoogleSignInAuthenticator: Authentication {
             }
         }
     }
-    
 }
 
 // MARK: Constants
