@@ -13,38 +13,38 @@ final class CreateAccountViewModel {
 
 // MARK: CreateAccountViewModelInput
 extension CreateAccountViewModel: CreateAccountViewModelInput {
-  func updateUsername(_ text: String) {
-    username = text
-    updateEnabledStateButton()
-  }
-
-  func updateEmail(_ text: String) {
-    email = text
-    updateEnabledStateButton()
-  }
-
-  func updatePassword(_ text: String) {
-    password = text
-    updateEnabledStateButton()
-  }
-
-  func updateConfirmPassword(_ text: String) {
-    confirmPassword = text
-    updateEnabledStateButton()
-  }
-
-  func updateAcceptTermsAndConditions(_ isChecked: Bool) {
-    self.isChecked = isChecked
-    updateEnabledStateButton()
-  }
+    func updateUsername(_ text: String) {
+        username = text
+        updateEnabledStateButton()
+    }
+    
+    func updateEmail(_ text: String) {
+        email = text
+        updateEnabledStateButton()
+    }
+    
+    func updatePassword(_ text: String) {
+        password = text
+        updateEnabledStateButton()
+    }
+    
+    func updateConfirmPassword(_ text: String) {
+        confirmPassword = text
+        updateEnabledStateButton()
+    }
+    
+    func updateAcceptTermsAndConditions(_ isChecked: Bool) {
+        self.isChecked = isChecked
+        updateEnabledStateButton()
+    }
 }
 
 // MARK: LoginViewModelOutput
 extension CreateAccountViewModel: CreateAccountViewModelOutput {
-  func configureButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
-    onButtonEnabled = onEnabled
-    updateEnabledStateButton()
-  }
+    func configureButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
+        onButtonEnabled = onEnabled
+        updateEnabledStateButton()
+    }
 }
 
 // MARK: Private Handlers
@@ -60,5 +60,6 @@ private extension CreateAccountViewModel {
           && isConfirmPasswordValid
           && isChecked
       onButtonEnabled(isButtonEnabled)
+
     }
 }
