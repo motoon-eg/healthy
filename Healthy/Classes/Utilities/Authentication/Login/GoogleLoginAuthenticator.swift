@@ -30,11 +30,13 @@ final class GoogleSignInAuthenticator: Authentication {
                     continuation.resume(throwing: SignInAuthenticationError.invalidUser)
                     return
                 }
+                
                 let authenticatedUser = AuthenticatedUser(
                     id: userID, name: user.name,
                     email: user.email,
                     imageURL: user.imageURL(withDimension: Constants.imageDimensions)
                 )
+                
                 continuation.resume(returning: authenticatedUser)
             }
         }
