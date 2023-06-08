@@ -69,7 +69,7 @@ private extension CreateAccountViewController {
     }
 }
 
-// MARK: - Private Handlers
+// MARK: - Actions
 private extension CreateAccountViewController {
     @objc func textDidChange(_ sender: UITextField) {
         guard let text = sender.text else { return }
@@ -93,54 +93,3 @@ private extension CreateAccountViewController {
         
     }
 }
-// MARK: - Actions
-private extension CreateAccountViewController { }
-
-// MARK: - Configurations
-private extension CreateAccountViewController {
-  func configureTextFields() {
-    nameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-    emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-    passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-    confirmPasswordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-
-  }
-
-  func  configureTermsAndConditionsCheckbox() {
-    if checkBoxButton.isChecked {
-      viewModel.updateAcceptTermsAndConditions(true)
-    }
-  }
-  func  configureSignUpButton() {
-          signUpButton.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
-      }
-
-      func configureViewModel() {
-          viewModel.configureButtonEnabled { [weak self] isEnabled in
-              self?.signUpButton.isEnabled = isEnabled
-          }
-      }
-  }
-  // MARK: - Private Handlers
-private extension CreateAccountViewController {
-  @objc func textDidChange(_ sender: UITextField) {
-    guard let text = sender.text else { return }
-
-    switch sender {
-    case nameTextField:
-      viewModel.updateUsername(text)
-    case emailTextField:
-      viewModel.updateEmail(text)
-    case passwordTextField:
-      viewModel.updatePassword(text)
-    case confirmPasswordTextField:
-      viewModel.updateConfirmPassword(text)
-    default:
-      break
-    }
-  }
-
-  @objc private func didTapSignUp(_ sender: Any) {
-
-      }
-  }
