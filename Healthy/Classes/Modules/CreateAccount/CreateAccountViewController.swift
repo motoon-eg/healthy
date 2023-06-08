@@ -84,6 +84,7 @@ private extension CreateAccountViewController {
         case confirmPasswordTextField:
             viewModel.updateConfirmPassword(text)
         default:
+            assertionFailure("Unexpected text field: \(sender)")
             break
         }
     }
