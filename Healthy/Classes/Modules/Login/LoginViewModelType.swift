@@ -3,6 +3,8 @@ import Foundation
 typealias LoginViewModelType = LoginViewModelInput & LoginViewModelOutput
 
 protocol LoginViewModelInput {
+    func updateEmail(_ text: String)
+    func updatePassword(_ text: String)
     func performSignIn()
     func performSignUp()
     func performForgetPassword()

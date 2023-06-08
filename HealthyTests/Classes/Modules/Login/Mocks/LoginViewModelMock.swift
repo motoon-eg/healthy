@@ -1,6 +1,18 @@
 @testable import Healthy
 
 final class LoginViewModelMock: LoginViewModelType {
+    func updateEmail(_ text: String) {}
+    
+    func updatePassword(_ text: String) {}
+    
+    func onLoadingIndicator(state: @escaping (Bool) -> Void) {}
+    
+    func onErrorMessage(message: @escaping (String) -> Void) {}
+    
+    func onButtonEnabled(onEnabled: @escaping (Bool) -> Void) {}
+    
+    func onLoginStatus(status: @escaping (Bool) -> Void) {}
+    
     // Forget Password Spy
     private(set) var performForgetPasswordCount: Int = .zero
     func performForgetPassword() {
