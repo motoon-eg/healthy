@@ -1,9 +1,9 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
+    
     // MARK: Outlets
-
+    
     @IBOutlet private(set) weak var emailTextFieldLabel: UILabel!
     @IBOutlet private(set) weak var emailTextField: UITextField!
     @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
@@ -13,26 +13,27 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
     @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
-
+    
     // MARK: Properties
-
+    
     private let viewModel: LoginViewModelType
-
+    
     // MARK: Init
-
+    
     init(viewModel: LoginViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureAppearance()
         bindTextFieldsChanges()
         bindLoadingIndicator()

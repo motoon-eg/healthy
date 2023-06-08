@@ -31,6 +31,7 @@ class CheckboxButton: UIButton {
     // MARK: - Lifecycle
 
     override func awakeFromNib() {
+        super.awakeFromNib()
         self.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
         self.isChecked = false
     }
@@ -40,6 +41,6 @@ class CheckboxButton: UIButton {
     /// Toggles the `isChecked` state when the button is clicked
     ///
     @objc private func buttonClicked(sender: UIButton) {
-        isChecked = !isChecked
+        isChecked.toggle()
     }
 }
