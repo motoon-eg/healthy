@@ -2,13 +2,12 @@ import Foundation
 
 // MARK: CreateAccountViewModel
 final class CreateAccountViewModel {
-  private var username: String = ""
-  private var email: String = ""
-  private var password: String = ""
-  private var confirmPassword: String = ""
-  private var isChecked: Bool = false
-  private var onButtonEnabled: (Bool) -> Void = { _ in }
-
+    private var username: String = ""
+    private var email: String = ""
+    private var password: String = ""
+    private var confirmPassword: String = ""
+    private var isChecked: Bool  = false
+    private var onButtonEnabled: (Bool) -> Void = { _ in }
 }
 
 // MARK: CreateAccountViewModelInput
@@ -49,17 +48,16 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
 
 // MARK: Private Handlers
 private extension CreateAccountViewModel {
-  func updateEnabledStateButton() {
-      let isUsernameValid = !username.isEmpty
-      // TODO: [HL-20] Add email validator
-      let isEmailValid = !email.isEmpty
-      let isPasswordValid = !password.isEmpty && PasswordValidator().hasValidValue(password)
-      let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
+    func updateEnabledStateButton() {
+        let isUsernameValid = !username.isEmpty
+        // TODO: [HL-20] Add email validator
+        let isEmailValid = !email.isEmpty
+        let isPasswordValid = !password.isEmpty && PasswordValidator().hasValidValue(password)
+        let isConfirmPasswordValid = !confirmPassword.isEmpty && confirmPassword == password
 
-      let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
-          && isConfirmPasswordValid
-          && isChecked
-      onButtonEnabled(isButtonEnabled)
-
+        let isButtonEnabled = isUsernameValid && isEmailValid && isPasswordValid
+            && isConfirmPasswordValid
+            && isChecked
+        onButtonEnabled(isButtonEnabled)
     }
 }
