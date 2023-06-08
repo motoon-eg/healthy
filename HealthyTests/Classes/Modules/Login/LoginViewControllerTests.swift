@@ -10,7 +10,7 @@ final class LoginViewControllerTests: XCTestCase {
 
     // MARK: Lifcycle
 
-    override func setUpWithError() throws {
+    override func setUp() {
         loginViewModelMock = LoginViewModelMock()
         sut = LoginViewController(viewModel: loginViewModelMock)
         sut.loadViewIfNeeded()
