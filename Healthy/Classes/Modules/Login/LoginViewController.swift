@@ -8,7 +8,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var emailTextField: UITextField!
     @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
     @IBOutlet private(set) weak var passwordTextField: UITextField!
-    @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
+    @IBOutlet private(set) weak var forgetPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
     @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
@@ -45,14 +45,26 @@ final class LoginViewController: UIViewController {
 
 // MARK: - Actions
 
-private extension LoginViewController {
+extension LoginViewController {
     @IBAction func didTapSignIn(_ sender: Any) {
-        viewModel.login()
+        viewModel.performSignIn()
     }
     
-    @IBAction func didTapSignUp(_ sender: Any) {}
-
-    @IBAction func didTapSignInWithGoogle(_ sender: Any) {}
+    @IBAction func didTapSignUp(_ sender: Any) {
+        viewModel.performSignUp()
+    }
+    
+    @IBAction func didTapForgetPassowrd(_ sender: Any) {
+        viewModel.performForgetPassword()
+    }
+    
+    @IBAction func didTapSignInWithGoogle(_ sender: Any) {
+        viewModel.performSignInWithGoogle()
+    }
+    
+    @IBAction func didTapSignInWithFacebook(_ sender: Any) {
+        viewModel.performSignInWithFacebook()
+    }
 }
 
 // MARK: - Configurations

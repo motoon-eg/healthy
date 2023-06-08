@@ -14,19 +14,13 @@ final class LoginViewModel {
 // MARK: Input
 
 extension LoginViewModel: LoginViewModelInput {
-    func updateEmail(_ text: String) {
-        email = text
-        updateStateButton()
-    }
-    
-    func updatePassword(_ text: String) {
-        password = text
-        updateStateButton()
-    }
-    
-    func login() {
-        // TODO: Call networking for login.
-    }
+    func updateEmail(_ text: String) {}
+    func updatePassword(_ text: String) {}
+    func performSignIn() {}
+    func performSignUp() {}
+    func performForgetPassword() {}
+    func performSignInWithGoogle() {}
+    func performSignInWithFacebook() {}
 }
 
 // MARK: Output

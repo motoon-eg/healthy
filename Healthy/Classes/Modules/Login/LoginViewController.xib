@@ -13,7 +13,7 @@
             <connections>
                 <outlet property="emailTextField" destination="y6L-fE-jmB" id="gqq-Zr-fLh"/>
                 <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="WRy-bS-Mdf"/>
-                <outlet property="forgotPasswordButton" destination="O2G-2d-u81" id="AwC-8a-jjD"/>
+                <outlet property="forgetPasswordButton" destination="O2G-2d-u81" id="5hS-yY-Mbo"/>
                 <outlet property="passwordTextField" destination="TCv-gO-mrb" id="LoA-CT-MPs"/>
                 <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
                 <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
@@ -95,6 +95,9 @@
                                     <buttonConfiguration key="configuration" style="plain" title="Forget Password?">
                                         <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapForgetPassowrd:" destination="-1" eventType="touchUpInside" id="XoQ-Fm-0hV"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-GX-UTD" userLabel="Sign In Stack View">
                                     <rect key="frame" x="0.0" y="485.66666666666669" width="333" height="99.333333333333314"/>
@@ -143,6 +146,9 @@
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="die.face.5.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="didTapSignInWithFacebook" destination="-1" eventType="touchUpInside" id="C79-aL-XIL"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
