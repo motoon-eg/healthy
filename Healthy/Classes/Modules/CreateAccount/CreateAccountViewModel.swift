@@ -8,11 +8,9 @@ final class CreateAccountViewModel {
     private var confirmPassword: String = ""
     private var isChecked: Bool  = false
     private var onButtonEnabled: (Bool) -> Void = { _ in }
-    
 }
 
 // MARK: CreateAccountViewModelInput
-// TODO: ... add validation on email & Password
 extension CreateAccountViewModel: CreateAccountViewModelInput {
     func updateUsername(_ text: String) {
         username = text

@@ -18,7 +18,7 @@
 		023988062A2E734000E04F0D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881C2D72A2B89A500D03580 /* SplashViewController.xib */; };
 		023988072A2E734000E04F0D /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D62A2B89A500D03580 /* SplashViewModel.swift */; };
 		025CD41C2A21101A002814D9 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */; };
-		025CD41E2A211066002814D9 /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41D2A211066002814D9 /* CreateAccountviewModelType.swift */; };
+		025CD41E2A211066002814D9 /* CreateAccountViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41D2A211066002814D9 /* CreateAccountViewModelType.swift */; };
 		02789D652A294DFE001ABF72 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D602A294DFE001ABF72 /* Strings.Generated.swift */; };
 		02789D672A294DFE001ABF72 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D622A294DFE001ABF72 /* UIColors.Generated.swift */; };
 		02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D642A294DFE001ABF72 /* UIImage.Generated.swift */; };
@@ -76,7 +76,7 @@
 		023987FF2A2E701000E04F0D /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		023988022A2E722600E04F0D /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
-		025CD41D2A211066002814D9 /* CreateAccountviewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountviewModelType.swift; sourceTree = "<group>"; };
+		025CD41D2A211066002814D9 /* CreateAccountViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelType.swift; sourceTree = "<group>"; };
 		02789D602A294DFE001ABF72 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
 		02789D622A294DFE001ABF72 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
 		02789D642A294DFE001ABF72 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
@@ -91,7 +91,6 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		02BBEE392A17BA20008E1BC0 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		20376AA82A2663F8004BF0BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2049C21B2A2000680077DBE4 /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		207FF8FF2A167F9100E4BC76 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -111,14 +110,11 @@
 		B881C2D52A2B89A500D03580 /* SplashViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModelType.swift; sourceTree = "<group>"; };
 		B881C2D62A2B89A500D03580 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		B881C2D72A2B89A500D03580 /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
-		B88CDB692A20B3590033DA3A /* HealthyPassValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthyPassValidator.swift; path = Healthy/Classes/Utilities/Validator/HealthyPassValidator.swift; sourceTree = SOURCE_ROOT; };
-		B88CDB6A2A20B3590033DA3A /* HealthyEmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthyEmailValidator.swift; path = Healthy/Classes/Utilities/Validator/HealthyEmailValidator.swift; sourceTree = SOURCE_ROOT; };
 		C96520C92A2B72B800FACCC0 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		C96520CA2A2B72B800FACCC0 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		C96520CB2A2B72B800FACCC0 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		C96520CC2A2B72B800FACCC0 /* FileSystemLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemLogger.swift; sourceTree = "<group>"; };
 		C9BF881C2A21350300F12A40 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +146,6 @@
 		021212432A2F7031002D9079 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				F39D440C2A14AD810039AEF8 /* UIImage.Generated.swift */,
-				B88CDB6A2A20B3590033DA3A /* HealthyEmailValidator.swift */,
-				02BBEE392A17BA20008E1BC0 /* Strings+Generated.swift */,
-				B88CDB692A20B3590033DA3A /* HealthyPassValidator.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -333,7 +325,7 @@
 				208E7A072A1F550C0067C731 /* CreateAccountViewController.swift */,
 				208E7A082A1F550C0067C731 /* CreateAccountViewController.xib */,
 				025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */,
-				025CD41D2A211066002814D9 /* CreateAccountviewModelType.swift */,
+				025CD41D2A211066002814D9 /* CreateAccountViewModelType.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -570,7 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				025CD41E2A211066002814D9 /* CreateAccountviewModelType.swift in Sources */,
+				025CD41E2A211066002814D9 /* CreateAccountViewModelType.swift in Sources */,
 				208E7A092A1F550C0067C731 /* CreateAccountViewController.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
 				025CD41C2A21101A002814D9 /* CreateAccountViewModel.swift in Sources */,

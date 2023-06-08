@@ -1,6 +1,6 @@
 import Foundation
 
-typealias CreateAccountviewModelType = CreateAccountViewModelInput & CreateAccountViewModelOutput
+typealias CreateAccountViewModelType = CreateAccountViewModelInput & CreateAccountViewModelOutput
 
 // MARK: CreateAccountViewModelInput
 protocol CreateAccountViewModelInput {
