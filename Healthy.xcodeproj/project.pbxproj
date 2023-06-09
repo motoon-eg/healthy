@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021212452A2F717A002D9079 /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021212442A2F717A002D9079 /* ValidationRule.swift */; };
+		021212472A2F7183002D9079 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021212462A2F7183002D9079 /* Validator.swift */; };
+		0212124B2A31C2BE002D9079 /* CreateAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0212124A2A31C2BE002D9079 /* CreateAccountViewModelTests.swift */; };
 		023985592A29FFAB0081A165 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		023988002A2E701000E04F0D /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023987FE2A2E701000E04F0D /* PasswordValidator.swift */; };
 		023988012A2E701000E04F0D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023987FF2A2E701000E04F0D /* EmailValidator.swift */; };
@@ -15,6 +18,9 @@
 		023988052A2E734000E04F0D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D42A2B89A500D03580 /* SplashViewController.swift */; };
 		023988062A2E734000E04F0D /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881C2D72A2B89A500D03580 /* SplashViewController.xib */; };
 		023988072A2E734000E04F0D /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881C2D62A2B89A500D03580 /* SplashViewModel.swift */; };
+		0239882D2A327DF900E04F0D /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239882C2A327DF900E04F0D /* LoginViewModelTest.swift */; };
+		025CD41C2A21101A002814D9 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */; };
+		025CD41E2A211066002814D9 /* CreateAccountViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CD41D2A211066002814D9 /* CreateAccountViewModelType.swift */; };
 		02789D652A294DFE001ABF72 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D602A294DFE001ABF72 /* Strings.Generated.swift */; };
 		02789D672A294DFE001ABF72 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D622A294DFE001ABF72 /* UIColors.Generated.swift */; };
 		02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02789D642A294DFE001ABF72 /* UIImage.Generated.swift */; };
@@ -25,12 +31,24 @@
 		027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA352A0E6A680052818C /* HealthyTests.swift */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049C21B2A2000680077DBE4 /* CheckboxButton.swift */; };
 		207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 207FF8FF2A167F9100E4BC76 /* Localizable.strings */; };
+		208E7A092A1F550C0067C731 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208E7A072A1F550C0067C731 /* CreateAccountViewController.swift */; };
+		208E7A0A2A1F550C0067C731 /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 208E7A082A1F550C0067C731 /* CreateAccountViewController.xib */; };
+		6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9C2A299E3600A1FC65 /* GoogleSignIn */; };
+		6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */; };
+		6DB5DC9B2A3270880064FBD3 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */; };
+		6DB5DCA12A3271640064FBD3 /* AuthenticatedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB5DC9D2A3271640064FBD3 /* AuthenticatedUser.swift */; };
+		6DB5DCA22A3271640064FBD3 /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB5DC9F2A3271640064FBD3 /* GoogleLoginAuthenticator.swift */; };
+		6DB5DCA32A3271640064FBD3 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB5DCA02A3271640064FBD3 /* Authentication.swift */; };
+		6DB5DCA62A3272350064FBD3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB5DCA52A3272350064FBD3 /* Constants.swift */; };
 		6DDA138D2A1109E8004390D4 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 6DDA138C2A1109E8004390D4 /* Factory */; };
 		6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF525052A1E84C80027502C /* LoginViewController.xib */; };
 		6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525072A1E84FD0027502C /* LoginViewController.swift */; };
 		6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF525092A1E854B0027502C /* LoginViewModel.swift */; };
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
+		6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */; };
+		6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */; };
 		7918F03E2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */; };
 		79311FCE2A191D2D00764707 /* FormTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79311FCD2A191D2D00764707 /* FormTextField.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
@@ -62,9 +80,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		021212442A2F717A002D9079 /* ValidationRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		021212462A2F7183002D9079 /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		0212124A2A31C2BE002D9079 /* CreateAccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelTests.swift; sourceTree = "<group>"; };
 		023987FE2A2E701000E04F0D /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		023987FF2A2E701000E04F0D /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		023988022A2E722600E04F0D /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		0239882C2A327DF900E04F0D /* LoginViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		025CD41B2A21101A002814D9 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		025CD41D2A211066002814D9 /* CreateAccountViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelType.swift; sourceTree = "<group>"; };
 		02789D602A294DFE001ABF72 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
 		02789D622A294DFE001ABF72 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
 		02789D642A294DFE001ABF72 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
@@ -74,16 +98,24 @@
 		027DDA272A0E6A680052818C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027DDA2C2A0E6A680052818C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027DDA312A0E6A680052818C /* HealthyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		027DDA352A0E6A680052818C /* HealthyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyTests.swift; sourceTree = "<group>"; };
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		20376AA82A2663F8004BF0BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2049C21B2A2000680077DBE4 /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		207FF8FF2A167F9100E4BC76 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		208E7A072A1F550C0067C731 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		208E7A082A1F550C0067C731 /* CreateAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
+		6DB5DC9D2A3271640064FBD3 /* AuthenticatedUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUser.swift; sourceTree = "<group>"; };
+		6DB5DC9F2A3271640064FBD3 /* GoogleLoginAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLoginAuthenticator.swift; sourceTree = "<group>"; };
+		6DB5DCA02A3271640064FBD3 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		6DB5DCA52A3272350064FBD3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6DF525052A1E84C80027502C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6DF525072A1E84FD0027502C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6DF525092A1E854B0027502C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelType.swift; sourceTree = "<group>"; };
+		6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelMock.swift; sourceTree = "<group>"; };
 		7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifier.swift"; sourceTree = "<group>"; };
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
@@ -114,7 +146,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
+				6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB5DC9B2A3270880064FBD3 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,16 +170,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021212432A2F7031002D9079 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		021212482A31C22D002D9079 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				021212492A31C245002D9079 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		021212492A31C245002D9079 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0239882E2A327E2D00E04F0D /* CreateAccount */,
+				0239882B2A327DF900E04F0D /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		023987FD2A2E6FDE00E04F0D /* Validators */ = {
 			isa = PBXGroup;
 			children = (
+				021212462A2F7183002D9079 /* Validator.swift */,
+				021212442A2F717A002D9079 /* ValidationRule.swift */,
 				023987FF2A2E701000E04F0D /* EmailValidator.swift */,
 				023987FE2A2E701000E04F0D /* PasswordValidator.swift */,
-				B8574F052A2022E80028FC4B /* ValidationRule.swift */,
-				B8574F032A2022AA0028FC4B /* Validator.swift */,
 				023988022A2E722600E04F0D /* ValidationError.swift */,
 			);
 			path = Validators;
+			sourceTree = "<group>";
+		};
+		0239882B2A327DF900E04F0D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0239882C2A327DF900E04F0D /* LoginViewModelTest.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0239882E2A327E2D00E04F0D /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				0212124A2A31C2BE002D9079 /* CreateAccountViewModelTests.swift */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		027DDA122A0E6A660052818C = {
@@ -154,6 +229,7 @@
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
 				027DDA1C2A0E6A660052818C /* Products */,
+				021212432A2F7031002D9079 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +255,7 @@
 		027DDA342A0E6A680052818C /* HealthyTests */ = {
 			isa = PBXGroup;
 			children = (
+				6DFEC61F2A2E97F80090B2E2 /* Classes */,
 				027DDA352A0E6A680052818C /* HealthyTests.swift */,
 			);
 			path = HealthyTests;
@@ -208,6 +285,7 @@
 		027DDA4F2A0E745F0052818C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6DB5DCA42A32721F0064FBD3 /* System */,
 				027DDA502A0E75E60052818C /* Extensions */,
 				027DDA512A0E761B0052818C /* Modules */,
 				027DDA542A0E76C50052818C /* ReusableViews */,
@@ -233,6 +311,7 @@
 		027DDA512A0E761B0052818C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				209F324A2A1E1BCC00D919E4 /* CreateAccount */,
 				027DDA522A0E76420052818C /* Splash */,
 				6DF525042A1E849F0027502C /* Login */,
 			);
@@ -253,6 +332,7 @@
 		027DDA532A0E76A00052818C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6DB5DC9C2A3271640064FBD3 /* Authentication */,
 				C96520C82A2B72B800FACCC0 /* Logger */,
 				023987FD2A2E6FDE00E04F0D /* Validators */,
 			);
@@ -264,6 +344,7 @@
 			children = (
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
+				2049C21B2A2000680077DBE4 /* CheckboxButton.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -321,6 +402,39 @@
 
 			sourceTree = "<group>";
 		};
+		6DFEC61F2A2E97F80090B2E2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6DFEC6202A2E97FF0090B2E2 /* Modules */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		6DFEC6202A2E97FF0090B2E2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6DFEC6212A2E980B0090B2E2 /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6DFEC6212A2E980B0090B2E2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6DFEC6262A2EB0B70090B2E2 /* Mocks */,
+				6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		6DFEC6262A2EB0B70090B2E2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		79311FCC2A191C8E00764707 /* FormTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,8 +481,8 @@
 			buildPhases = (
 				F39D440A2A149CCC0039AEF8 /* SwiftGen */,
 				0296C1152A0FC69E005E3DC8 /* SwiftLint */,
-				027DDA172A0E6A660052818C /* Sources */,
 				027DDA182A0E6A660052818C /* Frameworks */,
+				027DDA172A0E6A660052818C /* Sources */,
 				027DDA192A0E6A660052818C /* Resources */,
 			);
 			buildRules = (
@@ -378,6 +492,8 @@
 			name = Healthy;
 			packageProductDependencies = (
 				6DDA138C2A1109E8004390D4 /* Factory */,
+				6D611B9C2A299E3600A1FC65 /* GoogleSignIn */,
+				6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -397,6 +513,9 @@
 				027DDA332A0E6A680052818C /* PBXTargetDependency */,
 			);
 			name = HealthyTests;
+			packageProductDependencies = (
+				6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */,
+			);
 			productName = HealthyTests;
 			productReference = 027DDA312A0E6A680052818C /* HealthyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -453,6 +572,7 @@
 			mainGroup = 027DDA122A0E6A660052818C;
 			packageReferences = (
 				6DDA138B2A1109E8004390D4 /* XCRemoteSwiftPackageReference "Factory" */,
+				6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 027DDA1C2A0E6A660052818C /* Products */;
 			projectDirPath = "";
@@ -543,19 +663,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB5DCA12A3271640064FBD3 /* AuthenticatedUser.swift in Sources */,
+				6DB5DCA62A3272350064FBD3 /* Constants.swift in Sources */,
+				025CD41E2A211066002814D9 /* CreateAccountViewModelType.swift in Sources */,
+				208E7A092A1F550C0067C731 /* CreateAccountViewController.swift in Sources */,
+				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
+				025CD41C2A21101A002814D9 /* CreateAccountViewModel.swift in Sources */,
+				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				02789D672A294DFE001ABF72 /* UIColors.Generated.swift in Sources */,
 				023988002A2E701000E04F0D /* PasswordValidator.swift in Sources */,
+				208E7A092A1F550C0067C731 /* CreateAccountViewController.swift in Sources */,
+				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				023988072A2E734000E04F0D /* SplashViewModel.swift in Sources */,
 				023988052A2E734000E04F0D /* SplashViewController.swift in Sources */,
 				023988012A2E701000E04F0D /* EmailValidator.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
+				6DB5DCA22A3271640064FBD3 /* GoogleLoginAuthenticator.swift in Sources */,
 				023988042A2E734000E04F0D /* SplashViewModelType.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
+				6DB5DCA32A3271640064FBD3 /* Authentication.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
+				021212452A2F717A002D9079 /* ValidationRule.swift in Sources */,
 				023988032A2E722600E04F0D /* ValidationError.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
-				B8574F062A2022E80028FC4B /* ValidationRule.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				C9FE277E2A1B341200AD5923 /* SplashViewModel.swift in Sources */,
 				C9FE277B2A1B330200AD5923 /* SplashViewController.swift in Sources */,
@@ -563,10 +694,9 @@
 				C9FE277E2A1B341200AD5923 /* (null) in Sources */,
 				C9FE277B2A1B330200AD5923 /* (null) in Sources */,
 				C96520D02A2B72B900FACCC0 /* LogLevel.swift in Sources */,
-				C9FE27802A1B34E000AD5923 /* (null) in Sources */,
 				C96520CF2A2B72B900FACCC0 /* Logger.swift in Sources */,
-				B8574F042A2022AA0028FC4B /* Validator.swift in Sources */,
 				02789D692A294DFE001ABF72 /* UIImage.Generated.swift in Sources */,
+				021212472A2F7183002D9079 /* Validator.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				7918F03E2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
@@ -581,7 +711,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				027DDA362A0E6A680052818C /* HealthyTests.swift in Sources */,
+				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +934,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -822,7 +954,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -841,6 +973,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -859,6 +992,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JUUZV79G5F;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motoon.HealthyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -911,6 +1045,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		6DDA138B2A1109E8004390D4 /* XCRemoteSwiftPackageReference "Factory" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hmlongco/Factory.git";
@@ -922,10 +1064,25 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6D611B9C2A299E3600A1FC65 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		6DDA138C2A1109E8004390D4 /* Factory */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6DDA138B2A1109E8004390D4 /* XCRemoteSwiftPackageReference "Factory" */;
 			productName = Factory;
+		};
+		6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

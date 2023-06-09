@@ -10,6 +10,10 @@ extension UIImage {
       UIImage(named: "AccentColor")! 
     }
 
+    static var appColors: UIImage {
+      UIImage(named: "AppColors")! 
+    }
+
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
     }
@@ -24,5 +28,13 @@ extension UIImage {
 
     static var iconSplash: UIImage {
       UIImage(named: "icon-splash")! 
+    }
+
+    static var iconCheckboxNotSelected: UIImage {
+      UIImage(named: "icon_checkbox_not_selected")! 
+    }
+
+    static var iconCheckboxSelected: UIImage {
+      UIImage(named: "icon_checkbox_selected")! 
     }
 }
