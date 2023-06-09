@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02279EA62A3373C400C607AD /* CreateAccountViewModelTests.swift */; };
+		0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924292A33A137009290A8 /* UIView+Helpers.swift */; };
+		0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242B2A33A170009290A8 /* UIImage.Generated.swift */; };
+		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
+		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
+		022924312A33A1C5009290A8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
 		025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47512A336B05008BF85A /* DashboardViewModel.swift */; };
@@ -73,6 +78,10 @@
 
 /* Begin PBXFileReference section */
 		02279EA62A3373C400C607AD /* CreateAccountViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelTests.swift; sourceTree = "<group>"; };
+		022924292A33A137009290A8 /* UIView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
+		0229242B2A33A170009290A8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
+		0229242C2A33A170009290A8 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
+		0229242D2A33A170009290A8 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
 		025A474F2A336B05008BF85A /* DashboardViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelType.swift; sourceTree = "<group>"; };
 		025A47502A336B05008BF85A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		025A47512A336B05008BF85A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -121,7 +130,6 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
-		C9BF881C2A21350300F12A40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,7 +299,6 @@
 		027DDA4E2A0E74490052818C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C9BF881C2A21350300F12A40 /* Base */,
 				F39D440B2A14ACE30039AEF8 /* Generated */,
 				207FF8FE2A167E7C00E4BC76 /* Localization */,
 				027DDA272A0E6A680052818C /* Assets.xcassets */,
@@ -323,6 +330,7 @@
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
 				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
 				79311FD72A19214700764707 /* UITextField+Style.swift */,
+				022924292A33A137009290A8 /* UIView+Helpers.swift */,
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 			);
 			path = Extensions;
@@ -461,6 +469,9 @@
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				0229242C2A33A170009290A8 /* Strings.Generated.swift */,
+				0229242D2A33A170009290A8 /* UIColors.Generated.swift */,
+				0229242B2A33A170009290A8 /* UIImage.Generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -588,6 +599,7 @@
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 				025A476F2A337308008BF85A /* SplashViewController.xib in Resources */,
 				025A476B2A337308008BF85A /* .gitkeep in Resources */,
+				022924312A33A1C5009290A8 /* Colors.xcassets in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
 				025A47612A3372D2008BF85A /* CreateAccountViewController.xib in Resources */,
 			);
@@ -664,16 +676,20 @@
 				025A47802A337320008BF85A /* AuthenticatedUser.swift in Sources */,
 				025A47632A3372D2008BF85A /* CreateAccountviewModelType.swift in Sources */,
 				025A47852A337337008BF85A /* Constants.swift in Sources */,
+				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025A476E2A337308008BF85A /* SplashViewModelType.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
+				0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				025A476D2A337308008BF85A /* SplashViewModel.swift in Sources */,
+				0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */,
+				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A476C2A337308008BF85A /* SplashViewController.swift in Sources */,
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,

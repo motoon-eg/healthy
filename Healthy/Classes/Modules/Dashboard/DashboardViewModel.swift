@@ -1,3 +1,5 @@
+import Foundation
+
 // MARK: DashboardViewModel
 
 class DashboardViewModel {}
@@ -10,7 +12,7 @@ extension DashboardViewModel: DashboardViewModelInput {}
 
 extension DashboardViewModel: DashboardViewModelOutput {
     var header: HomeHeaderView.ViewModel {
-        .init(title: "", subtitle: "", imageUrl: URL(string: "")!)
+        .init(title: "", subtitle: "", imageUrl: URL(string: "www.google.com")!)
     }
 }
 

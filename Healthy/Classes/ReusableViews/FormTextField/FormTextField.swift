@@ -28,16 +28,9 @@ class FormTextField: UIView {
     // MARK: Configurations
 
     private func initView() {
-        loadContentViewFromNib()
+        loadViewFromNib()
         configureLayout()
         configureTextFieldObserver()
-    }
-
-    private func loadContentViewFromNib() {
-        Bundle.main.loadNibNamed(FormTextField.reusableIdentifier, owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }
 
