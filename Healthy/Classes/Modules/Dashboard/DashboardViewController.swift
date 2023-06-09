@@ -1,10 +1,3 @@
-//  
-//  DashboardViewController.swift
-//  Healthy
-//
-//  Created by Ahmed M. Hassan on 09/06/2023.
-//
-
 import UIKit
 
 final class DashboardViewController: UIViewController {
@@ -12,7 +5,11 @@ final class DashboardViewController: UIViewController {
     // MARK: Outlets
 
     @IBOutlet private weak var stackView: UIStackView!
-    
+
+    // MARK: Subviews
+
+    private let headerView = HomeHeaderView()
+
     // MARK: Properties
 
     private let viewModel: DashboardViewModelType
@@ -33,6 +30,8 @@ final class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureView()
     }
 }
 
@@ -42,8 +41,16 @@ extension DashboardViewController {}
 
 // MARK: - Configurations
 
-extension DashboardViewController {}
+extension DashboardViewController {
+    func configureView() {
+        stackView.addArrangedSubview(headerView)
+    }
+}
 
 // MARK: - Private Handlers
 
-private extension DashboardViewController {}
+private extension DashboardViewController {
+    func refreshView() {
+        headerView.configure(with: viewModel.header)
+    }
+}

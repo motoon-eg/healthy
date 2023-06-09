@@ -1,10 +1,3 @@
-//  
-//  DashboardViewModelType.swift
-//  Healthy
-//
-//  Created by Ahmed M. Hassan on 09/06/2023.
-//
-
 import Foundation
 
 /// Dashboard Input & Output
@@ -17,4 +10,6 @@ protocol DashboardViewModelInput {}
 
 /// Dashboard ViewModel Output
 ///
-protocol DashboardViewModelOutput {}
+protocol DashboardViewModelOutput {
+    var header: HomeHeaderView.ViewModel { get }
+}
