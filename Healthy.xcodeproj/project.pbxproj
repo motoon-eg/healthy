@@ -57,6 +57,7 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +362,7 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				B2F799E22A344584002F1894 /* MainTabBar */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
 				2049C21B2A2000680077DBE4 /* CheckboxButton.swift */,
@@ -457,6 +460,14 @@
 			children = (
 			);
 			path = SignButtonWithSocialMediaView;
+			sourceTree = "<group>";
+		};
+		B2F799E22A344584002F1894 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
+			);
+			path = MainTabBar;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -690,6 +701,7 @@
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
+				B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */,
 				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A476C2A337308008BF85A /* SplashViewController.swift in Sources */,
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
