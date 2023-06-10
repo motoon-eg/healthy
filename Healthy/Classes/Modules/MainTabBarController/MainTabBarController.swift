@@ -29,28 +29,28 @@ class MainTabBarController: UITabBarController {
         HomeViewController.view.backgroundColor = .red
         HomeViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "home"),
+            image: UIImage.iconHome,
             tag: 0)
 
         let NotificationViewController = UIViewController()
         NotificationViewController.view.backgroundColor = .yellow
         NotificationViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "notification"),
+            image: UIImage.iconNotification,
             tag: 0)
 
         let ProfileViewController = UIViewController()
         ProfileViewController.view.backgroundColor = .systemBrown
         ProfileViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "profile"),
+            image: UIImage.iconProfile,
             tag: 0)
 
         let UnionViewController = UIViewController()
         UnionViewController.view.backgroundColor = .systemPink
         UnionViewController.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "Union"),
+            image: UIImage.iconUnion,
             tag: 0)
 
         viewControllers = [HomeViewController,
