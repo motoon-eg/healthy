@@ -27,7 +27,7 @@ class MainTabBar: UITabBar {
         setupCenterCurve(withWidth: Constants.curveWidth, height: Constants.curveHeight)
     }
     
-    // MARK:  Increase the TabBar height 
+    // MARK:  Increase the TabBar height
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var newSize = super.sizeThatFits(size)
@@ -35,6 +35,20 @@ class MainTabBar: UITabBar {
         return newSize
     }
     
+    // MARK:  If TabBar contains 4 items create unEnabled item under cerve
+    
+    override func setItems(_ items: [UITabBarItem]?, animated: Bool) {
+        var updatedItems = items ?? []
+        
+        if updatedItems.count == 4 {
+            let desiredIndex = 2
+            let customItem = UITabBarItem()
+            customItem.isEnabled = false
+            updatedItems.insert(customItem, at: desiredIndex)
+        }
+        
+        super.setItems(updatedItems, animated: animated)
+    }
     
     // MARK:  Create and add curve at the center of TabBar
     
