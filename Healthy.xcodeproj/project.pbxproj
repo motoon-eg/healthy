@@ -59,6 +59,7 @@
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E62A344A74002F1894 /* UITabBarController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E52A344A74002F1894 /* UITabBarController+Style.swift */; };
+		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E52A344A74002F1894 /* UITabBarController+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Style.swift"; sourceTree = "<group>"; };
+		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 				025A475C2A3372D2008BF85A /* CreateAccount */,
 				025A474E2A336AE3008BF85A /* Dashboard */,
 				6DF525042A1E849F0027502C /* Login */,
+				B2F799E72A344B6C002F1894 /* MainTabBarController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -471,6 +474,14 @@
 				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
 			);
 			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B2F799E82A344B9A002F1894 /* MainTabBarController.swift */,
+			);
+			path = MainTabBarController;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -692,6 +703,7 @@
 				025A47852A337337008BF85A /* Constants.swift in Sources */,
 				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
+				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
 				B2F799E62A344A74002F1894 /* UITabBarController+Style.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025A476E2A337308008BF85A /* SplashViewModelType.swift in Sources */,
