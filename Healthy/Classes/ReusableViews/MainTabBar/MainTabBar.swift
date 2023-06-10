@@ -3,6 +3,7 @@ import UIKit
 class MainTabBar: UITabBar {
     
     private enum Constants {
+        static let customHeight: CGFloat = 100
         static let curveWidth: CGFloat = 64
         static let curveHeight: CGFloat = 42
     }
@@ -25,6 +26,15 @@ class MainTabBar: UITabBar {
     override func draw(_ rect: CGRect) {
         setupCenterCurve(withWidth: Constants.curveWidth, height: Constants.curveHeight)
     }
+    
+    // MARK:  Increase the TabBar height 
+    
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        var newSize = super.sizeThatFits(size)
+        newSize.height = Constants.customHeight
+        return newSize
+    }
+    
     
     // MARK:  Create and add curve at the center of TabBar
     
