@@ -100,8 +100,4 @@ extension UIColor {
     static var secondary80: UIColor {
       UIColor(named: "secondary 80")!
     }
-
-    static var white: UIColor {
-      UIColor(named: "white")!
-    }
 }
