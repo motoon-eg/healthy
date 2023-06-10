@@ -6,6 +6,7 @@ class MainTabBar: UITabBar {
         static let customHeight: CGFloat = 100
         static let curveWidth: CGFloat = 64
         static let curveHeight: CGFloat = 42
+        static let tabBarItemWidth: CGFloat = 40
     }
     
     private let curveSubLayer: CAShapeLayer = {
@@ -25,6 +26,8 @@ class MainTabBar: UITabBar {
     
     override func draw(_ rect: CGRect) {
         setupCenterCurve(withWidth: Constants.curveWidth, height: Constants.curveHeight)
+        moveItemsToTheCenter()
+        configureColors()
     }
     
     // MARK:  Increase the TabBar height
@@ -87,4 +90,19 @@ class MainTabBar: UITabBar {
         
         return path.cgPath
     }
+    
+    // MARK:  Make items at the center
+    
+    private func moveItemsToTheCenter(){
+        itemPositioning = .centered
+        itemWidth = Constants.tabBarItemWidth
+    }
+    
+    // MARK:  configure Item colors
+
+    func configureColors() {
+        tintColor = .primary100
+        unselectedItemTintColor = .gray4
+    }
+    
 }
