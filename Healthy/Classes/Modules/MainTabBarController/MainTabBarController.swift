@@ -2,7 +2,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    private let button: UIButton = {
+    private(set) var tabBarAddButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .primary100
@@ -20,7 +20,7 @@ class MainTabBarController: UITabBarController {
 
     private func configureTabBar() {
         setupMainTabBar()
-        addCenterButton(button, withSize: CGSize(width: 58, height: 58))
+        addCenterButton(tabBarAddButton, withSize: CGSize(width: 58, height: 58))
     }
 
     private func configureVieControllers() {
@@ -28,28 +28,28 @@ class MainTabBarController: UITabBarController {
         let HomeViewController = UIViewController()
         HomeViewController.view.backgroundColor = .red
         HomeViewController.tabBarItem = UITabBarItem(
-            title: "",
+            title: nil,
             image: UIImage.iconHome,
             tag: 0)
 
         let NotificationViewController = UIViewController()
         NotificationViewController.view.backgroundColor = .yellow
         NotificationViewController.tabBarItem = UITabBarItem(
-            title: "",
+            title: nil,
             image: UIImage.iconNotification,
             tag: 0)
 
         let ProfileViewController = UIViewController()
         ProfileViewController.view.backgroundColor = .systemBrown
         ProfileViewController.tabBarItem = UITabBarItem(
-            title: "",
+            title: nil,
             image: UIImage.iconProfile,
             tag: 0)
 
         let UnionViewController = UIViewController()
         UnionViewController.view.backgroundColor = .systemPink
         UnionViewController.tabBarItem = UITabBarItem(
-            title: "",
+            title: nil,
             image: UIImage.iconUnion,
             tag: 0)
 
