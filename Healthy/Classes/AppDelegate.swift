@@ -1,5 +1,6 @@
 import UIKit
 import GoogleSignIn
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,6 +8,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureGoogleSignin()
+
+                let config = GIDConfiguration(clientID: "500241227951-jfe9f5o8li3l753c2146hqfru8aaa7o5.apps.googleusercontent.com")
+        GIDSignIn.sharedInstance.configuration = config
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+              // Show the app's signed-out state.
+            } else {
+              // Show the app's signed-in state.
+            }
+          }
+
+      ApplicationDelegate.shared.application(
+                 application,
+                 didFinishLaunchingWithOptions: launchOptions
+             )
+
         return true
     }
 
@@ -36,7 +53,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func applicatxion(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
+      var flag: Bool = false
+      if  ApplicationDelegate.shared.application(
+                 app,
+                 open: url,
+                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                 annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+      ) {
+        // URl scheme facebook
+        flag = ApplicationDelegate.shared.application(
+                  app,
+                  open: url,
+                  sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                  annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+      } else {
+        // URL scheme google
+        flag = GIDSignIn.sharedInstance.handle(url)
+      }
+      return flag
     }
 }
 

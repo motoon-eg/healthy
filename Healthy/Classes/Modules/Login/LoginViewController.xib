@@ -13,7 +13,8 @@
             <connections>
                 <outlet property="emailTextField" destination="y6L-fE-jmB" id="gqq-Zr-fLh"/>
                 <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="WRy-bS-Mdf"/>
-                <outlet property="forgetPasswordButton" destination="O2G-2d-u81" id="5hS-yY-Mbo"/>
+                <outlet property="facebookButton" destination="Bm9-X6-e61" id="yj6-F2-3Ov"/>
+                <outlet property="forgotPasswordButton" destination="O2G-2d-u81" id="AwC-8a-jjD"/>
                 <outlet property="passwordTextField" destination="TCv-gO-mrb" id="LoA-CT-MPs"/>
                 <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
                 <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
@@ -138,7 +139,7 @@
                                                 <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="asq-w7-g4Q"/>
                                             </connections>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button" customClass="FBSDKLoginButton">
                                             <rect key="frame" x="69" y="0.0" width="44" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="EEQ-UD-rts"/>
@@ -147,7 +148,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="die.face.5.fill" catalog="system"/>
                                             <connections>
-                                                <action selector="didTapSignInWithFacebook" destination="-1" eventType="touchUpInside" id="C79-aL-XIL"/>
+                                                <action selector="didTapSignInWithFacebook:" destination="-1" eventType="touchUpInside" id="AQh-ql-Uzb"/>
                                             </connections>
                                         </button>
                                     </subviews>
