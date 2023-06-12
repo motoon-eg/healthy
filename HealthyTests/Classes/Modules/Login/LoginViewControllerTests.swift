@@ -16,7 +16,7 @@ final class LoginViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
     }
 
-    // MARK: TextFiels tests
+    // MARK: TextFields tests
 
     func test_whenLoginViewControllerCreated_shouldHasEmptyEmailTextField() throws {
         // When
