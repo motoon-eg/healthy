@@ -3,7 +3,21 @@ import XCTest
 
 final class CustomTapBarTest: XCTestCase {
 
+//    // MARK: Properties
+//
+//    private let sut: MainTabBarController!
+//
+//    // MARK: - Life cycle
+//
+//    override func setUp() {
+//        let tabBarController = MainTabBarController()
+//        tabBarController.loadViewIfNeeded()
+//        }
+//    }
+
+    
     // MARK: - Test TabBar Controllers count
+    
     func test_mainTabBar_contain4Controllers() {
         // Given
         let sut = makeSUT()
@@ -34,6 +48,7 @@ final class CustomTapBarTest: XCTestCase {
         XCTAssertNotNil(actualButton)
         XCTAssertEqual(actualButton, expectedButton)
     }
+    
     // MARK: - Test TabBar Controllers
 
     func test_tabBarViewController_configurationViewControllers() {
@@ -88,6 +103,7 @@ final class CustomTapBarTest: XCTestCase {
     }
 
     // MARK: - Helper Method
+    
     private func makeSUT() -> MainTabBarController {
         let tabBarController = MainTabBarController()
         tabBarController.loadViewIfNeeded()

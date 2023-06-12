@@ -15,48 +15,66 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTabBar()
-        configureVieControllers()
     }
 
     private func configureTabBar() {
         setupMainTabBar()
         addCenterButton(tabBarAddButton, withSize: CGSize(width: 58, height: 58))
+        setupViewControllers()
     }
 
-    private func configureVieControllers() {
+    // MARK:  Setup TabBar ViewControllers
 
-        let HomeViewController = UIViewController()
-        HomeViewController.view.backgroundColor = .red
-        HomeViewController.tabBarItem = UITabBarItem(
+    private func setupViewControllers() {
+        let homeNavigationController = createHomeNavigationController()
+        let notificationNavigationController = createNotificationNavigationController()
+        let profileNavigationController = createProfileNavigationController()
+        let unionNavigationController = createUnionNavigationController()
+        
+        viewControllers = [homeNavigationController,
+                           notificationNavigationController,
+                           profileNavigationController,
+                           unionNavigationController]
+    }
+ 
+    private func createHomeNavigationController() -> UINavigationController {
+        let homeViewController = UIViewController()
+        homeViewController.view.backgroundColor = .red
+        homeViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage.iconHome,
             tag: 0)
-
-        let NotificationViewController = UIViewController()
-        NotificationViewController.view.backgroundColor = .yellow
-        NotificationViewController.tabBarItem = UITabBarItem(
+        return UINavigationController(rootViewController: homeViewController)
+    }
+    
+    private func createNotificationNavigationController() -> UINavigationController {
+        let notificationViewController = UIViewController()
+        notificationViewController.view.backgroundColor = .yellow
+        notificationViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage.iconNotification,
             tag: 0)
-
-        let ProfileViewController = UIViewController()
-        ProfileViewController.view.backgroundColor = .systemBrown
-        ProfileViewController.tabBarItem = UITabBarItem(
+        return UINavigationController(rootViewController: notificationViewController)
+    }
+    
+    private func createProfileNavigationController() -> UINavigationController {
+        let profileViewController = UIViewController()
+        profileViewController.view.backgroundColor = .systemBrown
+        profileViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage.iconProfile,
             tag: 0)
-
-        let UnionViewController = UIViewController()
-        UnionViewController.view.backgroundColor = .systemPink
-        UnionViewController.tabBarItem = UITabBarItem(
+        return UINavigationController(rootViewController: profileViewController)
+    }
+    
+    private func createUnionNavigationController() -> UINavigationController {
+        let unionViewController = UIViewController()
+        unionViewController.view.backgroundColor = .systemPink
+        unionViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage.iconUnion,
             tag: 0)
-
-        viewControllers = [HomeViewController,
-                           NotificationViewController,
-                           ProfileViewController,
-                           UnionViewController]
+        return UINavigationController(rootViewController: unionViewController)
     }
 
 }
