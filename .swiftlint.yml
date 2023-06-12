@@ -3,10 +3,6 @@ disabled_rules: # rule identifiers turned on by default to exclude from running
   # TODOs and FIXMEs should be resolved.
   - todo
   
-  # swiftlint:disable commands should be re-enabled before the end of the file
-  # Needed for auto generated files from templates
-  - blanket_disable_command
-  
 # some rules are turned off by default, so you need to opt-in
 opt_in_rules:
   # Prefer checking isEmpty over comparing count to zero
@@ -26,6 +22,9 @@ opt_in_rules:
   
   # Function parameters should be aligned vertically if they’re in multiple lines in a method call
   - vertical_parameter_alignment_on_call
+  
+  # Use shorthand syntax for optional binding
+  - shorthand_optional_binding
 
 # Rules run by `swiftlint analyze`
 analyzer_rules:
@@ -38,9 +37,6 @@ excluded:
   - Templates
   - Healthy/Resources/Generated/
   
-# If true, SwiftLint will not fail if no lintable files are found.
-allow_zero_lintable_files: false
-
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
 force_cast: warning
