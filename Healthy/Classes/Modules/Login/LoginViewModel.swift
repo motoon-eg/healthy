@@ -29,16 +29,16 @@ extension LoginViewModel: LoginViewModelOutput {
     func onLoadingIndicator(state: @escaping (Bool) -> Void) {
         onLoadingState = state
     }
-    
+
     func onErrorMessage(message: @escaping (String) -> Void) {
         onErrorMessage = message
     }
-    
+
     func onButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
         onButtonEnabled = onEnabled
         updateStateButton()
     }
-    
+
     func onLoginStatus(status: @escaping (Bool) -> Void) {
         onLoginStatus = status
     }
@@ -52,7 +52,7 @@ private extension LoginViewModel {
         let emailIsValid = !email.isEmpty
         let passwordIsValid = !password.isEmpty && password.count >= 6
         let buttonIsEnabled = emailIsValid && passwordIsValid
-        
+
         onButtonEnabled(buttonIsEnabled)
     }
 }

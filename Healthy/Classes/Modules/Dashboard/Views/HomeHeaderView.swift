@@ -11,6 +11,6 @@ extension HomeHeaderView {
     struct ViewModel {
         let title: String
         let subtitle: String
-        let imageUrl: URL
+        let imageUrl: URL?
     }
 }

@@ -74,7 +74,7 @@ final class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(forgetPasswordButtonActions.count, 1)
         XCTAssertEqual(forgetPasswordButtonActions.first, "didTapForgetPassowrd:")
     }
-    
+
     func test_whenLoginViewControllerCreated_shouldHasSignInWithGoogleButtonAndAction() throws {
         // Given
         let signInWithGoogleButton = try XCTUnwrap(sut.signInWithGoogleButton, "SigninWithGoogle button is not connected to an IBOutlet")
@@ -87,7 +87,7 @@ final class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(signInWithGoogleButtonActions.count, 1)
         XCTAssertEqual(signInWithGoogleButtonActions.first, "didTapSignInWithGoogle:")
     }
-    
+
     func test_whenLoginViewControllerCreated_shouldHasSignInWithFacebookButtonAndAction() throws {
         // Given
         let signInWithFacebookButton = try XCTUnwrap(sut.forgetPasswordButton, "SignInWithFacebook button button is not connected to an IBOutlet")
@@ -124,7 +124,7 @@ final class LoginViewControllerTests: XCTestCase {
         // Then
         XCTAssertEqual(loginViewModelMock.performForgetPasswordCount, 1)
     }
-    
+
     func test_didTapSignInWithGoogle_shouldCallViewModelPerformSignInWithGoogle() {
         // When
         sut.didTapSignInWithGoogle(UIButton())
@@ -132,7 +132,7 @@ final class LoginViewControllerTests: XCTestCase {
         // Then
         XCTAssertEqual(loginViewModelMock.performSignInWithGoogleCallCount, 1)
     }
-    
+
     func test_didTapSignInWithFacebook_shouldCallViewModelPerformSignInWithFacebook() {
         // When
         sut.didTapSignInWithFacebook(UIButton())
