@@ -1,9 +1,9 @@
-# By default, SwiftLint uses a set of sensible default rules you can adjust:
-disabled_rules: # rule identifiers turned on by default to exclude from running  
-  # TODOs and FIXMEs should be resolved.
-  - todo
+# paths to ignore during linting. Takes precedence over `included`.
+excluded:
+  - Templates
+  - Healthy/Resources/Generated/
   
-# some rules are turned off by default, so you need to opt-in
+# Some rules are turned off by default, so we need to opt-in
 opt_in_rules:
   # Prefer checking isEmpty over comparing count to zero
   - empty_count
@@ -26,17 +26,13 @@ opt_in_rules:
   # Use shorthand syntax for optional binding
   - shorthand_optional_binding
 
-# Rules run by `swiftlint analyze`
-analyzer_rules:
-  - explicit_self
+  - custom_rules
 
-# paths to ignore during linting. Takes precedence over `included`.
-excluded:
-  - Carthage
-  - Pods
-  - Templates
-  - Healthy/Resources/Generated/
-  
+# By default, SwiftLint uses a set of sensible default rules you can adjust:
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  # TODOs and FIXMEs should be resolved.
+  - todo
+
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
 force_cast: warning
@@ -69,3 +65,11 @@ identifier_name:
 
 file_header:
   forbidden_string: "Created by"
+
+custom_rules:
+  no_lines_around_braces:
+    name: "No lines before or after closing curly braces"
+    regex: "(\\s*{[^\\n]*)\\s*\\n{2,}(\\s*\\n)*\\s*([^\\n]*\\n\\s*})"
+    message: "Don't leave lines before or after closing curly braces"
+    severity: warning # or error
+    correction: "$1\n$4"
