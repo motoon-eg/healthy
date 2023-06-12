@@ -36,7 +36,7 @@
 		025A47812A337320008BF85A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47782A337320008BF85A /* Authentication.swift */; };
 		025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A477A2A337320008BF85A /* GoogleLoginAuthenticator.swift */; };
 		025A47852A337337008BF85A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47842A337337008BF85A /* Constants.swift */; };
-		027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
+		0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
 		027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA202A0E6A660052818C /* SceneDelegate.swift */; };
 		027DDA282A0E6A680052818C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DDA272A0E6A680052818C /* Assets.xcassets */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
@@ -667,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
 				025A47622A3372D2008BF85A /* CreateAccountViewModel.swift in Sources */,
@@ -690,10 +691,8 @@
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
-				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A476C2A337308008BF85A /* SplashViewController.swift in Sources */,
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
-				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
