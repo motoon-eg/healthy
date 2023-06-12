@@ -80,8 +80,10 @@ final class LoginViewControllerTests: XCTestCase {
         let signInWithGoogleButton = try XCTUnwrap(sut.signInWithGoogleButton, "SigninWithGoogle button is not connected to an IBOutlet")
 
         // When
-        let signInWithGoogleButtonActions = try XCTUnwrap(signInWithGoogleButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-                                                        "SignInWithGoogle button doesn't has any actions assigned to it.")
+        let signInWithGoogleButtonActions = try XCTUnwrap(
+            signInWithGoogleButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
+            "SignInWithGoogle button doesn't has any actions assigned to it."
+        )
 
         // Then
         XCTAssertEqual(signInWithGoogleButtonActions.count, 1)
@@ -93,8 +95,10 @@ final class LoginViewControllerTests: XCTestCase {
         let signInWithFacebookButton = try XCTUnwrap(sut.forgetPasswordButton, "SignInWithFacebook button button is not connected to an IBOutlet")
 
         // When
-        let signInWithFacebookButtonActions = try XCTUnwrap(signInWithFacebookButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-                                                        "SignInWithFacebook button doesn't has any actions assigned to it.")
+        let signInWithFacebookButtonActions = try XCTUnwrap(
+            signInWithFacebookButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
+            "SignInWithFacebook button doesn't has any actions assigned to it."
+        )
 
         // Then
         XCTAssertEqual(signInWithFacebookButtonActions.count, 1)
