@@ -12,7 +12,6 @@
 		0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242B2A33A170009290A8 /* UIImage.Generated.swift */; };
 		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
 		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
-		022924312A33A1C5009290A8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		0252BF192A365A6F00823339 /* CreateAccountViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252BF182A365A6F00823339 /* CreateAccountViewModelType.swift */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
@@ -22,11 +21,9 @@
 		025A47612A3372D2008BF85A /* CreateAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A475D2A3372D2008BF85A /* CreateAccountViewController.xib */; };
 		025A47622A3372D2008BF85A /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A475E2A3372D2008BF85A /* CreateAccountViewModel.swift */; };
 		025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47602A3372D2008BF85A /* CreateAccountViewController.swift */; };
-		025A476B2A337308008BF85A /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 025A47662A337308008BF85A /* .gitkeep */; };
 		025A476C2A337308008BF85A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47672A337308008BF85A /* SplashViewController.swift */; };
 		025A476D2A337308008BF85A /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47682A337308008BF85A /* SplashViewModel.swift */; };
 		025A476E2A337308008BF85A /* SplashViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47692A337308008BF85A /* SplashViewModelType.swift */; };
-		025A476F2A337308008BF85A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A476A2A337308008BF85A /* SplashViewController.xib */; };
 		025A477B2A337320008BF85A /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47712A337320008BF85A /* EmailValidator.swift */; };
 		025A477C2A337320008BF85A /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47722A337320008BF85A /* Validator.swift */; };
 		025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47732A337320008BF85A /* PasswordValidator.swift */; };
@@ -39,6 +36,7 @@
 		0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
 		027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA202A0E6A660052818C /* SceneDelegate.swift */; };
 		027DDA282A0E6A680052818C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DDA272A0E6A680052818C /* Assets.xcassets */; };
+		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
 		2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049C21B2A2000680077DBE4 /* CheckboxButton.swift */; };
@@ -57,6 +55,8 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		C9E6BBEA2A38EB760073E51A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A476A2A337308008BF85A /* SplashViewController.xib */; };
+		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +91,6 @@
 		025A475D2A3372D2008BF85A /* CreateAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateAccountViewController.xib; sourceTree = "<group>"; };
 		025A475E2A3372D2008BF85A /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		025A47602A3372D2008BF85A /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		025A47662A337308008BF85A /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		025A47672A337308008BF85A /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		025A47682A337308008BF85A /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		025A47692A337308008BF85A /* SplashViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModelType.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 		027DDA1E2A0E6A660052818C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DDA202A0E6A660052818C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		027DDA272A0E6A680052818C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		027DDA2A2A0E6A680052818C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027DDA2C2A0E6A680052818C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027DDA312A0E6A680052818C /* HealthyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +128,7 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +202,6 @@
 		025A47652A337308008BF85A /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				025A47662A337308008BF85A /* .gitkeep */,
 				025A47672A337308008BF85A /* SplashViewController.swift */,
 				025A47682A337308008BF85A /* SplashViewModel.swift */,
 				025A47692A337308008BF85A /* SplashViewModelType.swift */,
@@ -299,12 +297,12 @@
 		027DDA4E2A0E74490052818C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */,
 				F39D440B2A14ACE30039AEF8 /* Generated */,
 				207FF8FE2A167E7C00E4BC76 /* Localization */,
 				027DDA272A0E6A680052818C /* Assets.xcassets */,
 				20376AA82A2663F8004BF0BF /* Colors.xcassets */,
 				027DDA2C2A0E6A680052818C /* Info.plist */,
-				027DDA292A0E6A680052818C /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -595,11 +593,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
+				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
+				027DDA2B2A0E6A680052818C /* (null) in Resources */,
+				C9E6BBEA2A38EB760073E51A /* SplashViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
-				025A476F2A337308008BF85A /* SplashViewController.xib in Resources */,
-				025A476B2A337308008BF85A /* .gitkeep in Resources */,
-				022924312A33A1C5009290A8 /* Colors.xcassets in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
 				025A47612A3372D2008BF85A /* CreateAccountViewController.xib in Resources */,
 			);
@@ -625,7 +623,7 @@
 		0296C1152A0FC69E005E3DC8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -738,10 +736,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		027DDA292A0E6A680052818C /* LaunchScreen.storyboard */ = {
+		C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				027DDA2A2A0E6A680052818C /* Base */,
+				C9EF410F2A34656800E859AD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -874,7 +872,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Healthy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -903,7 +901,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Healthy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
