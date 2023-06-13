@@ -48,4 +48,3 @@ private extension AppDelegate {
         GIDSignIn.sharedInstance.configuration = config
     }
 }
-// swiftlint:enable line_length
