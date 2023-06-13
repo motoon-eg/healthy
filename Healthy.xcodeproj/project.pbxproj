@@ -54,6 +54,7 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		C9E6BBEA2A38EB760073E51A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A476A2A337308008BF85A /* SplashViewController.xib */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 		C9EF41122A34670000E859AD /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EF41112A34670000E859AD /* CreateAccountviewModelType.swift */; };
 /* End PBXBuildFile section */
@@ -602,6 +603,7 @@
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
 				027DDA2B2A0E6A680052818C /* (null) in Resources */,
+				C9E6BBEA2A38EB760073E51A /* SplashViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
