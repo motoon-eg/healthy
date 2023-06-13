@@ -99,8 +99,6 @@ extension FormTextField {
     private func configureLayout() {
         titleLabel.applyStyle(.textFieldTitleLabel)
         inputTextField.applyTextFieldStyle(.primary)
-        inputTextField.setLeftPaddingPoints()
-        inputTextField.setRightPaddingPoints()
         errorLabel.isHidden = true
         errorLabel.textColor = .warning
     }
