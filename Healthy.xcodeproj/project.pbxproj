@@ -36,7 +36,7 @@
 		025A47812A337320008BF85A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47782A337320008BF85A /* Authentication.swift */; };
 		025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A477A2A337320008BF85A /* GoogleLoginAuthenticator.swift */; };
 		025A47852A337337008BF85A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47842A337337008BF85A /* Constants.swift */; };
-		027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
+		0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
 		027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA202A0E6A660052818C /* SceneDelegate.swift */; };
 		027DDA282A0E6A680052818C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DDA272A0E6A680052818C /* Assets.xcassets */; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
@@ -639,7 +639,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if git diff --name-only --cached | grep -q \"\\.swift$\"; then\n  swiftlint lint --path $(git diff --name-only --cached | grep \"\\.swift$\")\nelse\n  echo \"No Swift files changed\"\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint --strict\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		F39D440A2A149CCC0039AEF8 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -667,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
 				025A47622A3372D2008BF85A /* CreateAccountViewModel.swift in Sources */,
@@ -689,10 +690,8 @@
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
-				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A476C2A337308008BF85A /* SplashViewController.swift in Sources */,
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
-				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
@@ -800,7 +799,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -854,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

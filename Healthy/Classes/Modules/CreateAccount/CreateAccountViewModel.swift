@@ -16,22 +16,22 @@ extension CreateAccountViewModel: CreateAccountViewModelInput {
         username = text
         updateEnabledStateButton()
     }
-    
+
     func updateEmail(_ text: String) {
         email = text
         updateEnabledStateButton()
     }
-    
+
     func updatePassword(_ text: String) {
         password = text
         updateEnabledStateButton()
     }
-    
+
     func updateConfirmPassword(_ text: String) {
         confirmPassword = text
         updateEnabledStateButton()
     }
-    
+
     func updateAcceptTermsAndConditions(_ isChecked: Bool) {
         self.isChecked = isChecked
         updateEnabledStateButton()
