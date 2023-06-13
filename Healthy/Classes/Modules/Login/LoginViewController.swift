@@ -3,7 +3,7 @@ import GoogleSignIn
 import FBSDKLoginKit
 
 final class LoginViewController: UIViewController {
-    
+
     // MARK: Outlets
 
     @IBOutlet private(set) weak var emailTextFieldLabel: UILabel!
@@ -12,9 +12,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var passwordTextField: UITextField!
     @IBOutlet private(set) weak var forgetPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
-    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
-    @IBOutlet private(set) weak var facebookButton: FBLoginButton!
-    @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
+    @IBOutlet private(set) weak var signInWithGoogleButton: GIDSignInButton!
+    @IBOutlet private(set) weak var signInWithFacebookButton: FBLoginButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
 
     // MARK: Properties
@@ -50,8 +49,8 @@ final class LoginViewController: UIViewController {
         } else {
             // Extend the code sample from 6a. Add Facebook Login to Your Code
             // Add to your viewDidLoad method:
-            facebookButton.permissions = ["public_profile", "email"]
-            facebookButton.delegate   = self
+            signInWithFacebookButton.permissions = ["public_profile", "email"]
+            signInWithFacebookButton.delegate   = self
         }
 
         configureAppearance()
@@ -74,7 +73,7 @@ extension LoginViewController {
         viewModel.performSignUp()
     }
 
-    @IBAction func didTapForgetPassowrd(_ sender: Any) {
+    @IBAction func didTapForgetPassword(_ sender: Any) {
         viewModel.performForgetPassword()
     }
 

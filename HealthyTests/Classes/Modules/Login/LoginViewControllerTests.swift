@@ -20,7 +20,7 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_whenLoginViewControllerCreated_shouldHasEmptyEmailTextField() throws {
         // When
-        let emailTextField = try XCTUnwrap(sut.emailTextField, "The emailTextField is not connected to an IBOutlet")
+        let emailTextField = try XCTUnwrap(sut.emailTextField)
 
         // Then
         XCTAssertEqual(emailTextField.text, "")
@@ -28,7 +28,7 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_whenLoginViewControllerCreated_shouldHasEmptyPasswordTextField() throws {
         // When
-        let passowrdTextField = try XCTUnwrap(sut.passwordTextField, "The passwordTextField is not connected to an IBOutlet" )
+        let passowrdTextField = try XCTUnwrap(sut.passwordTextField)
 
         // Then
         XCTAssertEqual(passowrdTextField.text, "")
@@ -38,11 +38,12 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_whenLoginViewControllerCreated_shouldHasSignInButtonAndAction() throws {
         // Given
-        let signInButton: UIButton = try XCTUnwrap(sut.signInButton, "Signin button is not connected to an IBOutlet")
+        let signInButton: UIButton = try XCTUnwrap(sut.signInButton)
 
         // When
-        let signInButtonActions = try XCTUnwrap(signInButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-                                                "Singin button doesn't has any actions assigned to it.")
+        let signInButtonActions = try XCTUnwrap(
+            signInButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
+        )
 
         // Then
         XCTAssertEqual(signInButtonActions.count, 1)
@@ -51,11 +52,12 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_whenLoginViewControllerCreated_shouldHasSignUpButtonAndAction() throws {
         // Given
-        let signUpButton = try XCTUnwrap(sut.signUpButton, "Signup button is not connected to an IBOutlet")
+        let signUpButton = try XCTUnwrap(sut.signUpButton)
 
         // When
-        let signUpButtonActions = try XCTUnwrap(signUpButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-                                                "Signup button doesn't has any actions assigned to it.")
+        let signUpButtonActions = try XCTUnwrap(
+            signUpButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
+        )
 
         // Then
         XCTAssertEqual(signUpButtonActions.count, 1)
@@ -64,25 +66,25 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_whenLoginViewControllerCreated_shouldHasForgetPasswordButtonAndAction() throws {
         // Given
-        let forgetPasswordButton = try XCTUnwrap(sut.forgetPasswordButton, "ForgetPassword button is not connected to an IBOutlet")
+        let forgetPasswordButton = try XCTUnwrap(sut.forgetPasswordButton)
 
         // When
-        let forgetPasswordButtonActions = try XCTUnwrap(forgetPasswordButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-                                                        "Signup button doesn't has any actions assigned to it.")
+        let forgetPasswordButtonActions = try XCTUnwrap(
+            forgetPasswordButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
+        )
 
         // Then
         XCTAssertEqual(forgetPasswordButtonActions.count, 1)
-        XCTAssertEqual(forgetPasswordButtonActions.first, "didTapForgetPassowrd:")
+        XCTAssertEqual(forgetPasswordButtonActions.first, "didTapForgetPassword:")
     }
 
     func test_whenLoginViewControllerCreated_shouldHasSignInWithGoogleButtonAndAction() throws {
         // Given
-        let signInWithGoogleButton = try XCTUnwrap(sut.signInWithGoogleButton, "SigninWithGoogle button is not connected to an IBOutlet")
+        let signInWithGoogleButton = try XCTUnwrap(sut.signInWithGoogleButton)
 
         // When
         let signInWithGoogleButtonActions = try XCTUnwrap(
-            signInWithGoogleButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-            "SignInWithGoogle button doesn't has any actions assigned to it."
+            signInWithGoogleButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
         )
 
         // Then
@@ -92,17 +94,16 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_whenLoginViewControllerCreated_shouldHasSignInWithFacebookButtonAndAction() throws {
         // Given
-        let signInWithFacebookButton = try XCTUnwrap(sut.forgetPasswordButton, "SignInWithFacebook button button is not connected to an IBOutlet")
+        let signInWithFacebookButton = try XCTUnwrap(sut.forgetPasswordButton)
 
         // When
         let signInWithFacebookButtonActions = try XCTUnwrap(
-            signInWithFacebookButton.actions(forTarget: sut, forControlEvent: .touchUpInside),
-            "SignInWithFacebook button doesn't has any actions assigned to it."
+            signInWithFacebookButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
         )
 
         // Then
         XCTAssertEqual(signInWithFacebookButtonActions.count, 1)
-        XCTAssertEqual(signInWithFacebookButtonActions.first, "didTapForgetPassowrd:")
+        XCTAssertEqual(signInWithFacebookButtonActions.first, "didTapForgetPassword:")
     }
 
     func test_didTapSignIn_shouldCallViewModelPerformSignIn() {
@@ -123,7 +124,7 @@ final class LoginViewControllerTests: XCTestCase {
 
     func test_didTapForgetPassword_shouldCallViewModelPerformForgetPassword() {
         // When
-        sut.didTapForgetPassowrd(UIButton())
+        sut.didTapForgetPassword(UIButton())
 
         // Then
         XCTAssertEqual(loginViewModelMock.performForgetPasswordCount, 1)

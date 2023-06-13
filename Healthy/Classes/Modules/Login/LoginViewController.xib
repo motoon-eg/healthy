@@ -11,16 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="y6L-fE-jmB" id="gqq-Zr-fLh"/>
-                <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="WRy-bS-Mdf"/>
-                <outlet property="facebookButton" destination="Bm9-X6-e61" id="yj6-F2-3Ov"/>
-                <outlet property="forgotPasswordButton" destination="O2G-2d-u81" id="AwC-8a-jjD"/>
-                <outlet property="passwordTextField" destination="TCv-gO-mrb" id="LoA-CT-MPs"/>
-                <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
-                <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
-                <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="wRv-wr-MX2"/>
-                <outlet property="signInWithGoogleButton" destination="cN6-Mr-YAF" id="eoe-7W-PfZ"/>
-                <outlet property="signUpButton" destination="KEs-vw-Rzk" id="X5I-Xh-lYt"/>
+                <outlet property="emailTextField" destination="y6L-fE-jmB" id="oJ7-E7-2iJ"/>
+                <outlet property="emailTextFieldLabel" destination="YUh-bt-Td5" id="FU0-hx-xJa"/>
+                <outlet property="forgetPasswordButton" destination="O2G-2d-u81" id="Elf-dm-ee0"/>
+                <outlet property="passwordTextField" destination="TCv-gO-mrb" id="T9U-sz-wfx"/>
+                <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="hQw-zY-CMU"/>
+                <outlet property="signInButton" destination="I1J-oM-dkd" id="FNj-yj-GQe"/>
+                <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="RVl-jJ-V4r"/>
+                <outlet property="signInWithGoogleButton" destination="cN6-Mr-YAF" id="1Np-tW-zLT"/>
+                <outlet property="signUpButton" destination="KEs-vw-Rzk" id="VQv-az-gx9"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eJi-Nv-XUw"/>
             </connections>
         </placeholder>
@@ -97,7 +96,7 @@
                                         <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     </buttonConfiguration>
                                     <connections>
-                                        <action selector="didTapForgetPassowrd:" destination="-1" eventType="touchUpInside" id="XoQ-Fm-0hV"/>
+                                        <action selector="didTapForgetPassword:" destination="-1" eventType="touchUpInside" id="H0n-pR-Adg"/>
                                     </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-GX-UTD" userLabel="Sign In Stack View">
@@ -111,7 +110,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Sign In"/>
                                             <connections>
-                                                <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="PNu-gF-PYf"/>
+                                                <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="992-q7-gjT"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____ or sign in with ____" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kat-yT-6EX">
@@ -136,7 +135,7 @@
                                                 <constraint firstAttribute="height" constant="44" id="SEJ-JQ-9Cv"/>
                                             </constraints>
                                             <connections>
-                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="asq-w7-g4Q"/>
+                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="cFA-8p-uDh"/>
                                             </connections>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button" customClass="FBSDKLoginButton">
@@ -148,7 +147,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="die.face.5.fill" catalog="system"/>
                                             <connections>
-                                                <action selector="didTapSignInWithFacebook:" destination="-1" eventType="touchUpInside" id="AQh-ql-Uzb"/>
+                                                <action selector="didTapSignInWithFacebook:" destination="-1" eventType="touchUpInside" id="wrq-cc-HwM"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -167,7 +166,7 @@
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
                                             <connections>
-                                                <action selector="didTapSignUp:" destination="-1" eventType="touchUpInside" id="9du-Lq-SeW"/>
+                                                <action selector="didTapSignUp:" destination="-1" eventType="touchUpInside" id="ggA-fk-V75"/>
                                             </connections>
                                         </button>
                                     </subviews>
