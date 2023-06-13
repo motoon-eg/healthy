@@ -15,7 +15,7 @@ final class SplashViewControllerTest: XCTestCase {
         // When
         viewController.didTapStartCooking(UIButton())
         // Then
-        XCTAssertEqual(viewModelMock.performStartCookingCallCount, 0)
+        XCTAssertEqual(viewModelMock.performStartCookingCallCount, 1)
     }
     }
 // Spy
