@@ -12,6 +12,8 @@
 		0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242B2A33A170009290A8 /* UIImage.Generated.swift */; };
 		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
 		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
+		022924312A33A1C5009290A8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
+		0252BF192A365A6F00823339 /* CreateAccountViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252BF182A365A6F00823339 /* CreateAccountViewModelType.swift */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
 		025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47512A336B05008BF85A /* DashboardViewModel.swift */; };
@@ -32,7 +34,7 @@
 		025A47812A337320008BF85A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47782A337320008BF85A /* Authentication.swift */; };
 		025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A477A2A337320008BF85A /* GoogleLoginAuthenticator.swift */; };
 		025A47852A337337008BF85A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47842A337337008BF85A /* Constants.swift */; };
-		027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
+		0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
 		027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA202A0E6A660052818C /* SceneDelegate.swift */; };
 		027DDA282A0E6A680052818C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DDA272A0E6A680052818C /* Assets.xcassets */; };
 		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
@@ -83,6 +85,7 @@
 		0229242B2A33A170009290A8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		0229242C2A33A170009290A8 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
 		0229242D2A33A170009290A8 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
+		0252BF182A365A6F00823339 /* CreateAccountViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelType.swift; sourceTree = "<group>"; };
 		025A474F2A336B05008BF85A /* DashboardViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelType.swift; sourceTree = "<group>"; };
 		025A47502A336B05008BF85A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		025A47512A336B05008BF85A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -196,7 +199,7 @@
 				025A47602A3372D2008BF85A /* CreateAccountViewController.swift */,
 				025A475D2A3372D2008BF85A /* CreateAccountViewController.xib */,
 				025A475E2A3372D2008BF85A /* CreateAccountViewModel.swift */,
-				C9EF41112A34670000E859AD /* CreateAccountviewModelType.swift */,
+				0252BF182A365A6F00823339 /* CreateAccountViewModelType.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -656,7 +659,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if git diff --name-only --cached | grep -q \"\\.swift$\"; then\n  swiftlint lint --path $(git diff --name-only --cached | grep \"\\.swift$\")\nelse\n  echo \"No Swift files changed\"\nfi\n\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint --strict\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		F39D440A2A149CCC0039AEF8 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -684,6 +687,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
 				025A47622A3372D2008BF85A /* CreateAccountViewModel.swift in Sources */,
@@ -706,14 +710,13 @@
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
-				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A476C2A337308008BF85A /* SplashViewController.swift in Sources */,
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
-				027DDA1F2A0E6A660052818C /* AppDelegate.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
+				0252BF192A365A6F00823339 /* CreateAccountViewModelType.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				C9EF41122A34670000E859AD /* CreateAccountviewModelType.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
@@ -818,7 +821,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -872,7 +875,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
