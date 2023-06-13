@@ -2,9 +2,9 @@ import UIKit
 import Combine
 
 final class LoginViewController: UIViewController {
-
+    
     // MARK: Outlets
-
+    
     @IBOutlet private(set) weak var emailTextFieldLabel: UILabel!
     @IBOutlet private(set) weak var emailTextField: UITextField!
     @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
@@ -14,33 +14,30 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
-
+    
     // MARK: Properties
-
+    
     private let viewModel: LoginViewModelType
     private var subscriptions: Set<AnyCancellable> = []
     
     // MARK: Init
-
+    
     init(viewModel: LoginViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAppearance()
-        bindTextFieldsChanges()
-        bindLoadingIndicator()
-        bindErrorMessage()
-        bindButtonState()
-        bindLoginStatus()
+        configureViewModelInputs()
+        configureViewModelOutputs()
     }
 }
 
@@ -66,7 +63,7 @@ private extension LoginViewController {
     }
 }
 
-// MARK: bind to text fields changes
+// MARK: TextFields changes
 
 private extension LoginViewController {
     func bindTextFieldsChanges() {
@@ -85,25 +82,38 @@ private extension LoginViewController {
     }
 }
 
-// MARK: - View model binds
+// MARK: - Configure ViewModel
 
 private extension LoginViewController {
+    func configureViewModelInputs() {
+        bindTextFieldsChanges()
+    }
+    
+    func configureViewModelOutputs() {
+        bindLoadingIndicator()
+        bindErrorMessage()
+        bindButtonState()
+        bindLoginStatus()
+    }
+    
     func bindLoadingIndicator() {
-        viewModel.isLoadingIndicatorPublisher.sink { [weak self] isLoading in
-            guard let _ = self else { return }
-            
-            // TODO: Show loading indicator.
-            
-        }.store(in: &subscriptions)
+        viewModel.isLoadingIndicatorPublisher
+            .sink { [weak self] isLoading in
+                guard let _ = self else { return }
+                
+                // TODO: Show loading indicator.
+            }
+            .store(in: &subscriptions)
     }
     
     func bindErrorMessage() {
-        viewModel.isShowErrorMessagePublisher.sink { [weak self] message in
-            guard let _ = self else { return }
-            
-            // TODO: Show error message.
-            
-        }.store(in: &subscriptions)
+        viewModel.isShowErrorMessagePublisher
+            .sink { [weak self] message in
+                guard let _ = self else { return }
+                
+                // TODO: Show error message.
+            }
+            .store(in: &subscriptions)
     }
     
     func bindButtonState() {
@@ -113,18 +123,12 @@ private extension LoginViewController {
     }
     
     func bindLoginStatus() {
-        viewModel.isLoginStatusPublisher.sink { [weak self] status in
-            guard let _ = self else { return }
-            
-            switch status {
-            case true:
-                // TODO: Make action when login success.
-                break
-            case false:
-                // TODO: Make action when login fail.
-                break
+        viewModel.isLoginStatusPublisher
+            .sink { [weak self] status in
+                guard let _ = self else { return }
+                
             }
-        }.store(in: &subscriptions)
+            .store(in: &subscriptions)
     }
 }
 

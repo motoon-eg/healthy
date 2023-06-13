@@ -2,21 +2,13 @@ import Foundation
 import Combine
 
 final class LoginViewModel {
-    private var store = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     @Published private var email: String = ""
     @Published private var password: String = ""
     @Published private var isLoadingState: Bool = false
     @Published private var isShowErrorMessage: String = ""
     @Published private var isLoginEnabled: Bool = false
     @Published private var isLoginStatus: Bool = false
-    
-//    init() {
-//        Publishers.CombineLatest($email, $password)
-//            .map { email, password in
-//                email.isEmpty == false && password.isEmpty == false
-//            }
-//            .assign(to: &$isLoginEnabled)
-//    }
 }
 
 // MARK: Input
