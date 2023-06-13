@@ -12,7 +12,6 @@
 		0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242B2A33A170009290A8 /* UIImage.Generated.swift */; };
 		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
 		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
-		022924312A33A1C5009290A8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		0252BF192A365A6F00823339 /* CreateAccountViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252BF182A365A6F00823339 /* CreateAccountViewModelType.swift */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
@@ -58,7 +57,6 @@
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		C9E6BBEA2A38EB760073E51A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A476A2A337308008BF85A /* SplashViewController.xib */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
-		C9EF41122A34670000E859AD /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EF41112A34670000E859AD /* CreateAccountviewModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +129,6 @@
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C9EF41112A34670000E859AD /* CreateAccountviewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountviewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +255,6 @@
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
 				027DDA1C2A0E6A660052818C /* Products */,
-				C9EF410C2A34636800E859AD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -466,13 +462,6 @@
 			children = (
 			);
 			path = Logger;
-			sourceTree = "<group>";
-		};
-		C9EF410C2A34636800E859AD /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
@@ -707,7 +696,6 @@
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				0252BF192A365A6F00823339 /* CreateAccountViewModelType.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
-				C9EF41122A34670000E859AD /* CreateAccountviewModelType.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
