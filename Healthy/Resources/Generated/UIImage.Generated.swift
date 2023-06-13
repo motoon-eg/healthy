@@ -37,4 +37,12 @@ extension UIImage {
     static var iconCheckboxSelected: UIImage {
       UIImage(named: "icon_checkbox_selected")! 
     }
+
+    static var logoImg: UIImage {
+      UIImage(named: "logo-img")! 
+    }
+
+    static var splashScreen: UIImage {
+      UIImage(named: "splash-screen")! 
+    }
 }
