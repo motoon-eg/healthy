@@ -33,18 +33,13 @@ final class HomeHeaderView: UIView {
         
         // TODO: - Waiting for add home subtitle label style.
         subtitleLabel.applyStyle(.signupSubtitle)
-        
-        NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(equalToConstant: 128),
-            contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
-        ])
     }
     
     func configure(with viewModel: ViewModel) {
         titleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
         
-        // TODO: - Waiting for adding kingfisher (or any library for handle image cashing).
+        // TODO: - [HT-62] Waiting for adding kingfisher (or any library for handle image cashing).
     }
 }
 
