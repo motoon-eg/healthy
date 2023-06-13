@@ -6,7 +6,11 @@ final class SplashViewModel {}
 
 // MARK: SplashViewModel
 
-extension SplashViewModel: SplashViewModelInput {}
+extension SplashViewModel: SplashViewModelInput {
+    func performStartCooking() {
+        // Handel StartCooking Button
+    }
+}
 
 // MARK: SplashViewModel Output
 

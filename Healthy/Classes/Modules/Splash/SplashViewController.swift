@@ -36,11 +36,10 @@ final class SplashViewController: UIViewController {
 
 // MARK: - Actions
 
-private extension SplashViewController {
+ extension SplashViewController {
     @IBAction func didTapStartCooking(_ sender: Any) {
-        let viewModel = LoginViewModel()
-        let viewController = LoginViewController(viewModel: viewModel)
-        navigationController?.pushViewController(viewController, animated: true)
+       // TO DO ...
+        viewModel.performStartCooking()
     }
 }
 // MARK: - Configurations

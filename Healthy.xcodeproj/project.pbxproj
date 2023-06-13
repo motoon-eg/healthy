@@ -54,6 +54,7 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 		C9EF41122A34670000E859AD /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EF41112A34670000E859AD /* CreateAccountviewModelType.swift */; };
 /* End PBXBuildFile section */
@@ -126,6 +127,7 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9EF41112A34670000E859AD /* CreateAccountviewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountviewModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -418,6 +420,7 @@
 		6DFEC6202A2E97FF0090B2E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C9E6BBE42A38D6F40073E51A /* Splash */,
 				02279EA52A3373C400C607AD /* CreateAccount */,
 				6DFEC6212A2E980B0090B2E2 /* Login */,
 			);
@@ -462,6 +465,14 @@
 			children = (
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		C9E6BBE42A38D6F40073E51A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		C9EF410C2A34636800E859AD /* Recovered References */ = {
@@ -715,6 +726,7 @@
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
+				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
