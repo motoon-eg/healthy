@@ -6,10 +6,6 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
-    static var accentColor: UIImage {
-      UIImage(named: "AccentColor")! 
-    }
-
     static var appColors: UIImage {
       UIImage(named: "AppColors")! 
     }
@@ -36,13 +32,5 @@ extension UIImage {
 
     static var iconCheckboxSelected: UIImage {
       UIImage(named: "icon_checkbox_selected")! 
-    }
-
-    static var logoImg: UIImage {
-      UIImage(named: "logo-img")! 
-    }
-
-    static var splashScreen: UIImage {
-      UIImage(named: "splash-screen")! 
     }
 }
