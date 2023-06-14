@@ -1,11 +1,13 @@
 import UIKit
 import GoogleSignIn
+import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        configureFacebookSignin(application: application, launchOptions: launchOptions)
         configureGoogleSignin()
         return true
     }
@@ -36,7 +38,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     func applicatxion(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
+        let facebookResult: () -> Bool = {
+            ApplicationDelegate.shared.application(
+                app,
+                open: url,
+                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            )
+        }
+
+        let googleResult: () -> Bool = {
+            GIDSignIn.sharedInstance.handle(url)
+        }
+
+        return facebookResult() || googleResult()
     }
 }
 
@@ -46,5 +61,11 @@ private extension AppDelegate {
     func configureGoogleSignin() {
         let config = GIDConfiguration(clientID: Constatns.googleClientId)
         GIDSignIn.sharedInstance.configuration = config
+    }
+    func configureFacebookSignin(application: UIApplication,
+                                 launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions)
     }
 }
