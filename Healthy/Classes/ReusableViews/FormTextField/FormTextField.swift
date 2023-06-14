@@ -28,16 +28,9 @@ class FormTextField: UIView {
     // MARK: Configurations
 
     private func initView() {
-        loadContentViewFromNib()
+        loadViewFromNib()
         configureLayout()
         configureTextFieldObserver()
-    }
-
-    private func loadContentViewFromNib() {
-        Bundle.main.loadNibNamed(FormTextField.reusableIdentifier, owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }
 
@@ -99,10 +92,8 @@ extension FormTextField {
     private func configureLayout() {
         titleLabel.applyStyle(.textFieldTitleLabel)
         inputTextField.applyTextFieldStyle(.primary)
-
-        // Waiting for the design of the error label style
-        // TODO: - feat: [HL-4] Add UI label styling new design
-        errorLabel.textColor = .red
+        errorLabel.isHidden = true
+        errorLabel.textColor = .warning
     }
 
     private func configureTextFieldObserver() {

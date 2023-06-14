@@ -9,10 +9,10 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var emailTextField: UITextField!
     @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
     @IBOutlet private(set) weak var passwordTextField: UITextField!
-    @IBOutlet private(set) weak var forgotPasswordButton: UIButton!
+    @IBOutlet private(set) weak var forgetPasswordButton: UIButton!
     @IBOutlet private(set) weak var signInButton: UIButton!
-    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: UIButton!
+    @IBOutlet private(set) weak var signInWithGoogleButton: UIButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
     
     // MARK: Properties
@@ -43,12 +43,26 @@ final class LoginViewController: UIViewController {
 
 // MARK: - Actions
 
-private extension LoginViewController {
+extension LoginViewController {
     @IBAction func didTapSignIn(_ sender: Any) {
-        viewModel.login()
+        viewModel.performSignIn()
     }
-    
-    @IBAction func didTapSignUp(_ sender: Any) {}
+
+    @IBAction func didTapSignUp(_ sender: Any) {
+        viewModel.performSignUp()
+    }
+
+    @IBAction func didTapForgetPassowrd(_ sender: Any) {
+        viewModel.performForgetPassword()
+    }
+
+    @IBAction func didTapSignInWithGoogle(_ sender: Any) {
+        viewModel.performSignInWithGoogle()
+    }
+
+    @IBAction func didTapSignInWithFacebook(_ sender: Any) {
+        viewModel.performSignInWithFacebook()
+    }
 }
 
 // MARK: - Configurations
@@ -58,8 +72,62 @@ private extension LoginViewController {
         emailTextFieldLabel.applyStyle(.textFieldTitleLabel)
         passwordTextFieldLabel.applyStyle(.textFieldTitleLabel)
         signInButton.applyButtonStyle(.primary)
-        signInWithGoogleButton.applyButtonStyle(.primary)
-        signInWithFacebookButton.applyButtonStyle(.primary)
+        signInWithFacebookButton.applyButtonStyle(.plainGold)
+    }
+}
+
+// MARK: bind to text fields changes
+
+private extension LoginViewController {
+    func bindTextFieldsChanges() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+
+    @objc func textDidChange(_ sender: UITextField) {
+        guard let text = sender.text else { return }
+
+        if sender == emailTextField {
+            viewModel.updateEmail(text)
+        } else if sender == passwordTextField {
+            viewModel.updatePassword(text)
+        }
+    }
+}
+
+// MARK: - View model binds
+
+private extension LoginViewController {
+    func bindLoadingIndicator() {
+        viewModel.onLoadingIndicator { _ in
+            // TODO: Update loading state.
+        }
+    }
+
+    func bindErrorMessage() {
+        viewModel.onErrorMessage { _ in
+            // TODO: Show error message.
+        }
+    }
+
+    func bindButtonState() {
+        viewModel.onButtonEnabled { [weak self] isEnabled in
+            guard let self else { return }
+            self.signInButton.isEnabled = isEnabled
+        }
+    }
+
+    func bindLoginStatus() {
+        viewModel.onLoginStatus { status in
+            switch status {
+            case true:
+                // TODO: Make action when login success.
+                break
+            case false:
+                // TODO: Make action when login fail.
+                break
+            }
+        }
     }
 }
 

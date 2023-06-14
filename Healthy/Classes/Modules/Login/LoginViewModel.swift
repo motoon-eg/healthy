@@ -21,10 +21,12 @@ extension LoginViewModel: LoginViewModelInput {
     func updatePassword(_ text: String) {
         password = text
     }
-    
-    func login() {
-        // TODO: Call networking for login.
-    }
+
+    func performSignIn() { }
+    func performSignUp() { }
+    func performForgetPassword() { }
+    func performSignInWithGoogle() { }
+    func performSignInWithFacebook() { }
 }
 
 // MARK: Output

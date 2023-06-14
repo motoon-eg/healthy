@@ -6,7 +6,11 @@ typealias LoginViewModelType = LoginViewModelInput & LoginViewModelOutput
 protocol LoginViewModelInput {
     func updateEmail(_ text: String)
     func updatePassword(_ text: String)
-    func login()
+    func performSignIn()
+    func performSignUp()
+    func performForgetPassword()
+    func performSignInWithGoogle()
+    func performSignInWithFacebook()
 }
 
 protocol LoginViewModelOutput {
