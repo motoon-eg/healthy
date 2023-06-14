@@ -48,6 +48,6 @@ extension HomeHeaderView {
     struct HomeHeaderViewModel {
         let title: String
         let subtitle: String
-        let imageUrl: URL
+        let imageUrl: URL?
     }
 }

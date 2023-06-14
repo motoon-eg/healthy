@@ -6,14 +6,6 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
-    static var accentColor: UIImage {
-      UIImage(named: "AccentColor")! 
-    }
-
-    static var appColors: UIImage {
-      UIImage(named: "AppColors")! 
-    }
-
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
     }
