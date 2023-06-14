@@ -34,7 +34,7 @@ final class HomeHeaderView: UIView {
         subtitleLabel.applyStyle(.signupSubtitle)
     }
     
-    func configure(with viewModel: ViewModel) {
+    func configure(with viewModel: HomeHeaderViewModel) {
         titleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
         
@@ -45,7 +45,7 @@ final class HomeHeaderView: UIView {
 // MARK: ViewModel
 
 extension HomeHeaderView {
-    struct ViewModel {
+    struct HomeHeaderViewModel {
         let title: String
         let subtitle: String
         let imageUrl: URL
