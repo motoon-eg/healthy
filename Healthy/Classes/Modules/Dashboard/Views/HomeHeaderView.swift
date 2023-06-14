@@ -30,7 +30,6 @@ final class HomeHeaderView: UIView {
     
     private func configureLayout() {
         titleLabel.applyStyle(.signupTitle)
-        
         // TODO: - Waiting for add home subtitle label style.
         subtitleLabel.applyStyle(.signupSubtitle)
     }
