@@ -35,24 +35,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let token = AccessToken.current,
-           !token.isExpired {
-            // User is logged in, do work such as go to next view controller.
-            let token = token.tokenString
-            let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                     parameters: ["fields": "email,name"],
-                                                     tokenString: token, version: nil, httpMethod: .get)
-            request.start { (_, result, _) in
-                print("\(result ?? "")")
-            }
-        } else {
-            // Extend the code sample from 6a. Add Facebook Login to Your Code
-            // Add to your viewDidLoad method:
-            signInWithFacebookButton.permissions = ["public_profile", "email"]
-            signInWithFacebookButton.delegate   = self
-        }
-
+        signInWithFacebookButton.delegate   = self
         configureAppearance()
         bindTextFieldsChanges()
         bindLoadingIndicator()
@@ -169,6 +152,7 @@ extension LoginViewController: LoginButtonDelegate {
     }
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
-        print("Logout")
+        let loginManager = LoginManager()
+        loginManager.logOut()
     }
 }

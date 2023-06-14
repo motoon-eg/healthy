@@ -8,22 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureGoogleSignin()
-
-        let config = GIDConfiguration(clientID: "500241227951-jfe9f5o8li3l753c2146hqfru8aaa7o5.apps.googleusercontent.com")
-        GIDSignIn.sharedInstance.configuration = config
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-            if error != nil || user == nil {
-                // Show the app's signed-out state.
-            } else {
-                // Show the app's signed-in state.
-            }
-        }
-
-        ApplicationDelegate.shared.application(
-            application,
-            didFinishLaunchingWithOptions: launchOptions
-        )
-
+        configureFacebookSignin(application: application, launchOptions: launchOptions)
         return true
     }
 
@@ -52,25 +37,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Authentication Handler
 
 extension AppDelegate {
-    func applicatxion(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        var flag: Bool = false
-        if  ApplicationDelegate.shared.application(
-            app,
-            open: url,
-            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
-        ) {
-            // URl scheme facebook
-            flag = ApplicationDelegate.shared.application(
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let facebookResult: () -> Bool = {
+            ApplicationDelegate.shared.application(
                 app,
                 open: url,
                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                annotation: options[UIApplication.OpenURLOptionsKey.annotation])
-        } else {
-            // URL scheme google
-            flag = GIDSignIn.sharedInstance.handle(url)
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            )
         }
-        return flag
+
+        let googleResult: () -> Bool = {
+            GIDSignIn.sharedInstance.handle(url)
+        }
+
+        return facebookResult() || googleResult()
     }
 }
 
@@ -80,5 +61,12 @@ private extension AppDelegate {
     func configureGoogleSignin() {
         let config = GIDConfiguration(clientID: Constatns.googleClientId)
         GIDSignIn.sharedInstance.configuration = config
+    }
+
+    func configureFacebookSignin(application: UIApplication,
+                                 launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions)
     }
 }
