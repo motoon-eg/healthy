@@ -25,7 +25,7 @@ class FacebookAuthenticator: NSObject {
         guard let accessToken = FBSDKLoginKit.AccessToken.current else { return }
         let graphRequest = FBSDKLoginKit.GraphRequest(graphPath: "me",
                                                       parameters: ["fields":
-                                                      "first_name, last_name, email,  age_range, gender, picture.width(300).height(300)"],
+                                                             "first_name, last_name, email,  age_range, gender, picture.width(300).height(300)"],
                                                       tokenString: accessToken.tokenString,
                                                       version: nil,
                                                       httpMethod: .get)

@@ -66,6 +66,13 @@ extension LoginViewController {
 
     @IBAction func didTapSignInWithFacebook(_ sender: Any) {
         viewModel.performSignInWithFacebook()
+        FacebookAuthenticator.loginWithFacebookId(view: self) { error, credential, _ in
+            if let error {
+                debugPrint("Error in Login \(error)")
+            } else {
+                debugPrint("Data: \(String(describing: credential))")
+            }
+        }
     }
 }
 
@@ -154,5 +161,6 @@ extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
         let loginManager = LoginManager()
         loginManager.logOut()
+        print("Logout")
     }
 }
