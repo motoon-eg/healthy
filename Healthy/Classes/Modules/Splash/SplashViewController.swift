@@ -36,7 +36,7 @@ final class SplashViewController: UIViewController {
 
 // MARK: - Actions
 
- extension SplashViewController {
+extension SplashViewController {
     @IBAction func didTapStartCooking(_ sender: Any) {
        // TO DO ...
         viewModel.performStartCooking()

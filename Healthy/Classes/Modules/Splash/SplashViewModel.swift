@@ -8,7 +8,7 @@ final class SplashViewModel {}
 
 extension SplashViewModel: SplashViewModelInput {
     func performStartCooking() {
-        // Handel StartCooking Button
+        // Handel a StartCooking Button
     }
 }
 

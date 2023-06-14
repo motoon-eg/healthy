@@ -8,7 +8,7 @@ typealias SplashViewModelType = SplashViewModelInput & SplashViewModelOutput
 ///
 protocol SplashViewModelInput {
     func performStartCooking()
-   }
+}
 
 /// Splash ViewModel Output
 ///

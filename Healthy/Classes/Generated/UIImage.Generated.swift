@@ -18,3 +18,4 @@ extension UIImage {
       UIImage(named: "icon-splash")!
     }
 }
+// swiftlint:enable force_unwrapping
