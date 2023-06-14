@@ -9,7 +9,6 @@ extension UIImage {
     static var appColors: UIImage {
       UIImage(named: "AppColors")! 
     }
-
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
     }
