@@ -29,4 +29,8 @@ extension UIImage {
     static var iconCheckboxSelected: UIImage {
       UIImage(named: "icon_checkbox_selected")! 
     }
+
+    static var images: UIImage {
+      UIImage(named: "images")! 
+    }
 }
