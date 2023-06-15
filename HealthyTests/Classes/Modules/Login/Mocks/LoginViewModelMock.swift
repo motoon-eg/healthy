@@ -1,6 +1,32 @@
 @testable import Healthy
+import Combine
 
 final class LoginViewModelMock: LoginViewModelType {
+    @Published var email = ""
+    var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
+        $email
+            .map { $0.isEmpty }
+            .eraseToAnyPublisher()
+    }
+
+    var isShowErrorMessagePublisher: AnyPublisher<String, Never> {
+        $email
+            .map { $0.lowercased() }
+            .eraseToAnyPublisher()
+    }
+
+    var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
+        $email
+            .map { $0.isEmpty }
+            .eraseToAnyPublisher()
+    }
+
+    var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
+        $email
+            .map { $0.isEmpty }
+            .eraseToAnyPublisher()
+    }
+
     func updateEmail(_ text: String) {}
 
     func updatePassword(_ text: String) {}
