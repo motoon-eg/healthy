@@ -23,9 +23,13 @@ final class CustomTapBarControllerTest: XCTestCase {
     // MARK: - Test TabBar Controllers count
 
     func test_mainTabBar_contain4Controllers() {
-        XCTAssertEqual(sut.viewControllers?.count, 4)
+        // Given
+        let tabBarItemCount = sut.viewControllers?.count
+        
+        // Then
+        XCTAssertEqual(tabBarItemCount, 4)
     }
-
+ 
     // MARK: - Test CenterButton Attribures
 
     func test_centerButton_configurationAttributes() {
