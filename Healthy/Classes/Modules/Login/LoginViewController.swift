@@ -114,23 +114,23 @@ private extension LoginViewController {
     }
 
     func bindLoadingIndicator() {
-//        viewModel.isLoadingIndicatorPublisher
-//            .sink { [weak self] _ in
-//                guard let _ = self else { return }
-//
-//                // TODO: Show loading indicator.
-//            }
-//            .store(in: &subscriptions)
+        viewModel.isLoadingIndicatorPublisher
+            .sink { [weak self] _ in
+                guard self != nil else { return }
+
+                // TODO: Show loading indicator.
+            }
+            .store(in: &subscriptions)
     }
 
     func bindErrorMessage() {
-//        viewModel.isShowErrorMessagePublisher
-//            .sink { [weak self] _ in
-//                guard let _ = self else { return }
-//
-//                // TODO: Show error message.
-//            }
-//            .store(in: &subscriptions)
+        viewModel.isShowErrorMessagePublisher
+            .sink { [weak self] _ in
+                guard self != nil else { return }
+
+                // TODO: Show error message.
+            }
+            .store(in: &subscriptions)
     }
 
     func bindButtonState() {
@@ -140,12 +140,12 @@ private extension LoginViewController {
     }
 
     func bindLoginStatus() {
-//        viewModel.isLoginStatusPublisher
-//            .sink { [weak self] _ in
-//                guard let _ = self else { return }
-//
-//            }
-//            .store(in: &subscriptions)
+        viewModel.isLoginStatusPublisher
+            .sink { [weak self] _ in
+                guard self != nil else { return }
+
+            }
+            .store(in: &subscriptions)
     }
 }
 
@@ -167,6 +167,5 @@ extension LoginViewController: LoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
         let loginManager = LoginManager()
         loginManager.logOut()
-        print("Logout")
     }
 }
