@@ -18,6 +18,10 @@ extension UIImage {
       UIImage(named: "icon-google")! 
     }
 
+    static var iconNoData: UIImage {
+      UIImage(named: "icon-no-data")! 
+    }
+
     static var iconSplash: UIImage {
       UIImage(named: "icon-splash")! 
     }

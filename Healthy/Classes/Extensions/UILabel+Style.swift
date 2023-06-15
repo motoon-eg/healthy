@@ -13,6 +13,7 @@ extension UILabel {
         case signupTitle
         case signupSubtitle
         case textFieldTitleLabel
+        case messageLabel
 
         var labelTextColor: UIColor {
             switch self {
@@ -23,6 +24,8 @@ extension UILabel {
             case .signinSubtitle, .signupSubtitle, .textFieldTitleLabel:
                 // TODO: [HL-4] Add global Color
                 return LabelColor.slateGray
+            case .messageLabel:
+                return .white
             }
         }
 
@@ -45,6 +48,8 @@ extension UILabel {
                 return LabelFont.signupSubtitle
             case .textFieldTitleLabel:
                 return LabelFont.textFieldTitleLabel
+            case .messageLabel:
+                return LabelFont.messageLabel
             }
         }
 
@@ -79,4 +84,5 @@ private enum LabelFont {
     static let signupTitle = UIFont.systemFont(ofSize: 20, weight: .semibold)
     static let signupSubtitle = UIFont.systemFont(ofSize: 11, weight: .regular)
     static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
+    static let messageLabel = UIFont.systemFont(ofSize: 20, weight: .semibold)
 }
