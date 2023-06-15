@@ -20,10 +20,25 @@ extension UIImage {
 
     static var iconNoData: UIImage {
       UIImage(named: "icon-no-data")! 
+      
+    static var iconHome: UIImage {
+      UIImage(named: "icon-home")! 
+    }
+
+    static var iconNotification: UIImage {
+      UIImage(named: "icon-notification")! 
+    }
+
+    static var iconProfile: UIImage {
+      UIImage(named: "icon-profile")! 
     }
 
     static var iconSplash: UIImage {
       UIImage(named: "icon-splash")! 
+    }
+
+    static var iconUnion: UIImage {
+      UIImage(named: "icon-union")! 
     }
 
     static var iconCheckboxNotSelected: UIImage {
