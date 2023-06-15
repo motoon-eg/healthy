@@ -1,7 +1,7 @@
 import UIKit
 
 extension UITabBarController {
-    
+
     func configureMainTabBar() {
         let customTabBar = MainTabBar()
         setValue(customTabBar, forKey: "tabBar")
