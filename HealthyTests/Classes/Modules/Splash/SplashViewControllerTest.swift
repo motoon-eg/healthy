@@ -1,5 +1,6 @@
 import XCTest
 @testable import Healthy
+
 final class SplashViewControllerTest: XCTestCase {
 
     // MARK: Properties
@@ -10,8 +11,10 @@ final class SplashViewControllerTest: XCTestCase {
     // MARK: Lifecycle
 
     override func setUpWithError() throws {
+        super.setUp()
         viewModelMock = SplashViewModelSpy()
         viewController = SplashViewController(viewModel: viewModelMock)
+        viewController.loadViewIfNeeded()
     }
 
     // MARK: Tests
@@ -24,7 +27,9 @@ final class SplashViewControllerTest: XCTestCase {
         XCTAssertEqual(viewModelMock.performStartCookingCallCount, 1)
     }
 }
+
 // MARK: SplashViewModelSpy
+
 private final class SplashViewModelSpy: SplashViewModelType {
     private(set)var performStartCookingCallCount: Int = .zero
     func performStartCooking() {

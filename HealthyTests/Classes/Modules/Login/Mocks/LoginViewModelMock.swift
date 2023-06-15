@@ -1,6 +1,6 @@
-@testable import Healthy
+ @testable import Healthy
 
-final class LoginViewModelMock: LoginViewModelType {
+ final class LoginViewModelMock: LoginViewModelType {
     func updateEmail(_ text: String) {}
 
     func updatePassword(_ text: String) {}
@@ -42,4 +42,4 @@ final class LoginViewModelMock: LoginViewModelType {
     func performSignInWithFacebook() {
         performSignInWithFacebookCallCount += 1
     }
-}
+ }
