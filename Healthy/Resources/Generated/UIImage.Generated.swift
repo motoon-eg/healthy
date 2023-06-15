@@ -6,14 +6,6 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
-    static var accentColor: UIImage {
-      UIImage(named: "AccentColor")! 
-    }
-
-    static var appColors: UIImage {
-      UIImage(named: "AppColors")! 
-    }
-
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
     }
@@ -26,8 +18,24 @@ extension UIImage {
       UIImage(named: "icon-google")! 
     }
 
+    static var iconHome: UIImage {
+      UIImage(named: "icon-home")! 
+    }
+
+    static var iconNotification: UIImage {
+      UIImage(named: "icon-notification")! 
+    }
+
+    static var iconProfile: UIImage {
+      UIImage(named: "icon-profile")! 
+    }
+
     static var iconSplash: UIImage {
       UIImage(named: "icon-splash")! 
+    }
+
+    static var iconUnion: UIImage {
+      UIImage(named: "icon-union")! 
     }
 
     static var iconCheckboxNotSelected: UIImage {
