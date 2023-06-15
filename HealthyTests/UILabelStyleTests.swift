@@ -21,7 +21,7 @@ final class UILabelStyleTests: XCTestCase {
     }
 
     // MARK: - Test Subtyle style
-    
+
     func test_applyStyle_onSubtitleLabelStyle() {
         // Given
         let style = SubtitleLabelStyle()

@@ -22,7 +22,7 @@ extension UILabel {
     }
 }
 
-// MARK:  Title Label Style
+// MARK: Title Label Style
 
 struct TitleLabelStyle: LabelStyling {
     func applyStyle(for label: UILabel) {
@@ -32,7 +32,7 @@ struct TitleLabelStyle: LabelStyling {
     }
 }
 
-// MARK:  Subtitle Label Style
+// MARK: Subtitle Label Style
 
 struct SubtitleLabelStyle: LabelStyling {
     func applyStyle(for label: UILabel) {
