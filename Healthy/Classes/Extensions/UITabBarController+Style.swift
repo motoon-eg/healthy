@@ -2,7 +2,7 @@ import UIKit
 
 extension UITabBarController {
     
-    func setupMainTabBar() {
+    func configureMainTabBar() {
         let customTabBar = MainTabBar()
         setValue(customTabBar, forKey: "tabBar")
     }
@@ -20,5 +20,4 @@ extension UITabBarController {
             button.widthAnchor.constraint(equalToConstant: size.width)
         ])
     }
-    
 }

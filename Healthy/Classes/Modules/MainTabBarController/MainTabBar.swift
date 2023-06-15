@@ -1,75 +1,60 @@
 import UIKit
 
-class MainTabBar: UITabBar {
-    
-    private enum Constants {
-        static let customHeight: CGFloat = 100
-        static let curveWidth: CGFloat = 64
-        static let curveHeight: CGFloat = 42
-        static let tabBarItemWidth: CGFloat = 40
-    }
-    
+final class MainTabBar: UITabBar {
+
     private let curveSubLayer: CAShapeLayer = {
         let shapeLayer = CAShapeLayer()
         shapeLayer.fillColor = UIColor.white.cgColor
         shapeLayer.lineWidth = 1.0
         return shapeLayer
     }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
+
     override func draw(_ rect: CGRect) {
         setupCenterCurve(withWidth: Constants.curveWidth, height: Constants.curveHeight)
         moveItemsToTheCenter()
         configureColors()
     }
-    
-    // MARK:  Increase the TabBar height
-    
+
+    // MARK: Increase the TabBar height
+
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var newSize = super.sizeThatFits(size)
         newSize.height = Constants.customHeight
         return newSize
     }
-    
-    // MARK:  If TabBar contains 4 items create unEnabled item under cerve
-    
+
+    // MARK: If TabBar contains 4 items create unEnabled item under cerve
+
     override func setItems(_ items: [UITabBarItem]?, animated: Bool) {
         var updatedItems = items ?? []
-        
-        if updatedItems.count == 4 {
-            let desiredIndex = 2
+
+        if updatedItems.count % 2 == .zero {
+            let desiredIndex = updatedItems.count / 2
             let customItem = UITabBarItem()
             customItem.isEnabled = false
             updatedItems.insert(customItem, at: desiredIndex)
         }
-        
+
         super.setItems(updatedItems, animated: animated)
     }
-    
-    // MARK:  Create and add curve at the center of TabBar
-    
-    private func setupCenterCurve(withWidth width:CGFloat, height:CGFloat) {
+
+    // MARK: Create and add curve at the center of TabBar
+
+    private func setupCenterCurve(withWidth width: CGFloat, height: CGFloat) {
         curveSubLayer.path = createCurvedPath(frame: frame,
                                               curveWidth: width,
                                               curveHeight: height)
         configureShadow(for: curveSubLayer)
         self.layer.insertSublayer(curveSubLayer, at: 0)
     }
-    
+
     private func configureShadow(for shapeLayer: CALayer) {
         shapeLayer.shadowOffset = CGSize(width: 0, height: 0)
         shapeLayer.shadowRadius = 8
         shapeLayer.shadowColor = UIColor.gray1.withAlphaComponent(0.08).cgColor
         shapeLayer.shadowOpacity = 1
     }
-    
+
     private func createCurvedPath(frame: CGRect, curveWidth: CGFloat, curveHeight: CGFloat) -> CGPath {
         let path = UIBezierPath()
         let center = frame.width / 2
@@ -87,22 +72,31 @@ class MainTabBar: UITabBar {
         path.addLine(to: CGPoint(x: frame.width, y: frame.height))
         path.addLine(to: CGPoint(x: 0, y: frame.height))
         path.close()
-        
+
         return path.cgPath
     }
-    
-    // MARK:  Make items at the center
-    
-    private func moveItemsToTheCenter(){
+
+    // MARK: Make items at the center
+
+    private func moveItemsToTheCenter() {
         itemPositioning = .centered
         itemWidth = Constants.tabBarItemWidth
     }
-    
-    // MARK:  configure Item colors
 
-    func configureColors() {
+    // MARK: configure Item colors
+
+    private func configureColors() {
         tintColor = .primary100
         unselectedItemTintColor = .gray4
     }
-    
+}
+
+private extension MainTabBar {
+
+    private enum Constants {
+        static let customHeight: CGFloat = 100
+        static let curveWidth: CGFloat = 64
+        static let curveHeight: CGFloat = 42
+        static let tabBarItemWidth: CGFloat = 40
+    }
 }

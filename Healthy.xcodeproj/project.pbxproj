@@ -370,7 +370,6 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				B2F799E22A344584002F1894 /* MainTabBar */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
 				2049C21B2A2000680077DBE4 /* CheckboxButton.swift */,
@@ -487,18 +486,11 @@
 			path = MainTabBar;
 			sourceTree = "<group>";
 		};
-		B2F799E22A344584002F1894 /* MainTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
-			);
-			path = MainTabBar;
-			sourceTree = "<group>";
-		};
 		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
 			isa = PBXGroup;
 			children = (
 				B2F799E82A344B9A002F1894 /* MainTabBarController.swift */,
+				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
 			);
 			path = MainTabBarController;
 			sourceTree = "<group>";
