@@ -18,7 +18,7 @@ extension UITextField {
 
         layer.cornerRadius = Constants.defaultCornerRadius
         layer.borderWidth = Constants.defaultBorderWidth
-        layer.borderColor = Constants.defaultBorderColor.cgColor
+        layer.borderColor = UIColor.gray4.cgColor
         borderStyle = .none
 
         // Workaround for adding leading & training spaces
@@ -49,9 +49,6 @@ private extension UITextField {
     enum Constants {
         static let defaultCornerRadius: CGFloat = 10.0
         static let defaultHeight: CGFloat = 55.0
-        static let defaultPadding: CGFloat = 12.0
         static let defaultBorderWidth: CGFloat = 1.5
-        // TODO: [HL-4] Add global Color
-        static let defaultBorderColor: UIColor = UIColor(red: 0.851, green: 0.851, blue: 0.851, alpha: 1)
     }
 }

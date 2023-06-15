@@ -1,3 +1,7 @@
-'app.title' = "Healthy";
-'signin.buttonTitle' = "Sign In";
-'signup.buttonTitle' = "Sign Up";
+"app.title" = "Healthy";
+"signin.buttonTitle" = "Sign In";
+"signup.buttonTitle" = "Sign Up";
+
+// MARK: Common Localizations
+"common.email" = "Email";
+"common.password" = "Password";
