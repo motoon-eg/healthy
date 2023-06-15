@@ -57,6 +57,9 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		B29ABA5C2A3469CA00171A0C /* CustomTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* CustomTapBarControllerTest.swift */; };
+		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
+		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 		C9E6BBEA2A38EB760073E51A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A476A2A337308008BF85A /* SplashViewController.xib */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -132,6 +135,9 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
+		B29ABA5B2A3469CA00171A0C /* CustomTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTapBarControllerTest.swift; sourceTree = "<group>"; };
+		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -345,6 +351,7 @@
 				025A475C2A3372D2008BF85A /* CreateAccount */,
 				025A474E2A336AE3008BF85A /* Dashboard */,
 				6DF525042A1E849F0027502C /* Login */,
+				B2F799E72A344B6C002F1894 /* MainTabBarController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -434,6 +441,7 @@
 			children = (
 				02279EA52A3373C400C607AD /* CreateAccount */,
 				6DFEC6212A2E980B0090B2E2 /* Login */,
+				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -469,6 +477,23 @@
 			children = (
 			);
 			path = SignButtonWithSocialMediaView;
+			sourceTree = "<group>";
+		};
+		B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B29ABA5B2A3469CA00171A0C /* CustomTapBarControllerTest.swift */,
+			);
+			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B2F799E82A344B9A002F1894 /* MainTabBarController.swift */,
+				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
+			);
+			path = MainTabBarController;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -692,6 +717,7 @@
 				025A47852A337337008BF85A /* Constants.swift in Sources */,
 				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
+				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025A476E2A337308008BF85A /* SplashViewModelType.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
@@ -704,6 +730,7 @@
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				025A47642A3372D2008BF85A /* CreateAccountViewController.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
+				B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */,
 				025A476C2A337308008BF85A /* SplashViewController.swift in Sources */,
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
@@ -723,6 +750,7 @@
 			files = (
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
+				B29ABA5C2A3469CA00171A0C /* CustomTapBarControllerTest.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
