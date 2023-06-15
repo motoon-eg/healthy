@@ -26,75 +26,66 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="background-splash" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-ee-dr3">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="8Y4-Ls-LgM">
-                    <rect key="frame" x="20" y="100" width="335" height="467"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="iJt-Dx-H0T">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="111.5"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-splash" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-ea-rFA">
-                                    <rect key="frame" x="128" y="0.0" width="79" height="79"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="79" id="Bz1-5c-uR8"/>
-                                        <constraint firstAttribute="height" constant="79" id="zLL-BG-J83"/>
-                                    </constraints>
-                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100K+ Premium Recipe " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-so-Lsr" userLabel="100K+ Premium Recipe">
-                                    <rect key="frame" x="78" y="91" width="179.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Bt0-Kh-Jqc">
-                            <rect key="frame" x="0.0" y="300" width="335" height="167"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-RO-nQA">
-                                    <rect key="frame" x="47.5" y="0.0" width="240" height="53"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Cooking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-QI-U0T">
-                                            <rect key="frame" x="72.5" y="0.0" width="95" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple way to find Tasty Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw5-Nc-SnG">
-                                            <rect key="frame" x="0.0" y="32.5" width="240" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teD-mQ-e7K">
-                                    <rect key="frame" x="103.5" y="113" width="128.5" height="54"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="54" id="QFs-F7-QyR"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Start Cooking"/>
-                                    <connections>
-                                        <action selector="didTapStartCooking:" destination="-1" eventType="touchUpInside" id="21R-xk-30S"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-splash" translatesAutoresizingMaskIntoConstraints="NO" id="kVU-ea-rFA">
+                    <rect key="frame" x="148" y="104" width="79" height="79"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="79" id="Bz1-5c-uR8"/>
+                        <constraint firstAttribute="height" constant="79" id="zLL-BG-J83"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100K+ Premium Recipe " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccU-so-Lsr" userLabel="100K+ Premium Recipe">
+                    <rect key="frame" x="12" y="197" width="351" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Cooking" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-QI-U0T">
+                    <rect key="frame" x="81" y="392" width="213" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple way to find Tasty Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw5-Nc-SnG">
+                    <rect key="frame" x="50" y="432.5" width="275" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teD-mQ-e7K">
+                    <rect key="frame" x="66" y="517" width="243" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="QFs-F7-QyR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Start Cooking"/>
+                    <connections>
+                        <action selector="didTapStartCooking:" destination="-1" eventType="touchUpInside" id="21R-xk-30S"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="8Y4-Ls-LgM" secondAttribute="leading" constant="-20" id="0ln-2O-zhd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nw5-Nc-SnG" secondAttribute="trailing" constant="50" id="1gn-23-6mP"/>
                 <constraint firstItem="mJ0-ee-dr3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="49s-f7-KCr"/>
+                <constraint firstItem="teD-mQ-e7K" firstAttribute="top" secondItem="nw5-Nc-SnG" secondAttribute="bottom" constant="64" id="9DO-Xn-WqZ"/>
+                <constraint firstItem="ccU-so-Lsr" firstAttribute="top" secondItem="kVU-ea-rFA" secondAttribute="bottom" constant="14" id="EHX-39-twH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EcO-QI-U0T" secondAttribute="trailing" constant="81" id="EZu-zE-jsc"/>
+                <constraint firstAttribute="bottom" secondItem="teD-mQ-e7K" secondAttribute="bottom" constant="96" id="Ivn-hp-bWN"/>
+                <constraint firstItem="EcO-QI-U0T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="81" id="QjC-M3-ANa"/>
+                <constraint firstItem="teD-mQ-e7K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="66" id="RlJ-th-2Xx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mJ0-ee-dr3" secondAttribute="trailing" id="Srg-Rn-3M5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8Y4-Ls-LgM" secondAttribute="bottom" constant="100" id="U5h-G4-GKC"/>
-                <constraint firstItem="8Y4-Ls-LgM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="V2U-AH-X4P"/>
+                <constraint firstItem="nw5-Nc-SnG" firstAttribute="top" secondItem="EcO-QI-U0T" secondAttribute="bottom" constant="20" id="TQ8-S3-tyT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ccU-so-Lsr" secondAttribute="trailing" constant="12" id="UjS-m9-m2J"/>
+                <constraint firstItem="kVU-ea-rFA" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="XgR-AX-M6l"/>
                 <constraint firstItem="mJ0-ee-dr3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="b8N-WT-tI9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="teD-mQ-e7K" secondAttribute="trailing" constant="66" id="dr8-PL-jlC"/>
+                <constraint firstItem="ccU-so-Lsr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="heM-aV-UTH"/>
+                <constraint firstItem="kVU-ea-rFA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="104" id="iOx-GR-PJn"/>
                 <constraint firstAttribute="bottom" secondItem="mJ0-ee-dr3" secondAttribute="bottomMargin" id="kmb-mT-qqF"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Y4-Ls-LgM" secondAttribute="trailing" constant="20" id="nms-Xa-cj1"/>
+                <constraint firstItem="nw5-Nc-SnG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="qOu-3N-cqB"/>
+                <constraint firstItem="ccU-so-Lsr" firstAttribute="centerX" secondItem="kVU-ea-rFA" secondAttribute="centerX" id="vO7-lV-TFa"/>
                 <constraint firstItem="mJ0-ee-dr3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yXO-XT-a4v"/>
             </constraints>
             <point key="canvasLocation" x="23.664122137404579" y="20.422535211267608"/>

@@ -1,58 +1,51 @@
 import Foundation
-
-// MARK: LoginViewModel
+import Combine
 
 final class LoginViewModel {
-    private var email: String = ""
-    private var password: String = ""
-    private var onLoadingState: (Bool) -> Void = { _ in }
-    private var onErrorMessage: (String) -> Void = { _ in }
-    private var onButtonEnabled: (Bool) -> Void = { _ in }
-    private var onLoginStatus: (Bool) -> Void = { _ in }
+    private var subscriptions = Set<AnyCancellable>()
+    @Published private var email: String = ""
+    @Published private var password: String = ""
+    @Published private var isLoadingState: Bool = false
+    @Published private var isShowErrorMessage: String = ""
+    @Published private var isLoginEnabled: Bool = false
+    @Published private var isLoginStatus: Bool = false
 }
 
 // MARK: Input
 
 extension LoginViewModel: LoginViewModelInput {
-    func updateEmail(_ text: String) {}
-    func updatePassword(_ text: String) {}
-    func performSignIn() {}
-    func performSignUp() {}
-    func performForgetPassword() {}
-    func performSignInWithGoogle() {}
-    func performSignInWithFacebook() {}
+    func updateEmail(_ text: String) {
+        email = text
+    }
+    
+    func updatePassword(_ text: String) {
+        password = text
+    }
+
+    func performSignIn() { }
+    func performSignUp() { }
+    func performForgetPassword() { }
+    func performSignInWithGoogle() { }
+    func performSignInWithFacebook() { }
 }
 
 // MARK: Output
 
 extension LoginViewModel: LoginViewModelOutput {
-    func onLoadingIndicator(state: @escaping (Bool) -> Void) {
-        onLoadingState = state
+    var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
+        $isLoadingState.eraseToAnyPublisher()
     }
     
-    func onErrorMessage(message: @escaping (String) -> Void) {
-        onErrorMessage = message
+    var isShowErrorMessagePublisher: AnyPublisher<String, Never> {
+        $isShowErrorMessage.eraseToAnyPublisher()
     }
     
-    func onButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
-        onButtonEnabled = onEnabled
-        updateStateButton()
+    var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
+        $isLoginEnabled.eraseToAnyPublisher()
     }
     
-    func onLoginStatus(status: @escaping (Bool) -> Void) {
-        onLoginStatus = status
+    var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
+        $isLoginStatus.eraseToAnyPublisher()
     }
 }
 
-// MARK: Private Handlers
-
-private extension LoginViewModel {
-    func updateStateButton() {
-        // TODO: [HL-22] Create validator with ability to validate email & password.
-        let emailIsValid = !email.isEmpty
-        let passwordIsValid = !password.isEmpty && password.count >= 6
-        let buttonIsEnabled = emailIsValid && passwordIsValid
-        
-        onButtonEnabled(buttonIsEnabled)
-    }
-}
