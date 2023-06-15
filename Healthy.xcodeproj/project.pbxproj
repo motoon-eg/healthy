@@ -717,6 +717,7 @@
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
 				025A476D2A337308008BF85A /* SplashViewModel.swift in Sources */,
 				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
+				025A476D2A337308008BF85A /* SplashViewModel.swift in Sources */,
 				0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
