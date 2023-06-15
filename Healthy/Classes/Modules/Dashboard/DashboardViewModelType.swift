@@ -11,5 +11,5 @@ protocol DashboardViewModelInput {}
 /// Dashboard ViewModel Output
 ///
 protocol DashboardViewModelOutput {
-    var header: HomeHeaderView.HomeHeaderViewModel { get }
+    var header: HomeHeaderView.ViewModel { get }
 }
