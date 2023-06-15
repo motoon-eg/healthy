@@ -4,9 +4,9 @@ class PlaceholderView: UIView {
 
     // MARK: Outlets
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet private(set) weak var imageView: UIImageView!
+    @IBOutlet private(set) weak var messageLabel: UILabel!
+    @IBOutlet private(set) weak var actionButton: UIButton!
 
     // MARK: Init
 
@@ -97,7 +97,6 @@ extension PlaceholderView {
             actionButton.setTitle(newValue, for: .normal)
         }
     }
-
 }
 
 // MARK: Private Handlers
@@ -115,5 +114,4 @@ extension PlaceholderView {
     @IBAction func didTapButton(_ sender: Any) {
         onAction?()
     }
-
 }
