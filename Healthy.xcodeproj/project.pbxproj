@@ -28,6 +28,8 @@
 		025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AE2A3C5F8900295B91 /* FilterSearchViewController.swift */; };
 		025511B32A3C5F8900295B91 /* FilterSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AF2A3C5F8900295B91 /* FilterSearchViewModel.swift */; };
 		025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025511B02A3C5F8900295B91 /* FilterSearchViewController.xib */; };
+		025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BA2A3C655200295B91 /* SavedRecipe.swift */; };
+		025511BD2A3C656300295B91 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BC2A3C656300295B91 /* Recipe.swift */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
 		025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47512A336B05008BF85A /* DashboardViewModel.swift */; };
@@ -125,6 +127,8 @@
 		025511AE2A3C5F8900295B91 /* FilterSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchViewController.swift; sourceTree = "<group>"; };
 		025511AF2A3C5F8900295B91 /* FilterSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchViewModel.swift; sourceTree = "<group>"; };
 		025511B02A3C5F8900295B91 /* FilterSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterSearchViewController.xib; sourceTree = "<group>"; };
+		025511BA2A3C655200295B91 /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
+		025511BC2A3C656300295B91 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		025A474F2A336B05008BF85A /* DashboardViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelType.swift; sourceTree = "<group>"; };
 		025A47502A336B05008BF85A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		025A47512A336B05008BF85A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -276,6 +280,15 @@
 			path = FilterSearch;
 			sourceTree = "<group>";
 		};
+		025511B92A3C654700295B91 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				025511BC2A3C656300295B91 /* Recipe.swift */,
+				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		025A474E2A336AE3008BF85A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +432,7 @@
 		027DDA4F2A0E745F0052818C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				025511B92A3C654700295B91 /* Entities */,
 				027DDA502A0E75E60052818C /* Extensions */,
 				027DDA512A0E761B0052818C /* Modules */,
 				027DDA542A0E76C50052818C /* ReusableViews */,
@@ -871,8 +885,10 @@
 				0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */,
 				B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */,
 				025511AA2A3C5DAA00295B91 /* SavedRecipesViewModel.swift in Sources */,
+				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
 				025511B12A3C5F8900295B91 /* FilterSearchViewModelType.swift in Sources */,
+				025511BD2A3C656300295B91 /* Recipe.swift in Sources */,
 				0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */,
 				025A476E2A337308008BF85A /* SplashViewModelType.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
