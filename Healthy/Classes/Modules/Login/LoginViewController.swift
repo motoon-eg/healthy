@@ -115,9 +115,7 @@ private extension LoginViewController {
 
     func bindLoadingIndicator() {
         viewModel.isLoadingIndicatorPublisher
-            .sink { [weak self] _ in
-                guard self != nil else { return }
-
+            .sink { _ in
                 // TODO: Show loading indicator.
             }
             .store(in: &subscriptions)
@@ -125,9 +123,7 @@ private extension LoginViewController {
 
     func bindErrorMessage() {
         viewModel.isShowErrorMessagePublisher
-            .sink { [weak self] _ in
-                guard self != nil else { return }
-
+            .sink { _ in
                 // TODO: Show error message.
             }
             .store(in: &subscriptions)
@@ -141,10 +137,7 @@ private extension LoginViewController {
 
     func bindLoginStatus() {
         viewModel.isLoginStatusPublisher
-            .sink { [weak self] _ in
-                guard self != nil else { return }
-
-            }
+            .sink { _ in }
             .store(in: &subscriptions)
     }
 }
