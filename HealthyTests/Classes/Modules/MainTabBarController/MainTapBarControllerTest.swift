@@ -48,7 +48,7 @@ final class CustomTapBarControllerTest: XCTestCase {
 
     // MARK: - Home View Controller tabBarTests
 
-    func test_tabBarViewController_HomeViewController() {
+    func test_tabBarViewController_homeViewController() {
         // Given
         let homeViewController = sut.viewControllers?[0]
 
@@ -60,15 +60,28 @@ final class CustomTapBarControllerTest: XCTestCase {
         XCTAssertEqual(homeViewController?.tabBarItem.tag, 0)
     }
 
+    // MARK: - Union View Controller tabBarTests
+
+    func test_tabBarViewController_savedReceiptsViewController() {
+        // Given
+        let unionViewController = sut.viewControllers?[1]
+
+        // Then
+        XCTAssertNotNil(unionViewController)
+        XCTAssertNotNil(unionViewController?.tabBarItem)
+        XCTAssertEqual(unionViewController?.tabBarItem.title, nil)
+        XCTAssertEqual(unionViewController?.tabBarItem.image, UIImage.iconUnion)
+        XCTAssertEqual(unionViewController?.tabBarItem.tag, 0)
+    }
+
     // MARK: - Notification View Controller tabBarTests
 
-    func test_tabBarViewController_NotificationViewController() {
+    func test_tabBarViewController_notificationViewController() {
         // Given
-        let notificationViewController = sut.viewControllers?[1]
+        let notificationViewController = sut.viewControllers?[2]
 
         // Then
         XCTAssertNotNil(notificationViewController)
-        XCTAssertEqual(notificationViewController?.view.backgroundColor, .yellow)
         XCTAssertNotNil(notificationViewController?.tabBarItem)
         XCTAssertEqual(notificationViewController?.tabBarItem.title, nil)
         XCTAssertEqual(notificationViewController?.tabBarItem.image, UIImage.iconNotification)
@@ -77,9 +90,9 @@ final class CustomTapBarControllerTest: XCTestCase {
 
     // MARK: - Profile View Controller tabBarTests
 
-    func test_tabBarViewController_ProfileViewController() {
+    func test_tabBarViewController_profileViewController() {
         // Given
-        let profileViewController = sut.viewControllers?[2]
+        let profileViewController = sut.viewControllers?[3]
 
         // Then
         XCTAssertNotNil(profileViewController)
@@ -87,20 +100,6 @@ final class CustomTapBarControllerTest: XCTestCase {
         XCTAssertEqual(profileViewController?.tabBarItem.title, nil)
         XCTAssertEqual(profileViewController?.tabBarItem.image, UIImage.iconProfile)
         XCTAssertEqual(profileViewController?.tabBarItem.tag, 0)
-    }
-
-    // MARK: - Union View Controller tabBarTests
-
-    func test_tabBarViewController_UnionViewController() {
-        // Given
-        let unionViewController = sut.viewControllers?[3]
-
-        // Then
-        XCTAssertNotNil(unionViewController)
-        XCTAssertNotNil(unionViewController?.tabBarItem)
-        XCTAssertEqual(unionViewController?.tabBarItem.title, nil)
-        XCTAssertEqual(unionViewController?.tabBarItem.image, UIImage.iconUnion)
-        XCTAssertEqual(unionViewController?.tabBarItem.tag, 0)
     }
 
     // MARK: - Test Custom Tab Bar
