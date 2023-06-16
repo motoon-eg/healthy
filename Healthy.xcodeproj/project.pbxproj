@@ -847,6 +847,7 @@
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
 				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
 				206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */,
+				
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
