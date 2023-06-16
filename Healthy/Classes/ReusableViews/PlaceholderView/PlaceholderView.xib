@@ -16,41 +16,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ybj-Bt-kbT">
-                    <rect key="frame" x="8" y="0.0" width="412" height="497.33333333333331"/>
+                    <rect key="frame" x="20" y="223.33333333333334" width="388" height="492.33333333333314"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-no-data" translatesAutoresizingMaskIntoConstraints="NO" id="mgo-Fz-duC">
-                            <rect key="frame" x="0.0" y="0.0" width="412" height="401.66666666666669"/>
+                            <rect key="frame" x="0.0" y="0.0" width="388" height="388"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="mgo-Fz-duC" secondAttribute="height" multiplier="1:1" id="V1h-tJ-Chk"/>
+                            </constraints>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FaY-bl-N9a">
-                            <rect key="frame" x="126.33333333333336" y="441.66666666666669" width="159.66666666666663" height="55.666666666666686"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Archived Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-bI-ZH3">
-                                    <rect key="frame" x="0.0" y="0.0" width="159.66666666666666" height="23"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-YL-FQn">
-                                    <rect key="frame" x="0.0" y="33" width="159.66666666666666" height="22.666666666666671"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Fetch"/>
-                                    <connections>
-                                        <action selector="didTapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="KX7-Zj-WNp"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Archived Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-bI-ZH3">
+                            <rect key="frame" x="114.33333333333336" y="428" width="159.66666666666663" height="15.666666666666686"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEc-YL-FQn">
+                            <rect key="frame" x="160.66666666666666" y="483.66666666666663" width="67" height="8.6666666666666856"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Fetch"/>
+                            <connections>
+                                <action selector="didTapButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="KX7-Zj-WNp"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="FaY-bl-N9a" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="AaZ-u8-4AK"/>
-                <constraint firstItem="ybj-Bt-kbT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K2d-X0-dZz"/>
-                <constraint firstItem="FaY-bl-N9a" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Zdt-Sc-WDV"/>
-                <constraint firstAttribute="trailing" secondItem="ybj-Bt-kbT" secondAttribute="trailing" constant="8" id="bTY-XM-tgs"/>
-                <constraint firstItem="ybj-Bt-kbT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="dfP-Yt-11v"/>
+                <constraint firstItem="ybj-Bt-kbT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="BqR-fd-hwH"/>
+                <constraint firstAttribute="trailing" secondItem="ybj-Bt-kbT" secondAttribute="trailing" constant="20" id="bTY-XM-tgs"/>
+                <constraint firstItem="ybj-Bt-kbT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dfP-Yt-11v"/>
             </constraints>
             <connections>
                 <outlet property="actionButton" destination="eEc-YL-FQn" id="ov3-WJ-Fgy"/>
