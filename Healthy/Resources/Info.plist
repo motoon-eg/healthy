@@ -12,6 +12,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array/>
 		</dict>
+    </array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Poppins-Regular.ttf</string>
