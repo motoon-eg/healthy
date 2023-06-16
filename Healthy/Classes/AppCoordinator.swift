@@ -4,7 +4,7 @@ import UIKit
 final class AppCoordinator {
     private let window: UIWindow
     private var children: [Coordinator] = []
-    private var isLoggedIn = false
+    private var isLoggedIn = false // TODO: [HL-74] Replace with actual implentation
 
     /// Initializes a new `AppCoordinator` object with the specified window.
     ///
@@ -34,7 +34,7 @@ private extension AppCoordinator {
         let viewController = MainTabBarController()
         replaceRootViewController(viewController)
     }
-    
+
     /// Displays the onboarding flow.
     func displayOnboardingFlow() {
         let navigationController = UINavigationController()
@@ -59,7 +59,8 @@ private extension AppCoordinator {
 private extension AppCoordinator {
     ///  Replaces the root view controller of the app's window.
     ///
-    /// This method sets the specified view controller as the root view controller of the app's window, and makes the window visible.
+    /// This method sets the specified view controller as the root view controller of the app's window,
+    /// and makes the window visible.
     func replaceRootViewController(_ viewController: UIViewController) {
         window.rootViewController = viewController
         window.makeKeyAndVisible()
