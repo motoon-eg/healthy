@@ -18,15 +18,18 @@ final class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureTabBar()
+        configureViewControllers()
     }
+}
 
-    // MARK: Configurations
+// MARK: Configurations
 
+private extension MainTabBarController {
     private func configureTabBar() {
         configureMainTabBar()
         addCenterButton(addButton, withSize: CGSize(width: 58, height: 58))
-        configureViewControllers()
     }
 }
 
@@ -60,23 +63,35 @@ private extension MainTabBarController {
 
     private func configureViewControllers() {
         let homeViewController = makeHomeViewController()
+        let savedRecipesViewController = makeSavedRecipesViewController()
         let notificationViewController = makeNotificationViewController()
         let profileViewController = makeProfileViewController()
-        let unionViewController = makeUnionViewController()
+
         viewControllers = [
             homeViewController,
+            savedRecipesViewController,
             notificationViewController,
-            profileViewController,
-            unionViewController
+            profileViewController
         ]
     }
 
     private func makeHomeViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let viewModel = DashboardViewModel()
+        let viewController = DashboardViewController(viewModel: viewModel)
         viewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage.iconHome,
+            tag: 0
+        )
+        return viewController
+    }
+
+    private func makeSavedRecipesViewController() -> UIViewController {
+        let viewModel = SavedRecipesViewModel()
+        let viewController = SavedRecipesViewController(viewModel: viewModel)
+        viewController.tabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage.iconUnion,
             tag: 0
         )
         return viewController
@@ -99,17 +114,6 @@ private extension MainTabBarController {
         viewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage.iconProfile,
-            tag: 0
-        )
-        return viewController
-    }
-
-    private func makeUnionViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .systemPink
-        viewController.tabBarItem = UITabBarItem(
-            title: nil,
-            image: UIImage.iconUnion,
             tag: 0
         )
         return viewController
