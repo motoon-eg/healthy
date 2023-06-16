@@ -62,10 +62,12 @@ private extension AppDelegate {
         let config = GIDConfiguration(clientID: Constatns.googleClientId)
         GIDSignIn.sharedInstance.configuration = config
     }
+    
     func configureFacebookSignin(application: UIApplication,
                                  launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         ApplicationDelegate.shared.application(
             application,
-            didFinishLaunchingWithOptions: launchOptions)
+            didFinishLaunchingWithOptions: launchOptions
+        )
     }
 }
