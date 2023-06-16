@@ -126,9 +126,9 @@ private extension LoginViewController {
     }
 
     func bindButtonState() {
-//        viewModel.isLoginEnabledPublisher
-//            .assign(to: \.isEnabled, on: signInButton)
-//            .store(in: &subscriptions)
+        viewModel.isLoginEnabledPublisher
+            .assign(to: \.isEnabled, on: signInButton)
+            .store(in: &subscriptions)
     }
 
     func bindLoginStatus() {
