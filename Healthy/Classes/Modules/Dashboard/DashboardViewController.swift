@@ -33,24 +33,24 @@ final class DashboardViewController: UIViewController {
 
         configureView()
     }
-    
-    //MARK: - Function for header section creation
-    func makeHeaderSection(title: String ,content:UIView) -> UIView {
-        
+
+    // MARK: - Function for header section creation
+    func makeHeaderSection(title: String, content: UIView) -> UIView {
+
         let titleLabel = UILabel()
         titleLabel.text = title
-        
-        let stack = UIStackView(arrangedSubviews: [titleLabel , content ])
+
+        let stack = UIStackView(arrangedSubviews: [titleLabel, content ])
         view.addSubview(stack)
         stack.backgroundColor = .darkGray
-        
+
         stack.axis = .horizontal
         stack.alignment = .center
         stack.distribution = .fillEqually
        stack.spacing = 10
-        
+
         stack.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
             stack.leadingAnchor.constraint(equalTo:
                                             view.safeAreaLayoutGuide.leadingAnchor,
@@ -62,24 +62,23 @@ final class DashboardViewController: UIViewController {
         ])
 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: stack.leadingAnchor , constant: 8),
+            titleLabel.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: 8),
             titleLabel.trailingAnchor.constraint(equalTo: content.leadingAnchor),
             titleLabel.topAnchor.constraint(equalTo: stack.topAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: content.topAnchor, constant: -8)
         ])
 
-       
         content.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
-            content.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor , constant: 10),
+            content.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 10),
             content.topAnchor.constraint(equalTo: stack.topAnchor),
-            content.trailingAnchor.constraint(equalTo: stack.trailingAnchor , constant: -8),
+            content.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: -8),
             content.bottomAnchor.constraint(equalTo: content.topAnchor, constant: -8)
         ])
-    
+
         return stack
     }
 }
