@@ -1,28 +1,34 @@
 @testable import Healthy
 
 final class CreateAccountViewModelMock: CreateAccountViewModelType {
-
-    // MARK: - Properties
-    var updateUsernameCalled = false
-    var updateEmailCalled = false
-    var updatePasswordCalled = false
-    var updateConfirmPasswordCalled = false
-
     // MARK: - Methods
+    private(set) var updateUsernameCallCount: Int = .zero
     func updateUsername(_ username: String) {
-        updateUsernameCalled = true
+        updateUsernameCallCount += 1
     }
+
+    private(set) var updateEmailCallCount: Int = .zero
     func updateEmail(_ email: String) {
-        updateEmailCalled = true
+        updateEmailCallCount += 1
     }
+
+    private(set) var updatePasswordCallCount: Int = .zero
     func updatePassword(_ password: String) {
-        updatePasswordCalled = true
+        updatePasswordCallCount += 1
     }
+
+    private(set) var updateConfirmPasswordCallCount: Int = .zero
     func updateConfirmPassword(_ confirmPassword: String) {
-        updateConfirmPasswordCalled = true
+        updateConfirmPasswordCallCount += 1
     }
+
+    private(set) var configureButtonEnabledCallCount: Int = .zero
     func configureButtonEnabled(onEnabled: @escaping (Bool) -> Void) {
+        configureButtonEnabledCallCount += 1
     }
+
+    private(set) var updateAcceptTermsAndConditionsCallCount: Int = .zero
     func updateAcceptTermsAndConditions(_ accepted: Bool) {
+        updateAcceptTermsAndConditionsCallCount += 1
     }
 }

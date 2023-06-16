@@ -38,20 +38,19 @@ final class CreateAccountViewControllerTests: XCTestCase {
 
     func testTextFieldEditingChanged() {
         sut.nameTextField.sendActions(for: .editingChanged)
-        XCTAssertTrue(viewModel.updateUsernameCalled)
+        XCTAssertEqual(viewModel.updateUsernameCallCount, 1)
 
         sut.emailTextField.sendActions(for: .editingChanged)
-        XCTAssertTrue(viewModel.updateEmailCalled)
+        XCTAssertEqual(viewModel.updateEmailCallCount, 1)
 
         sut.passwordTextField.sendActions(for: .editingChanged)
-        XCTAssertTrue(viewModel.updatePasswordCalled)
+        XCTAssertEqual(viewModel.updatePasswordCallCount, 1)
 
         sut.confirmPasswordTextField.sendActions(for: .editingChanged)
-        XCTAssertTrue(viewModel.updateConfirmPasswordCalled)
+        XCTAssertEqual(viewModel.updateConfirmPasswordCallCount, 1)
     }
 
     func testSignUpButtonTouchUpInside() {
         sut.signUpButton.sendActions(for: .touchUpInside)
-//        XCTAssertFalse(viewModel.didTapSignUpCalled)
     }
 }
