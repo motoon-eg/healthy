@@ -109,25 +109,21 @@ private extension LoginViewController {
 //        bindLoginStatus()
     }
 
-//    func bindLoadingIndicator() {
-//        viewModel.isLoadingIndicatorPublisher
-//            .sink { [weak self] isLoading in
-//                guard let _ = self else { return }
-//
-//                // TODO: Show loading indicator.
-//            }
-//            .store(in: &subscriptions)
-//    }
+    func bindLoadingIndicator() {
+        viewModel.isLoadingIndicatorPublisher
+            .sink { _ in
+                // TODO: Show loading indicator.
+            }
+            .store(in: &subscriptions)
+    }
 
-//    func bindErrorMessage() {
-//        viewModel.isShowErrorMessagePublisher
-//            .sink { [weak self] message in
-//                guard let _ = self else { return }
-//
-//                // TODO: Show error message.
-//            }
-//            .store(in: &subscriptions)
-//    }
+    func bindErrorMessage() {
+        viewModel.isShowErrorMessagePublisher
+            .sink { _ in
+                // TODO: Show error message.
+            }
+            .store(in: &subscriptions)
+    }
 
     func bindButtonState() {
         viewModel.isLoginEnabledPublisher
@@ -135,14 +131,11 @@ private extension LoginViewController {
             .store(in: &subscriptions)
     }
 
-//    func bindLoginStatus() {
-//        viewModel.isLoginStatusPublisher
-//            .sink { [weak self] status in
-//                guard let _ = self else { return }
-//
-//            }
-//            .store(in: &subscriptions)
-//    }
+    func bindLoginStatus() {
+        viewModel.isLoginStatusPublisher
+            .sink { _ in }
+            .store(in: &subscriptions)
+    }
 }
 
 // MARK: - Private Handlers

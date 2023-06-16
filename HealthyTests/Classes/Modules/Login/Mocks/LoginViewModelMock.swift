@@ -1,17 +1,24 @@
+import Combine
 @testable import Healthy
 import Combine
 
 final class LoginViewModelMock: LoginViewModelType {
+    var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
+        Just(false).eraseToAnyPublisher()
+    }
 
-    var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never>
+    var isShowErrorMessagePublisher: AnyPublisher<String, Never> {
+        Just("").eraseToAnyPublisher()
+    }
 
-    var isShowErrorMessagePublisher: AnyPublisher<String, Never>
+    var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
+        Just(false).eraseToAnyPublisher()
+    }
 
-    var isLoginEnabledPublisher: AnyPublisher<Bool, Never>
+    var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
+        Just(false).eraseToAnyPublisher()
+    }
 
-    var isLoginStatusPublisher: AnyPublisher<Bool, Never>
-
-    init?() {return nil}
     func updateEmail(_ text: String) {}
 
     func updatePassword(_ text: String) {}
