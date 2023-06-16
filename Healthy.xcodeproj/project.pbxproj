@@ -15,6 +15,7 @@
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511942A3C3F6400295B91 /* Poppins-Regular.ttf */; };
 		025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511952A3C3F6400295B91 /* Poppins-Bold.ttf */; };
+		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
 		0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511992A3C5D7300295B91 /* SearchViewModelType.swift */; };
 		0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119A2A3C5D7300295B91 /* SearchViewController.swift */; };
 		0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119B2A3C5D7300295B91 /* SearchViewModel.swift */; };
@@ -204,6 +205,7 @@
 			files = (
 				6DB1366C2A36357000448722 /* SkeletonView in Frameworks */,
 				6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */,
+				025511B72A3C623000295B91 /* NewRelic in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
 				6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */,
 			);
@@ -705,6 +707,7 @@
 				027DDA182A0E6A660052818C /* Frameworks */,
 				027DDA172A0E6A660052818C /* Sources */,
 				027DDA192A0E6A660052818C /* Resources */,
+				025511B82A3C624E00295B91 /* NewRelic */,
 			);
 			buildRules = (
 			);
@@ -716,6 +719,7 @@
 				6D611B9C2A299E3600A1FC65 /* GoogleSignIn */,
 				6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */,
 				6DB1366B2A36357000448722 /* SkeletonView */,
+				025511B62A3C623000295B91 /* NewRelic */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -796,6 +800,7 @@
 				6DDA138B2A1109E8004390D4 /* XCRemoteSwiftPackageReference "Factory" */,
 				6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				6DB1366A2A36357000448722 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
 			);
 			productRefGroup = 027DDA1C2A0E6A660052818C /* Products */;
 			projectDirPath = "";
@@ -1293,6 +1298,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/newrelic/newrelic-ios-agent-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -1320,6 +1333,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		025511B62A3C623000295B91 /* NewRelic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
+			productName = NewRelic;
+		};
 		6D611B9C2A299E3600A1FC65 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
