@@ -13,6 +13,7 @@
 		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
 		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
 		0252BF192A365A6F00823339 /* CreateAccountViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0252BF182A365A6F00823339 /* CreateAccountViewModelType.swift */; };
+		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
 		025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47512A336B05008BF85A /* DashboardViewModel.swift */; };
@@ -617,6 +618,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025511922A3C394300295B91 /* Colors.xcassets in Resources */,
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
 				027DDA2B2A0E6A680052818C /* (null) in Resources */,
