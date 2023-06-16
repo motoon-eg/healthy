@@ -17,7 +17,7 @@ extension LoginViewModel: LoginViewModelInput {
     func updateEmail(_ text: String) {
         email = text
     }
-    
+
     func updatePassword(_ text: String) {
         password = text
     }
@@ -35,17 +35,16 @@ extension LoginViewModel: LoginViewModelOutput {
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
         $isLoadingState.eraseToAnyPublisher()
     }
-    
+
     var isShowErrorMessagePublisher: AnyPublisher<String, Never> {
         $isShowErrorMessage.eraseToAnyPublisher()
     }
-    
+
     var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
         $isLoginEnabled.eraseToAnyPublisher()
     }
-    
+
     var isLoginStatusPublisher: AnyPublisher<Bool, Never> {
         $isLoginStatus.eraseToAnyPublisher()
     }
 }
-
