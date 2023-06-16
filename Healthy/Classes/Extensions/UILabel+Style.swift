@@ -52,9 +52,7 @@ extension UILabel {
                 return LabelFont.messageLabel
             }
         }
-
     }
-
 }
 
 // MARK: Style Attributes

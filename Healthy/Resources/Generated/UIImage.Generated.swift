@@ -18,11 +18,12 @@ extension UIImage {
       UIImage(named: "icon-google")! 
     }
 
-    static var iconNoData: UIImage {
-      UIImage(named: "icon-no-data")! 
-      
     static var iconHome: UIImage {
       UIImage(named: "icon-home")! 
+    }
+
+    static var iconNoData: UIImage {
+      UIImage(named: "icon-no-data")! 
     }
 
     static var iconNotification: UIImage {
