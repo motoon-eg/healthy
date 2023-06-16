@@ -1,12 +1,14 @@
 import UIKit
 import GoogleSignIn
+import NewRelic
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        configureGoogleSignin()
+        configureGoogleSignIn()
+        configureNewRelic()
         return true
     }
 
@@ -41,11 +43,15 @@ extension AppDelegate {
     }
 }
 
-// MARK: - Helper Methods
+// MARK: - Configurations
 
 private extension AppDelegate {
-    func configureGoogleSignin() {
-        let config = GIDConfiguration(clientID: Constatns.googleClientId)
+    func configureGoogleSignIn() {
+        let config = GIDConfiguration(clientID: Constants.googleClientId)
         GIDSignIn.sharedInstance.configuration = config
+    }
+
+    func configureNewRelic() {
+        NewRelic.start(withApplicationToken: Constants.newRelicAPIKey)
     }
 }
