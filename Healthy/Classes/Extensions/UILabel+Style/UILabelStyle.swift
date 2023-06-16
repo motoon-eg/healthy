@@ -27,7 +27,7 @@ extension UILabel {
 struct TitleLabelStyle: LabelStyling {
     func applyStyle(for label: UILabel) {
         label.textColor = .black20
-        label.font = .poppinsbold(20.0)
+        label.font = .largeRegular
         label.numberOfLines = .zero
     }
 }
@@ -37,7 +37,7 @@ struct TitleLabelStyle: LabelStyling {
 struct SubtitleLabelStyle: LabelStyling {
     func applyStyle(for label: UILabel) {
         label.textColor = .black20
-        label.font = .poppinsbold(18.0)
+        label.font = .mediumRegular
         label.numberOfLines = .zero
     }
 }

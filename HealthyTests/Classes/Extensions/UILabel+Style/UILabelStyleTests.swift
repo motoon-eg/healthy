@@ -16,7 +16,7 @@ final class UILabelStyleTests: XCTestCase {
 
         // Then
         XCTAssertEqual(sut.textColor, .black20)
-        XCTAssertEqual(sut.font, UIFont.poppinsbold(20.0))
+        XCTAssertEqual(sut.font, .largeRegular)
         XCTAssertEqual(sut.numberOfLines, 0)
     }
 
@@ -32,7 +32,7 @@ final class UILabelStyleTests: XCTestCase {
 
         // Then
         XCTAssertEqual(sut.textColor, .black20)
-        XCTAssertEqual(sut.font, UIFont.poppinsbold(18.0))
+        XCTAssertEqual(sut.font, UIFont.mediumRegular)
         XCTAssertEqual(sut.numberOfLines, 0)
     }
 
