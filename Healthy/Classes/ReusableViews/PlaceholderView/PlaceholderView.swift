@@ -101,8 +101,8 @@ extension PlaceholderView {
 
 // MARK: Private Handlers
 
-extension PlaceholderView {
-    private func configureLayout() {
+private extension PlaceholderView {
+    func configureLayout() {
         messageLabel.applyStyle(.messageLabel)
         actionButton.applyButtonStyle(.primary)
     }
@@ -110,7 +110,7 @@ extension PlaceholderView {
 
 // MARK: Actions
 
-extension PlaceholderView {
+private extension PlaceholderView {
     @IBAction func didTapButton(_ sender: Any) {
         onAction?()
     }
