@@ -1,6 +1,5 @@
 import Combine
 @testable import Healthy
-import Combine
 
 final class LoginViewModelMock: LoginViewModelType {
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
