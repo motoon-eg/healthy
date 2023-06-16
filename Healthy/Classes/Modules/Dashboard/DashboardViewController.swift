@@ -52,8 +52,11 @@ final class DashboardViewController: UIViewController {
         stack.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            stack.leadingAnchor.constraint(equalTo:
+                                            view.safeAreaLayoutGuide.leadingAnchor,
+                                           constant: 8),
+            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,
+                                            constant: -8),
             stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
             stack.heightAnchor.constraint(equalToConstant: view.bounds.height*0.1)
         ])
