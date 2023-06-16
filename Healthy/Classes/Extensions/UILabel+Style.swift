@@ -47,9 +47,7 @@ extension UILabel {
                 return LabelFont.textFieldTitleLabel
             }
         }
-
     }
-
 }
 
 // MARK: Style Attributes
