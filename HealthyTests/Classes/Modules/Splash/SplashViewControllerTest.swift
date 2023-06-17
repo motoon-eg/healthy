@@ -6,13 +6,13 @@ final class SplashViewControllerTest: XCTestCase {
     // MARK: Properties
 
     private var viewController: SplashViewController!
-    private var viewModelMock: SplashViewModelSpy!
+    private var viewModelMock: SplashViewModelMock!
 
     // MARK: Lifecycle
 
-    override func setUpWithError() throws {
+    override func setUp() {
         super.setUp()
-        viewModelMock = SplashViewModelSpy()
+        viewModelMock = SplashViewModelMock()
         viewController = SplashViewController(viewModel: viewModelMock)
         viewController.loadViewIfNeeded()
     }
@@ -28,9 +28,9 @@ final class SplashViewControllerTest: XCTestCase {
     }
 }
 
-// MARK: SplashViewModelSpy
+// MARK: SplashViewModelMock
 
-private final class SplashViewModelSpy: SplashViewModelType {
+private final class SplashViewModelMock: SplashViewModelType {
     private(set)var performStartCookingCallCount: Int = .zero
     func performStartCooking() {
         performStartCookingCallCount += 1

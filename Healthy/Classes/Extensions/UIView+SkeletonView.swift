@@ -6,7 +6,7 @@ public extension UIView {
         isSkeletonable = true
         showAnimatedGradientSkeleton()
     }
-    
+
     func stopSkeletonView() {
         isSkeletonable = false
         hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
