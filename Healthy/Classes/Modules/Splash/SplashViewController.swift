@@ -30,6 +30,7 @@ final class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureContent()
         configureAppearance()
     }
 }
@@ -51,6 +52,13 @@ private extension SplashViewController {
         headerTitleLabel.applyStyle(.splashTitle)
         logoCaptionLabel.applyStyle(.splashSubtitle)
         startCookingButton.applyButtonStyle(.primary)
+    }
+
+    func configureContent() {
+        logoCaptionLabel.text = L10n.Splash.Logo.caption
+        headerTitleLabel.text = L10n.Splash.Main.title
+        headerCaptionLabel.text = L10n.Splash.Main.subtitle
+        startCookingButton.setTitle(L10n.Splash.Button.title, for: .normal)
     }
 }
 

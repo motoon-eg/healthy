@@ -5,3 +5,9 @@
 // MARK: Common Localizations
 "common.email" = "Email";
 "common.password" = "Password";
+
+// MARK: Splash Screen
+"splash.main.title" = "Get\nCooking";
+"splash.main.subtitle" = "Simple way to find Tasty Recipe";
+"splash.button.title" = "Start Cooking";
+"splash.logo.caption" = "100K+ Premium Recipe";
