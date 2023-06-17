@@ -35,6 +35,8 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureContent()
         configureAppearance()
         configureViewModelInputs()
         configureViewModelOutputs()
@@ -73,6 +75,13 @@ private extension LoginViewController {
         passwordTextFieldLabel.applyStyle(.textFieldTitleLabel)
         signInButton.applyButtonStyle(.primary)
         signInWithFacebookButton.applyButtonStyle(.plainGold)
+        signInWithGoogleButton.applyShadow(.normal)
+        signInWithFacebookButton.applyShadow(.normal)
+    }
+
+    func configureContent() {
+        signInWithGoogleButton.setImage(.iconGoogle, for: .normal)
+        signInWithFacebookButton.setImage(.iconFacebook, for: .normal)
     }
 }
 

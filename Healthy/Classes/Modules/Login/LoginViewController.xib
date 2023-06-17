@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                 <outlet property="passwordTextFieldLabel" destination="kP0-g2-eF4" id="xsl-rr-Bfa"/>
                 <outlet property="signInButton" destination="I1J-oM-dkd" id="ldV-YT-Hif"/>
                 <outlet property="signInWithFacebookButton" destination="Bm9-X6-e61" id="wRv-wr-MX2"/>
-                <outlet property="signInWithGoogleButton" destination="cN6-Mr-YAF" id="eoe-7W-PfZ"/>
+                <outlet property="signInWithGoogleButton" destination="3EZ-iQ-2Ai" id="fOo-ST-Blq"/>
                 <outlet property="signUpButton" destination="KEs-vw-Rzk" id="X5I-Xh-lYt"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eJi-Nv-XUw"/>
             </connections>
@@ -66,7 +66,7 @@
                                                 <constraint firstAttribute="height" constant="55" id="ECP-4B-1Pu"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" textContentType="email"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
@@ -85,7 +85,7 @@
                                                 <constraint firstAttribute="height" constant="55" id="ryz-Aq-G3t"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
                                     </subviews>
                                 </stackView>
@@ -96,19 +96,20 @@
                                         <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                     </buttonConfiguration>
                                     <connections>
-                                        <action selector="didTapForgetPassowrd:" destination="-1" eventType="touchUpInside" id="XoQ-Fm-0hV"/>
+                                        <action selector="didTapForgetPassowrd:" destination="-1" eventType="touchUpInside" id="BEE-gT-kaG"/>
                                     </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-GX-UTD" userLabel="Sign In Stack View">
                                     <rect key="frame" x="0.0" y="485.66666666666669" width="333" height="99.333333333333314"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1J-oM-dkd">
+                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1J-oM-dkd">
                                             <rect key="frame" x="0.0" y="0.0" width="333" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="26X-D3-nzq"/>
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Sign In"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
                                             <connections>
                                                 <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="PNu-gF-PYf"/>
                                             </connections>
@@ -124,33 +125,31 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wBq-h2-a9r" userLabel="Sign In options Stack View">
                                     <rect key="frame" x="110" y="605" width="113" height="44"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-Mr-YAF" userLabel="Google Button" customClass="GIDSignInButton">
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EZ-iQ-2Ai" userLabel="Google Button">
                                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" button="YES"/>
-                                            </accessibility>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="cN6-Mr-YAF" secondAttribute="height" multiplier="1:1" id="Gel-Ns-YFb"/>
-                                                <constraint firstAttribute="height" constant="44" id="SEJ-JQ-9Cv"/>
-                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
-                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="asq-w7-g4Q"/>
+                                                <action selector="didTapSignInWithGoogle:" destination="-1" eventType="touchUpInside" id="gz9-n0-2J5"/>
                                             </connections>
-                                        </view>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button">
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bm9-X6-e61" userLabel="Facebook Button">
                                             <rect key="frame" x="69" y="0.0" width="44" height="44"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" secondItem="Bm9-X6-e61" secondAttribute="height" id="7w1-ZX-LZ0"/>
                                                 <constraint firstAttribute="height" constant="44" id="EEQ-UD-rts"/>
-                                                <constraint firstAttribute="width" secondItem="Bm9-X6-e61" secondAttribute="height" multiplier="1:1" id="aAe-WG-dSO"/>
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="die.face.5.fill" catalog="system"/>
+                                            <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
-                                                <action selector="didTapSignInWithFacebook" destination="-1" eventType="touchUpInside" id="C79-aL-XIL"/>
+                                                <action selector="didTapSignInWithFacebook:" destination="-1" eventType="touchUpInside" id="S48-V5-DAK"/>
                                             </connections>
                                         </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3EZ-iQ-2Ai" firstAttribute="width" secondItem="Bm9-X6-e61" secondAttribute="width" id="War-b1-Sf6"/>
+                                        <constraint firstItem="3EZ-iQ-2Ai" firstAttribute="height" secondItem="Bm9-X6-e61" secondAttribute="height" id="sg5-sH-qIN"/>
+                                    </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slC-NE-DpG" userLabel="Sign up Stack View">
                                     <rect key="frame" x="45.333333333333329" y="704" width="242.66666666666669" height="34.333333333333371"/>
@@ -219,7 +218,6 @@
         </view>
     </objects>
     <resources>
-        <image name="die.face.5.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
