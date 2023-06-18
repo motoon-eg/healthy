@@ -32,7 +32,7 @@ final class SplashViewControllerTest: XCTestCase {
 
 private final class SplashViewModelMock: SplashViewModelType {
     private(set)var performStartCookingCallCount: Int = .zero
-    func performStartCooking() {
+    func startCooking() {
         performStartCookingCallCount += 1
     }
 }

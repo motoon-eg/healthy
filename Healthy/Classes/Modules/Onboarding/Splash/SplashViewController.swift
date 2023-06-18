@@ -38,10 +38,7 @@ final class SplashViewController: UIViewController {
 
 extension SplashViewController {
     @IBAction func didTapStartCooking(_ sender: Any) {
-        let viewModel = LoginViewModel()
-        let viewController = LoginViewController(viewModel: viewModel)
-        navigationController?.pushViewController(viewController, animated: true)
-        self.viewModel.performStartCooking()
+        viewModel.startCooking()
     }
 }
 // MARK: - Configurations

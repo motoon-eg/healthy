@@ -35,6 +35,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureAppearance()
         configureViewModelInputs()
         configureViewModelOutputs()
@@ -103,10 +104,10 @@ private extension LoginViewController {
     }
 
     func configureViewModelOutputs() {
-//        bindLoadingIndicator()
-//        bindErrorMessage()
+        bindLoadingIndicator()
+        bindErrorMessage()
         bindButtonState()
-//        bindLoginStatus()
+        bindLoginStatus()
     }
 
     func bindLoadingIndicator() {

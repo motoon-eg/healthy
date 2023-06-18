@@ -59,4 +59,4 @@ final class LoginViewModelMock: LoginViewModelType {
     func performSignInWithFacebook() {
         performSignInWithFacebookCallCount += 1
     }
- }
+}

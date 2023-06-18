@@ -2,13 +2,19 @@ import Foundation
 
 // MARK: SplashViewModel
 
-final class SplashViewModel {}
+final class SplashViewModel {
+    private unowned let coordinator: OnboardingCoordinator
+
+    init(coordinator: OnboardingCoordinator) {
+        self.coordinator = coordinator
+    }
+}
 
 // MARK: SplashViewModel
 
 extension SplashViewModel: SplashViewModelInput {
-    func performStartCooking() {
-        // Handel a StartCooking Button
+    func startCooking() {
+        coordinator.didStartCooking()
     }
 }
 
