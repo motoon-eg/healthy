@@ -36,7 +36,7 @@ final class SplashViewController: UIViewController {
 
 // MARK: - Actions
 
-private extension SplashViewController {
+extension SplashViewController {
     @IBAction func didTapStartCooking(_ sender: Any) {
         viewModel.startCooking()
     }
@@ -45,7 +45,6 @@ private extension SplashViewController {
 
 private extension SplashViewController {
     func configureAppearance() {
-        logoCaptionLabel.applyStyle(.splashHeaderLabel)
         headerTitleLabel.applyStyle(.splashTitle)
         logoCaptionLabel.applyStyle(.splashSubtitle)
         startCookingButton.applyButtonStyle(.primary)

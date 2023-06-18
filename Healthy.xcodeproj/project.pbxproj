@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */; };
 		02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02279EA62A3373C400C607AD /* CreateAccountViewModelTests.swift */; };
 		0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924292A33A137009290A8 /* UIView+Helpers.swift */; };
-		0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242B2A33A170009290A8 /* UIImage.Generated.swift */; };
 		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
 		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
@@ -89,6 +89,7 @@
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
+		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -112,7 +113,6 @@
 /* Begin PBXFileReference section */
 		02279EA62A3373C400C607AD /* CreateAccountViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModelTests.swift; sourceTree = "<group>"; };
 		022924292A33A137009290A8 /* UIView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
-		0229242B2A33A170009290A8 /* UIImage.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		0229242C2A33A170009290A8 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
 		0229242D2A33A170009290A8 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
 		025511942A3C3F6400295B91 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
@@ -192,6 +192,8 @@
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
+		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,9 +312,9 @@
 			isa = PBXGroup;
 			children = (
 				025511C62A3D0A8B00295B91 /* SplashViewController.swift */,
+				025511C92A3D0A8B00295B91 /* SplashViewController.xib */,
 				025511C72A3D0A8B00295B91 /* SplashViewModel.swift */,
 				025511C82A3D0A8B00295B91 /* SplashViewModelType.swift */,
-				025511C92A3D0A8B00295B91 /* SplashViewController.xib */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -584,6 +586,7 @@
 		6DFEC6202A2E97FF0090B2E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C9E6BBE42A38D6F40073E51A /* Splash */,
 				02279EA52A3373C400C607AD /* CreateAccount */,
 				6DFEC6212A2E980B0090B2E2 /* Login */,
 				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
@@ -672,12 +675,20 @@
 			path = Logger;
 			sourceTree = "<group>";
 		};
+		C9E6BBE42A38D6F40073E51A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		F39D440B2A14ACE30039AEF8 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
 				0229242C2A33A170009290A8 /* Strings.Generated.swift */,
 				0229242D2A33A170009290A8 /* UIColors.Generated.swift */,
-				0229242B2A33A170009290A8 /* UIImage.Generated.swift */,
+				C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -918,7 +929,6 @@
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
 				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
-				0229242E2A33A170009290A8 /* UIImage.Generated.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
@@ -935,6 +945,7 @@
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
+				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
 				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -949,6 +960,7 @@
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
+				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
 				206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
