@@ -9,6 +9,7 @@ final class LoginViewModel {
     private var onErrorMessage: (String) -> Void = { _ in }
     private var onButtonEnabled: (Bool) -> Void = { _ in }
     private var onLoginStatus: (Bool) -> Void = { _ in }
+    private lazy var authService: Authentication = FacebookAuthenticator()
 }
 
 // MARK: Input

@@ -66,13 +66,6 @@ extension LoginViewController {
 
     @IBAction func didTapSignInWithFacebook(_ sender: Any) {
         viewModel.performSignInWithFacebook()
-        FacebookAuthenticator.loginWithFacebookId(view: self) { error, credential, _ in
-            if let error {
-                debugPrint("Error in Login \(error)")
-            } else {
-                debugPrint("Data: \(String(describing: credential))")
-            }
-        }
     }
 }
 
@@ -118,6 +111,7 @@ private extension LoginViewController {
     func bindErrorMessage() {
         viewModel.onErrorMessage { _ in
             // TODO: Show error message.
+
         }
     }
 
@@ -148,14 +142,13 @@ private extension LoginViewController {}
 
 extension LoginViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: Error?) {
-        let token = result?.token?.tokenString
-
-        let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                 parameters: ["fields": "email,name"],
-                                                 tokenString: token, version: nil, httpMethod: .get)
-        request.start { (_, result, _) in
-            print("\(result ?? "")")
-        }
+//        FacebookAuthenticator.loginWithFacebookId(view: self) { error, credential, _ in
+//            if let error {
+//                debugPrint("Error in Login \(error)")
+//            } else {
+//                debugPrint("Data: \(String(describing: credential))")
+//            }
+//        }
     }
 
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginKit.FBLoginButton) {
