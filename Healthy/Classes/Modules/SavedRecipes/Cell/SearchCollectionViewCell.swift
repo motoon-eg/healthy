@@ -24,7 +24,10 @@ class SearchCollectionViewCell: UICollectionViewCell {
     
     // MARK: Configuration
     func configureCell(with viewModel: ViewModel) {
-        // Do view model integration...
+        // TODO: - [HT-62] Waiting for adding kingfisher To load image and set it to backImage.
+        ratingNumber.text = viewModel.recipyName
+        chefName.text = viewModel.chefName
+        ratingNumber.text = "\(viewModel.ratingNumber)"
     }
     
 }
@@ -34,7 +37,7 @@ extension SearchCollectionViewCell {
     struct ViewModel {
         let recipyName: String
         let chefName: String
-        let rate: Float
+        let ratingNumber: Float
         let imageUrl: URL?
     }
 }
