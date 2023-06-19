@@ -23,6 +23,7 @@ final class FoodTagsView: UIView {
 
     private func configureTagsCollectionView() {
         tagsCollectionView.collectionViewLayout = .createTagsLayout()
+        tagsCollectionView.registerNibCell(cellClass: TagCollectionViewCell.self)
     }
 
 }
