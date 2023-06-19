@@ -117,6 +117,7 @@
                 <outlet property="backImage" destination="UrF-kc-mMa" id="tjp-mt-akX"/>
                 <outlet property="chefName" destination="PTX-Zf-5Xj" id="KeY-cw-4AB"/>
                 <outlet property="ratingNumber" destination="REd-N2-qRV" id="BZ9-Fj-Wo4"/>
+                <outlet property="ratingView" destination="mNE-e4-NUC" id="Bop-Ly-SbV"/>
                 <outlet property="recipyName" destination="O5k-PX-AEp" id="Bm0-nL-hFg"/>
             </connections>
             <point key="canvasLocation" x="269.46564885496184" y="36.971830985915496"/>

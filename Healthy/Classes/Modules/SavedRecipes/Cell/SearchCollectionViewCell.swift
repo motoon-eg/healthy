@@ -9,11 +9,19 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
     
+    
     // MARK:  Outlets
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var ratingNumber: UILabel!
     @IBOutlet weak var recipyName: UILabel!
     @IBOutlet weak var chefName: UILabel!
+    
+    @IBOutlet weak var ratingView: UIView!{
+        didSet{
+            ratingView.layer.cornerRadius = ratingView.frame.height / 2
+        }
+    }
+    
     // MARK: Configuration
     func configureCell(with viewModel: ViewModel) {
         // Do view model integration...
