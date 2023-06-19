@@ -88,6 +88,8 @@
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
+		B2E577422A40A52900FEFD05 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E577402A40A52900FEFD05 /* SearchCollectionViewCell.swift */; };
+		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
@@ -192,6 +194,8 @@
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
+		B2E577402A40A52900FEFD05 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 		025511A32A3C5D9B00295B91 /* SavedRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				B2E5773F2A40A4E000FEFD05 /* Cell */,
 				025511A52A3C5DAA00295B91 /* SavedRecipesViewController.swift */,
 				025511A72A3C5DAA00295B91 /* SavedRecipesViewController.xib */,
 				025511A62A3C5DAA00295B91 /* SavedRecipesViewModel.swift */,
@@ -662,6 +667,15 @@
 			path = "UILabel+Style";
 			sourceTree = "<group>";
 		};
+		B2E5773F2A40A4E000FEFD05 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2E577402A40A52900FEFD05 /* SearchCollectionViewCell.swift */,
+				B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +841,7 @@
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
 				A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
+				B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */,
 				025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */,
 				02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
@@ -921,6 +936,7 @@
 				0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */,
 				B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */,
 				025511AA2A3C5DAA00295B91 /* SavedRecipesViewModel.swift in Sources */,
+				B2E577422A40A52900FEFD05 /* SearchCollectionViewCell.swift in Sources */,
 				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
