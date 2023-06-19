@@ -85,6 +85,7 @@
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2AD70422A406A5F00F15853 /* FoodTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70412A406A5F00F15853 /* FoodTagsView.swift */; };
 		B2AD70442A406AA800F15853 /* FoodTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AD70432A406AA800F15853 /* FoodTagsView.xib */; };
+		B2AD70462A406D5B00F15853 /* UICollectionViewLayout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
@@ -190,6 +191,7 @@
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2AD70412A406A5F00F15853 /* FoodTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagsView.swift; sourceTree = "<group>"; };
 		B2AD70432A406AA800F15853 /* FoodTagsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTagsView.xib; sourceTree = "<group>"; };
+		B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+Extension.swift"; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
@@ -637,6 +639,7 @@
 			children = (
 				B2AD70412A406A5F00F15853 /* FoodTagsView.swift */,
 				B2AD70432A406AA800F15853 /* FoodTagsView.xib */,
+				B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */,
 			);
 			path = FoodTagsView;
 			sourceTree = "<group>";
@@ -955,6 +958,7 @@
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				025511D12A3D0A8B00295B91 /* SplashViewModelType.swift in Sources */,
+				B2AD70462A406D5B00F15853 /* UICollectionViewLayout+Extension.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,

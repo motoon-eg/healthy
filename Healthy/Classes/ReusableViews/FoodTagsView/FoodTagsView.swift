@@ -1,8 +1,11 @@
-
 import UIKit
 
 final class FoodTagsView: UIView {
-    
+
+    // MARK: Outlets
+
+    @IBOutlet weak var tagsCollectionView: UICollectionView!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -13,9 +16,13 @@ final class FoodTagsView: UIView {
         initView()
     }
 
-    private func initView(){
+    private func initView() {
         loadViewFromNib()
-        backgroundColor = .red
+        backgroundColor = .clear
     }
-    
+
+    private func configureTagsCollectionView() {
+        tagsCollectionView.collectionViewLayout = .createTagsLayout()
+    }
+
 }
