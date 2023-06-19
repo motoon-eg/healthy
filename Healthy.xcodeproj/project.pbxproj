@@ -357,6 +357,7 @@
 		025A47572A336C04008BF85A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B2AD70402A4069FD00F15853 /* FoodTagsView */,
 				025A47582A336C2D008BF85A /* HomeHeaderView.swift */,
 			);
 			path = Views;
@@ -520,7 +521,6 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				B2AD70402A4069FD00F15853 /* FoodTagsView */,
 				02FDBC292A3A624C0012AF87 /* PlaceholderView */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
