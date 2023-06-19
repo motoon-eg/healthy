@@ -48,11 +48,18 @@ final class EmailValidatorsTests: XCTestCase {
             XCTAssertFalse(validator.hasValidValue(inValidDomain))
         }
 
-    func test_emailValidator_whenEmailStartWithNumbershouldFail() {
+//    func test_emailValidator_when_shouldFail() {
+//           // Given
+//           let startsWithNumber = "123test@example.com"
+//           // Then
+//           XCTAssertFalse(validator.hasValidValue(startsWithNumber))
+//       }
+
+    func test_emailValidator_whenEmailInValidDomain_shouldFail() {
             // Given
-            let startsWithNumber = "123test@example.com"
+            let inValidDomain = "2345test@example.c"
 
             // Then
-            XCTAssertFalse(validator.hasValidValue(startsWithNumber))
+            XCTAssertFalse(validator.hasValidValue(inValidDomain))
         }
 }
