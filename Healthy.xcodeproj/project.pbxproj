@@ -83,6 +83,8 @@
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
+		B2AD70422A406A5F00F15853 /* FoodTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70412A406A5F00F15853 /* FoodTagsView.swift */; };
+		B2AD70442A406AA800F15853 /* FoodTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AD70432A406AA800F15853 /* FoodTagsView.xib */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
@@ -186,6 +188,8 @@
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
+		B2AD70412A406A5F00F15853 /* FoodTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagsView.swift; sourceTree = "<group>"; };
+		B2AD70432A406AA800F15853 /* FoodTagsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTagsView.xib; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
@@ -507,6 +511,7 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				B2AD70402A4069FD00F15853 /* FoodTagsView */,
 				02FDBC292A3A624C0012AF87 /* PlaceholderView */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
@@ -625,6 +630,15 @@
 			children = (
 			);
 			path = SignButtonWithSocialMediaView;
+			sourceTree = "<group>";
+		};
+		B2AD70402A4069FD00F15853 /* FoodTagsView */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD70412A406A5F00F15853 /* FoodTagsView.swift */,
+				B2AD70432A406AA800F15853 /* FoodTagsView.xib */,
+			);
+			path = FoodTagsView;
 			sourceTree = "<group>";
 		};
 		B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */ = {
@@ -816,6 +830,7 @@
 				025511922A3C394300295B91 /* Colors.xcassets in Resources */,
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				025511D32A3D0A8B00295B91 /* CreateAccountViewController.xib in Resources */,
+				B2AD70442A406AA800F15853 /* FoodTagsView.xib in Resources */,
 				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
 				025511D22A3D0A8B00295B91 /* SplashViewController.xib in Resources */,
 				027DDA2B2A0E6A680052818C /* (null) in Resources */,
@@ -946,6 +961,7 @@
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
+				B2AD70422A406A5F00F15853 /* FoodTagsView.swift in Sources */,
 				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
