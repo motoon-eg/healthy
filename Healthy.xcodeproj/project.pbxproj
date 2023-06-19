@@ -81,6 +81,7 @@
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
+		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
@@ -184,6 +185,7 @@
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				025A47582A336C2D008BF85A /* HomeHeaderView.swift */,
+				A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -822,6 +825,7 @@
 				025511AB2A3C5DAA00295B91 /* SavedRecipesViewController.xib in Resources */,
 				025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
+				A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 				025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */,
 				02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */,
