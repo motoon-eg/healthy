@@ -2,22 +2,30 @@ import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
 
+    // MARK: Properties
+
     static let reusableIdentifire = "SearchCollectionViewCell"
-    fileprivate let gradientLayer = CAGradientLayer()
 
     // MARK: Outlets
+
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var ratingNumber: UILabel!
     @IBOutlet weak var recipyName: UILabel!
     @IBOutlet weak var chefName: UILabel!
     @IBOutlet weak var ratingView: UIView!
 
+    // MARK: Set up layout
+
     override func layoutSubviews() {
         super.layoutSubviews()
         configureUI()
     }
+}
+
+extension SearchCollectionViewCell {
 
     // MARK: Configuration
+
     func configureCell(with viewModel: ViewModel) {
         // TODO: - [HT-62] Waiting for adding kingfisher To load image and set it to backImage.
         recipyName.text = viewModel.recipyName
@@ -34,6 +42,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     }
 
     private func setupGradientLayer() {
+        let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradientLayer.locations = [0.2, 1]
         gradientLayer.frame = backImage.frame
