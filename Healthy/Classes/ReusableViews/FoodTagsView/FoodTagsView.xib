@@ -31,7 +31,6 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="laz-OU-YyB" secondAttribute="bottom" id="I4T-sK-Kwi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="laz-OU-YyB" secondAttribute="trailing" id="rAN-Q0-Unh"/>
