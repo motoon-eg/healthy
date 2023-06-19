@@ -6,7 +6,7 @@ class TagCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var backView: UIView! {
         didSet {
-            backView.layer.cornerRadius = backView.frame.height / 3
+            backView.layer.cornerRadius = 10
         }
     }
     @IBOutlet weak var foodCategoryName: UILabel!

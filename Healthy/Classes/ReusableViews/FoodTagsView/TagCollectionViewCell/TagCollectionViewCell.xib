@@ -27,8 +27,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="206" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-sW-8XT">
-                                <rect key="frame" x="10" y="10" width="186" height="30"/>
-                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
+                                <rect key="frame" x="20" y="10" width="166" height="30"/>
+                                <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                 <color key="textColor" name="primary 100"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -36,8 +36,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uA2-sW-8XT" firstAttribute="top" secondItem="aRM-bf-HzU" secondAttribute="top" constant="10" id="90s-ce-z8U"/>
-                            <constraint firstAttribute="trailing" secondItem="uA2-sW-8XT" secondAttribute="trailing" constant="10" id="GdI-Uc-qQ8"/>
-                            <constraint firstItem="uA2-sW-8XT" firstAttribute="leading" secondItem="aRM-bf-HzU" secondAttribute="leading" constant="10" id="tX1-Ti-khO"/>
+                            <constraint firstAttribute="trailing" secondItem="uA2-sW-8XT" secondAttribute="trailing" constant="20" id="GdI-Uc-qQ8"/>
+                            <constraint firstItem="uA2-sW-8XT" firstAttribute="leading" secondItem="aRM-bf-HzU" secondAttribute="leading" constant="20" id="tX1-Ti-khO"/>
                             <constraint firstAttribute="bottom" secondItem="uA2-sW-8XT" secondAttribute="bottom" constant="10" id="u4R-vc-hUO"/>
                         </constraints>
                     </view>
