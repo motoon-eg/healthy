@@ -1,27 +1,19 @@
-//
-//  SearchCollectionViewCell.swift
-//  Healthy
-//
-//  Created by Abdallah on 19/06/2023.
-//
-
 import UIKit
 
 class SearchCollectionViewCell: UICollectionViewCell {
-    
-    
-    // MARK:  Outlets
+
+    // MARK: Outlets
     @IBOutlet weak var backImage: UIImageView!
     @IBOutlet weak var ratingNumber: UILabel!
     @IBOutlet weak var recipyName: UILabel!
     @IBOutlet weak var chefName: UILabel!
-    
-    @IBOutlet weak var ratingView: UIView!{
-        didSet{
+
+    @IBOutlet weak var ratingView: UIView! {
+        didSet {
             ratingView.layer.cornerRadius = ratingView.frame.height / 2
         }
     }
-    
+
     // MARK: Configuration
     func configureCell(with viewModel: ViewModel) {
         // TODO: - [HT-62] Waiting for adding kingfisher To load image and set it to backImage.
@@ -29,7 +21,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
         chefName.text = viewModel.chefName
         ratingNumber.text = "\(viewModel.ratingNumber)"
     }
-    
+
 }
 
 // MARK: ViewModel
