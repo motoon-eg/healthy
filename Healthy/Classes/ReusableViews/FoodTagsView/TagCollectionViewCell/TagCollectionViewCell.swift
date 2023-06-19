@@ -16,8 +16,8 @@ class TagCollectionViewCell: UICollectionViewCell {
     }
 
     func setSelection(_ selected: Bool) {
-        backView.backgroundColor = selected ? .red : .clear
-        foodCategoryName.textColor = selected ? .white : .black
+        backView.backgroundColor = selected ? .primary100 : .clear
+        foodCategoryName.textColor = selected ? .white : .primary100
     }
 
 }

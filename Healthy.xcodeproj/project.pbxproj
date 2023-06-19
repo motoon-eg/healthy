@@ -646,11 +646,27 @@
 			children = (
 				B2AD70412A406A5F00F15853 /* FoodTagsView.swift */,
 				B2AD70432A406AA800F15853 /* FoodTagsView.xib */,
-				B2AD704D2A40703D00F15853 /* TagCollectionViewCell.swift */,
-				B2AD704E2A40703D00F15853 /* TagCollectionViewCell.xib */,
-				B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */,
+				B2AD70512A40785700F15853 /* TagCollectionViewCell */,
+				B2AD70522A40787700F15853 /* Layout */,
 			);
 			path = FoodTagsView;
+			sourceTree = "<group>";
+		};
+		B2AD70512A40785700F15853 /* TagCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD704D2A40703D00F15853 /* TagCollectionViewCell.swift */,
+				B2AD704E2A40703D00F15853 /* TagCollectionViewCell.xib */,
+			);
+			path = TagCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		B2AD70522A40787700F15853 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */ = {
