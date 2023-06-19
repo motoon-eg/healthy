@@ -6,9 +6,12 @@ final class FoodTagsView: UIView {
 
     @IBOutlet weak var tagsCollectionView: UICollectionView!
 
-    // MARK: proberty
+    // MARK: Properties
+
     private var currentSelectedIndexPath: IndexPath = IndexPath(item: 0, section: 0)
     private var foodCategories: [String] = []
+
+    // MARK: Init
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,6 +22,8 @@ final class FoodTagsView: UIView {
         super.init(coder: coder)
         initView()
     }
+
+    // MARK: Configurations
 
     private func initView() {
         loadViewFromNib()
@@ -31,6 +36,14 @@ final class FoodTagsView: UIView {
         tagsCollectionView.dataSource = self
         tagsCollectionView.delegate = self
     }
+
+    // MARK: Set foodCategories
+
+    func setfoodCategories(_ foodCategories: [String]) {
+        self.foodCategories = foodCategories
+        tagsCollectionView.reloadData()
+    }
+
 }
 
 extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
