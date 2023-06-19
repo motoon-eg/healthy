@@ -10,8 +10,10 @@ import UIKit
 class SearchCollectionViewCell: UICollectionViewCell {
     
     // MARK:  Outlets
-
-    
+    @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var ratingNumber: UILabel!
+    @IBOutlet weak var recipyName: UILabel!
+    @IBOutlet weak var chefName: UILabel!
     // MARK: Configuration
     func configureCell(with viewModel: ViewModel) {
         // Do view model integration...
@@ -22,7 +24,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 // MARK: ViewModel
 extension SearchCollectionViewCell {
     struct ViewModel {
-        let recipeName: String
+        let recipyName: String
         let chefName: String
         let rate: Float
         let imageUrl: URL?
