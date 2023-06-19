@@ -275,7 +275,6 @@
 		025511A32A3C5D9B00295B91 /* SavedRecipes */ = {
 			isa = PBXGroup;
 			children = (
-				B2E5773F2A40A4E000FEFD05 /* Cell */,
 				025511A52A3C5DAA00295B91 /* SavedRecipesViewController.swift */,
 				025511A72A3C5DAA00295B91 /* SavedRecipesViewController.xib */,
 				025511A62A3C5DAA00295B91 /* SavedRecipesViewModel.swift */,
@@ -492,6 +491,7 @@
 		027DDA512A0E761B0052818C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B2E577482A40DECF00FEFD05 /* SearchReceipes  */,
 				025511A32A3C5D9B00295B91 /* SavedRecipes */,
 				025511982A3C5D5B00295B91 /* Search */,
 				025A474E2A336AE3008BF85A /* Dashboard */,
@@ -674,6 +674,14 @@
 				B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B2E577482A40DECF00FEFD05 /* SearchReceipes  */ = {
+			isa = PBXGroup;
+			children = (
+				B2E5773F2A40A4E000FEFD05 /* Cell */,
+			);
+			path = "SearchReceipes ";
 			sourceTree = "<group>";
 		};
 		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
