@@ -89,12 +89,12 @@
 		B2AD70442A406AA800F15853 /* FoodTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AD70432A406AA800F15853 /* FoodTagsView.xib */; };
 		B2AD70462A406D5B00F15853 /* UICollectionViewLayout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */; };
 		B2AD70482A406F9300F15853 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70472A406F9300F15853 /* UICollectionView+Helpers.swift */; };
-		B2AD704F2A40703D00F15853 /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD704D2A40703D00F15853 /* TagCollectionViewCell.swift */; };
-		B2AD70502A40703D00F15853 /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AD704E2A40703D00F15853 /* TagCollectionViewCell.xib */; };
+		B2AD704F2A40703D00F15853 /* FoodTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD704D2A40703D00F15853 /* FoodTagCollectionViewCell.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
+		B2F496CE2A41DD2E007A477D /* FoodTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F496CD2A41DD2E007A477D /* FoodTagCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
@@ -199,12 +199,12 @@
 		B2AD70432A406AA800F15853 /* FoodTagsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTagsView.xib; sourceTree = "<group>"; };
 		B2AD70452A406D5B00F15853 /* UICollectionViewLayout+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+Extension.swift"; sourceTree = "<group>"; };
 		B2AD70472A406F9300F15853 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
-		B2AD704D2A40703D00F15853 /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
-		B2AD704E2A40703D00F15853 /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
+		B2AD704D2A40703D00F15853 /* FoodTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
+		B2F496CD2A41DD2E007A477D /* FoodTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
@@ -651,19 +651,19 @@
 			children = (
 				B2AD70412A406A5F00F15853 /* FoodTagsView.swift */,
 				B2AD70432A406AA800F15853 /* FoodTagsView.xib */,
-				B2AD70512A40785700F15853 /* TagCollectionViewCell */,
+				B2AD70512A40785700F15853 /* FoodTagCollectionViewCell */,
 				B2AD70522A40787700F15853 /* Layout */,
 			);
 			path = FoodTagsView;
 			sourceTree = "<group>";
 		};
-		B2AD70512A40785700F15853 /* TagCollectionViewCell */ = {
+		B2AD70512A40785700F15853 /* FoodTagCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				B2AD704D2A40703D00F15853 /* TagCollectionViewCell.swift */,
-				B2AD704E2A40703D00F15853 /* TagCollectionViewCell.xib */,
+				B2AD704D2A40703D00F15853 /* FoodTagCollectionViewCell.swift */,
+				B2F496CD2A41DD2E007A477D /* FoodTagCollectionViewCell.xib */,
 			);
-			path = TagCollectionViewCell;
+			path = FoodTagCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		B2AD70522A40787700F15853 /* Layout */ = {
@@ -863,7 +863,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2AD70502A40703D00F15853 /* TagCollectionViewCell.xib in Resources */,
+				B2F496CE2A41DD2E007A477D /* FoodTagCollectionViewCell.xib in Resources */,
 				025511922A3C394300295B91 /* Colors.xcassets in Resources */,
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				025511D32A3D0A8B00295B91 /* CreateAccountViewController.xib in Resources */,
@@ -977,7 +977,7 @@
 				025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */,
 				025A47802A337320008BF85A /* AuthenticatedUser.swift in Sources */,
 				025A47852A337337008BF85A /* Constants.swift in Sources */,
-				B2AD704F2A40703D00F15853 /* TagCollectionViewCell.swift in Sources */,
+				B2AD704F2A40703D00F15853 /* FoodTagCollectionViewCell.swift in Sources */,
 				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,
 				6DB1366E2A3635AC00448722 /* UIView+SkeletonView.swift in Sources */,
 				B2AD70482A406F9300F15853 /* UICollectionView+Helpers.swift in Sources */,

@@ -51,7 +51,7 @@ private extension FoodTagsView {
 
     private func configureTagsCollectionView() {
         tagsCollectionView.collectionViewLayout = .createTagsLayout()
-        tagsCollectionView.register(TagCollectionViewCell.self)
+        tagsCollectionView.register(FoodTagCollectionViewCell.self)
         tagsCollectionView.dataSource = self
         tagsCollectionView.delegate = self
     }
@@ -66,10 +66,7 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: TagCollectionViewCell.reuseIdentifier,
-            for: indexPath) as? TagCollectionViewCell else {
-            fatalError("Unable to dequeue cell") }
+        let cell: FoodTagCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.updateView(viewModel: .init(foodCategoryName: foodCategories[indexPath.row]))
         let isSelected = currentSelectedIndexPath == indexPath
         cell.setSelection(isSelected)
@@ -88,7 +85,7 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
     // MARK: Animation
 
     func collectionView(_ collectionView: UICollectionView,
-                        cell: UICollectionViewCell,
+                        willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
         willDisplayCellAnimation(cell, collectionView)
     }
@@ -106,18 +103,20 @@ private extension FoodTagsView {
     private func willDisplayCellAnimation(_ cell: UICollectionViewCell, _ collectionView: UICollectionView) {
         cell.transform = CGAffineTransform(translationX: 0, y: collectionView.bounds.height / 2)
         cell.alpha = 0
-        UIView.animate(withDuration: 0.5) {
+
+        UIView.animate(withDuration: 0.5, animations: {
             cell.transform = CGAffineTransform.identity
             cell.alpha = 1
-        }
+        }, completion: nil)
     }
 
     private func didEndDisplayingCellAnimation(_ cell: UICollectionViewCell, _ collectionView: UICollectionView) {
         cell.transform = CGAffineTransform.identity
         cell.alpha = 1
-        UIView.animate(withDuration: 0.5) {
+
+        UIView.animate(withDuration: 0.5, animations: {
             cell.transform = CGAffineTransform(translationX: 0, y: collectionView.bounds.height / 2)
             cell.alpha = 0
-        }
+        }, completion: nil)
     }
 }

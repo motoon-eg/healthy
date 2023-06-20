@@ -27,6 +27,8 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="CHB-e5-dio" firstAttribute="leading" secondItem="fVo-6R-ftw" secondAttribute="leading" id="GBE-Y9-8Dt"/>
+                        <constraint firstItem="CHB-e5-dio" firstAttribute="centerX" secondItem="fVo-6R-ftw" secondAttribute="centerX" id="OFX-kz-t6X"/>
+                        <constraint firstItem="CHB-e5-dio" firstAttribute="centerY" secondItem="fVo-6R-ftw" secondAttribute="centerY" id="Qej-iq-3hF"/>
                         <constraint firstAttribute="bottom" secondItem="CHB-e5-dio" secondAttribute="bottom" id="bbm-Eb-B8y"/>
                         <constraint firstAttribute="trailing" secondItem="CHB-e5-dio" secondAttribute="trailing" id="vj1-FX-LMb"/>
                         <constraint firstItem="CHB-e5-dio" firstAttribute="top" secondItem="fVo-6R-ftw" secondAttribute="top" id="z8E-il-Ywb"/>
