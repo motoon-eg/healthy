@@ -7,6 +7,11 @@ class TagCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var foodCategoryName: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backView.layer.cornerRadius = 10
+    }
+
     func updateView(viewModel: ViewModel) {
         foodCategoryName.text = viewModel.foodCategoryName
     }
