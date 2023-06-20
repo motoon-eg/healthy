@@ -6,6 +6,14 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
+    static var backgroundFood: UIImage {
+      UIImage(named: "background-food")! 
+    }
+
+    static var backgroundGradient: UIImage {
+      UIImage(named: "background-gradient")! 
+    }
+
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
     }
@@ -36,6 +44,10 @@ extension UIImage {
 
     static var iconSplash: UIImage {
       UIImage(named: "icon-splash")! 
+    }
+
+    static var iconStroke: UIImage {
+      UIImage(named: "icon-stroke")! 
     }
 
     static var iconUnion: UIImage {
