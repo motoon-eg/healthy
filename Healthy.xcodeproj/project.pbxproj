@@ -15,7 +15,6 @@
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511942A3C3F6400295B91 /* Poppins-Regular.ttf */; };
 		025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511952A3C3F6400295B91 /* Poppins-Bold.ttf */; };
-		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
 		0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511992A3C5D7300295B91 /* SearchViewModelType.swift */; };
 		0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119A2A3C5D7300295B91 /* SearchViewController.swift */; };
 		0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119B2A3C5D7300295B91 /* SearchViewModel.swift */; };
@@ -28,6 +27,7 @@
 		025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AE2A3C5F8900295B91 /* FilterSearchViewController.swift */; };
 		025511B32A3C5F8900295B91 /* FilterSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AF2A3C5F8900295B91 /* FilterSearchViewModel.swift */; };
 		025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025511B02A3C5F8900295B91 /* FilterSearchViewController.xib */; };
+		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
 		025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BA2A3C655200295B91 /* SavedRecipe.swift */; };
 		025511BD2A3C656300295B91 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BC2A3C656300295B91 /* Recipe.swift */; };
 		025511BF2A3C8E9300295B91 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BE2A3C8E9300295B91 /* OnboardingCoordinator.swift */; };
@@ -91,6 +91,8 @@
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
+		C2FE12102A4128D8001A7BE3 /* UILoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE120F2A4128D8001A7BE3 /* UILoadingButton.swift */; };
+		C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE12112A412904001A7BE3 /* AnimatableView.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -195,6 +197,8 @@
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		C2FE120F2A4128D8001A7BE3 /* UILoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILoadingButton.swift; sourceTree = "<group>"; };
+		C2FE12112A412904001A7BE3 /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -512,6 +516,7 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				C2FE120E2A4128BA001A7BE3 /* UILoadingButton */,
 				02FDBC292A3A624C0012AF87 /* PlaceholderView */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
@@ -671,6 +676,15 @@
 				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
 			);
 			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		C2FE120E2A4128BA001A7BE3 /* UILoadingButton */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE120F2A4128D8001A7BE3 /* UILoadingButton.swift */,
+				C2FE12112A412904001A7BE3 /* AnimatableView.swift */,
+			);
+			path = UILoadingButton;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -920,9 +934,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
 				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
+				C2FE12102A4128D8001A7BE3 /* UILoadingButton.swift in Sources */,
 				025511C22A3D049500295B91 /* Coordinator.swift in Sources */,
 				025511D42A3D0A8B00295B91 /* CreateAccountViewModel.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
