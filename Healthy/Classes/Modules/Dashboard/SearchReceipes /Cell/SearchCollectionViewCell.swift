@@ -14,6 +14,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupGradientLayer()
         configureLayout()
     }
 }
@@ -23,7 +24,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
 extension SearchCollectionViewCell {
     private func configureLayout() {
         ratingView.layer.cornerRadius = ratingView.frame.height / 2
-        setupGradientLayer()
         backImage.layer.cornerRadius = 10
         backImage.layer.masksToBounds = true
         contentView.layer.cornerRadius = 12
