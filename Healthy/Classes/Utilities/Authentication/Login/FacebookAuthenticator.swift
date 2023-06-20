@@ -11,8 +11,8 @@ class FacebookAuthenticator: Authentication {
     
     // MARK: Init
     
-    init(viewController: UIViewController?? = nil) {
-        self.viewController = (viewController ?? CreateAccountViewController(viewModel: CreateAccountViewModel()))!
+    init(viewController: UIViewController) {
+        self.viewController = viewController
     }
     
     // MARK: Authentication
@@ -52,6 +52,7 @@ class FacebookAuthenticator: Authentication {
             if error == nil {
                 debugPrint(result as Any)
                 guard result is [String: Any] else {return}
+                
                 print("Facebook User details from FB: \(String(describing: result))")
             } else {
                 debugPrint(error as Any)

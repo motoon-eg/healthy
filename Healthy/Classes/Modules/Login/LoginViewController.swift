@@ -1,11 +1,12 @@
 import UIKit
 import GoogleSignIn
 import FBSDKLoginKit
+import Combine
 
 final class LoginViewController: UIViewController {
-
+    
     // MARK: Outlets
-
+    
     @IBOutlet private(set) weak var emailTextFieldLabel: UILabel!
     @IBOutlet private(set) weak var emailTextField: UITextField!
     @IBOutlet private(set) weak var passwordTextFieldLabel: UILabel!
@@ -15,33 +16,33 @@ final class LoginViewController: UIViewController {
     @IBOutlet private(set) weak var signInWithGoogleButton: GIDSignInButton!
     @IBOutlet private(set) weak var signInWithFacebookButton: FBLoginButton!
     @IBOutlet private(set) weak var signUpButton: UIButton!
-
+    
     // MARK: Properties
-
+    
     private let viewModel: LoginViewModelType
-
+    private var subscriptions: Set<AnyCancellable> = []
+    
     // MARK: Init
-
+    
     init(viewModel: LoginViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+       
         signInWithFacebookButton.delegate   = self
         configureAppearance()
-        bindTextFieldsChanges()
-        bindLoadingIndicator()
-        bindErrorMessage()
-        bindButtonState()
-        bindLoginStatus()
+        configureViewModelInputs()
+        configureViewModelOutputs()
     }
 }
 
@@ -80,17 +81,17 @@ private extension LoginViewController {
     }
 }
 
-// MARK: bind to text fields changes
+// MARK: TextFields changes
 
 private extension LoginViewController {
     func bindTextFieldsChanges() {
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
-
+    
     @objc func textDidChange(_ sender: UITextField) {
         guard let text = sender.text else { return }
-
+        
         if sender == emailTextField {
             viewModel.updateEmail(text)
         } else if sender == passwordTextField {
@@ -99,40 +100,53 @@ private extension LoginViewController {
     }
 }
 
-// MARK: - View model binds
+// MARK: - Configure ViewModel
 
 private extension LoginViewController {
+    func configureViewModelInputs() {
+        bindTextFieldsChanges()
+    }
+    
+    func configureViewModelOutputs() {
+        bindLoadingIndicator()
+        bindErrorMessage()
+        bindButtonState()
+        bindLoginStatus()
+    }
+    
     func bindLoadingIndicator() {
-        viewModel.onLoadingIndicator { _ in
-            // TODO: Update loading state.
-        }
-    }
-
-    func bindErrorMessage() {
-        viewModel.onErrorMessage { _ in
-            // TODO: Show error message.
-
-        }
-    }
-
-    func bindButtonState() {
-        viewModel.onButtonEnabled { [weak self] isEnabled in
-            guard let self else { return }
-            self.signInButton.isEnabled = isEnabled
-        }
-    }
-
-    func bindLoginStatus() {
-        viewModel.onLoginStatus { status in
-            switch status {
-            case true:
-                // TODO: Make action when login success.
-                break
-            case false:
-                // TODO: Make action when login fail.
-                break
+        viewModel.isLoadingIndicatorPublisher
+            .sink { [weak self] isLoading in
+                guard let _ = self else { return }
+                
+                // TODO: Show loading indicator.
             }
-        }
+            .store(in: &subscriptions)
+    }
+    
+    func bindErrorMessage() {
+        viewModel.isShowErrorMessagePublisher
+            .sink { [weak self] message in
+                guard let _ = self else { return }
+                
+                // TODO: Show error message.
+            }
+            .store(in: &subscriptions)
+    }
+    
+    func bindButtonState() {
+        viewModel.isLoginEnabledPublisher
+            .assign(to: \.isEnabled, on: signInButton)
+            .store(in: &subscriptions)
+    }
+    
+    func bindLoginStatus() {
+        viewModel.isLoginStatusPublisher
+            .sink { [weak self] status in
+                guard let _ = self else { return }
+                
+            }
+            .store(in: &subscriptions)
     }
 }
 
