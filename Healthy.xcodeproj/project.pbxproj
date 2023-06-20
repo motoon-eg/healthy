@@ -15,7 +15,6 @@
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511942A3C3F6400295B91 /* Poppins-Regular.ttf */; };
 		025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511952A3C3F6400295B91 /* Poppins-Bold.ttf */; };
-		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
 		0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511992A3C5D7300295B91 /* SearchViewModelType.swift */; };
 		0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119A2A3C5D7300295B91 /* SearchViewController.swift */; };
 		0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119B2A3C5D7300295B91 /* SearchViewModel.swift */; };
@@ -28,6 +27,7 @@
 		025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AE2A3C5F8900295B91 /* FilterSearchViewController.swift */; };
 		025511B32A3C5F8900295B91 /* FilterSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AF2A3C5F8900295B91 /* FilterSearchViewModel.swift */; };
 		025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025511B02A3C5F8900295B91 /* FilterSearchViewController.xib */; };
+		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
 		025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BA2A3C655200295B91 /* SavedRecipe.swift */; };
 		025511BD2A3C656300295B91 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BC2A3C656300295B91 /* Recipe.swift */; };
 		025511BF2A3C8E9300295B91 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BE2A3C8E9300295B91 /* OnboardingCoordinator.swift */; };
@@ -79,6 +79,8 @@
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
 		6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */; };
 		6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */; };
+		792D42E92A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */; };
+		792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
@@ -182,6 +184,8 @@
 		6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelMock.swift; sourceTree = "<group>"; };
 		7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifier.swift"; sourceTree = "<group>"; };
+		792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCell.swift; sourceTree = "<group>"; };
+		792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedRecipesTableViewCell.xib; sourceTree = "<group>"; };
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 		025511A32A3C5D9B00295B91 /* SavedRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				792D42E62A423A9F00EC2FE5 /* Cell */,
 				025511A52A3C5DAA00295B91 /* SavedRecipesViewController.swift */,
 				025511A72A3C5DAA00295B91 /* SavedRecipesViewController.xib */,
 				025511A62A3C5DAA00295B91 /* SavedRecipesViewModel.swift */,
@@ -616,6 +621,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		792D42E62A423A9F00EC2FE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */,
+				792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		79311FCC2A191C8E00764707 /* FormTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +836,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				025511922A3C394300295B91 /* Colors.xcassets in Resources */,
+				792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */,
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				025511D32A3D0A8B00295B91 /* CreateAccountViewController.xib in Resources */,
 				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
@@ -941,6 +956,7 @@
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025511CF2A3D0A8B00295B91 /* SplashViewController.swift in Sources */,
+				792D42E92A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift in Sources */,
 				0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */,
 				B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */,
 				025511AA2A3C5DAA00295B91 /* SavedRecipesViewModel.swift in Sources */,
