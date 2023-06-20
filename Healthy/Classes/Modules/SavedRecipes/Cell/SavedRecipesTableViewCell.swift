@@ -18,6 +18,10 @@ class SavedRecipesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         configureLayout()
     }
+    
+    func configureCell(viewModel: SavedRecipesCellViewModelType) {
+        // TODO: Configure cell with view model.
+    }
 }
 
 // MARK: Private Handlers
@@ -25,13 +29,13 @@ class SavedRecipesTableViewCell: UITableViewCell {
 private extension SavedRecipesTableViewCell {
     func configureLayout() {
         contentView.layer.cornerRadius = 10
-        // TODO: Waiting for add style to title label
+        // TODO: Waiting for add style to title label.
         titleLabel.textColor = .white
-        // TODO: Waiting for add style to chef name label
+        // TODO: Waiting for add style to chef name label.
         chefNameLabel.textColor = .white
         rateView.layer.cornerRadius = 8
         rateView.backgroundColor = UIColor.secondary20
-        // TODO: Waiting for add style to time clock label
+        // TODO: Waiting for add style to time clock label.
         timeLabel.textColor = .white
         bookMarkView.layer.cornerRadius = 12
     }
