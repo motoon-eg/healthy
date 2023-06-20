@@ -16,7 +16,7 @@ extension UICollectionViewLayout {
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 25, bottom: 8, trailing: 5)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20)
         section.interGroupSpacing = 15
 
         return UICollectionViewCompositionalLayout(section: section)
