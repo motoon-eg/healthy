@@ -15,6 +15,7 @@
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511942A3C3F6400295B91 /* Poppins-Regular.ttf */; };
 		025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511952A3C3F6400295B91 /* Poppins-Bold.ttf */; };
+		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
 		0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511992A3C5D7300295B91 /* SearchViewModelType.swift */; };
 		0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119A2A3C5D7300295B91 /* SearchViewController.swift */; };
 		0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0255119B2A3C5D7300295B91 /* SearchViewModel.swift */; };
@@ -81,6 +82,7 @@
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
+		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2AD70422A406A5F00F15853 /* FoodTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70412A406A5F00F15853 /* FoodTagsView.swift */; };
@@ -190,6 +192,7 @@
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2AD70412A406A5F00F15853 /* FoodTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagsView.swift; sourceTree = "<group>"; };
@@ -216,6 +219,7 @@
 			files = (
 				6DB1366C2A36357000448722 /* SkeletonView in Frameworks */,
 				6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */,
+				025511B72A3C623000295B91 /* NewRelic in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
 				6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */,
 			);
@@ -359,6 +363,7 @@
 			children = (
 				B2AD70402A4069FD00F15853 /* FoodTagsView */,
 				025A47582A336C2D008BF85A /* HomeHeaderView.swift */,
+				A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -747,6 +752,7 @@
 				027DDA182A0E6A660052818C /* Frameworks */,
 				027DDA172A0E6A660052818C /* Sources */,
 				027DDA192A0E6A660052818C /* Resources */,
+				025511B82A3C624E00295B91 /* NewRelic */,
 			);
 			buildRules = (
 			);
@@ -758,6 +764,7 @@
 				6D611B9C2A299E3600A1FC65 /* GoogleSignIn */,
 				6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */,
 				6DB1366B2A36357000448722 /* SkeletonView */,
+				025511B62A3C623000295B91 /* NewRelic */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -838,6 +845,7 @@
 				6DDA138B2A1109E8004390D4 /* XCRemoteSwiftPackageReference "Factory" */,
 				6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				6DB1366A2A36357000448722 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
 			);
 			productRefGroup = 027DDA1C2A0E6A660052818C /* Products */;
 			projectDirPath = "";
@@ -866,6 +874,7 @@
 				025511AB2A3C5DAA00295B91 /* SavedRecipesViewController.xib in Resources */,
 				025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
+				A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 				025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */,
 				02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */,
@@ -892,6 +901,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		025511B82A3C624E00295B91 /* NewRelic */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = NewRelic;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\nif [ -z \"${SCRIPT}\"]; then\n\nARTIFACT_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\n\nSCRIPT=`/usr/bin/find \"${ARTIFACT_DIR}\" -name newrelic_postbuild.sh | head -n 1`\n\nfi\n\n/bin/sh \"${SCRIPT}\" \"eu01xxd1e0131edfbcd7bb48440b03c791a96c5a7b-NRMA\"\n";
+		};
 		0296C1152A0FC69E005E3DC8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -1341,6 +1368,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/newrelic/newrelic-ios-agent-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -1368,6 +1403,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		025511B62A3C623000295B91 /* NewRelic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
+			productName = NewRelic;
+		};
 		6D611B9C2A299E3600A1FC65 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
