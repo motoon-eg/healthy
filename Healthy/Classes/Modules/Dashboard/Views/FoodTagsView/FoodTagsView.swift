@@ -24,12 +24,20 @@ final class FoodTagsView: UIView {
     }
 }
 
-// MARK: Set foodCategories
+// MARK: Configure Categories
 
 extension FoodTagsView {
-    func setfoodCategories(_ foodCategories: [String]) {
-        self.foodCategories = foodCategories
+    func configureCollectionViewCategories(with viewModel: ViewModel) {
+        self.foodCategories = viewModel.foodCategories
         tagsCollectionView.reloadData()
+    }
+}
+
+// MARK: ViewModel
+
+extension FoodTagsView {
+    struct ViewModel {
+        let foodCategories: [String]
     }
 }
 

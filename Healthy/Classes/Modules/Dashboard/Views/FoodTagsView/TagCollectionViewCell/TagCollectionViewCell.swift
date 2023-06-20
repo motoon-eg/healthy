@@ -4,8 +4,10 @@ class TagCollectionViewCell: UICollectionViewCell {
 
     // MARK: Outlets
 
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var foodCategoryName: UILabel!
+    @IBOutlet private weak var backView: UIView!
+    @IBOutlet private weak var foodCategoryName: UILabel!
+
+    // MARK: - Lifecycle Methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +25,7 @@ class TagCollectionViewCell: UICollectionViewCell {
 }
 
 // MARK: ViewModel
+
 extension TagCollectionViewCell {
     struct ViewModel {
         let foodCategoryName: String
