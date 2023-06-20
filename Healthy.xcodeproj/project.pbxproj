@@ -82,13 +82,14 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
+		B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */; };
+		B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
-		B2E577422A40A52900FEFD05 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E577402A40A52900FEFD05 /* SearchCollectionViewCell.swift */; };
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
@@ -188,13 +189,14 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
-		B2E577402A40A52900FEFD05 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		025A474E2A336AE3008BF85A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				B2E577482A40DECF00FEFD05 /* SearchReceipes  */,
 				025A47572A336C04008BF85A /* Views */,
 				025A47502A336B05008BF85A /* DashboardViewController.swift */,
 				025A47522A336B05008BF85A /* DashboardViewController.xib */,
@@ -484,6 +487,7 @@
 				022924292A33A137009290A8 /* UIView+Helpers.swift */,
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 				6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */,
+				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -491,7 +495,6 @@
 		027DDA512A0E761B0052818C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B2E577482A40DECF00FEFD05 /* SearchReceipes  */,
 				025511A32A3C5D9B00295B91 /* SavedRecipes */,
 				025511982A3C5D5B00295B91 /* Search */,
 				025A474E2A336AE3008BF85A /* Dashboard */,
@@ -670,7 +673,7 @@
 		B2E5773F2A40A4E000FEFD05 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				B2E577402A40A52900FEFD05 /* SearchCollectionViewCell.swift */,
+				B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */,
 				B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */,
 			);
 			path = Cell;
@@ -944,7 +947,6 @@
 				0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */,
 				B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */,
 				025511AA2A3C5DAA00295B91 /* SavedRecipesViewModel.swift in Sources */,
-				B2E577422A40A52900FEFD05 /* SearchCollectionViewCell.swift in Sources */,
 				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
@@ -960,6 +962,7 @@
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
+				B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
 				B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */,
 				025511D62A3D0A8B00295B91 /* CreateAccountViewController.swift in Sources */,
@@ -974,6 +977,7 @@
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
+				B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */,
 				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
