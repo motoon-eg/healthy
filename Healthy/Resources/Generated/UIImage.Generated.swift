@@ -22,6 +22,10 @@ extension UIImage {
       UIImage(named: "icon-home")! 
     }
 
+    static var iconNoData: UIImage {
+      UIImage(named: "icon-no-data")! 
+    }
+
     static var iconNotification: UIImage {
       UIImage(named: "icon-notification")! 
     }

@@ -35,6 +35,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureAppearance()
         configureViewModelInputs()
         configureViewModelOutputs()
