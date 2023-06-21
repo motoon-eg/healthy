@@ -36,7 +36,7 @@ extension LoginViewModel: LoginViewModelOutput {
         $isLoadingState.eraseToAnyPublisher()
     }
 
-    var errorMessagePublisher: AnyPublisher<String, Never> {
+    var isShowErrorMessagePublisher: AnyPublisher<String, Never> {
         $isShowErrorMessage.eraseToAnyPublisher()
     }
 
