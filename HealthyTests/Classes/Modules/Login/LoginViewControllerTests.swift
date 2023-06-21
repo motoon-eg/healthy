@@ -130,20 +130,34 @@ final class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(loginViewModelMock.performForgetPasswordCount, 1)
     }
 
-    func test_didTapSignInWithGoogle_shouldCallViewModelPerformSignInWithGoogle() {
+//    func test_didTapSignInWithGoogle_shouldCallViewModelPerformSignInWithGoogle() {
+//        // When
+//        sut.didTapSignInWithGoogle(UIButton())
+//
+//        // Then
+//        XCTAssertEqual(loginViewModelMock.performSignInWithGoogleCallCount, 1)
+//    }
+//
+//    func test_didTapSignInWithFacebook_shouldCallViewModelPerformSignInWithFacebook() {
+//        // When
+//        sut.didTapSignInWithFacebook(UIButton())
+//
+//        // Then
+//        XCTAssertEqual(loginViewModelMock.performSignInWithFacebookCallCount, 1)
+//    }
+    func test_didTapSignInWithGoogle_shouldCallViewModelPerformSignInWithSocial() {
         // When
         sut.didTapSignInWithGoogle(UIButton())
 
         // Then
-        XCTAssertEqual(loginViewModelMock.performSignInWithGoogleCallCount, 1)
+        XCTAssertEqual(loginViewModelMock.performSocialMediaSignInCount, 1)
     }
 
-    func test_didTapSignInWithFacebook_shouldCallViewModelPerformSignInWithFacebook() {
+    func test_didTapSignInWithFacebook_shouldCallViewModelPerformSignInWithSocial() {
         // When
         sut.didTapSignInWithFacebook(UIButton())
 
         // Then
-        XCTAssertEqual(loginViewModelMock.performSignInWithFacebookCallCount, 1)
+        XCTAssertEqual(loginViewModelMock.performSocialMediaSignInCount, 1)
     }
-
 }
