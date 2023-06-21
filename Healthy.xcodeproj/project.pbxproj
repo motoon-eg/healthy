@@ -93,6 +93,8 @@
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
+		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
+		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +200,8 @@
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
+		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -583,6 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				B2D402E22A3BB2E200FDB941 /* Extensions */,
+				B85D26A42A3902A9000A463D /* Utilities */,
 				6DFEC6202A2E97FF0090B2E2 /* Modules */,
 			);
 			path = Classes;
@@ -671,6 +676,23 @@
 				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
 			);
 			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		B85D26A42A3902A9000A463D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B85D26A52A3902BB000A463D /* Validators */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B85D26A52A3902BB000A463D /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */,
+				B85D26A82A390331000A463D /* PasswordValidatorTests.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -983,7 +1005,9 @@
 			files = (
 				206FF7972A39EE4100130CA4 /* CreateAccountViewControllerTests.swift in Sources */,
 				B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */,
+				B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */,
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
+				B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
