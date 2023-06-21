@@ -5,61 +5,54 @@ final class EmailValidatorsTests: XCTestCase {
 
     // MARK: - Properties
 
-    var validator: EmailValidator!
+    private var validator: EmailValidator!
 
     // MARK: - Lifecycle
 
     override func setUp() {
         super.setUp()
-            validator = EmailValidator()
+        validator = EmailValidator()
     }
 
     // MARK: - Tests
 
     func test_emailValidator_whenEmailIsValid_shouldPass() {
-            // Given
-            let validEmail = "calara23@gmail.com"
+        // Given
+        let validEmail = "calara23@gmail.com"
 
-            // Then
-            XCTAssertTrue(validator.hasValidValue(validEmail))
-        }
+        // Then
+        XCTAssertTrue(validator.hasValidValue(validEmail))
+    }
 
     func test_emailValidator_whenEmailIsInValid_shouldFail() {
-           // Given
-           let noAtSymbolEmail = "testexample.com"
+        // Given
+        let noAtSymbolEmail = "testexample.com"
 
-           // Then
-           XCTAssertFalse(validator.hasValidValue(noAtSymbolEmail))
-       }
+        // Then
+        XCTAssertFalse(validator.hasValidValue(noAtSymbolEmail))
+    }
 
     func test_emailValidator_whenEmailDoesNotHaveDomain_shouldFail() {
-           // Given
-           let noDomain  = "test@"
+        // Given
+        let noDomain  = "test@"
 
-           // Then
-           XCTAssertFalse(validator.hasValidValue(noDomain))
-       }
+        // Then
+        XCTAssertFalse(validator.hasValidValue(noDomain))
+    }
 
     func test_emailValidator_whenEmailHasInValidDomain_shouldFail() {
-            // Given
-            let inValidDomain = "test@example.c"
+        // Given
+        let inValidDomain = "test@example.c"
 
-            // Then
-            XCTAssertFalse(validator.hasValidValue(inValidDomain))
-        }
-
-//    func test_emailValidator_when_shouldFail() {
-//           // Given
-//           let startsWithNumber = "123test@example.com"
-//           // Then
-//           XCTAssertFalse(validator.hasValidValue(startsWithNumber))
-//       }
+        // Then
+        XCTAssertFalse(validator.hasValidValue(inValidDomain))
+    }
 
     func test_emailValidator_whenEmailInValidDomain_shouldFail() {
-            // Given
-            let inValidDomain = "2345test@example.c"
+        // Given
+        let inValidDomain = "2345test@example.c"
 
-            // Then
-            XCTAssertFalse(validator.hasValidValue(inValidDomain))
-        }
+        // Then
+        XCTAssertFalse(validator.hasValidValue(inValidDomain))
+    }
 }
