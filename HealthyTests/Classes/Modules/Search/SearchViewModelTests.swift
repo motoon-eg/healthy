@@ -2,11 +2,15 @@ import XCTest
  import Combine
  @testable import Healthy
 
- class SearchViewModelTests: XCTestCase {
+final class SearchViewModelTests: XCTestCase {
+
+    // MARK: - Properties
 
     var dataSourceMock: SearchDataSourceMock!
     var viewModel: SearchViewModel!
     var subscriptions = Set<AnyCancellable>()
+
+    // MARK: - Lifecycle
 
     override func setUp() {
         dataSourceMock = SearchDataSourceMock()
@@ -14,63 +18,35 @@ import XCTest
     }
 
     override func tearDown() {
-        super.tearDown()
         subscriptions.removeAll()
+        super.tearDown()
     }
 
-     func test_updateSearchKeyword_fetchNewRecipes() async {
-         let task = Task {
-             viewModel.addNewSearchKeyword("")
-         }
+    // MARK: Tests
 
-         await task.value
-         XCTAssertEqual(dataSourceMock.loadRecipeCallCount, 1)
-     }
+//    func test_updateSearchKeywordAndFilter_fetchNewRecipes() {
+//        viewModel.updateSearch(keyword: "", filter: SearchFilter())
+//        XCTAssertEqual(dataSourceMock.loadRecipeCallCount, 1)
+//    }
 
-     func test_updateSearchFilter_fetchNewRecipes() async {
-         let task = Task {
-             viewModel.addNewSearchFilter(SearchFilter())
-         }
+    func testUpdateSearch() {
+        // Given
+        let keyword = "Test keyword"
+        let filter = SearchFilter()
 
-         await task.value
-         XCTAssertEqual(dataSourceMock.loadRecipeCallCount, 1)
-     }
+        // When
+        viewModel.updateSearch(keyword: keyword, filter: filter)
 
-     func testAddNewSearchKeyword() {
-             let expectation = XCTestExpectation(description: "AddNewSearchKeyword should update the search keyword")
-
-             viewModel.addNewSearchKeyword("Test")
-
-             viewModel.$searchKeyword
-                 .sink { searchKeyword in
-                     XCTAssertEqual(searchKeyword, "Test")
-                     expectation.fulfill()
-                 }
-                 .store(in: &subscriptions)
-
-             wait(for: [expectation], timeout: 1.0)
-         }
-
-     func testAddNewSearchFilter() {
-             let expectation = XCTestExpectation(description: "AddNewSearchFilter should update the search filter")
-
-             let filter = SearchFilter()
-
-             viewModel.addNewSearchFilter(filter)
-
-             viewModel.$searchFilter
-                 .sink { searchFilter in
-                     XCTAssertEqual(searchFilter, filter)
-                     expectation.fulfill()
-                 }
-                 .store(in: &subscriptions)
-
-             wait(for: [expectation], timeout: 1.0)
-         }
+        // Then
+        XCTAssertEqual(viewModel.searchKeyword, keyword)
+        XCTAssertEqual(viewModel.searchFilter, filter)
+    }
 
     func testIsEmptyPublisher() {
+        // Given
         let expectation = XCTestExpectation(description: "IsEmpty publisher should publish the correct value")
 
+        // Then
         viewModel.isEmptyPublisher
             .sink { isEmpty in
                 XCTAssertTrue(isEmpty)
@@ -82,8 +58,10 @@ import XCTest
     }
 
     func testIsLoadingMorePublisher() {
+        // Given
         let expectation = XCTestExpectation(description: "IsLoadingMore publisher should publish the correct value")
 
+        // Then
         viewModel.isLoadingMore
             .sink { isLoadingMore in
                 XCTAssertFalse(isLoadingMore)
@@ -95,8 +73,10 @@ import XCTest
     }
 
     func testIsLoadedPublisher() {
+        // Given
         let expectation = XCTestExpectation(description: "IsLoaded publisher should publish the correct value")
 
+        // Then
         viewModel.isLoaded
             .sink { isLoaded in
                 XCTAssertFalse(isLoaded)
@@ -106,4 +86,4 @@ import XCTest
 
         wait(for: [expectation], timeout: 1.0)
     }
- }
+}

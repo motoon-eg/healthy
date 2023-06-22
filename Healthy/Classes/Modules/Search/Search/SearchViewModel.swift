@@ -1,12 +1,13 @@
+import Foundation
 import Combine
 
- protocol SearchDataSource {
+protocol SearchDataSource {
     func loadRecipes() async throws -> [Recipe]
- }
+}
 
  // MARK: SearchViewModel
 
- final class SearchViewModel {
+final class SearchViewModel {
     private var subscriptions = Set<AnyCancellable>()
     @Published private(set) var searchKeyword = ""
     @Published private(set) var searchFilter = SearchFilter()
@@ -20,23 +21,27 @@ import Combine
     }
  }
 
- // MARK: SearchViewModel
+ // MARK: SearchViewModelInput
 
- extension SearchViewModel: SearchViewModelInput {
-    func addNewSearchKeyword(_ keyword: String) {
+extension SearchViewModel: SearchViewModelInput {
+    func updateSearch(keyword: String, filter: SearchFilter) {
         searchKeyword = keyword
-        updateSearch()
-    }
-
-    func addNewSearchFilter(_ filter: SearchFilter) {
         searchFilter = filter
-        updateSearch()
+        Publishers.CombineLatest($searchKeyword, $searchFilter)
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+            .sink { [weak self] searchKeyword, searchFilter in
+                self?.update(
+                    searchKeyword: searchKeyword,
+                    searchFilter: searchFilter
+                )
+            }
+            .store(in: &subscriptions)
     }
- }
+}
 
  // MARK: SearchViewModelOutput
 
- extension SearchViewModel: SearchViewModelOutput {
+extension SearchViewModel: SearchViewModelOutput {
     var recipesPublisher: AnyPublisher<[Recipe], Never> {
         $recipes.eraseToAnyPublisher()
     }
@@ -44,10 +49,10 @@ import Combine
     var errorPublisher: AnyPublisher<Error, Never> {
         $state
             .compactMap {
-            guard case let .failure(error) = $0 else { return nil }
+                guard case let .failure(error) = $0 else { return nil }
                 return error
-        }
-        .eraseToAnyPublisher()
+            }
+            .eraseToAnyPublisher()
     }
 
     var isEmptyPublisher: AnyPublisher<Bool, Never> {
@@ -82,19 +87,12 @@ import Combine
             }
             .eraseToAnyPublisher()
     }
- }
-
-    // MARK: Search states
-
-    enum SearchState {
-        case initial, loading, loadingMore, loaded
-        case failure(Error)
-    }
+}
 
  // MARK: Private Helpers
 
- private extension SearchViewModel {
-    func updateSearch() {
+private extension SearchViewModel {
+    func update(searchKeyword: String, searchFilter: SearchFilter) {
         Task {
             do {
                 state = .loading
@@ -105,4 +103,13 @@ import Combine
             }
         }
     }
- }
+}
+
+// MARK: Nested Types
+
+private extension SearchViewModel {
+    enum SearchState {
+        case initial, loading, loadingMore, loaded
+        case failure(Error)
+    }
+}
