@@ -84,8 +84,6 @@
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
-		79CC0B6D2A425098004F27AD /* SavedRecipesCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC0B6C2A425098004F27AD /* SavedRecipesCellViewModelType.swift */; };
-		79CC0B6F2A4250A5004F27AD /* SavedRecipesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC0B6E2A4250A5004F27AD /* SavedRecipesCellViewModel.swift */; };
 		A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */; };
 		A21C51FB2A43036A00850B15 /* TableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* TableViewMock.swift */; };
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
@@ -195,8 +193,6 @@
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
-		79CC0B6C2A425098004F27AD /* SavedRecipesCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesCellViewModelType.swift; sourceTree = "<group>"; };
-		79CC0B6E2A4250A5004F27AD /* SavedRecipesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesCellViewModel.swift; sourceTree = "<group>"; };
 		A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCellTests.swift; sourceTree = "<group>"; };
 		A21C51FA2A43036A00850B15 /* TableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMock.swift; sourceTree = "<group>"; };
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
@@ -636,7 +632,6 @@
 		792D42E62A423A9F00EC2FE5 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				79CC0B6B2A425072004F27AD /* SavedRecipesCellViewModel */,
 				792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */,
 				792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */,
 			);
@@ -650,15 +645,6 @@
 				79311FCF2A191D3700764707 /* FormTextField.swift */,
 			);
 			path = FormTextField;
-			sourceTree = "<group>";
-		};
-		79CC0B6B2A425072004F27AD /* SavedRecipesCellViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				79CC0B6C2A425098004F27AD /* SavedRecipesCellViewModelType.swift */,
-				79CC0B6E2A4250A5004F27AD /* SavedRecipesCellViewModel.swift */,
-			);
-			path = SavedRecipesCellViewModel;
 			sourceTree = "<group>";
 		};
 		A21C51F62A42FF6400850B15 /* SavedRecipes */ = {
@@ -991,9 +977,7 @@
 				6DB1366E2A3635AC00448722 /* UIView+SkeletonView.swift in Sources */,
 				025511A92A3C5DAA00295B91 /* SavedRecipesViewController.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
-				79CC0B6F2A4250A5004F27AD /* SavedRecipesCellViewModel.swift in Sources */,
 				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
-				79CC0B6D2A425098004F27AD /* SavedRecipesCellViewModelType.swift in Sources */,
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025511CF2A3D0A8B00295B91 /* SplashViewController.swift in Sources */,

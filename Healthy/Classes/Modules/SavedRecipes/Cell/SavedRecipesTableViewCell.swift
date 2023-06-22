@@ -1,6 +1,6 @@
 import UIKit
 
-class SavedRecipesTableViewCell: UITableViewCell {
+final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
     
@@ -19,7 +19,7 @@ class SavedRecipesTableViewCell: UITableViewCell {
         configureLayout()
     }
     
-    func configureCell(viewModel: SavedRecipesCellViewModelType) {
+    func configureCell(viewModel: ViewModel) {
         // TODO: Configure cell with view model.
     }
 }
@@ -36,5 +36,11 @@ private extension SavedRecipesTableViewCell {
         rateView.backgroundColor = UIColor.secondary20
         timeLabel.applyStyle(.time)
         bookMarkView.layer.cornerRadius = 12
+    }
+}
+
+extension SavedRecipesTableViewCell {
+    struct ViewModel {
+        // Here goes your implementation....
     }
 }
