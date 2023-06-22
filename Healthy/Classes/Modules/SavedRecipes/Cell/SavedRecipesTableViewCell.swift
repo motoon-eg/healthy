@@ -30,14 +30,11 @@ private extension SavedRecipesTableViewCell {
     func configureLayout() {
         contentView.layer.cornerRadius = 10
         recipeImageView.applyPrimaryGradient()
-        // TODO: Waiting for add style to title label.
-        titleLabel.textColor = .white
-        // TODO: Waiting for add style to chef name label.
-        chefNameLabel.textColor = .white
+        titleLabel.applyStyle(.savedRecipesTitle)
+        chefNameLabel.applyStyle(.savedRecipesSubTitle)
         rateView.layer.cornerRadius = 8
         rateView.backgroundColor = UIColor.secondary20
-        // TODO: Waiting for add style to time clock label.
-        timeLabel.textColor = .white
+        timeLabel.applyStyle(.time)
         bookMarkView.layer.cornerRadius = 12
     }
 }

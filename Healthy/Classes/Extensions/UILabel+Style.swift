@@ -14,10 +14,13 @@ extension UILabel {
         case signupSubtitle
         case textFieldTitleLabel
         case messageLabel
+        case savedRecipesTitle
+        case savedRecipesSubTitle
+        case time
 
         var labelTextColor: UIColor {
             switch self {
-            case .splashHeaderLabel, .splashTitle, .splashSubtitle:
+            case .splashHeaderLabel, .splashTitle, .splashSubtitle, .savedRecipesTitle, .savedRecipesSubTitle, .time:
                 return .white
             case .signinTitle, .signupTitle:
                 return .black
@@ -44,12 +47,16 @@ extension UILabel {
                 return LabelFont.signinSubtitle
             case .signupTitle:
                 return LabelFont.signupTitle
-            case .signupSubtitle:
+            case .signupSubtitle, .time:
                 return LabelFont.signupSubtitle
             case .textFieldTitleLabel:
                 return LabelFont.textFieldTitleLabel
             case .messageLabel:
                 return LabelFont.messageLabel
+            case .savedRecipesTitle:
+                return LabelFont.savedRecipesTitleLabel
+            case .savedRecipesSubTitle:
+                return LabelFont.savedRecipesSubTitleLabel
             }
         }
     }
@@ -83,4 +90,6 @@ private enum LabelFont {
     static let signupSubtitle = UIFont.systemFont(ofSize: 11, weight: .regular)
     static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
     static let messageLabel = UIFont.systemFont(ofSize: 20, weight: .semibold)
+    static let savedRecipesTitleLabel = UIFont.systemFont(ofSize: 14, weight: .bold)
+    static let savedRecipesSubTitleLabel = UIFont.systemFont(ofSize: 8, weight: .regular)
 }

@@ -10,10 +10,6 @@ extension UIImage {
       UIImage(named: "background-food")! 
     }
 
-    static var backgroundGradient: UIImage {
-      UIImage(named: "background-gradient")! 
-    }
-
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
     }
