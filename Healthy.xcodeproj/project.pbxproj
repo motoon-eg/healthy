@@ -89,6 +89,7 @@
 		A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */; };
 		A21C51FB2A43036A00850B15 /* TableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* TableViewMock.swift */; };
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
+		A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA41102A44412500C9C9A0 /* UIView+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
@@ -199,6 +200,7 @@
 		A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCellTests.swift; sourceTree = "<group>"; };
 		A21C51FA2A43036A00850B15 /* TableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMock.swift; sourceTree = "<group>"; };
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		A2FA41102A44412500C9C9A0 /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 				022924292A33A137009290A8 /* UIView+Helpers.swift */,
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 				6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */,
+				A2FA41102A44412500C9C9A0 /* UIView+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1009,6 +1012,7 @@
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
+				A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */,
 				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,

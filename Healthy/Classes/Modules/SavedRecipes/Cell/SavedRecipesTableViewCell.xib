@@ -22,9 +22,6 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-food" translatesAutoresizingMaskIntoConstraints="NO" id="o1X-a1-R6g">
                         <rect key="frame" x="0.0" y="0.0" width="467" height="196"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="DO0-e1-aFb">
-                        <rect key="frame" x="0.0" y="0.0" width="467" height="196"/>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgb-Ts-Q3m">
                         <rect key="frame" x="10" y="10" width="447" height="176"/>
                         <subviews>
@@ -136,16 +133,12 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="DO0-e1-aFb" secondAttribute="trailing" id="55P-aB-L4X"/>
                     <constraint firstItem="bgb-Ts-Q3m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7Bx-3v-Lan"/>
-                    <constraint firstAttribute="bottom" secondItem="DO0-e1-aFb" secondAttribute="bottom" id="7Wx-ha-dIW"/>
                     <constraint firstAttribute="trailing" secondItem="o1X-a1-R6g" secondAttribute="trailing" id="LSg-MH-T3g"/>
                     <constraint firstItem="bgb-Ts-Q3m" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ofv-C5-UIG"/>
-                    <constraint firstItem="DO0-e1-aFb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ead-j6-I34"/>
                     <constraint firstAttribute="trailing" secondItem="bgb-Ts-Q3m" secondAttribute="trailing" constant="10" id="f0V-1t-Aji"/>
                     <constraint firstItem="o1X-a1-R6g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f41-4b-W1h"/>
                     <constraint firstAttribute="bottom" secondItem="o1X-a1-R6g" secondAttribute="bottom" id="mHv-62-WLi"/>
-                    <constraint firstItem="DO0-e1-aFb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nLx-4Y-EAq"/>
                     <constraint firstAttribute="bottom" secondItem="bgb-Ts-Q3m" secondAttribute="bottom" constant="10" id="qjY-uK-cOe"/>
                     <constraint firstItem="o1X-a1-R6g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xW9-dH-Su5"/>
                 </constraints>
@@ -156,7 +149,7 @@
                 <outlet property="bookMarkView" destination="qVl-MD-hVa" id="Yov-KK-Rl1"/>
                 <outlet property="chefNameLabel" destination="ckL-hc-CAD" id="GZE-to-hPw"/>
                 <outlet property="rateView" destination="hk2-NY-RsQ" id="Pqk-LQ-VJX"/>
-                <outlet property="recipeImageView" destination="DO0-e1-aFb" id="HpW-GL-Czt"/>
+                <outlet property="recipeImageView" destination="o1X-a1-R6g" id="RoM-3q-diG"/>
                 <outlet property="timeLabel" destination="AJO-fY-bBG" id="nfJ-Yb-ViB"/>
                 <outlet property="titleLabel" destination="aYS-5J-z3w" id="FEd-W6-TU7"/>
             </connections>
@@ -165,7 +158,6 @@
     </objects>
     <resources>
         <image name="background-food" width="1000" height="1000"/>
-        <image name="background-gradient" width="315" height="150"/>
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="icon-stroke" width="12" height="14"/>
         <namedColor name="rating">

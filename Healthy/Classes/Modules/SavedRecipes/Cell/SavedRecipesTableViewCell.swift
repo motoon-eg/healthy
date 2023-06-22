@@ -29,6 +29,7 @@ class SavedRecipesTableViewCell: UITableViewCell {
 private extension SavedRecipesTableViewCell {
     func configureLayout() {
         contentView.layer.cornerRadius = 10
+        recipeImageView.applyPrimaryGradient()
         // TODO: Waiting for add style to title label.
         titleLabel.textColor = .white
         // TODO: Waiting for add style to chef name label.
