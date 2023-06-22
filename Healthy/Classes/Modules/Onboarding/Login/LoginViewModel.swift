@@ -19,6 +19,7 @@ final class LoginViewModel {
 // MARK: Input
 
 extension LoginViewModel: LoginViewModelInput {
+
     func updateEmail(_ text: String) {
         email = text
     }
@@ -40,8 +41,19 @@ extension LoginViewModel: LoginViewModelInput {
 
     func performSignUp() { }
     func performForgetPassword() { }
-    func performSignInWithGoogle() { }
-    func performSignInWithFacebook() { }
+
+    func performSocialMediaSignIn(_ authentication: Authentication) {
+        Task {
+            do {
+                // Loading
+                let authenticatedUser = try await authentication.performLogin()
+                print(authenticatedUser)
+                // End loading
+            } catch {
+                // Show error
+            }
+        }
+    }
 }
 
 // MARK: Output
