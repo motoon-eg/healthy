@@ -1,62 +1,108 @@
 import Combine
 
-// MARK: SearchViewModel
+ protocol SearchDataSource {
+    func loadRecipes() async throws -> [Recipe]
+ }
 
-final class SearchViewModel {
+ // MARK: SearchViewModel
+
+ final class SearchViewModel {
     private var subscriptions = Set<AnyCancellable>()
+    @Published private(set) var searchKeyword = ""
+    @Published private(set) var searchFilter = SearchFilter()
+    @Published private(set) var recipes = [Recipe]()
+    @Published private var state = SearchState.initial
 
-    @Published private var searchKeywords = [String]()
-    @Published private var searchFilters = [SearchFilter]()
-    @Published private var recipe = [Recipe]()
-    @Published private var error: Error = SearchError.unknownError
-    @Published private var isEmpty = false
-    @Published private var isLoading = false
-}
+    private let searchDataSource: SearchDataSource
 
-// MARK: SearchViewModel
+    init(searchDataSource: SearchDataSource) {
+        self.searchDataSource = searchDataSource
+    }
+ }
 
-extension SearchViewModel: SearchViewModelInput {
+ // MARK: SearchViewModel
+
+ extension SearchViewModel: SearchViewModelInput {
     func addNewSearchKeyword(_ keyword: String) {
-        searchKeywords.append(keyword)
+        searchKeyword = keyword
+        updateSearch()
     }
 
-    func addNewSearchFilter(_ filter: SearchFilter) { }
-}
+    func addNewSearchFilter(_ filter: SearchFilter) {
+        searchFilter = filter
+        updateSearch()
+    }
+ }
 
-// MARK: SearchViewModelOutput
+ // MARK: SearchViewModelOutput
 
-extension SearchViewModel: SearchViewModelOutput {
+ extension SearchViewModel: SearchViewModelOutput {
     var recipesPublisher: AnyPublisher<[Recipe], Never> {
-        $recipe.eraseToAnyPublisher()
+        $recipes.eraseToAnyPublisher()
     }
 
     var errorPublisher: AnyPublisher<Error, Never> {
-        $error.eraseToAnyPublisher()
+        $state
+            .compactMap {
+            guard case let .failure(error) = $0 else { return nil }
+                return error
+        }
+        .eraseToAnyPublisher()
     }
 
     var isEmptyPublisher: AnyPublisher<Bool, Never> {
-        $isEmpty.eraseToAnyPublisher()
+        $recipes
+            .map { $0.isEmpty }
+            .eraseToAnyPublisher()
     }
 
     var isLoadingPublisher: AnyPublisher<Bool, Never> {
-        $isLoading.eraseToAnyPublisher()
+        $state
+            .map {
+                guard case .loading = $0 else { return false }
+                return true
+            }
+            .eraseToAnyPublisher()
     }
-}
 
-// MARK: Private Helpers
-
-private extension SearchViewModel {
-
-    // MARK: Search Error
-
-    enum SearchError: Error {
-        case unknownError
+    var isLoadingMore: AnyPublisher<Bool, Never> {
+        $state
+            .map {
+                guard case .loadingMore = $0 else { return false }
+                return true
+            }
+            .eraseToAnyPublisher()
     }
+
+    var isLoaded: AnyPublisher<Bool, Never> {
+        $state
+            .map {
+                guard case .loaded = $0 else { return false}
+                return true
+            }
+            .eraseToAnyPublisher()
+    }
+ }
 
     // MARK: Search states
 
     enum SearchState {
-        case initial, loading, loadingMore, empty, loaded
+        case initial, loading, loadingMore, loaded
+        case failure(Error)
     }
 
-}
+ // MARK: Private Helpers
+
+ private extension SearchViewModel {
+    func updateSearch() {
+        Task {
+            do {
+                state = .loading
+                recipes = try await searchDataSource.loadRecipes()
+                state = .loaded
+            } catch {
+                state = .failure(error)
+            }
+        }
+    }
+ }

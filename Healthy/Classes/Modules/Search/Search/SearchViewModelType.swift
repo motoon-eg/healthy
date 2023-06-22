@@ -1,7 +1,5 @@
 import Combine
 
-public enum SearchFilter { }
-
 /// Search Input & Output
 ///
 typealias SearchViewModelType = SearchViewModelInput & SearchViewModelOutput
@@ -20,4 +18,6 @@ protocol SearchViewModelOutput {
     var errorPublisher: AnyPublisher<Error, Never> { get }
     var isEmptyPublisher: AnyPublisher<Bool, Never> { get }
     var isLoadingPublisher: AnyPublisher<Bool, Never> { get }
+    var isLoadingMore: AnyPublisher<Bool, Never> { get }
+    var isLoaded: AnyPublisher<Bool, Never> { get }
 }

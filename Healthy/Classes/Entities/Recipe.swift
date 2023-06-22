@@ -1,1 +1,1 @@
-struct Recipe {}
+struct Recipe: Equatable {}
