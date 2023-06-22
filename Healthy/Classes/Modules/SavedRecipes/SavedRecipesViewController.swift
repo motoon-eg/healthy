@@ -4,9 +4,12 @@ final class SavedRecipesViewController: UIViewController {
 
     // MARK: Outlets
 
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
+    private var dataSource: UITableViewDiffableDataSource<Int, SavedRecipe>?
 
     // MARK: Init
 
@@ -24,6 +27,9 @@ final class SavedRecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Saved Recipes"
+        configureTableView()
+        configureDataSource()
     }
 }
 
@@ -37,4 +43,15 @@ extension SavedRecipesViewController {}
 
 // MARK: - Private Handlers
 
-private extension SavedRecipesViewController {}
+private extension SavedRecipesViewController {
+    
+ // MARK: - Private Methods
+    
+    private func configureTableView() {
+        
+    }
+    
+    private func configureDataSource() {
+        
+    }
+}

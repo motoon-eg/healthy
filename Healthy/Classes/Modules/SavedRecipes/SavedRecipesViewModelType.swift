@@ -4,7 +4,9 @@ typealias SavedRecipesViewModelType = SavedRecipesViewModelInput & SavedRecipesV
 
 /// SavedRecipes ViewModel Input
 ///
-protocol SavedRecipesViewModelInput {}
+protocol SavedRecipesViewModelInput {
+    func removeSavedRecipe(_ recipe: SavedRecipe)
+}
 
 /// SavedRecipes ViewModel Output
 ///
