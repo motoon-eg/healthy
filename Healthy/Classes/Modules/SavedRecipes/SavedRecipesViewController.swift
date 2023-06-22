@@ -9,7 +9,7 @@ final class SavedRecipesViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
-    private var dataSource: UITableViewDiffableDataSource<Int, SavedRecipe>?
+    private var dataSource: UITableViewDiffableDataSource<Int, SavedRecipe>!
 
     // MARK: Init
 
@@ -48,7 +48,14 @@ private extension SavedRecipesViewController {
  // MARK: - Private Methods
     
     private func configureTableView() {
-        
+        tableView.register(RecipeListTableViewCell.self, forCellReuseIdentifier: RecipeListTableViewCell.reuseIdentifier)
+        dataSource = UITableViewDiffableDataSource(tableView: tableView) { tableView, indexPath, recipe in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: RecipeListTableViewCell.reuseIdentifier, for: indexPath) as? RecipeListTableViewCell else {
+                return UITableViewCell()
+            }
+            //cell.configure(with: recipe.recipe)
+            return cell
+        }
     }
     
     private func configureDataSource() {
