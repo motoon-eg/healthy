@@ -85,7 +85,8 @@
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */; };
-		A21C51FB2A43036A00850B15 /* TableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* TableViewMock.swift */; };
+		A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* UITableViewMock.swift */; };
+		A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */; };
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
 		A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA41102A44412500C9C9A0 /* UIView+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
@@ -194,7 +195,8 @@
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCellTests.swift; sourceTree = "<group>"; };
-		A21C51FA2A43036A00850B15 /* TableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewMock.swift; sourceTree = "<group>"; };
+		A21C51FA2A43036A00850B15 /* UITableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewMock.swift; sourceTree = "<group>"; };
+		A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterNib.swift"; sourceTree = "<group>"; };
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		A2FA41102A44412500C9C9A0 /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 				6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */,
 				A2FA41102A44412500C9C9A0 /* UIView+Style.swift */,
+				A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 		6DFEC61F2A2E97F80090B2E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A27861132A445BDE00BA7018 /* Mocks */,
 				B2D402E22A3BB2E200FDB941 /* Extensions */,
 				6DFEC6202A2E97FF0090B2E2 /* Modules */,
 			);
@@ -658,10 +662,17 @@
 		A21C51F72A42FF7900850B15 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A21C51FA2A43036A00850B15 /* TableViewMock.swift */,
 				A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		A27861132A445BDE00BA7018 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A21C51FA2A43036A00850B15 /* UITableViewMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
@@ -993,6 +1004,7 @@
 				0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */,
+				A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
@@ -1028,7 +1040,7 @@
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
-				A21C51FB2A43036A00850B15 /* TableViewMock.swift in Sources */,
+				A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
 				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
 				206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */,
