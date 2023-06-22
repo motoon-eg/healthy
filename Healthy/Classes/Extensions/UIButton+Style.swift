@@ -71,3 +71,7 @@ private extension UIButton {
         static let gold = UIColor(red: 1.000, green: 0.612, blue: 0.000, alpha: 1)
     }
 }
+
+// MARK: - Loading Indicator Button
+//
+extension UIButton: Animatable {}
