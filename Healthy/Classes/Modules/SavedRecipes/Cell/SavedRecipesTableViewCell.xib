@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="467" height="196"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o1X-a1-R6g">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-food" translatesAutoresizingMaskIntoConstraints="NO" id="o1X-a1-R6g">
                         <rect key="frame" x="0.0" y="0.0" width="467" height="196"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="DO0-e1-aFb">
@@ -164,6 +164,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="background-food" width="1000" height="1000"/>
         <image name="background-gradient" width="315" height="150"/>
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="icon-stroke" width="12" height="14"/>
