@@ -1,9 +1,9 @@
 import UIKit
 
 final class HomeHeaderView: UIView {
-    
+
     // MARK: Outlets
-    
+
     @IBOutlet private(set) weak var contentView: UIView!
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var subtitleLabel: UILabel!
@@ -33,11 +33,11 @@ final class HomeHeaderView: UIView {
         // TODO: - Waiting for add home subtitle label style.
         subtitleLabel.applyStyle(.signupSubtitle)
     }
-    
+
     func configure(with viewModel: ViewModel) {
         titleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
-        
+
         // TODO: - [HT-62] Waiting for adding kingfisher (or any library for handle image cashing).
     }
 }

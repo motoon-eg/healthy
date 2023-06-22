@@ -58,11 +58,13 @@ extension LoginViewController {
     }
 
     @IBAction func didTapSignInWithGoogle(_ sender: Any) {
-        viewModel.performSignInWithGoogle()
+        let authenticator = GoogleSignInAuthenticator(viewController: self)
+        viewModel.performSocialMediaSignIn(authenticator)
     }
 
     @IBAction func didTapSignInWithFacebook(_ sender: Any) {
-        viewModel.performSignInWithFacebook()
+        let authenticator = FacebookAuthenticator(viewController: self)
+        viewModel.performSocialMediaSignIn(authenticator)
     }
 }
 
