@@ -12,12 +12,14 @@ final class SavedRecipesTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var bookMarkView: UIView!
     @IBOutlet private(set) weak var bookMarkImageView: UIImageView!
     
-    //MARK:  Lifecycle
+    // MARK:  Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
     }
+    
+    // MARK:  Configure
     
     func configureCell(viewModel: ViewModel) {
         // TODO: Configure cell with view model.
@@ -38,6 +40,8 @@ private extension SavedRecipesTableViewCell {
         bookMarkView.layer.cornerRadius = 12
     }
 }
+
+// MARK: View Model
 
 extension SavedRecipesTableViewCell {
     struct ViewModel {
