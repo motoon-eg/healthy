@@ -1,15 +1,23 @@
 import UIKit
 
+// MARK: ViewModel
+
+extension FoodTagsView {
+    struct ViewModel {
+        let foodCategories: [FoodTagCollectionViewCell.ViewModel]
+    }
+}
+
 final class FoodTagsView: UIView {
 
     // MARK: Outlets
 
-    @IBOutlet weak var tagsCollectionView: UICollectionView!
+    @IBOutlet private(set) weak var tagsCollectionView: UICollectionView!
 
     // MARK: Properties
 
     private var currentSelectedIndexPath: IndexPath = IndexPath(item: 0, section: 0)
-    private var foodCategories: [String] = []
+    private var foodCategories: [FoodTagCollectionViewCell.ViewModel] = []
 
     // MARK: Init
 
@@ -33,13 +41,6 @@ extension FoodTagsView {
     }
 }
 
-// MARK: ViewModel
-
-extension FoodTagsView {
-    struct ViewModel {
-        let foodCategories: [String]
-    }
-}
 
 // MARK: Configurations
 
@@ -67,7 +68,7 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell: FoodTagCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.updateView(viewModel: .init(foodCategoryName: foodCategories[indexPath.row]))
+        cell.updateView(viewModel: .init(foodCategoryName: foodCategories[indexPath.row].foodCategoryName))
         let isSelected = currentSelectedIndexPath == indexPath
         cell.setSelection(isSelected)
 
@@ -87,20 +88,20 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         willDisplay cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
-        willDisplayCellAnimation(cell, collectionView)
+        performSlideInAnimations(cell, collectionView)
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         didEndDisplaying cell: UICollectionViewCell,
                         forItemAt indexPath: IndexPath) {
-        didEndDisplayingCellAnimation(cell, collectionView)
+        performSlideOffAnimations(cell, collectionView)
     }
 }
 
 // MARK: Animation Methods
 
 private extension FoodTagsView {
-    private func willDisplayCellAnimation(_ cell: UICollectionViewCell, _ collectionView: UICollectionView) {
+    private func performSlideInAnimations(_ cell: UICollectionViewCell, _ collectionView: UICollectionView) {
         cell.transform = CGAffineTransform(translationX: 0, y: collectionView.bounds.height / 2)
         cell.alpha = 0
 
@@ -110,7 +111,7 @@ private extension FoodTagsView {
         }, completion: nil)
     }
 
-    private func didEndDisplayingCellAnimation(_ cell: UICollectionViewCell, _ collectionView: UICollectionView) {
+    private func performSlideOffAnimations(_ cell: UICollectionViewCell, _ collectionView: UICollectionView) {
         cell.transform = CGAffineTransform.identity
         cell.alpha = 1
 
@@ -118,5 +119,30 @@ private extension FoodTagsView {
             cell.transform = CGAffineTransform(translationX: 0, y: collectionView.bounds.height / 2)
             cell.alpha = 0
         }, completion: nil)
+    }
+}
+
+// MARK:  Layout
+
+private extension UICollectionViewLayout {
+
+    static func createTagsLayout() -> UICollectionViewCompositionalLayout {
+
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .estimated(100),
+            heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .estimated(100),
+            heightDimension: .fractionalHeight(1.0))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20)
+        section.interGroupSpacing = 15
+
+        return UICollectionViewCompositionalLayout(section: section)
     }
 }
