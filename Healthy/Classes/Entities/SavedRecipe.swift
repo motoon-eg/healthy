@@ -9,7 +9,7 @@ struct SavedRecipe: Hashable {
     let title: String?
     
     /// The  image of the recipe
-    let recipeImageUrl: String?
+    let recipeImageUrl: UIImage?
     
     /// The rating of the recipe
     let rating: Int?
@@ -28,7 +28,7 @@ struct SavedRecipe: Hashable {
         return lhs.id == rhs.id
     }
     
-    init(title: String?, recipeImageUrl: String?, rating: Int?, chefName: String?, cookingTime: Int?) {
+    init(title: String?, recipeImageUrl: UIImage?, rating: Int?, chefName: String?, cookingTime: Int?) {
         self.title = title
         self.recipeImageUrl = recipeImageUrl
         self.rating = rating
