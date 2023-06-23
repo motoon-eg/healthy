@@ -66,6 +66,7 @@
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
 		02FDBC312A3A65AB0012AF87 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */; };
 		02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBC322A3A66780012AF87 /* PlaceholderView.xib */; };
+		02FE38F22A45F7C8006EB245 /*  MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FE38F12A45F7C8006EB245 /*  MyTableViewCell.swift */; };
 		2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049C21B2A2000680077DBE4 /* CheckboxButton.swift */; };
 		206FF7972A39EE4100130CA4 /* CreateAccountViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206FF7962A39EE4100130CA4 /* CreateAccountViewControllerTests.swift */; };
 		206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206FF7992A3A32DC00130CA4 /* CreateViewModelMock.swift */; };
@@ -97,10 +98,10 @@
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
-		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
-		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
+		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
+		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,7 @@
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		02FDBC322A3A66780012AF87 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
+		02FE38F12A45F7C8006EB245 /*  MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " MyTableViewCell.swift"; sourceTree = "<group>"; };
 		20376AA82A2663F8004BF0BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2049C21B2A2000680077DBE4 /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		206FF7962A39EE4100130CA4 /* CreateAccountViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewControllerTests.swift; sourceTree = "<group>"; };
@@ -207,11 +209,11 @@
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
+		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
-		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 				025511A72A3C5DAA00295B91 /* SavedRecipesViewController.xib */,
 				025511A62A3C5DAA00295B91 /* SavedRecipesViewModel.swift */,
 				025511A42A3C5DAA00295B91 /* SavedRecipesViewModelType.swift */,
+				02FE38F12A45F7C8006EB245 /*  MyTableViewCell.swift */,
 			);
 			path = SavedRecipes;
 			sourceTree = "<group>";
@@ -1028,6 +1031,7 @@
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				025511D12A3D0A8B00295B91 /* SplashViewModelType.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
+				02FE38F22A45F7C8006EB245 /*  MyTableViewCell.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,

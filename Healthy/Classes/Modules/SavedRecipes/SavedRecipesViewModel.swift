@@ -1,4 +1,5 @@
 import Combine
+import UIKit
 
 // MARK: SavedRecipesViewModel
 
@@ -6,7 +7,10 @@ final class SavedRecipesViewModel {
     
     //MARK: - Properties
     
-    var savedRecipes: [SavedRecipe] = []
+    @Published private var savedRecipes: [SavedRecipe] = [
+        SavedRecipe(title: "pizza", recipeImageUrl: UIImage.iconNotification, rating: 4, chefName: "sara", cookingTime: 15),
+        SavedRecipe(title: "shawrma", recipeImageUrl: UIImage.backgroundSplash, rating: 5, chefName: "doaa", cookingTime: 20)
+    ]
 }
 
 // MARK: SavedRecipesViewModel
@@ -22,12 +26,8 @@ extension SavedRecipesViewModel: SavedRecipesViewModelInput {
 // MARK: SavedRecipesViewModelOutput
 
 extension SavedRecipesViewModel: SavedRecipesViewModelOutput {
-    var recipesPublisher: any Publisher<[SavedRecipe], Error> {
-        <#code#>
-    }
-    
-    var isEmptyPublisher: any Publisher<Bool, Error> {
-        <#code#>
+    var recipesPublisher: any Publisher<[SavedRecipe], Never> {
+        $savedRecipes.eraseToAnyPublisher()
     }
 }
 
