@@ -7,6 +7,7 @@ protocol FoodTagCollectionDelegate: AnyObject {
 class FoodTagCollectionViewCell: UICollectionViewCell {
 
     // MARK: Outlets
+
     @IBOutlet private weak var foodCategoryName: UILabel!
 
     weak var delegate: FoodTagCollectionDelegate?

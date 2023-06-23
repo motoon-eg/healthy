@@ -31,7 +31,7 @@ final class AppCoordinator {
 private extension AppCoordinator {
     /// Displays the logged-in flow.
     func displayLoggedInFlow() {
-        let viewController = MainTabBarController()
+        let viewController = TestViewController()
         replaceRootViewController(viewController)
     }
 
