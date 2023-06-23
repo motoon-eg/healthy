@@ -20,6 +20,10 @@ jobs:
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
           echo $default | cat >default
           echo Using default scheme: $default
+      - name: Run SwiftGen
+        run: |
+          $SRCROOT/Vendors/SwiftGen/bin/swiftgen
+
       - name: Build
         env:
           scheme: ${{ 'default' }}

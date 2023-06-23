@@ -58,7 +58,7 @@ private extension SplashViewController {
         logoCaptionLabel.text = L10n.Splash.Logo.caption
         headerTitleLabel.text = L10n.Splash.Main.title
         headerCaptionLabel.text = L10n.Splash.Main.subtitle
-        startCookingButton.setTitle(L10n.Splash.Button.title, for: .normal)
+        startCookingButton.setTitle(L10n.Splash.Login.Button.title, for: .normal)
     }
 }
 
