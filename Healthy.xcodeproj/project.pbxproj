@@ -1080,7 +1080,6 @@
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
-				B2AD70422A406A5F00F15853 /* FoodTagsView.swift in Sources */,
 				B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */,
 				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
