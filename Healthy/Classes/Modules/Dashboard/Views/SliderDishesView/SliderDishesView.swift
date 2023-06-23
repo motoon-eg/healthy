@@ -9,8 +9,12 @@ class SliderDishesView: UIView{
     @IBOutlet private(set) weak var dishesSliderCollectionView: UICollectionView!
 
     // MARK: - Properties
-
-    private var viewModel: [SliderCollectionViewCell.SliderViewModel]?
+    private var viewModel: [SliderCollectionViewCell.SliderViewModel] = [
+        .init(imageUrl: nil, disheName: "", time: "", duration: .zero),
+        .init(imageUrl: nil, disheName: "", time: "", duration: .zero),
+        .init(imageUrl: nil, disheName: "", time: "", duration: .zero),
+        .init(imageUrl: nil, disheName: "", time: "", duration: .zero)
+    ]
 
     // MARK: - initializer
 
@@ -18,6 +22,7 @@ class SliderDishesView: UIView{
         super.init(frame: frame)
 
         collectionViewSetup()
+        
     }
 
     required init?(coder: NSCoder) {
@@ -32,9 +37,7 @@ class SliderDishesView: UIView{
 extension SliderDishesView {
 
     func collectionViewSetup() {
-        Bundle.main.loadNibNamed("SliderDishesView", owner: self, options: nil)
-//        addAndFixSubview(SliderDishesView)
-
+        loadViewFromNib()
         dishesSliderCollectionView.register(SliderCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         dishesSliderCollectionView.delegate = self
         dishesSliderCollectionView.dataSource = self
@@ -44,7 +47,12 @@ extension SliderDishesView {
     func collectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: (dishesSliderCollectionView.bounds.width) - 5, height: dishesSliderCollectionView.bounds.height)
+        
+        layout.itemSize = CGSize(
+            width: dishesSliderCollectionView.bounds.width * 0.3,
+            height: dishesSliderCollectionView.bounds.height
+        )
+
         layout.minimumInteritemSpacing = 15
         layout.minimumLineSpacing = 15
         layout.scrollDirection = .horizontal
@@ -57,13 +65,14 @@ extension SliderDishesView {
 extension SliderDishesView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel?.count ?? 0
+        viewModel.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       
         let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SliderCollectionViewCell
-        guard let model = viewModel else { return UICollectionViewCell() }
-        cell.configureCellData(viewModel: model[indexPath.row])
+        cell.configureCellData(viewModel: viewModel[indexPath.row])
         return cell
+
     }
 }

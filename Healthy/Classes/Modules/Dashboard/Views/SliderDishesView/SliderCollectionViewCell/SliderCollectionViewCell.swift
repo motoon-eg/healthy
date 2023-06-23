@@ -21,7 +21,7 @@ class SliderCollectionViewCell: UICollectionViewCell, Identifiable{
     // MARK: - Configurations
     
     func configureCellData(viewModel: SliderViewModel) {
-        disheImage.image = viewModel.imageUrl
+//        disheImage.image = viewModel.imageUrl
     }
 }
 
@@ -29,7 +29,7 @@ class SliderCollectionViewCell: UICollectionViewCell, Identifiable{
 
 extension SliderCollectionViewCell {
     struct SliderViewModel {
-        let imageUrl: UIImage
+        let imageUrl: UIImage?
         let disheName: String
         let time: String
         let duration: Int
