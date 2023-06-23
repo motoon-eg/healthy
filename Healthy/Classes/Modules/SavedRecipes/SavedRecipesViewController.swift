@@ -3,10 +3,12 @@ import UIKit
 final class SavedRecipesViewController: UIViewController {
 
     // MARK: Outlets
-
+    private var tableView: UITableView!
+    
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
+    private var dataSource: UITableViewDiffableDataSource<Section, SavedRecipe>!
 
     // MARK: Init
 
@@ -24,6 +26,15 @@ final class SavedRecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "MyTableViewCell")
+        view.addSubview(tableView)
+        dataSource = UITableViewDiffableDataSource(tableView: tableView) { tableView, indexPath, viewModel in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
+            cell.configure(with: viewModel)
+            return cell
+        }
     }
 }
 
