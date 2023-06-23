@@ -1,12 +1,21 @@
 import UIKit
+import Combine
 
 final class SavedRecipesViewController: UIViewController {
 
+    enum Section {
+        case main
+    }
+
     // MARK: Outlets
+
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
+    private var dataSource: UITableViewDiffableDataSource<Section, SavedRecipe>!
+    private var subscriptions: Set<AnyCancellable> = []
 
     // MARK: Init
 
@@ -24,6 +33,14 @@ final class SavedRecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureTableView()
+        configureTableViewDataSource()
+        viewModel.recipesPublisher
+            .sink { [weak self] viewModels in
+                self?.updateTableData(viewModel: viewModels)
+            }
+            .store(in: &subscriptions)
     }
 }
 
@@ -33,7 +50,27 @@ extension SavedRecipesViewController {}
 
 // MARK: - Configurations
 
-extension SavedRecipesViewController {}
+extension SavedRecipesViewController {
+    func configureTableView() {
+        tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "MyTableViewCell")
+    }
+
+    func configureTableViewDataSource() {
+    dataSource =
+        UITableViewDiffableDataSource<Section, SavedRecipe>(tableView: tableView) { tableView, indexPath, viewModel in
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as? MyTableViewCell
+            cell?.update(with: viewModel)
+            return cell
+        }
+    }
+
+    func updateTableData(viewModel: [SavedRecipe]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, SavedRecipe>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(viewModel)
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+}
 
 // MARK: - Private Handlers
 

@@ -4,11 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavedRecipesViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="1Yd-PG-qZH" id="kvb-8x-zHL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,8 +18,25 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-PG-qZH">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1Yd-PG-qZH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8Jz-4t-aZk"/>
+                <constraint firstItem="1Yd-PG-qZH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bul-x0-qPb"/>
+                <constraint firstAttribute="bottom" secondItem="1Yd-PG-qZH" secondAttribute="bottom" id="EMe-8p-V7A"/>
+                <constraint firstAttribute="trailing" secondItem="1Yd-PG-qZH" secondAttribute="trailing" id="xM5-Sh-eLL"/>
+            </constraints>
             <point key="canvasLocation" x="19" y="-17"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -61,6 +61,7 @@
 		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		028C83B22A46202F00F6C675 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C83B12A46202F00F6C675 /* MyTableViewCell.swift */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
@@ -200,6 +201,7 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		028C83B12A46202F00F6C675 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		02FDBC322A3A66780012AF87 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				025511A72A3C5DAA00295B91 /* SavedRecipesViewController.xib */,
 				025511A62A3C5DAA00295B91 /* SavedRecipesViewModel.swift */,
 				025511A42A3C5DAA00295B91 /* SavedRecipesViewModelType.swift */,
+				028C83B12A46202F00F6C675 /* MyTableViewCell.swift */,
 			);
 			path = SavedRecipes;
 			sourceTree = "<group>";
@@ -1193,6 +1196,7 @@
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
 				A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */,
 				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
+				028C83B22A46202F00F6C675 /* MyTableViewCell.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				27C7C7F92A4341A300FECE25 /* LogLevel.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
