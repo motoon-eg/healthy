@@ -2,8 +2,8 @@ import UIKit
 
 extension UICollectionView {
 
-    func register<T: UICollectionViewCell>(_: T.Type, bundle: Bundle? = nil) {
-        let bundle = bundle ?? Bundle(for: T.self)
+    func register<T: UICollectionViewCell>(_: T.Type) {
+        let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.reuseIdentifier, bundle: bundle)
         register(nib, forCellWithReuseIdentifier: T.reuseIdentifier)
     }
@@ -12,6 +12,7 @@ extension UICollectionView {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
         }
+
         return cell
     }
 }
