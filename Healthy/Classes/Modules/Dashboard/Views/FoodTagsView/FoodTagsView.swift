@@ -15,7 +15,7 @@ final class FoodTagsView: UIView {
     @IBOutlet private(set) weak var tagsCollectionView: UICollectionView!
 
     // MARK: Properties
-
+// value 
     private var currentSelectedIndexPath: IndexPath = IndexPath(item: 0, section: 0)
     private var foodCategories: [FoodTagCollectionViewCell.ViewModel] = []
 
@@ -71,6 +71,7 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.updateView(viewModel: .init(foodCategoryName: foodCategories[indexPath.row].foodCategoryName))
         let isSelected = currentSelectedIndexPath == indexPath
         cell.setSelection(isSelected)
+        cell.delegate = self
 
         return cell
     }
@@ -144,5 +145,11 @@ private extension UICollectionViewLayout {
         section.interGroupSpacing = 15
 
         return UICollectionViewCompositionalLayout(section: section)
+    }
+}
+
+extension FoodTagsView: FoodTagCollectionDelegate {
+    func didSelectTag(viewModel: FoodTagCollectionViewCell.ViewModel) {
+        print("viewModel.foodCategoryName is : ",viewModel.foodCategoryName)
     }
 }
