@@ -5,6 +5,12 @@
         <key>CFBundleURLTypes</key>
         <array>
             <dict>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <string>fb803528534332452</string>
+                </array>
+            </dict>
+            <dict>
                 <key>CFBundleTypeRole</key>
                 <string>Editor</string>
                 <key>CFBundleURLName</key>
@@ -12,6 +18,17 @@
                 <key>CFBundleURLSchemes</key>
                 <array/>
             </dict>
+        </array>
+        <key>FacebookAppID</key>
+        <string>803528534332452</string>
+        <key>FacebookClientToken</key>
+        <string>4cb2b9e5260f24ef6fb62356ec043deb</string>
+        <key>FacebookDisplayName</key>
+        <string>Healthy Name</string>
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+            <string>fbapi</string>
+            <string>fb-messenger-share-api</string>
         </array>
         <key>UIAppFonts</key>
         <array>
