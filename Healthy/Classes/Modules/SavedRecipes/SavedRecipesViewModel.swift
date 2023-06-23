@@ -6,11 +6,16 @@ import Combine
 final class SavedRecipesViewModel {
 
     // MARK: - Properties
-   internal var savedRecipes: [SavedRecipe] = []
-   private(set) var subscriptions = Set<AnyCancellable>()
-   private let savedRecipesSubject = PassthroughSubject<[SavedRecipe], Never>()
-   private let isEmptySubject = PassthroughSubject<Bool, Never>()
 
+    var savedRecipes: [SavedRecipe] = [] {
+        didSet {
+            recipesSubject.send(savedRecipes)
+            isEmptySubject.send(savedRecipes.isEmpty)
+        }
+    }
+    internal var recipesSubject = PassthroughSubject<[SavedRecipe], Error>()
+    internal var isEmptySubject = PassthroughSubject<Bool, Error>()
+    private var subscriptions = Set<AnyCancellable>()
 }
 
 // MARK: SavedRecipesViewModel
@@ -26,12 +31,11 @@ extension SavedRecipesViewModel: SavedRecipesViewModelInput {
 // MARK: SavedRecipesViewModelOutput
 
 extension SavedRecipesViewModel: SavedRecipesViewModelOutput {
-
-    var recipesPublisher: AnyPublisher<[SavedRecipe], Never> {
-        savedRecipesSubject.eraseToAnyPublisher()
+    var recipesPublisher: AnyPublisher<[SavedRecipe], Error> {
+        recipesSubject.eraseToAnyPublisher()
     }
 
-    var isEmptyPublisher: AnyPublisher<Bool, Never> {
+    var isEmptyPublisher: AnyPublisher<Bool, Error> {
         isEmptySubject.eraseToAnyPublisher()
     }
 }

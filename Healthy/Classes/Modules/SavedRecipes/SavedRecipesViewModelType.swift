@@ -12,6 +12,6 @@ protocol SavedRecipesViewModelInput {
 /// SavedRecipes ViewModel Output
 ///
 protocol SavedRecipesViewModelOutput {
-    var recipesPublisher: AnyPublisher<[SavedRecipe], Never> { get }
-    var isEmptyPublisher: AnyPublisher<Bool, Never> { get }
+    var recipesPublisher: AnyPublisher<[SavedRecipe], Error> { get }
+    var isEmptyPublisher: AnyPublisher<Bool, Error> { get }
 }

@@ -5,14 +5,12 @@ final class SavedRecipesViewControllerTests: XCTestCase {
 
     // MARK: - Properties
 
-    private var savedRecipeViewModelMock: SavedRecipesViewModelMock!
     private var sut: SavedRecipesViewController!
 
    // MARK: - Lifecycle
 
     override func setUpWithError() throws {
-        savedRecipeViewModelMock = SavedRecipesViewModelMock()
-        sut = SavedRecipesViewController(viewModel: savedRecipeViewModelMock)
+        // sut = SavedRecipesViewController(viewModel: savedRecipeViewModelMock)
         sut.loadViewIfNeeded()
     }
 

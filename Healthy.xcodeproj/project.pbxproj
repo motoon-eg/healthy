@@ -65,7 +65,6 @@
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
 		02DD10002A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD0FFF2A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift */; };
-		02DD10042A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD10032A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift */; };
 		02DD10062A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD10052A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift */; };
 		02FDBC312A3A65AB0012AF87 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */; };
 		02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBC322A3A66780012AF87 /* PlaceholderView.xib */; };
@@ -180,7 +179,6 @@
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02DD0FFF2A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelTests.swift; sourceTree = "<group>"; };
-		02DD10032A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
 		02DD10052A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
 		02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		02FDBC322A3A66780012AF87 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
@@ -622,7 +620,6 @@
 				6DFEC6212A2E980B0090B2E2 /* Login */,
 				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
 				02DD0FFF2A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift */,
-				02DD10032A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift */,
 				02DD10052A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift */,
 			);
 			path = Modules;
@@ -1062,7 +1059,6 @@
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
 				02DD10062A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift in Sources */,
 				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
-				02DD10042A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift in Sources */,
 				206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
