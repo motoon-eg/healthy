@@ -2,6 +2,7 @@ import Combine
 @testable import Healthy
 
 final class LoginViewModelMock: LoginViewModelType {
+
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
         Just(false).eraseToAnyPublisher()
     }
@@ -48,15 +49,9 @@ final class LoginViewModelMock: LoginViewModelType {
         performSignUpCallCount += 1
     }
 
-    // Sign-in with Google Spy
-    private(set) var performSignInWithGoogleCallCount: Int = .zero
-    func performSignInWithGoogle() {
-        performSignInWithGoogleCallCount += 1
-    }
-
-    // Sign-with Facebook Spy
-    private(set) var performSignInWithFacebookCallCount: Int = .zero
-    func performSignInWithFacebook() {
-        performSignInWithFacebookCallCount += 1
+    // Sign-with social spy
+    private(set) var performSocialMediaSignInCount: Int = .zero
+    func performSocialMediaSignIn(_ authentication: Healthy.Authentication) {
+        performSocialMediaSignInCount += 1
     }
 }
