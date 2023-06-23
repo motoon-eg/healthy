@@ -91,7 +91,6 @@
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2AD70442A406AA800F15853 /* FoodTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AD70432A406AA800F15853 /* FoodTagsView.xib */; };
-		B2AD70482A406F9300F15853 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70472A406F9300F15853 /* UICollectionView+Helpers.swift */; };
 		B2AD704F2A40703D00F15853 /* FoodTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD704D2A40703D00F15853 /* FoodTagCollectionViewCell.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
@@ -105,8 +104,6 @@
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
-		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
-		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,7 +205,6 @@
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2AD70412A406A5F00F15853 /* FoodTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagsView.swift; sourceTree = "<group>"; };
 		B2AD70432A406AA800F15853 /* FoodTagsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTagsView.xib; sourceTree = "<group>"; };
-		B2AD70472A406F9300F15853 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		B2AD704D2A40703D00F15853 /* FoodTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
@@ -223,8 +219,6 @@
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
-		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,7 +426,6 @@
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
 				027DDA1C2A0E6A660052818C /* Products */,
-				B2C9E39C2A447000004E3B7E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -692,13 +685,6 @@
 				B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */,
 			);
 			path = MainTabBarController;
-			sourceTree = "<group>";
-		};
-		B2C9E39C2A447000004E3B7E /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		B2D402DD2A3BB1D700FDB941 /* UILabel+Style */ = {
@@ -1037,7 +1023,6 @@
 				B2AD704F2A40703D00F15853 /* FoodTagCollectionViewCell.swift in Sources */,
 				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,
 				6DB1366E2A3635AC00448722 /* UIView+SkeletonView.swift in Sources */,
-				B2AD70482A406F9300F15853 /* UICollectionView+Helpers.swift in Sources */,
 				025511A92A3C5DAA00295B91 /* SavedRecipesViewController.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
 				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
