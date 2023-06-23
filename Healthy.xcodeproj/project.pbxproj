@@ -515,7 +515,6 @@
 				022924292A33A137009290A8 /* UIView+Helpers.swift */,
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 				6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */,
-				B2AD70472A406F9300F15853 /* UICollectionView+Helpers.swift */,
 				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
 			);
 			path = Extensions;
