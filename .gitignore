@@ -93,4 +93,6 @@ iOSInjectionProject/
 # System files
 
 .DS_Store
-Healthy/Resources/Generated
+
+# Ignore generated code
+*/*/Generated
