@@ -15,7 +15,7 @@ final class FoodTagsView: UIView {
     @IBOutlet private(set) weak var tagsCollectionView: UICollectionView!
 
     // MARK: Properties
-// value 
+
     private var currentSelectedIndexPath: IndexPath = IndexPath(item: 0, section: 0)
     private var foodCategories: [FoodTagCollectionViewCell.ViewModel] = []
 
@@ -40,7 +40,6 @@ extension FoodTagsView {
         tagsCollectionView.reloadData()
     }
 }
-
 
 // MARK: Configurations
 
@@ -123,7 +122,7 @@ private extension FoodTagsView {
     }
 }
 
-// MARK:  Layout
+// MARK: Layout
 
 private extension UICollectionViewLayout {
 
@@ -150,6 +149,6 @@ private extension UICollectionViewLayout {
 
 extension FoodTagsView: FoodTagCollectionDelegate {
     func didSelectTag(viewModel: FoodTagCollectionViewCell.ViewModel) {
-        print("viewModel.foodCategoryName is : ",viewModel.foodCategoryName)
+        print("viewModel.foodCategoryName is : ", viewModel.foodCategoryName)
     }
 }

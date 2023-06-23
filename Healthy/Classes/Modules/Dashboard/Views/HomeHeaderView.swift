@@ -8,7 +8,7 @@ final class HomeHeaderView: UIView {
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var subtitleLabel: UILabel!
     @IBOutlet private(set) weak var userImageView: UIImageView!
-   
+
     // MARK: Init
 
     override init(frame: CGRect) {
@@ -27,7 +27,7 @@ final class HomeHeaderView: UIView {
         loadViewFromNib()
         configureLayout()
     }
-    
+
     private func configureLayout() {
         titleLabel.applyStyle(.signupTitle)
         // TODO: - Waiting for add home subtitle label style.

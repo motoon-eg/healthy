@@ -1,6 +1,6 @@
 import UIKit
 
-protocol FoodTagCollectionDelegate: AnyObject{
+protocol FoodTagCollectionDelegate: AnyObject {
     func didSelectTag(viewModel: FoodTagCollectionViewCell.ViewModel)
 }
 
@@ -10,7 +10,7 @@ class FoodTagCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var foodCategoryName: UILabel!
 
     weak var delegate: FoodTagCollectionDelegate?
-    
+
     // MARK: - Lifecycle Methods
 
     override func awakeFromNib() {
@@ -40,4 +40,3 @@ extension FoodTagCollectionViewCell {
         let foodCategoryName: String
     }
 }
-

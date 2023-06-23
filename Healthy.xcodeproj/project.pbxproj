@@ -87,10 +87,8 @@
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
 		B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */; };
-		B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
-		B2AD70422A406A5F00F15853 /* FoodTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70412A406A5F00F15853 /* FoodTagsView.swift */; };
 		B2AD70442A406AA800F15853 /* FoodTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AD70432A406AA800F15853 /* FoodTagsView.xib */; };
 		B2AD70482A406F9300F15853 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD70472A406F9300F15853 /* UICollectionView+Helpers.swift */; };
 		B2AD704F2A40703D00F15853 /* FoodTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AD704D2A40703D00F15853 /* FoodTagCollectionViewCell.swift */; };
@@ -106,8 +104,6 @@
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
-		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
-		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,7 +200,6 @@
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
-		B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2AD70412A406A5F00F15853 /* FoodTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTagsView.swift; sourceTree = "<group>"; };
@@ -224,8 +219,6 @@
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
-		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,7 +691,6 @@
 		B2C9E39C2A447000004E3B7E /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1065,7 +1057,6 @@
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
-				B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
 				B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */,
 				025511D62A3D0A8B00295B91 /* CreateAccountViewController.swift in Sources */,
