@@ -5,7 +5,7 @@ import NewRelic
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureGoogleSignIn()
@@ -13,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureNewRelic()
         return true
     }
-
+    
     // MARK: UISceneSession Lifecycle
-
+    
     func application(_ application: UIApplication,
                      configurationForConnecting connectingSceneSession: UISceneSession,
                      options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UISceneConfiguration(name: "Default Configuration",
                                     sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication,
                      didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
@@ -49,11 +49,11 @@ extension AppDelegate {
                 annotation: options[UIApplication.OpenURLOptionsKey.annotation]
             )
         }
-
+        
         let googleResult: () -> Bool = {
             GIDSignIn.sharedInstance.handle(url)
         }
-
+        
         return facebookResult() || googleResult()
     }
 }
@@ -65,16 +65,16 @@ private extension AppDelegate {
         let config = GIDConfiguration(clientID: Constants.googleClientId)
         GIDSignIn.sharedInstance.configuration = config
     }
-
+    
     func configureFacebookSignin(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         ApplicationDelegate.shared.application(
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
     }
-
+    
     func configureNewRelic() {
         NewRelic.start(withApplicationToken: Constants.newRelicAPIKey)
     }
-
+    
 }
