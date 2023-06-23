@@ -4,10 +4,13 @@ import Combine
 // MARK: SavedRecipesViewModel
 
 final class SavedRecipesViewModel {
-    
+
     // MARK: - Properties
-   private var savedRecipes: [SavedRecipe] = []
-    
+   internal var savedRecipes: [SavedRecipe] = []
+   private(set) var subscriptions = Set<AnyCancellable>()
+   private let savedRecipesSubject = PassthroughSubject<[SavedRecipe], Never>()
+   private let isEmptySubject = PassthroughSubject<Bool, Never>()
+
 }
 
 // MARK: SavedRecipesViewModel
@@ -22,7 +25,16 @@ extension SavedRecipesViewModel: SavedRecipesViewModelInput {
 
 // MARK: SavedRecipesViewModelOutput
 
-extension SavedRecipesViewModel: SavedRecipesViewModelOutput {}
+extension SavedRecipesViewModel: SavedRecipesViewModelOutput {
+
+    var recipesPublisher: AnyPublisher<[SavedRecipe], Never> {
+        savedRecipesSubject.eraseToAnyPublisher()
+    }
+
+    var isEmptyPublisher: AnyPublisher<Bool, Never> {
+        isEmptySubject.eraseToAnyPublisher()
+    }
+}
 
 // MARK: Private Handlers
 

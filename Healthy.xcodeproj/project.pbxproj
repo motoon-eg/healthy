@@ -64,6 +64,9 @@
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
+		02DD10002A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD0FFF2A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift */; };
+		02DD10042A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD10032A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift */; };
+		02DD10062A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD10052A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift */; };
 		02FDBC312A3A65AB0012AF87 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */; };
 		02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBC322A3A66780012AF87 /* PlaceholderView.xib */; };
 		2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049C21B2A2000680077DBE4 /* CheckboxButton.swift */; };
@@ -97,10 +100,10 @@
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
-		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
-		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
+		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
+		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +179,9 @@
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
+		02DD0FFF2A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelTests.swift; sourceTree = "<group>"; };
+		02DD10032A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
+		02DD10052A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
 		02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		02FDBC322A3A66780012AF87 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
 		20376AA82A2663F8004BF0BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -207,11 +213,11 @@
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
+		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
-		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -615,6 +621,9 @@
 				02279EA52A3373C400C607AD /* CreateAccount */,
 				6DFEC6212A2E980B0090B2E2 /* Login */,
 				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
+				02DD0FFF2A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift */,
+				02DD10032A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift */,
+				02DD10052A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1045,12 +1054,15 @@
 				206FF7972A39EE4100130CA4 /* CreateAccountViewControllerTests.swift in Sources */,
 				B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */,
 				B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */,
+				02DD10002A44F8E800DAD1BE /* SavedRecipesViewModelTests.swift in Sources */,
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
+				02DD10062A450C9E00DAD1BE /* SavedRecipesViewControllerTests.swift in Sources */,
 				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
+				02DD10042A44FDDE00DAD1BE /* SavedRecipesViewModelMock.swift in Sources */,
 				206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

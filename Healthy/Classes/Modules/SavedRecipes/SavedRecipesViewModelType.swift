@@ -1,3 +1,4 @@
+import Combine
 /// SavedRecipes Input & Output
 ///
 typealias SavedRecipesViewModelType = SavedRecipesViewModelInput & SavedRecipesViewModelOutput
@@ -10,4 +11,7 @@ protocol SavedRecipesViewModelInput {
 
 /// SavedRecipes ViewModel Output
 ///
-protocol SavedRecipesViewModelOutput {}
+protocol SavedRecipesViewModelOutput {
+    var recipesPublisher: AnyPublisher<[SavedRecipe], Never> { get }
+    var isEmptyPublisher: AnyPublisher<Bool, Never> { get }
+}
