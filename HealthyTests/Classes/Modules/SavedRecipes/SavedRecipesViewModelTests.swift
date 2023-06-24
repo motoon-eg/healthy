@@ -46,6 +46,10 @@ final class SavedRecipesViewModelTests: XCTestCase {
         waitForExpectations(timeout: 1)
         // Then 
         XCTAssertEqual(receivedRecipes, expectedRecipes)
+
+        for recipe in expectedRecipes {
+            XCTAssertTrue(receivedRecipes.contains(recipe))
+        }
     }
 
     func testRemoveSavedRecipe() {
@@ -60,6 +64,7 @@ final class SavedRecipesViewModelTests: XCTestCase {
 
         // Then
         XCTAssertFalse(viewModel.savedRecipes.contains(recipeToRemove))
+        XCTAssertEqual(viewModel.savedRecipes.count, 1)
     }
 
 }
