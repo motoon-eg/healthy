@@ -1,6 +1,6 @@
 import UIKit
 
-struct SavedRecipe: Hashable {
+struct SavedRecipe: Hashable, Equatable {
 
     // MARK: - Properties
 
@@ -25,7 +25,11 @@ struct SavedRecipe: Hashable {
     }
 
     static func == (lhs: SavedRecipe, rhs: SavedRecipe) -> Bool {
-        return lhs.id == rhs.id
+        return  lhs.title == rhs.title &&
+        lhs.rating == rhs.rating &&
+        lhs.chefName == rhs.chefName &&
+        lhs.cookingTime == rhs.cookingTime &&
+        lhs.recipeImageUrl == rhs.recipeImageUrl
     }
 
     init(title: String?, recipeImageUrl: UIImage?, rating: Int?, chefName: String?, cookingTime: Int?) {
