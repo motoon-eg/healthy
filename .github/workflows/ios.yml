@@ -22,7 +22,7 @@ jobs:
           echo Using default scheme: $default
       - name: Run SwiftGen
         run: |
-          $SRCROOT/Vendors/SwiftGen/bin/swiftgen
+          swiftgen
 
       - name: Build
         env:
