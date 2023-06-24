@@ -38,7 +38,7 @@ extension SliderDishesView {
 
     func collectionViewSetup() {
         loadViewFromNib()
-        dishesSliderCollectionView.register(SliderCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        dishesSliderCollectionView.register(SliderCollectionViewCell.self, forCellWithReuseIdentifier:"cell")
         dishesSliderCollectionView.delegate = self
         dishesSliderCollectionView.dataSource = self
         collectionViewLayout()
