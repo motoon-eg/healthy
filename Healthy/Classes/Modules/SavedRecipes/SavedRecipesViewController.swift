@@ -14,7 +14,7 @@ final class SavedRecipesViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
-    private var dataSource: UITableViewDiffableDataSource<Section, SavedRecipe>!
+    private (set) var dataSource: UITableViewDiffableDataSource<Section, SavedRecipe>!
     private var subscriptions: Set<AnyCancellable> = []
 
     // MARK: Init
