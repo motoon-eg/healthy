@@ -7,7 +7,7 @@ final class SavedRecipesViewModel {
 
     // MARK: - Properties
 
-    @Published private var savedRecipes: [SavedRecipe] = [
+    @Published private (set) var savedRecipes: [SavedRecipe] = [
         SavedRecipe(title: "pizza",
                     recipeImageUrl: UIImage.iconNoData,
                     rating: 4,
