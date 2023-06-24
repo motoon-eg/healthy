@@ -15,6 +15,7 @@ final class SearchViewModel {
     @Published private var state = SearchState.initial
 
     private let searchDataSource: SearchDataSource
+    var dueDebounseTime: Double = 0.5
 
     init(searchDataSource: SearchDataSource) {
         self.searchDataSource = searchDataSource
@@ -27,8 +28,8 @@ extension SearchViewModel: SearchViewModelInput {
     func updateSearch(keyword: String, filter: SearchFilter) {
         searchKeyword = keyword
         searchFilter = filter
-        Publishers.CombineLatest($searchKeyword, $searchFilter)
-            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+        Publishers.Zip($searchKeyword, $searchFilter)
+            .debounce(for: .seconds(dueDebounseTime), scheduler: DispatchQueue.global())
             .sink { [weak self] searchKeyword, searchFilter in
                 self?.update(
                     searchKeyword: searchKeyword,
@@ -55,6 +56,10 @@ extension SearchViewModel: SearchViewModelOutput {
             .eraseToAnyPublisher()
     }
 
+    var statePublisher: AnyPublisher<SearchState, Never> {
+        $state.eraseToAnyPublisher()
+    }
+
     var isEmptyPublisher: AnyPublisher<Bool, Never> {
         $recipes
             .map { $0.isEmpty }
@@ -70,7 +75,7 @@ extension SearchViewModel: SearchViewModelOutput {
             .eraseToAnyPublisher()
     }
 
-    var isLoadingMore: AnyPublisher<Bool, Never> {
+    var isLoadingMorePublisher: AnyPublisher<Bool, Never> {
         $state
             .map {
                 guard case .loadingMore = $0 else { return false }
@@ -79,7 +84,7 @@ extension SearchViewModel: SearchViewModelOutput {
             .eraseToAnyPublisher()
     }
 
-    var isLoaded: AnyPublisher<Bool, Never> {
+    var isLoadedPublisher: AnyPublisher<Bool, Never> {
         $state
             .map {
                 guard case .loaded = $0 else { return false}
@@ -107,9 +112,21 @@ private extension SearchViewModel {
 
 // MARK: Nested Types
 
-private extension SearchViewModel {
-    enum SearchState {
+extension SearchViewModel {
+    enum SearchState: Equatable {
+        static func == (lhs: SearchViewModel.SearchState, rhs: SearchViewModel.SearchState) -> Bool {
+            switch (lhs, rhs) {
+            case (.initial, .initial): return true
+            case (.loading, .loading): return true
+            case (.loadingMore, .loadingMore): return true
+            case (.loaded, .loaded): return true
+            case (.failure, .failure): return true
+            default: return false
+            }
+        }
+
         case initial, loading, loadingMore, loaded
         case failure(Error)
     }
+
 }

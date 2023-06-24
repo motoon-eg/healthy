@@ -17,6 +17,6 @@ protocol SearchViewModelOutput {
     var errorPublisher: AnyPublisher<Error, Never> { get }
     var isEmptyPublisher: AnyPublisher<Bool, Never> { get }
     var isLoadingPublisher: AnyPublisher<Bool, Never> { get }
-    var isLoadingMore: AnyPublisher<Bool, Never> { get }
-    var isLoaded: AnyPublisher<Bool, Never> { get }
+    var isLoadingMorePublisher: AnyPublisher<Bool, Never> { get }
+    var isLoadedPublisher: AnyPublisher<Bool, Never> { get }
 }

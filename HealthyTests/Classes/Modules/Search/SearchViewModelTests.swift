@@ -1,6 +1,6 @@
 import XCTest
- import Combine
- @testable import Healthy
+import Combine
+@testable import Healthy
 
 final class SearchViewModelTests: XCTestCase {
 
@@ -24,12 +24,23 @@ final class SearchViewModelTests: XCTestCase {
 
     // MARK: Tests
 
-//    func test_updateSearchKeywordAndFilter_fetchNewRecipes() {
-//        viewModel.updateSearch(keyword: "", filter: SearchFilter())
-//        XCTAssertEqual(dataSourceMock.loadRecipeCallCount, 1)
-//    }
+    func test_updateSearchKeywordAndFilter_fetchNewRecipesAndUpdateState() async throws {
+        // Given
+        let recipesSpy = PublisherSpy(viewModel.recipesPublisher)
+        let searchStateSpy = PublisherMultibleValueSpy(viewModel.statePublisher)
 
-    func testUpdateSearch() {
+        // When
+        viewModel.dueDebounseTime = 0.0
+        viewModel.updateSearch(keyword: "", filter: SearchFilter())
+
+        try await Task.sleep(for: .seconds(1))
+
+        // Then
+        XCTAssertEqual(recipesSpy.value.count, 2)
+        XCTAssertEqual(searchStateSpy.values, [.initial, .loading, .loaded])
+    }
+
+    func test_updateSearchKeywordAndFilter_shouldUpdateSearchKeyworkAndfilterValues() {
         // Given
         let keyword = "Test keyword"
         let filter = SearchFilter()
@@ -42,48 +53,73 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.searchFilter, filter)
     }
 
-    func testIsEmptyPublisher() {
+    func test_isEmptyPublisher_hasTruAsInitialValue() {
         // Given
-        let expectation = XCTestExpectation(description: "IsEmpty publisher should publish the correct value")
+        let stateSpy = PublisherSpy(viewModel.isEmptyPublisher)
 
         // Then
-        viewModel.isEmptyPublisher
-            .sink { isEmpty in
-                XCTAssertTrue(isEmpty)
-                expectation.fulfill()
-            }
-            .store(in: &subscriptions)
-
-        wait(for: [expectation], timeout: 1.0)
+        XCTAssertEqual(stateSpy.value, true)
     }
 
-    func testIsLoadingMorePublisher() {
+    func test_isLoadingPublisher_hasFalseAsInitialValue() {
         // Given
-        let expectation = XCTestExpectation(description: "IsLoadingMore publisher should publish the correct value")
+        let stateSpy = PublisherSpy(viewModel.isLoadingPublisher)
 
         // Then
-        viewModel.isLoadingMore
-            .sink { isLoadingMore in
-                XCTAssertFalse(isLoadingMore)
-                expectation.fulfill()
-            }
-            .store(in: &subscriptions)
-
-        wait(for: [expectation], timeout: 1.0)
+        XCTAssertEqual(stateSpy.value, false)
     }
 
-    func testIsLoadedPublisher() {
+    func test_isLoadingMorePublisher_hasFalseAsInitialValue() {
         // Given
-        let expectation = XCTestExpectation(description: "IsLoaded publisher should publish the correct value")
+        let stateSpy = PublisherSpy(viewModel.isLoadingMorePublisher)
 
         // Then
-        viewModel.isLoaded
-            .sink { isLoaded in
-                XCTAssertFalse(isLoaded)
-                expectation.fulfill()
-            }
-            .store(in: &subscriptions)
+        XCTAssertEqual(stateSpy.value, false)
+    }
 
-        wait(for: [expectation], timeout: 1.0)
+    func test_isLoadedPublisher_hasFalseAsInitialValue() {
+        // Given
+        let stateSpy = PublisherSpy(viewModel.isLoadedPublisher)
+
+        // Then
+        XCTAssertEqual(stateSpy.value, false)
+    }
+
+    func test_loadRecipes_shouldUpdateStateToFailureCaseWhenThrowError() async throws {
+        // Given
+        dataSourceMock = SearchDataSourceMock(error: SearchDataSourceMockError.mockedError)
+        viewModel = SearchViewModel(searchDataSource: dataSourceMock)
+        let searchStateSpy = PublisherSpy(viewModel.statePublisher)
+
+        // When
+        viewModel.updateSearch(keyword: "", filter: SearchFilter())
+
+        try await Task.sleep(for: .seconds(1))
+
+        // Then
+        XCTAssertNotNil(searchStateSpy.value)
+        XCTAssertEqual(searchStateSpy.value, .failure(SearchDataSourceMockError.mockedError))
+    }
+}
+
+// MARK: Publisher Values Spy
+
+final class PublisherSpy<T> {
+    private(set) var value: T!
+    private var cancellable: Cancellable?
+    init(_ publisher: AnyPublisher<T, Never>) {
+        cancellable = publisher.sink { [weak self] value in
+            self?.value = value
+        }
+    }
+}
+
+final class PublisherMultibleValueSpy<T> {
+    private(set) var values: [T] = []
+    private var cancellable: Cancellable?
+    init(_ publisher: AnyPublisher<T, Never>) {
+        cancellable = publisher.sink { [weak self] value in
+            self?.values.append(value)
+        }
     }
 }
