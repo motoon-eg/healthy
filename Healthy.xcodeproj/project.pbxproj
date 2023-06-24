@@ -64,6 +64,8 @@
 		028C83B22A46202F00F6C675 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C83B12A46202F00F6C675 /* MyTableViewCell.swift */; };
 		028C83BA2A46473C00F6C675 /* SavedRecipesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C83B92A46473C00F6C675 /* SavedRecipesViewModelTests.swift */; };
 		028C83BB2A464D2300F6C675 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
+		028C83BD2A466ECE00F6C675 /* SavedRecipesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C83BC2A466ECE00F6C675 /* SavedRecipesViewControllerTests.swift */; };
+		028C83C02A4670B300F6C675 /* SavedRecipesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C83BF2A4670B300F6C675 /* SavedRecipesViewModelMock.swift */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
@@ -204,6 +206,8 @@
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		028C83B12A46202F00F6C675 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		028C83B92A46473C00F6C675 /* SavedRecipesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelTests.swift; sourceTree = "<group>"; };
+		028C83BC2A466ECE00F6C675 /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
+		028C83BF2A4670B300F6C675 /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		02FDBC322A3A66780012AF87 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
@@ -635,9 +639,19 @@
 		028C83B82A4646E600F6C675 /* SavedRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				028C83BE2A46708F00F6C675 /* Mocks */,
 				028C83B92A46473C00F6C675 /* SavedRecipesViewModelTests.swift */,
+				028C83BC2A466ECE00F6C675 /* SavedRecipesViewControllerTests.swift */,
 			);
 			path = SavedRecipes;
+			sourceTree = "<group>";
+		};
+		028C83BE2A46708F00F6C675 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				028C83BF2A4670B300F6C675 /* SavedRecipesViewModelMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		02FDBC292A3A624C0012AF87 /* PlaceholderView */ = {
@@ -1247,11 +1261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028C83C02A4670B300F6C675 /* SavedRecipesViewModelMock.swift in Sources */,
 				206FF7972A39EE4100130CA4 /* CreateAccountViewControllerTests.swift in Sources */,
 				209F93CA2A40A34200B007BA /* RecipeTest.swift in Sources */,
 				B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */,
 				B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */,
 				028C83BA2A46473C00F6C675 /* SavedRecipesViewModelTests.swift in Sources */,
+				028C83BD2A466ECE00F6C675 /* SavedRecipesViewControllerTests.swift in Sources */,
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
