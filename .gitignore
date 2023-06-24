@@ -93,3 +93,6 @@ iOSInjectionProject/
 # System files
 
 .DS_Store
+
+# Ignore generated code
+*/*/Generated

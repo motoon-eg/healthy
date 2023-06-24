@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
-                <outlet property="headerCaptionLabel" destination="nw5-Nc-SnG" id="Z3W-qH-rD0"/>
-                <outlet property="headerTitleLabel" destination="EcO-QI-U0T" id="6ot-oB-7Fi"/>
+                <outlet property="headerCaptionLabel" destination="nw5-Nc-SnG" id="xwp-0g-qkT"/>
+                <outlet property="headerTitleLabel" destination="EcO-QI-U0T" id="SIh-gW-O7A"/>
                 <outlet property="logoCaptionLabel" destination="ccU-so-Lsr" id="vkA-wp-DUV"/>
                 <outlet property="startCookingButton" destination="teD-mQ-e7K" id="bdg-8R-b6J"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

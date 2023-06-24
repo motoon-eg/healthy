@@ -88,6 +88,7 @@
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
 		B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */; };
 		B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */; };
+		96A923612A3D435F00B47A4C /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A923602A3D435F00B47A4C /* UIView+Style.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
@@ -198,6 +199,7 @@
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
 		B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
+		96A923602A3D435F00B47A4C /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				B2D402DD2A3BB1D700FDB941 /* UILabel+Style */,
 				B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */,
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
+				96A923602A3D435F00B47A4C /* UIView+Style.swift */,
 				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
 				79311FD72A19214700764707 /* UITextField+Style.swift */,
 				B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */,
@@ -989,6 +992,7 @@
 				025A477E2A337320008BF85A /* ValidationError.swift in Sources */,
 				02FDBC312A3A65AB0012AF87 /* PlaceholderView.swift in Sources */,
 				025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */,
+				96A923612A3D435F00B47A4C /* UIView+Style.swift in Sources */,
 				025A47802A337320008BF85A /* AuthenticatedUser.swift in Sources */,
 				025A47852A337337008BF85A /* Constants.swift in Sources */,
 				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,

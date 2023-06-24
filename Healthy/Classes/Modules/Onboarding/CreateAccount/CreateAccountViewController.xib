@@ -81,7 +81,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="coK-f7-JVT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="name"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,7 +113,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="PzE-jz-eFy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,7 +145,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="5kc-rm-Dnf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -177,7 +177,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="P2A-hb-lJR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
