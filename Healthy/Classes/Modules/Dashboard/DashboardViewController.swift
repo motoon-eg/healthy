@@ -9,8 +9,8 @@ final class DashboardViewController: UIViewController {
     // MARK: Subviews
 
     private let headerView = HomeHeaderView()
-    private let dishesView = CardPagingLayout()
-
+//    private let dishesView = CardPagingLayout()
+    private let dishesView = SliderDishesView()
     // MARK: Properties
 
     private let viewModel: DashboardViewModelType
@@ -45,7 +45,11 @@ extension DashboardViewController {}
 extension DashboardViewController {
     func configureView() {
         stackView.addArrangedSubview(headerView)
-        stackView.addArrangedSubview(<#T##view: UIView##UIView#>)
+        stackView.addArrangedSubview(dishesView)
+        
+//        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: dishesView)
+//        stackView.addArrangedSubview(collectionView)
+       
     }
 }
 
