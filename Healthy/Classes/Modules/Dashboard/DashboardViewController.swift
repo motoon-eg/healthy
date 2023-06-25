@@ -9,6 +9,7 @@ final class DashboardViewController: UIViewController {
     // MARK: Subviews
 
     private let headerView = HomeHeaderView()
+    private let dishesView = CardPagingLayout()
 
     // MARK: Properties
 
@@ -44,6 +45,7 @@ extension DashboardViewController {}
 extension DashboardViewController {
     func configureView() {
         stackView.addArrangedSubview(headerView)
+        stackView.addArrangedSubview(<#T##view: UIView##UIView#>)
     }
 }
 
