@@ -145,9 +145,9 @@
                                                 <constraint firstAttribute="width" secondItem="Bm9-X6-e61" secondAttribute="height" multiplier="1:1" id="aAe-WG-dSO"/>
                                             </constraints>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="die.face.5.fill" catalog="system"/>
+                                            <state key="normal" image="icon-facebook"/>
                                             <connections>
-                                                <action selector="didTapSignInWithFacebook" destination="-1" eventType="touchUpInside" id="C79-aL-XIL"/>
+                                                <action selector="didTapSignInWithFacebook:" destination="-1" eventType="touchUpInside" id="Jhe-l1-kEE"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -219,7 +219,7 @@
         </view>
     </objects>
     <resources>
-        <image name="die.face.5.fill" catalog="system" width="128" height="114"/>
+        <image name="icon-facebook" width="36" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

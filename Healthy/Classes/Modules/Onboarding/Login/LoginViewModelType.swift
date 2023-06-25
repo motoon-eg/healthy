@@ -9,8 +9,7 @@ protocol LoginViewModelInput {
     func performSignIn()
     func performSignUp()
     func performForgetPassword()
-    func performSignInWithGoogle()
-    func performSignInWithFacebook()
+    func performSocialMediaSignIn(_ authentication: Authentication)
 }
 
 protocol LoginViewModelOutput {
