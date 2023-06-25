@@ -12,7 +12,7 @@ extension DashboardViewModel: DashboardViewModelInput {}
 
 extension DashboardViewModel: DashboardViewModelOutput {
     var header: HomeHeaderView.ViewModel {
-        .init(title: "", subtitle: "", imageUrl: URL(string: "www.google.com"))
+        .init(title: "", subtitle: "", imageUrl: URL(string: "www.google.com")!)
     }
 }
 

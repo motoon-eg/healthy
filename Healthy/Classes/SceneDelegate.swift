@@ -3,7 +3,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private var appCoordinator: AppCoordinator?
 
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,
@@ -15,12 +14,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new
         // (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
+//        let splashViewModel = SplashViewModel()
+//        let splashViewController = SplashViewController(viewModel: splashViewModel)
+        let DashboardViewModel = DashboardViewModel()
+        let DashboardViewController = DashboardViewController (viewModel: DashboardViewModel)
+        
         let window = UIWindow(windowScene: windowScene)
-        let appCoordinator = AppCoordinator(window: window)
-        appCoordinator.start()
+        window.rootViewController = DashboardViewController
+        window.makeKeyAndVisible()
 
-        self.appCoordinator = appCoordinator
         self.window = window
     }
 

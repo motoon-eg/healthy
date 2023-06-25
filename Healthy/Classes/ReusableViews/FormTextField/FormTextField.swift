@@ -92,8 +92,10 @@ extension FormTextField {
     private func configureLayout() {
         titleLabel.applyStyle(.textFieldTitleLabel)
         inputTextField.applyTextFieldStyle(.primary)
-        errorLabel.isHidden = true
-        errorLabel.textColor = .warning
+
+        // Waiting for the design of the error label style
+        // TODO: - feat: [HL-4] Add UI label styling new design
+        errorLabel.textColor = .red
     }
 
     private func configureTextFieldObserver() {
