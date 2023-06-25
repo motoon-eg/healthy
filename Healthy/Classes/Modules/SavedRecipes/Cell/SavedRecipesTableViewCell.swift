@@ -21,7 +21,7 @@ final class SavedRecipesTableViewCell: UITableViewCell {
     
     // MARK:  Configure
     
-    func configureCell(viewModel: ViewModel) {
+    func update(with viewModel: ViewModel) {
         // TODO: Configure cell with view model.
     }
 }
@@ -32,11 +32,11 @@ private extension SavedRecipesTableViewCell {
     func configureLayout() {
         contentView.layer.cornerRadius = 10
         recipeImageView.applyPrimaryGradient()
-        titleLabel.applyStyle(.savedRecipesTitle)
-        chefNameLabel.applyStyle(.savedRecipesSubTitle)
+        titleLabel.applyStyle(.cellHeaderTitle)
+        chefNameLabel.applyStyle(.cellHeaderSubTitle)
         rateView.layer.cornerRadius = 8
         rateView.backgroundColor = UIColor.secondary20
-        timeLabel.applyStyle(.time)
+        timeLabel.applyStyle(.cellTime)
         bookMarkView.layer.cornerRadius = 12
     }
 }
