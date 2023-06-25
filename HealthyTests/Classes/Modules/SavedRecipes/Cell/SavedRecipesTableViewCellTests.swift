@@ -6,7 +6,7 @@ final class SavedRecipesTableViewCellTests: XCTestCase {
     // MARK: Properties
     
     private var sut: SavedRecipesTableViewCell!
-    private var mockTableView: UITableViewMock!
+    private var mockTableView: UITableViewMock<SavedRecipesTableViewCell>!
     
     // MARK: Lifecycle
     
@@ -23,7 +23,7 @@ final class SavedRecipesTableViewCellTests: XCTestCase {
         let indexPath = IndexPath(row: 0, section: 0)
         
         // When
-        let itemCell = createCell(indexPath: indexPath)
+        let itemCell = mockTableView.tableView(mockTableView, cellForRowAt: indexPath)
         
         // Then
         XCTAssertNotNil(itemCell)
@@ -34,23 +34,9 @@ final class SavedRecipesTableViewCellTests: XCTestCase {
         let indexPath = IndexPath(row: 0, section: 0)
         
         // When
-        let view = createCell(indexPath: indexPath).contentView
+        let view = mockTableView.tableView(mockTableView, cellForRowAt: indexPath)
         
         // Then
         XCTAssertNotNil(view)
-    }
-}
-
-
-// MARK: Private Handlers
-
-private extension SavedRecipesTableViewCellTests {
-    func createCell(indexPath: IndexPath) -> SavedRecipesTableViewCell {
-        
-        guard let cell = mockTableView.dataSource?.tableView(mockTableView, cellForRowAt: indexPath) as? SavedRecipesTableViewCell else {
-            return SavedRecipesTableViewCell()
-        }
-        
-        return cell
     }
 }

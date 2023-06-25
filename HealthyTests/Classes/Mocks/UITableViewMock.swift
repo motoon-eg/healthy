@@ -1,7 +1,7 @@
 import UIKit
 @testable import Healthy
 
-final class UITableViewMock: UITableView, UITableViewDelegate, UITableViewDataSource {
+final class UITableViewMock<Cell: UITableViewCell>: UITableView, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Configure table view
     
@@ -10,7 +10,7 @@ final class UITableViewMock: UITableView, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue()
-        return cell
+        let tableViewCell: Cell = tableView.dequeue()
+        return tableViewCell
     }
 }
