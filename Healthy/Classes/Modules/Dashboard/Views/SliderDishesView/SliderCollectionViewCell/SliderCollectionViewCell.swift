@@ -11,6 +11,7 @@ class SliderCollectionViewCell: UICollectionViewCell, Identifiable{
     @IBOutlet weak var disheImage: UIImageView!
     @IBOutlet weak var disheName: UILabel!
     @IBOutlet weak var timeDuration: UILabel!
+    @IBOutlet weak var disheView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +21,7 @@ class SliderCollectionViewCell: UICollectionViewCell, Identifiable{
     // MARK: - Configurations
     
     func configureCellData(viewModel: SliderViewModel) {
-//        disheImage.image = viewModel.imageUrl
+        disheImage.image = viewModel.imageUrl
     }
 }
 
@@ -28,9 +29,23 @@ class SliderCollectionViewCell: UICollectionViewCell, Identifiable{
 
 extension SliderCollectionViewCell {
     struct SliderViewModel {
-        let imageUrl: URL
+        let imageUrl: UIImage
         let disheName: String
         let time: String
         let duration: Int
+    }
+}
+
+extension UIImageView {
+    func roundedImage() {
+        self.layer.cornerRadius = self.frame.size.width / 2
+        self.clipsToBounds = true
+    }
+    
+}
+
+extension UIView {
+    func setRadius() {
+        self.layer.cornerRadius =  20
     }
 }
