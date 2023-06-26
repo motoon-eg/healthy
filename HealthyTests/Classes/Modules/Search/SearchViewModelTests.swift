@@ -7,31 +7,33 @@ final class SearchViewModelTests: XCTestCase {
     // MARK: - Properties
 
     var dataSourceMock: SearchDataSourceMock!
-    var viewModel: SearchViewModel!
+    var sut: SearchViewModel!
     var subscriptions = Set<AnyCancellable>()
 
     // MARK: - Lifecycle
 
     override func setUp() {
         dataSourceMock = SearchDataSourceMock()
-        viewModel = SearchViewModel(searchDataSource: dataSourceMock)
+        sut = makeSUT(dateSource: dataSourceMock)
     }
 
     override func tearDown() {
-        subscriptions.removeAll()
         super.tearDown()
+        subscriptions.removeAll()
+        sut = nil
+        XCTAssertNil(weakSUT)
     }
 
     // MARK: Tests
 
     func test_updateSearchKeywordAndFilter_fetchNewRecipesAndUpdateState() async throws {
         // Given
-        let recipesSpy = PublisherSpy(viewModel.recipesPublisher)
-        let searchStateSpy = PublisherMultibleValueSpy(viewModel.statePublisher)
+        let recipesSpy = PublisherSpy(sut.recipesPublisher)
+        let searchStateSpy = PublisherMultibleValueSpy(sut.statePublisher)
 
         // When
-        viewModel.dueDebounseTime = 0.0
-        viewModel.updateSearch(keyword: "", filter: SearchFilter())
+        sut.dueDebounseTime = 0.0
+        sut.updateSearch(keyword: "", filter: SearchFilter())
 
         try await Task.sleep(for: .seconds(1))
 
@@ -46,16 +48,16 @@ final class SearchViewModelTests: XCTestCase {
         let filter = SearchFilter()
 
         // When
-        viewModel.updateSearch(keyword: keyword, filter: filter)
+        sut.updateSearch(keyword: keyword, filter: filter)
 
         // Then
-        XCTAssertEqual(viewModel.searchKeyword, keyword)
-        XCTAssertEqual(viewModel.searchFilter, filter)
+        XCTAssertEqual(sut.searchKeyword, keyword)
+        XCTAssertEqual(sut.searchFilter, filter)
     }
 
     func test_isEmptyPublisher_hasTruAsInitialValue() {
         // Given
-        let stateSpy = PublisherSpy(viewModel.isEmptyPublisher)
+        let stateSpy = PublisherSpy(sut.isEmptyPublisher)
 
         // Then
         XCTAssertEqual(stateSpy.value, true)
@@ -63,7 +65,7 @@ final class SearchViewModelTests: XCTestCase {
 
     func test_isLoadingPublisher_hasFalseAsInitialValue() {
         // Given
-        let stateSpy = PublisherSpy(viewModel.isLoadingPublisher)
+        let stateSpy = PublisherSpy(sut.isLoadingPublisher)
 
         // Then
         XCTAssertEqual(stateSpy.value, false)
@@ -71,7 +73,7 @@ final class SearchViewModelTests: XCTestCase {
 
     func test_isLoadingMorePublisher_hasFalseAsInitialValue() {
         // Given
-        let stateSpy = PublisherSpy(viewModel.isLoadingMorePublisher)
+        let stateSpy = PublisherSpy(sut.isLoadingMorePublisher)
 
         // Then
         XCTAssertEqual(stateSpy.value, false)
@@ -79,7 +81,7 @@ final class SearchViewModelTests: XCTestCase {
 
     func test_isLoadedPublisher_hasFalseAsInitialValue() {
         // Given
-        let stateSpy = PublisherSpy(viewModel.isLoadedPublisher)
+        let stateSpy = PublisherSpy(sut.isLoadedPublisher)
 
         // Then
         XCTAssertEqual(stateSpy.value, false)
@@ -88,17 +90,27 @@ final class SearchViewModelTests: XCTestCase {
     func test_loadRecipes_shouldUpdateStateToFailureCaseWhenThrowError() async throws {
         // Given
         dataSourceMock = SearchDataSourceMock(error: SearchDataSourceMockError.mockedError)
-        viewModel = SearchViewModel(searchDataSource: dataSourceMock)
-        let searchStateSpy = PublisherSpy(viewModel.statePublisher)
+        sut = SearchViewModel(searchDataSource: dataSourceMock)
+        let searchStateSpy = PublisherSpy(sut.statePublisher)
 
         // When
-        viewModel.updateSearch(keyword: "", filter: SearchFilter())
+        sut.updateSearch(keyword: "", filter: SearchFilter())
 
         try await Task.sleep(for: .seconds(1))
 
         // Then
         XCTAssertNotNil(searchStateSpy.value)
         XCTAssertEqual(searchStateSpy.value, .failure(SearchDataSourceMockError.mockedError))
+    }
+
+    // MARK: Helpers
+
+    weak var weakSUT: SearchViewModel?
+
+    func makeSUT(dateSource: SearchDataSourceMock) -> SearchViewModel {
+        let sut = SearchViewModel(searchDataSource: dateSource)
+        weakSUT = sut
+        return sut
     }
 }
 

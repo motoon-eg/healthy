@@ -128,5 +128,4 @@ extension SearchViewModel {
         case initial, loading, loadingMore, loaded
         case failure(Error)
     }
-
 }
