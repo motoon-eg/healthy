@@ -9,7 +9,7 @@ extension SavedRecipesTableViewCell {
         var chefName: String
         var rate: Double
         var time: String
-        var tapOnBookMark: () -> Void
+        var toggleBookmark: () -> Void
     }
 }
 
@@ -44,7 +44,7 @@ final class SavedRecipesTableViewCell: UITableViewCell {
         chefNameLabel.text = viewModel.chefName
         timeLabel.text = viewModel.time
         // TODO: Set rate count.
-        toggleBookmark = viewModel.tapOnBookMark
+        toggleBookmark = viewModel.toggleBookmark
     }
 }
 
