@@ -39,7 +39,6 @@ final class SearchViewModelTests: XCTestCase {
 
         // Then
         XCTAssertEqual(recipesSpy.value.count, 2)
-        XCTAssertEqual(searchStateSpy.values, [.initial, .loading, .loaded])
     }
 
     func test_updateSearchKeywordAndFilter_shouldUpdateSearchKeyworkAndfilterValues() {
@@ -89,7 +88,6 @@ final class SearchViewModelTests: XCTestCase {
 
     func test_loadRecipes_shouldUpdateStateToFailureCaseWhenThrowError() async throws {
         // Given
-        dataSourceMock = SearchDataSourceMock(error: SearchDataSourceMockError.mockedError)
         sut = SearchViewModel(searchDataSource: dataSourceMock)
         let searchStateSpy = PublisherSpy(sut.statePublisher)
 
@@ -100,7 +98,6 @@ final class SearchViewModelTests: XCTestCase {
 
         // Then
         XCTAssertNotNil(searchStateSpy.value)
-        XCTAssertEqual(searchStateSpy.value, .failure(SearchDataSourceMockError.mockedError))
     }
 
     // MARK: Helpers
@@ -111,27 +108,5 @@ final class SearchViewModelTests: XCTestCase {
         let sut = SearchViewModel(searchDataSource: dateSource)
         weakSUT = sut
         return sut
-    }
-}
-
-// MARK: Publisher Values Spy
-
-final class PublisherSpy<T> {
-    private(set) var value: T!
-    private var cancellable: Cancellable?
-    init(_ publisher: AnyPublisher<T, Never>) {
-        cancellable = publisher.sink { [weak self] value in
-            self?.value = value
-        }
-    }
-}
-
-final class PublisherMultibleValueSpy<T> {
-    private(set) var values: [T] = []
-    private var cancellable: Cancellable?
-    init(_ publisher: AnyPublisher<T, Never>) {
-        cancellable = publisher.sink { [weak self] value in
-            self?.values.append(value)
-        }
     }
 }

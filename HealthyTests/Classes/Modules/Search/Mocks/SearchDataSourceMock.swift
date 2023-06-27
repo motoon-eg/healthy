@@ -3,7 +3,14 @@ import Combine
 @testable import Healthy
 
 final class SearchDataSourceMock: SearchDataSource {
-    var error: Error?
+
+    // Error Mock
+    enum SearchDataSourceMockError: Error {
+        case mockedError
+    }
+
+    private var error: Error?
+    var loadRecipesCallBack: () async throws -> [Recipe] = { [] }
 
     init(error: Error? = nil) {
         self.error = error
@@ -16,9 +23,4 @@ final class SearchDataSourceMock: SearchDataSource {
 
         return [Recipe(), Recipe()]
     }
-}
-
-// Error Mock
-enum SearchDataSourceMockError: Error {
-    case mockedError
 }

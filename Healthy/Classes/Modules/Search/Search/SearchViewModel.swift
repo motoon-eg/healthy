@@ -11,7 +11,7 @@ final class SearchViewModel {
     private var subscriptions = Set<AnyCancellable>()
     @Published private(set) var searchKeyword = ""
     @Published private(set) var searchFilter = SearchFilter()
-    @Published private(set) var recipes = [Recipe]()
+    @Published private(set) var recipes: [Recipe] = []
     @Published private var state = SearchState.initial
 
     private let searchDataSource: SearchDataSource
@@ -28,7 +28,7 @@ extension SearchViewModel: SearchViewModelInput {
     func updateSearch(keyword: String, filter: SearchFilter) {
         searchKeyword = keyword
         searchFilter = filter
-        Publishers.Zip($searchKeyword, $searchFilter)
+        Publishers.CombineLatest($searchKeyword, $searchFilter)
             .debounce(for: .seconds(dueDebounseTime), scheduler: DispatchQueue.global())
             .sink { [weak self] searchKeyword, searchFilter in
                 self?.update(
@@ -112,8 +112,11 @@ private extension SearchViewModel {
 
 // MARK: Nested Types
 
-extension SearchViewModel {
+private extension SearchViewModel {
     enum SearchState: Equatable {
+        case initial, loading, loadingMore, loaded
+        case failure(Error)
+
         static func == (lhs: SearchViewModel.SearchState, rhs: SearchViewModel.SearchState) -> Bool {
             switch (lhs, rhs) {
             case (.initial, .initial): return true
@@ -124,8 +127,5 @@ extension SearchViewModel {
             default: return false
             }
         }
-
-        case initial, loading, loadingMore, loaded
-        case failure(Error)
     }
 }
