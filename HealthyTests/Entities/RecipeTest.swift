@@ -122,6 +122,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, expectedFormattedPreparationTime, testErrorMessage)
     }
+
     func test_formattedPreparationTime_withMinutesOnly_ensureCorrectFormattedTime() {
         // Arrange
         let minutesOnlyPreparationTimeRecipe = Recipe(title: "Test",
