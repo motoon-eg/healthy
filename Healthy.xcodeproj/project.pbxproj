@@ -97,10 +97,14 @@
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
-		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
-		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
+		C9057FE62A48AC78002E4459 /* SliderDishesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9057FE42A48AC78002E4459 /* SliderDishesView.xib */; };
+		C9057FE72A48AC78002E4459 /* SliderDishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9057FE52A48AC78002E4459 /* SliderDishesView.swift */; };
+		C9057FEB2A48AC8F002E4459 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */; };
+		C9057FEC2A48AC8F002E4459 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */; };
+		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
+		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,11 +211,15 @@
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
+		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
+		C9057FE42A48AC78002E4459 /* SliderDishesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderDishesView.xib; sourceTree = "<group>"; };
+		C9057FE52A48AC78002E4459 /* SliderDishesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDishesView.swift; sourceTree = "<group>"; };
+		C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
+		C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
-		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +374,7 @@
 		025A47572A336C04008BF85A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9057FE32A48AC68002E4459 /* SliderDishesView */,
 				025A47582A336C2D008BF85A /* HomeHeaderView.swift */,
 				A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */,
 			);
@@ -727,6 +736,25 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		C9057FE32A48AC68002E4459 /* SliderDishesView */ = {
+			isa = PBXGroup;
+			children = (
+				C9057FE82A48AC81002E4459 /* SliderCollectionViewCell */,
+				C9057FE52A48AC78002E4459 /* SliderDishesView.swift */,
+				C9057FE42A48AC78002E4459 /* SliderDishesView.xib */,
+			);
+			path = SliderDishesView;
+			sourceTree = "<group>";
+		};
+		C9057FE82A48AC81002E4459 /* SliderCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */,
+				C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */,
+			);
+			path = SliderCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,6 +911,7 @@
 				025511D32A3D0A8B00295B91 /* CreateAccountViewController.xib in Resources */,
 				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
 				025511D22A3D0A8B00295B91 /* SplashViewController.xib in Resources */,
+				C9057FE62A48AC78002E4459 /* SliderDishesView.xib in Resources */,
 				027DDA2B2A0E6A680052818C /* (null) in Resources */,
 				025511AB2A3C5DAA00295B91 /* SavedRecipesViewController.xib in Resources */,
 				025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */,
@@ -894,6 +923,7 @@
 				02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
 				025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */,
+				C9057FEC2A48AC8F002E4459 /* SliderCollectionViewCell.xib in Resources */,
 				025511A02A3C5D7300295B91 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -987,6 +1017,7 @@
 				025511BF2A3C8E9300295B91 /* OnboardingCoordinator.swift in Sources */,
 				6DF525082A1E84FD0027502C /* LoginViewController.swift in Sources */,
 				025A477E2A337320008BF85A /* ValidationError.swift in Sources */,
+				C9057FE72A48AC78002E4459 /* SliderDishesView.swift in Sources */,
 				02FDBC312A3A65AB0012AF87 /* PlaceholderView.swift in Sources */,
 				025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */,
 				025A47802A337320008BF85A /* AuthenticatedUser.swift in Sources */,
@@ -1027,6 +1058,7 @@
 				025A477C2A337320008BF85A /* Validator.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				025511D12A3D0A8B00295B91 /* SplashViewModelType.swift in Sources */,
+				C9057FEB2A48AC8F002E4459 /* SliderCollectionViewCell.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
