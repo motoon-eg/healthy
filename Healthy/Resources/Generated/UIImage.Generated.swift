@@ -10,6 +10,10 @@ extension UIImage {
       UIImage(named: "background-splash")! 
     }
 
+    static var iconBookmark: UIImage {
+      UIImage(named: "icon-bookmark")! 
+    }
+
     static var iconFacebook: UIImage {
       UIImage(named: "icon-facebook")! 
     }
@@ -64,5 +68,9 @@ extension UIImage {
 
     static var imageUserRecipePlaceholder: UIImage {
       UIImage(named: "image-user-recipe-placeholder")! 
+    }
+
+    static var patternFood: UIImage {
+      UIImage(named: "pattern-food")! 
     }
 }
