@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myy-Gg-R6D">
                         <rect key="frame" x="0.0" y="0.0" width="169" height="231"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-59-bGq" userLabel="disheView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-59-bGq">
                                 <rect key="frame" x="0.0" y="55" width="169" height="176"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="O03-Mv-FJD">
@@ -30,7 +31,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4so-W6-wvm">
                                                 <rect key="frame" x="0.0" y="0.0" width="169" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="3Gg-2l-d2c">
@@ -48,8 +49,8 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVZ-6b-yh8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="24"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
+                                                                <color key="textColor" name="black"/>
+                                                                <color key="highlightedColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdB-tG-UcZ">
                                                                 <rect key="frame" x="125" y="0.0" width="24" height="24"/>
@@ -77,7 +78,7 @@
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="6jb-jf-QqN"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="O03-Mv-FJD" firstAttribute="leading" secondItem="6jb-jf-QqN" secondAttribute="leading" id="0LZ-a8-muA"/>
                                     <constraint firstItem="6jb-jf-QqN" firstAttribute="trailing" secondItem="O03-Mv-FJD" secondAttribute="trailing" id="Cmj-id-lax"/>
@@ -98,13 +99,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTF-2P-psf">
                                                 <rect key="frame" x="20.666666666666657" y="0.0" width="24.333333333333329" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="black"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" red="1" green="0.88235294117647056" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Cnf-56-ySb" secondAttribute="bottom" id="2Fw-xF-o1X"/>
                                     <constraint firstAttribute="trailing" secondItem="Cnf-56-ySb" secondAttribute="trailing" id="Isp-lo-p9t"/>
@@ -148,22 +149,20 @@
             <connections>
                 <outlet property="disheImage" destination="x52-1X-aTN" id="A9J-aA-d2F"/>
                 <outlet property="disheName" destination="4so-W6-wvm" id="lcS-f9-VJ1"/>
-                <outlet property="disheView" destination="Ta3-59-bGq" id="2oP-fO-iKy"/>
-                <outlet property="rateView" destination="tcQ-bI-vZR" id="4F9-rT-MQ5"/>
+                <outlet property="disheView" destination="Ta3-59-bGq" id="cGL-Q7-gbp"/>
+                <outlet property="rateLable" destination="XTF-2P-psf" id="vbM-WL-c16"/>
+                <outlet property="rateView" destination="tcQ-bI-vZR" id="7ps-KP-mQW"/>
                 <outlet property="timeDuration" destination="DVZ-6b-yh8" id="LWK-vs-WLv"/>
             </connections>
             <point key="canvasLocation" x="486.25954198473278" y="25.704225352112676"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

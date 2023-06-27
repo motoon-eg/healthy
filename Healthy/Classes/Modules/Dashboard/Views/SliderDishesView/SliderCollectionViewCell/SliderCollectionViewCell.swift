@@ -11,6 +11,7 @@ class SliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var timeDuration: UILabel!
     @IBOutlet weak var disheView: UIView!
     @IBOutlet weak var rateView: UIView!
+    @IBOutlet weak var rateLable: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +23,7 @@ class SliderCollectionViewCell: UICollectionViewCell {
 
     func configureCellView() {
         disheImage.roundedImage()
-        disheView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
+        disheView.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 12)
         rateView.setRadius(radius: 10)
     }
 

@@ -15,12 +15,13 @@ extension UILabel {
         case textFieldTitleLabel
         case titleLabelStyle
         case messageLabel
+        case dishesNameLable
 
         var labelTextColor: UIColor {
             switch self {
             case .splashHeaderLabel, .splashTitle, .splashSubtitle:
                 return .white
-            case .signinTitle, .signupTitle:
+            case .signinTitle, .signupTitle, .dishesNameLable:
                 return .black
             case .signinSubtitle, .signupSubtitle, .textFieldTitleLabel, .titleLabelStyle:
                 // TODO: [HL-4] Add global Color
@@ -53,6 +54,9 @@ extension UILabel {
                 return LabelFont.titleLabelStyle
             case .messageLabel:
                 return LabelFont.messageLabel
+            case .dishesNameLable:
+                return LabelFont.dishesNameLable
+
             }
         }
     }
@@ -87,4 +91,5 @@ private enum LabelFont {
     static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
     static let titleLabelStyle = UIFont.systemFont(ofSize: 40, weight: .semibold)
     static let messageLabel = UIFont.systemFont(ofSize: 20, weight: .semibold)
+    static let dishesNameLable = UIFont.smallBold
 }
