@@ -112,11 +112,11 @@ private extension SearchViewModel {
 
 // MARK: Nested Types
 
-private extension SearchViewModel {
+extension SearchViewModel {
     enum SearchState: Equatable {
         case initial, loading, loadingMore, loaded
         case failure(Error)
-
+        
         static func == (lhs: SearchViewModel.SearchState, rhs: SearchViewModel.SearchState) -> Bool {
             switch (lhs, rhs) {
             case (.initial, .initial): return true

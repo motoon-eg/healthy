@@ -29,7 +29,9 @@ final class SearchViewModelTests: XCTestCase {
     func test_updateSearchKeywordAndFilter_fetchNewRecipesAndUpdateState() async throws {
         // Given
         let recipesSpy = PublisherSpy(sut.recipesPublisher)
-        let searchStateSpy = PublisherMultibleValueSpy(sut.statePublisher)
+        dataSourceMock.loadRecipesCallBack = {
+            return [.init(), .init()]
+        }
 
         // When
         sut.dueDebounseTime = 0.0
