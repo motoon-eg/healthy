@@ -56,7 +56,7 @@ extension SearchViewModel: SearchViewModelOutput {
             .eraseToAnyPublisher()
     }
 
-    var statePublisher: AnyPublisher<SearchState, Never> {
+    private var statePublisher: AnyPublisher<SearchState, Never> {
         $state.eraseToAnyPublisher()
     }
 
@@ -112,11 +112,11 @@ private extension SearchViewModel {
 
 // MARK: Nested Types
 
-extension SearchViewModel {
+private extension SearchViewModel {
     enum SearchState: Equatable {
         case initial, loading, loadingMore, loaded
         case failure(Error)
-        
+
         static func == (lhs: SearchViewModel.SearchState, rhs: SearchViewModel.SearchState) -> Bool {
             switch (lhs, rhs) {
             case (.initial, .initial): return true

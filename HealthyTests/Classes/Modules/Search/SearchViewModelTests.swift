@@ -30,7 +30,7 @@ final class SearchViewModelTests: XCTestCase {
         // Given
         let recipesSpy = PublisherSpy(sut.recipesPublisher)
         dataSourceMock.loadRecipesCallBack = {
-            return [.init(), .init()]
+            [.init(), .init()]
         }
 
         // When
@@ -90,8 +90,10 @@ final class SearchViewModelTests: XCTestCase {
 
     func test_loadRecipes_shouldUpdateStateToFailureCaseWhenThrowError() async throws {
         // Given
-        sut = SearchViewModel(searchDataSource: dataSourceMock)
-        let searchStateSpy = PublisherSpy(sut.statePublisher)
+        let searchStateSpy = PublisherSpy(sut.errorPublisher)
+        dataSourceMock.loadRecipesCallBack = {
+            throw NSError(domain: "", code: -1)
+        }
 
         // When
         sut.updateSearch(keyword: "", filter: SearchFilter())
