@@ -1,6 +1,4 @@
-import Foundation
-
-protocol AnimatableView: AnyObject {
+protocol AnimatableView {
     func startAnimating()
     func stopAnimating()
 }

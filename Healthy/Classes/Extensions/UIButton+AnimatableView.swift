@@ -2,26 +2,38 @@ import UIKit
 
 extension UIButton: AnimatableView {
 
-    func startAnimating() {
-        titleLabel?.alpha = 0
+    // MARK: - AnimatableView Conformance
 
-        if getActivityIndicator() == nil {
+    func startAnimating() {
+        isEnabled = false
+        setTitleColor(.clear, for: .disabled)
+
+        titleLabel?.alpha = 0
+        if activityIndicator == nil {
             let activityIndicator = createActivityIndicator()
             addSubview(activityIndicator)
             centerActivityIndicatorInButton()
         }
-            showSpinning()
+        showSpinning()
     }
 
     func stopAnimating() {
+        isEnabled = true
+        setTitleColor(titleLabel?.textColor.withAlphaComponent(0.5), for: .disabled)
+
         titleLabel?.alpha = 1
-        getActivityIndicator()?.stopAnimating()
+
+        guard let activityIndicator else { return }
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
     }
 
-    private func getActivityIndicator() -> UIActivityIndicatorView? {
-        subviews.compactMap({ view in
-            view as? UIActivityIndicatorView
-        })[safe: 0]
+    // MARK: - AnimatableView Private Helpers
+
+    private var activityIndicator: UIActivityIndicatorView? {
+        subviews
+            .filter { $0 is UIActivityIndicatorView }
+            .first as? UIActivityIndicatorView
     }
 
     private func createActivityIndicator() -> UIActivityIndicatorView {
@@ -32,7 +44,7 @@ extension UIButton: AnimatableView {
     }
 
     private func centerActivityIndicatorInButton() {
-        guard let activityIndicator = getActivityIndicator() else {
+        guard let activityIndicator else {
             assertionFailure("Trying to configure constraints for invalid activity indicator.")
             return
         }
@@ -46,7 +58,7 @@ extension UIButton: AnimatableView {
     }
 
     private func showSpinning() {
-        guard let activityIndicator = getActivityIndicator() else { return }
+        guard let activityIndicator else { return }
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
     }
