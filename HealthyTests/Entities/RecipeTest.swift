@@ -27,6 +27,7 @@ final class RecipeTest: XCTestCase {
     // MARK: - Tests
 
     // MARK: - Initializer Tests
+
     func test_initializer_withValidTitle_ensureModelHasValidTitle() {
         // Arrange
         let actual = sut.title
@@ -36,6 +37,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, expectedTitle, testErrorMessage)
     }
+
     func test_initializer_withValidImageUrl_ensureModelHasValidRecipeImageUrl() {
         // Arrange
         let actual = sut.recipeImageUrl
@@ -45,6 +47,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, expectedImageUrl, testErrorMessage)
     }
+
     func test_initializer_withValidRating_ensureModelHasValidRating() {
         // Arrange
         let actual = sut.rating
@@ -54,6 +57,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, expectedRating, testErrorMessage)
     }
+
     func test_initializer_withValidUserImageUrl_ensureModelHasValidUserImageUrl() {
         // Arrange
         let actual = sut.userImageUrl
@@ -63,6 +67,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, userImageUrl, testErrorMessage)
     }
+
     func test_initializer_withValidUserName_ensureModelHasValidUserName() {
         // Arrange
         let actual = sut.userName
@@ -72,6 +77,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, userName, testErrorMessage)
     }
+
     func test_initializer_withValidPreparationTime_ensureModelHasValidPreparationTime() {
         // Arrange
         let actual = sut.preparationTime
@@ -81,6 +87,7 @@ final class RecipeTest: XCTestCase {
         // Assert
         XCTAssertEqual(actual, expectedPreparationTime, testErrorMessage)
     }
+
     func test_initializer_withEmptyTitle_ensureModelHasEmptyTitle() {
         // Arrange
         let emptyTitleRecipe = Recipe(title: "",
