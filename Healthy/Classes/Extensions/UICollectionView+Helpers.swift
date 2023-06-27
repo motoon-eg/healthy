@@ -17,7 +17,7 @@ extension UICollectionView {
     }
 }
 
-extension UICollectionViewCell {
+extension UIView {
     static var reuseIdentifier: String {
         return String(describing: self)
     }

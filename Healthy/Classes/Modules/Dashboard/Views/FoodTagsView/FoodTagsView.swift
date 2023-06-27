@@ -4,7 +4,9 @@ import UIKit
 
 extension FoodTagsView {
     struct ViewModel {
-        let foodCategories: [FoodTagCollectionViewCell.ViewModel]
+        var foodCategories: [FoodTagCollectionViewCell.ViewModel] = []
+        var selected: FoodTagCollectionViewCell.ViewModel?
+        var onSelect: (FoodTagCollectionViewCell.ViewModel) -> Void = { _ in }
     }
 }
 
@@ -16,9 +18,8 @@ final class FoodTagsView: UIView {
 
     // MARK: Properties
 
-    private var currentSelectedIndexPath: IndexPath = IndexPath(item: 0, section: 0)
-    private var foodCategories: [FoodTagCollectionViewCell.ViewModel] = []
-
+    private var viewModel = ViewModel()
+    private var selectedIndex: IndexPath?
     // MARK: Init
 
     override init(frame: CGRect) {
@@ -35,8 +36,8 @@ final class FoodTagsView: UIView {
 // MARK: Configure Categories
 
 extension FoodTagsView {
-    func configureCollectionViewCategories(with viewModel: ViewModel) {
-        self.foodCategories = viewModel.foodCategories
+    func update(with viewModel: ViewModel) {
+        self.viewModel = viewModel
         tagsCollectionView.reloadData()
     }
 }
@@ -60,27 +61,32 @@ private extension FoodTagsView {
 extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return foodCategories.count
+        return viewModel.foodCategories.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let cell: FoodTagCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.updateView(viewModel: .init(foodCategoryName: foodCategories[indexPath.row].foodCategoryName))
-        let isSelected = currentSelectedIndexPath == indexPath
+        // TODO: Make it safe get index
+        let element = viewModel.foodCategories[indexPath.row]
+        cell.updateView(viewModel: element)
+        let isSelected = viewModel.selected == element
         cell.setSelection(isSelected)
-        cell.delegate = self
-
         return cell
     }
 
     // MARK: select Item
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let previousSelectedIndex = currentSelectedIndexPath
-        currentSelectedIndexPath = indexPath
-        collectionView.reloadItems(at: [previousSelectedIndex, indexPath].compactMap { $0 })
+        let element = viewModel.foodCategories[indexPath.row]
+        viewModel.onSelect(element)
+        viewModel.selected = element
+        if let selectedIndex {
+            collectionView.reloadItems(at: [indexPath, selectedIndex])
+        } else {
+            collectionView.reloadItems(at: [indexPath])
+        }
+        selectedIndex = indexPath
     }
 
     // MARK: Animation
@@ -96,6 +102,7 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
                         forItemAt indexPath: IndexPath) {
         performSlideOffAnimations(cell, collectionView)
     }
+
 }
 
 // MARK: Animation Methods
@@ -147,8 +154,3 @@ private extension UICollectionViewLayout {
     }
 }
 
-extension FoodTagsView: FoodTagCollectionDelegate {
-    func didSelectTag(viewModel: FoodTagCollectionViewCell.ViewModel) {
-        print("viewModel.foodCategoryName is : ", viewModel.foodCategoryName)
-    }
-}

@@ -1,8 +1,5 @@
 import UIKit
 
-protocol FoodTagCollectionDelegate: AnyObject {
-    func didSelectTag(viewModel: FoodTagCollectionViewCell.ViewModel)
-}
 
 class FoodTagCollectionViewCell: UICollectionViewCell {
 
@@ -24,11 +21,6 @@ class FoodTagCollectionViewCell: UICollectionViewCell {
     }
 
     func setSelection(_ selected: Bool) {
-        if let categoryName = foodCategoryName.text {
-            delegate?.didSelectTag(viewModel: .init(foodCategoryName: categoryName))
-        } else {
-            assertionFailure("No data in Food Category Cell")
-        }
         contentView.backgroundColor = selected ? .primary100 : .clear
         foodCategoryName.textColor = selected ? .white : .primary100
     }
@@ -37,7 +29,7 @@ class FoodTagCollectionViewCell: UICollectionViewCell {
 // MARK: ViewModel
 
 extension FoodTagCollectionViewCell {
-    struct ViewModel {
+    struct ViewModel: Equatable {
         let foodCategoryName: String
     }
 }
