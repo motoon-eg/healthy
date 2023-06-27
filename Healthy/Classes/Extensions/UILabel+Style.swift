@@ -13,15 +13,28 @@ extension UILabel {
         case signupTitle
         case signupSubtitle
         case textFieldTitleLabel
+        case titleLabelStyle
         case messageLabel
+        case cellHeaderTitle
+        case cellHeaderSubTitle
+        case cellTime
 
         var labelTextColor: UIColor {
             switch self {
-            case .splashHeaderLabel, .splashTitle, .splashSubtitle:
+            case .splashHeaderLabel,
+                    .splashTitle,
+                    .splashSubtitle,
+                    .cellHeaderTitle,
+                    .cellHeaderSubTitle,
+                    .cellTime:
                 return .white
-            case .signinTitle, .signupTitle:
+            case .signinTitle,
+                    .signupTitle:
                 return .black
-            case .signinSubtitle, .signupSubtitle, .textFieldTitleLabel:
+            case .signinSubtitle,
+                    .signupSubtitle,
+                    .textFieldTitleLabel,
+                    .titleLabelStyle:
                 // TODO: [HL-4] Add global Color
                 return LabelColor.slateGray
             case .messageLabel:
@@ -48,8 +61,16 @@ extension UILabel {
                 return LabelFont.signupSubtitle
             case .textFieldTitleLabel:
                 return LabelFont.textFieldTitleLabel
+            case .titleLabelStyle:
+                return LabelFont.titleLabelStyle
             case .messageLabel:
                 return LabelFont.messageLabel
+            case .cellHeaderTitle:
+                return LabelFont.cellHeaderTitleLabel
+            case .cellHeaderSubTitle:
+                return LabelFont.cellHeaderSubTitleLabel
+            case .cellTime:
+                return LabelFont.cellTimeLabel
             }
         }
     }
@@ -82,5 +103,9 @@ private enum LabelFont {
     static let signupTitle = UIFont.systemFont(ofSize: 20, weight: .semibold)
     static let signupSubtitle = UIFont.systemFont(ofSize: 11, weight: .regular)
     static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
+    static let titleLabelStyle = UIFont.systemFont(ofSize: 40, weight: .semibold)
     static let messageLabel = UIFont.systemFont(ofSize: 20, weight: .semibold)
+    static let cellHeaderTitleLabel = UIFont.smallBold
+    static let cellHeaderSubTitleLabel = UIFont.smallLabelRegular
+    static let cellTimeLabel = UIFont.smallerRegular
 }

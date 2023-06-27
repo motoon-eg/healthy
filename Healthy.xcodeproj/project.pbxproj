@@ -61,6 +61,9 @@
 		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
+		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
+		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
 		02FDBC312A3A65AB0012AF87 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */; };
 		02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FDBC322A3A66780012AF87 /* PlaceholderView.xib */; };
 		2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049C21B2A2000680077DBE4 /* CheckboxButton.swift */; };
@@ -72,6 +75,9 @@
 		27C7C7F82A4341A300FECE25 /* FileSystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7F42A4341A300FECE25 /* FileSystemLogger.swift */; };
 		27C7C7F92A4341A300FECE25 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7F52A4341A300FECE25 /* LogLevel.swift */; };
 		27C7C7FB2A4341D100FECE25 /* NewRelicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */; };
+		209F93CA2A40A34200B007BA /* RecipeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209F93C92A40A34200B007BA /* RecipeTest.swift */; };
+		209F93D12A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209F93CF2A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift */; };
+		209F93D22A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209F93D02A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib */; };
 		6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9C2A299E3600A1FC65 /* GoogleSignIn */; };
 		6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */; };
 		6DB1366C2A36357000448722 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB1366B2A36357000448722 /* SkeletonView */; };
@@ -84,18 +90,32 @@
 		6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF5250B2A1E855F0027502C /* LoginViewModelType.swift */; };
 		6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */; };
 		6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */; };
+		792D42E92A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */; };
+		792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
+		A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */; };
+		A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* UITableViewMock.swift */; };
+		A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */; };
 		A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */; };
+		A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA41102A44412500C9C9A0 /* UIView+Style.swift */; };
+		B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */; };
+		B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */; };
 		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
+		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
+		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
+		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
+		C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */; };
+		C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */; };
+		C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE12112A412904001A7BE3 /* AnimatableView.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -172,6 +192,7 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02FDBC302A3A65AB0012AF87 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		02FDBC322A3A66780012AF87 /* PlaceholderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceholderView.xib; sourceTree = "<group>"; };
 		20376AA82A2663F8004BF0BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -184,6 +205,9 @@
 		27C7C7F42A4341A300FECE25 /* FileSystemLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemLogger.swift; sourceTree = "<group>"; };
 		27C7C7F52A4341A300FECE25 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRelicLogger.swift; sourceTree = "<group>"; };
+		209F93C92A40A34200B007BA /* RecipeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTest.swift; sourceTree = "<group>"; };
+		209F93CF2A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewRecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		209F93D02A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNewRecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SkeletonView.swift"; sourceTree = "<group>"; };
 		6DF525052A1E84C80027502C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6DF525072A1E84FD0027502C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -192,19 +216,33 @@
 		6DFEC6222A2E982C0090B2E2 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		6DFEC6242A2EA5770090B2E2 /* LoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelMock.swift; sourceTree = "<group>"; };
 		7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReusableIdentifier.swift"; sourceTree = "<group>"; };
+		792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCell.swift; sourceTree = "<group>"; };
+		792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedRecipesTableViewCell.xib; sourceTree = "<group>"; };
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCellTests.swift; sourceTree = "<group>"; };
+		A21C51FA2A43036A00850B15 /* UITableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewMock.swift; sourceTree = "<group>"; };
+		A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterNib.swift"; sourceTree = "<group>"; };
 		A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		A2FA41102A44412500C9C9A0 /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
+		B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
 		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
+		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
+		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
+		C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
+		C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatableView.swift"; sourceTree = "<group>"; };
+		C2FE12112A412904001A7BE3 /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -216,9 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB1366C2A36357000448722 /* SkeletonView in Frameworks */,
+				0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */,
 				6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */,
 				025511B72A3C623000295B91 /* NewRelic in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
+				0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */,
 				6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +323,7 @@
 		025511A32A3C5D9B00295B91 /* SavedRecipes */ = {
 			isa = PBXGroup;
 			children = (
+				792D42E62A423A9F00EC2FE5 /* Cell */,
 				025511A52A3C5DAA00295B91 /* SavedRecipesViewController.swift */,
 				025511A72A3C5DAA00295B91 /* SavedRecipesViewController.xib */,
 				025511A62A3C5DAA00295B91 /* SavedRecipesViewModel.swift */,
@@ -347,6 +388,7 @@
 		025A474E2A336AE3008BF85A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				B2E577482A40DECF00FEFD05 /* SearchReceipes  */,
 				025A47572A336C04008BF85A /* Views */,
 				025A47502A336B05008BF85A /* DashboardViewController.swift */,
 				025A47522A336B05008BF85A /* DashboardViewController.xib */,
@@ -391,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				025A477A2A337320008BF85A /* GoogleLoginAuthenticator.swift */,
+				0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -435,6 +478,7 @@
 		027DDA342A0E6A680052818C /* HealthyTests */ = {
 			isa = PBXGroup;
 			children = (
+				209F93C82A40A31900B007BA /* Entities */,
 				6DFEC61F2A2E97F80090B2E2 /* Classes */,
 			);
 			path = HealthyTests;
@@ -492,6 +536,11 @@
 				022924292A33A137009290A8 /* UIView+Helpers.swift */,
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 				6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */,
+				A2FA41102A44412500C9C9A0 /* UIView+Style.swift */,
+				A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */,
+				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
+				C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */,
+				C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -499,6 +548,7 @@
 		027DDA512A0E761B0052818C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				209F93CC2A40C0E500B007BA /* Home */,
 				025511A32A3C5D9B00295B91 /* SavedRecipes */,
 				025511982A3C5D5B00295B91 /* Search */,
 				025A474E2A336AE3008BF85A /* Dashboard */,
@@ -522,6 +572,7 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				C2FE120E2A4128BA001A7BE3 /* AnimatableView */,
 				02FDBC292A3A624C0012AF87 /* PlaceholderView */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
@@ -578,6 +629,47 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		209F93C82A40A31900B007BA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				209F93C92A40A34200B007BA /* RecipeTest.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		209F93CC2A40C0E500B007BA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				209F93CD2A40C0E900B007BA /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		209F93CD2A40C0E900B007BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				209F93CE2A40C10000B007BA /* HomeNewRecipesView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		209F93CE2A40C10000B007BA /* HomeNewRecipesView */ = {
+			isa = PBXGroup;
+			children = (
+				209F93D32A40C22900B007BA /* CollectionViewCell */,
+			);
+			path = HomeNewRecipesView;
+			sourceTree = "<group>";
+		};
+		209F93D32A40C22900B007BA /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				209F93CF2A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift */,
+				209F93D02A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		6DF525042A1E849F0027502C /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,7 +684,9 @@
 		6DFEC61F2A2E97F80090B2E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A27861132A445BDE00BA7018 /* Mocks */,
 				B2D402E22A3BB2E200FDB941 /* Extensions */,
+				B85D26A42A3902A9000A463D /* Utilities */,
 				6DFEC6202A2E97FF0090B2E2 /* Modules */,
 			);
 			path = Classes;
@@ -605,6 +699,7 @@
 				02279EA52A3373C400C607AD /* CreateAccount */,
 				6DFEC6212A2E980B0090B2E2 /* Login */,
 				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
+				A21C51F62A42FF6400850B15 /* SavedRecipes */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -626,6 +721,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		792D42E62A423A9F00EC2FE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				792D42E72A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift */,
+				792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		79311FCC2A191C8E00764707 /* FormTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,6 +737,30 @@
 				79311FCF2A191D3700764707 /* FormTextField.swift */,
 			);
 			path = FormTextField;
+			sourceTree = "<group>";
+		};
+		A21C51F62A42FF6400850B15 /* SavedRecipes */ = {
+			isa = PBXGroup;
+			children = (
+				A21C51F72A42FF7900850B15 /* Cell */,
+			);
+			path = SavedRecipes;
+			sourceTree = "<group>";
+		};
+		A21C51F72A42FF7900850B15 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A27861132A445BDE00BA7018 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A21C51FA2A43036A00850B15 /* UITableViewMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */ = {
@@ -674,6 +802,23 @@
 			path = "UILabel+Style";
 			sourceTree = "<group>";
 		};
+		B2E5773F2A40A4E000FEFD05 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */,
+				B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B2E577482A40DECF00FEFD05 /* SearchReceipes  */ = {
+			isa = PBXGroup;
+			children = (
+				B2E5773F2A40A4E000FEFD05 /* Cell */,
+			);
+			path = "SearchReceipes ";
+			sourceTree = "<group>";
+		};
 		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +826,31 @@
 				B2F799E32A34459B002F1894 /* MainTabBar.swift */,
 			);
 			path = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		B85D26A42A3902A9000A463D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B85D26A52A3902BB000A463D /* Validators */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B85D26A52A3902BB000A463D /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */,
+				B85D26A82A390331000A463D /* PasswordValidatorTests.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
+		C2FE120E2A4128BA001A7BE3 /* AnimatableView */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE12112A412904001A7BE3 /* AnimatableView.swift */,
+			);
+			path = AnimatableView;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -738,6 +908,8 @@
 				6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */,
 				6DB1366B2A36357000448722 /* SkeletonView */,
 				025511B62A3C623000295B91 /* NewRelic */,
+				0296F7922A4342B500DBC86A /* FacebookCore */,
+				0296F7942A4342B500DBC86A /* FacebookLogin */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -819,6 +991,7 @@
 				6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				6DB1366A2A36357000448722 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */,
+				0296F7912A4342B400DBC86A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 027DDA1C2A0E6A660052818C /* Products */;
 			projectDirPath = "";
@@ -837,16 +1010,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				025511922A3C394300295B91 /* Colors.xcassets in Resources */,
+				792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */,
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
 				025511D32A3D0A8B00295B91 /* CreateAccountViewController.xib in Resources */,
 				C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */,
 				025511D22A3D0A8B00295B91 /* SplashViewController.xib in Resources */,
 				027DDA2B2A0E6A680052818C /* (null) in Resources */,
+				209F93D22A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib in Resources */,
 				025511AB2A3C5DAA00295B91 /* SavedRecipesViewController.xib in Resources */,
 				025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
 				A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
+				B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */,
 				025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */,
 				02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
@@ -935,9 +1111,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
+				209F93D12A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift in Sources */,
 				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
+				C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */,
 				025511C22A3D049500295B91 /* Coordinator.swift in Sources */,
 				025511D42A3D0A8B00295B91 /* CreateAccountViewModel.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
@@ -954,29 +1133,35 @@
 				27C7C7F82A4341A300FECE25 /* FileSystemLogger.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
 				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
+				C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */,
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025511CF2A3D0A8B00295B91 /* SplashViewController.swift in Sources */,
+				792D42E92A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift in Sources */,
 				0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */,
 				B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */,
 				025511AA2A3C5DAA00295B91 /* SavedRecipesViewModel.swift in Sources */,
 				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
+				0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */,
 				025511B12A3C5F8900295B91 /* FilterSearchViewModelType.swift in Sources */,
 				025511BD2A3C656300295B91 /* Recipe.swift in Sources */,
 				0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				27C7C7F72A4341A300FECE25 /* Logging.swift in Sources */,
 				0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */,
+				A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
+				A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */,
 				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				27C7C7F92A4341A300FECE25 /* LogLevel.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
+				B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
 				B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */,
 				025511D62A3D0A8B00295B91 /* CreateAccountViewController.swift in Sources */,
@@ -993,6 +1178,7 @@
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
+				B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */,
 				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1002,13 +1188,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				206FF7972A39EE4100130CA4 /* CreateAccountViewControllerTests.swift in Sources */,
+				209F93CA2A40A34200B007BA /* RecipeTest.swift in Sources */,
 				B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */,
+				B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */,
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
+				B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
+				A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
 				C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */,
 				206FF79A2A3A32DD00130CA4 /* CreateViewModelMock.swift in Sources */,
+				A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1348,6 +1539,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		0296F7912A4342B400DBC86A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		6D611B9B2A299E3600A1FC65 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -1379,6 +1578,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
 			productName = NewRelic;
+		};
+		0296F7922A4342B500DBC86A /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0296F7912A4342B400DBC86A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		0296F7942A4342B500DBC86A /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0296F7912A4342B400DBC86A /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 		6D611B9C2A299E3600A1FC65 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
