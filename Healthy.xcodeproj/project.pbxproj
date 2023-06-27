@@ -106,10 +106,13 @@
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
-		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
-		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
+		C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */; };
+		C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */; };
+		C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE12112A412904001A7BE3 /* AnimatableView.swift */; };
+		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
+		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,11 +228,14 @@
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
+		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
+		C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
+		C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatableView.swift"; sourceTree = "<group>"; };
+		C2FE12112A412904001A7BE3 /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
-		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +529,8 @@
 				A2FA41102A44412500C9C9A0 /* UIView+Style.swift */,
 				A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */,
 				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
+				C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */,
+				C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -554,6 +562,7 @@
 		027DDA542A0E76C50052818C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				C2FE120E2A4128BA001A7BE3 /* AnimatableView */,
 				02FDBC292A3A624C0012AF87 /* PlaceholderView */,
 				B21570A62A209E6800C80A0C /* SignButtonWithSocialMediaView */,
 				79311FCC2A191C8E00764707 /* FormTextField */,
@@ -826,6 +835,14 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		C2FE120E2A4128BA001A7BE3 /* AnimatableView */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE12112A412904001A7BE3 /* AnimatableView.swift */,
+			);
+			path = AnimatableView;
+			sourceTree = "<group>";
+		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
@@ -1079,10 +1096,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
 				209F93D12A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift in Sources */,
 				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
+				C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */,
 				025511C22A3D049500295B91 /* Coordinator.swift in Sources */,
 				025511D42A3D0A8B00295B91 /* CreateAccountViewModel.swift in Sources */,
 				2049C21C2A2000680077DBE4 /* CheckboxButton.swift in Sources */,
@@ -1098,6 +1117,7 @@
 				025511A92A3C5DAA00295B91 /* SavedRecipesViewController.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
 				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
+				C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */,
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025511CF2A3D0A8B00295B91 /* SplashViewController.swift in Sources */,
