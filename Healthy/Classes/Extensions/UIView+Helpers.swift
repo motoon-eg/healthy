@@ -39,13 +39,13 @@ extension UIView {
     /// using Interface Builder or programmatically. When the corner radius
     /// is greater than 0, the `masksToBounds` property of the layer is set
     /// to true, clipping the content and subviews to the rounded corners.
-    @IBInspectable var cornerRadius: CGFloat {
-            get {
-                return layer.cornerRadius
-            }
-            set {
-                layer.cornerRadius = newValue
-                layer.masksToBounds = newValue > 0
-            }
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
         }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
 }
