@@ -674,6 +674,7 @@
 			children = (
 				6DA228F92A431FC60011E43E /* Search */,
 				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
+				A21C51F62A42FF6400850B15 /* SavedRecipes */,
 				6DA228F82A431F8C0011E43E /* Onboarding */,
 			);
 			path = Modules;
@@ -1110,6 +1111,7 @@
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
 				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
+				A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */,
 				6D2145472A44C9EB0085C519 /* SearchFilter.swift in Sources */,
 				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
@@ -1146,6 +1148,8 @@
 				B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
+				A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */,
+				A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */,
 				6DA25B542A446CF900DB5980 /* SearchDataSourceMock.swift in Sources */,
 				6D9D97A52A4B020F00BB3589 /* PublisherSpy.swift in Sources */,
 				02279EA72A3373C400C607AD /* CreateAccountViewModelTests.swift in Sources */,
