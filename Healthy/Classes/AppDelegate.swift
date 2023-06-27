@@ -1,5 +1,6 @@
 import UIKit
 import GoogleSignIn
+import FBSDKCoreKit
 import NewRelic
 
 @main
@@ -8,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureGoogleSignIn()
+        configureFacebookSignin(application: application, launchOptions: launchOptions)
         configureNewRelic()
         return true
     }
@@ -36,10 +38,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Authentication Handler
 
 extension AppDelegate {
-    func application(_ app: UIApplication,
-                     open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
+    func applicatxion(_ app: UIApplication,
+                      open url: URL,
+                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        let facebookResult: () -> Bool = {
+            ApplicationDelegate.shared.application(
+                app,
+                open: url,
+                sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            )
+        }
+
+        let googleResult: () -> Bool = {
+            GIDSignIn.sharedInstance.handle(url)
+        }
+
+        return facebookResult() || googleResult()
     }
 }
 
@@ -51,7 +66,15 @@ private extension AppDelegate {
         GIDSignIn.sharedInstance.configuration = config
     }
 
+    func configureFacebookSignin(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+        ApplicationDelegate.shared.application(
+            application,
+            didFinishLaunchingWithOptions: launchOptions
+        )
+    }
+
     func configureNewRelic() {
         NewRelic.start(withApplicationToken: Constants.newRelicAPIKey)
     }
+
 }

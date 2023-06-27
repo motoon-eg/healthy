@@ -47,6 +47,23 @@ extension DashboardViewController {
     }
 }
 
+// MARK: - Header Creation
+
+private extension DashboardViewController {
+    private func makeSection(title: String, content: UIView) -> UIView {
+        let titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.applyStyle(.titleLabelStyle)
+
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, content])
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.spacing = 8.0
+
+        return stackView
+    }
+}
+
 // MARK: - Private Handlers
 
 private extension DashboardViewController {
