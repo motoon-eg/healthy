@@ -35,7 +35,7 @@ final class SearchViewModelTests: XCTestCase {
 
         // When
         sut.dueDebounseTime = 0.0
-        sut.updateSearch(keyword: "", filter: SearchFilter())
+        sut.updateSearchKeyword("")
 
         try await Task.sleep(for: .seconds(1))
 
@@ -43,16 +43,25 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertEqual(recipesSpy.value.count, 2)
     }
 
-    func test_updateSearchKeywordAndFilter_shouldUpdateSearchKeyworkAndfilterValues() {
+    func test_updateSearchKeyword_shouldUpdateSearchKeyworkAndfilterValues() {
         // Given
         let keyword = "Test keyword"
-        let filter = SearchFilter()
 
         // When
-        sut.updateSearch(keyword: keyword, filter: filter)
+        sut.updateSearchKeyword(keyword)
 
         // Then
         XCTAssertEqual(sut.searchKeyword, keyword)
+    }
+
+    func test_updateSearchFilter_shouldUpdateSearchFilterValues() {
+        // Given
+        let filter = SearchFilter()
+
+        // When
+        sut.updateSearchFilter(filter)
+
+        // Then
         XCTAssertEqual(sut.searchFilter, filter)
     }
 
@@ -96,7 +105,7 @@ final class SearchViewModelTests: XCTestCase {
         }
 
         // When
-        sut.updateSearch(keyword: "", filter: SearchFilter())
+        sut.updateSearchKeyword("")
 
         try await Task.sleep(for: .seconds(1))
 

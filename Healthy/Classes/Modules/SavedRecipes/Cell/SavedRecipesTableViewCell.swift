@@ -16,7 +16,7 @@ extension SavedRecipesTableViewCell {
 final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
-    
+
     @IBOutlet private(set) weak var recipeImageView: UIImageView!
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var chefNameLabel: UILabel!
@@ -24,20 +24,20 @@ final class SavedRecipesTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var timeLabel: UILabel!
     @IBOutlet private(set) weak var bookMarkView: UIView!
     @IBOutlet private(set) weak var bookMarkImageView: UIImageView!
-    
+
     // MARK: Properties
-    
+
     private var toggleBookmark: () -> Void = {}
-    
-    // MARK:  Lifecycle
-    
+
+    // MARK: Lifecycle
+
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
     }
-    
-    // MARK:  Configure
-    
+
+    // MARK: Configure
+
     func update(with viewModel: ViewModel) {
         // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
         titleLabel.text = viewModel.title
@@ -62,14 +62,14 @@ private extension SavedRecipesTableViewCell {
         bookMarkView.layer.cornerRadius = 12
         addActionToBookMarkView()
     }
-    
+
     private func addActionToBookMarkView() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTappedOnBookMarkView))
         tap.numberOfTapsRequired = 1
         bookMarkView.isUserInteractionEnabled = true
         bookMarkView.addGestureRecognizer(tap)
     }
-    
+
     @objc private func didTappedOnBookMarkView() {
         toggleBookmark()
     }

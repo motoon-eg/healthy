@@ -19,24 +19,27 @@ final class SearchViewModel {
 
     init(searchDataSource: SearchDataSource) {
         self.searchDataSource = searchDataSource
+
+        Publishers.CombineLatest($searchKeyword, $searchFilter)
+            .debounce(for: .seconds(dueDebounseTime), scheduler: DispatchQueue.global())
+            .sink { [weak self] _, _ in
+                self?.update()
+            }
+            .store(in: &subscriptions)
     }
- }
+}
 
  // MARK: SearchViewModelInput
 
 extension SearchViewModel: SearchViewModelInput {
-    func updateSearch(keyword: String, filter: SearchFilter) {
+    func updateSearchKeyword(_ keyword: String) {
         searchKeyword = keyword
+        update()
+    }
+
+    func updateSearchFilter(_ filter: SearchFilter) {
         searchFilter = filter
-        Publishers.CombineLatest($searchKeyword, $searchFilter)
-            .debounce(for: .seconds(dueDebounseTime), scheduler: DispatchQueue.global())
-            .sink { [weak self] searchKeyword, searchFilter in
-                self?.update(
-                    searchKeyword: searchKeyword,
-                    searchFilter: searchFilter
-                )
-            }
-            .store(in: &subscriptions)
+        update()
     }
 }
 
@@ -97,7 +100,7 @@ extension SearchViewModel: SearchViewModelOutput {
  // MARK: Private Helpers
 
 private extension SearchViewModel {
-    func update(searchKeyword: String, searchFilter: SearchFilter) {
+    func update() {
         Task {
             do {
                 state = .loading

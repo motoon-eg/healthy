@@ -7,7 +7,8 @@ typealias SearchViewModelType = SearchViewModelInput & SearchViewModelOutput
 /// Search ViewModel Input
 ///
 protocol SearchViewModelInput {
-    func updateSearch(keyword: String, filter: SearchFilter)
+    func updateSearchKeyword(_ keyword: String)
+    func updateSearchFilter(_ filter: SearchFilter)
 }
 
 /// Search ViewModel Output
