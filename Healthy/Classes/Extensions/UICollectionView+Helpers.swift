@@ -2,8 +2,8 @@ import UIKit
 
 extension UICollectionView {
 
-    func register<T: UICollectionViewCell>(_: T.Type) {
-        let bundle = Bundle(for: T.self)
+    func register<T: UICollectionViewCell>(_: T.Type, bundle: Bundle? = nil) {
+        let bundle = bundle ?? Bundle(for: T.self)
         let nib = UINib(nibName: T.reuseIdentifier, bundle: bundle)
         register(nib, forCellWithReuseIdentifier: T.reuseIdentifier)
     }
@@ -17,7 +17,7 @@ extension UICollectionView {
     }
 }
 
-extension UICollectionViewCell {
+extension UIView {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
