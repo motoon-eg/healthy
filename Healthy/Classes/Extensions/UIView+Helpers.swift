@@ -31,6 +31,21 @@ extension UIView {
         addSubview(contentView)
     }
 
+    // MARK: - Shadow
+
+    /// Applies a default card-style shadow to a view with a specified corner radius.
+    /// - Parameter cornerRadius: The corner radius to apply to the view.
+    ///
+    func applyDefaultCardShadow(cornerRadius: CGFloat) {
+        self.cornerRadius = cornerRadius
+        backgroundColor = UIColor.white
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowRadius = 4.0
+        layer.shadowOpacity = 0.1
+        layer.shadowOffset = .zero
+        layer.masksToBounds = false
+    }
+
     // MARK: - Corner Radius
 
     /// A property to get or set the corner radius of the UIView.
