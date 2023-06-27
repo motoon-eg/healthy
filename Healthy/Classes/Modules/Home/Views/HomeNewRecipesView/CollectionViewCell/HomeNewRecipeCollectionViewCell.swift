@@ -45,8 +45,6 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
         preparationTimeInMinutesLabel.text = with.preparationTimeInMinutes
 
         // TODO: [HL-52] To be Implemented after implementing binding imageUrl To UIImageView
-//        recipeImage.image = with.recipeImageUrl
-//        userImage.image = with.userImageUrl
     }
 }
 
