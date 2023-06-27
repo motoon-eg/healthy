@@ -42,6 +42,10 @@ extension UIImage {
       UIImage(named: "icon-splash")! 
     }
 
+    static var iconTimer: UIImage {
+      UIImage(named: "icon-timer")! 
+    }
+
     static var iconUnion: UIImage {
       UIImage(named: "icon-union")! 
     }
@@ -52,6 +56,18 @@ extension UIImage {
 
     static var iconCheckboxSelected: UIImage {
       UIImage(named: "icon_checkbox_selected")! 
+    }
+
+    static var imageRecipePlaceholder1: UIImage {
+      UIImage(named: "image-recipe-placeholder 1")! 
+    }
+
+    static var imageRecipePlaceholder: UIImage {
+      UIImage(named: "image-recipe-placeholder")! 
+    }
+
+    static var imageUserRecipePlaceholder: UIImage {
+      UIImage(named: "image-user-recipe-placeholder")! 
     }
 
     static var patternFood: UIImage {

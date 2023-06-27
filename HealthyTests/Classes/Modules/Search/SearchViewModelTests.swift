@@ -21,6 +21,7 @@ final class SearchViewModelTests: XCTestCase {
         super.tearDown()
         subscriptions.removeAll()
         sut = nil
+        dataSourceMock = nil
         XCTAssertNil(weakSUT)
     }
 
