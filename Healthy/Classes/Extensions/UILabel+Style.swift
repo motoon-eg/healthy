@@ -33,7 +33,7 @@ extension UILabel {
                 return .black
             case .signinSubtitle,
                     .signupSubtitle,
-                    .textFieldTitleLabel, 
+                    .textFieldTitleLabel,
                     .titleLabelStyle:
                 // TODO: [HL-4] Add global Color
                 return LabelColor.slateGray
