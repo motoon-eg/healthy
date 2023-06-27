@@ -6,12 +6,12 @@ import UIKit.UIImage
 // swiftlint:disable force_unwrapping
 extension UIImage {
 
-    static var backgroundFood: UIImage {
-      UIImage(named: "background-food")! 
-    }
-
     static var backgroundSplash: UIImage {
       UIImage(named: "background-splash")! 
+    }
+
+    static var iconBookmark: UIImage {
+      UIImage(named: "icon-bookmark")! 
     }
 
     static var iconFacebook: UIImage {
@@ -42,10 +42,6 @@ extension UIImage {
       UIImage(named: "icon-splash")! 
     }
 
-    static var iconStroke: UIImage {
-      UIImage(named: "icon-stroke")! 
-    }
-
     static var iconUnion: UIImage {
       UIImage(named: "icon-union")! 
     }
@@ -56,5 +52,9 @@ extension UIImage {
 
     static var iconCheckboxSelected: UIImage {
       UIImage(named: "icon_checkbox_selected")! 
+    }
+
+    static var patternFood: UIImage {
+      UIImage(named: "pattern-food")! 
     }
 }

@@ -4,7 +4,12 @@ import UIKit
 
 extension SavedRecipesTableViewCell {
     struct ViewModel {
-        // Here goes your implementation....
+        var recipeImageURL: URL
+        var title: String
+        var chefName: String
+        var rate: Double
+        var time: String
+        var tapOnBookMark: () -> Void
     }
 }
 
@@ -20,6 +25,10 @@ final class SavedRecipesTableViewCell: UITableViewCell {
     @IBOutlet private(set) weak var bookMarkView: UIView!
     @IBOutlet private(set) weak var bookMarkImageView: UIImageView!
     
+    // MARK: Properties
+    
+    private var toggleBookmark: () -> Void = {}
+    
     // MARK:  Lifecycle
     
     override func awakeFromNib() {
@@ -30,7 +39,12 @@ final class SavedRecipesTableViewCell: UITableViewCell {
     // MARK:  Configure
     
     func update(with viewModel: ViewModel) {
-        // TODO: Configure cell with view model.
+        // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
+        titleLabel.text = viewModel.title
+        chefNameLabel.text = viewModel.chefName
+        timeLabel.text = viewModel.time
+        // TODO: Set rate count.
+        toggleBookmark = viewModel.tapOnBookMark
     }
 }
 
@@ -46,5 +60,17 @@ private extension SavedRecipesTableViewCell {
         rateView.backgroundColor = UIColor.secondary20
         timeLabel.applyStyle(.cellTime)
         bookMarkView.layer.cornerRadius = 12
+        addActionToBookMarkView()
+    }
+    
+    private func addActionToBookMarkView() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTappedOnBookMarkView))
+        tap.numberOfTapsRequired = 1
+        bookMarkView.isUserInteractionEnabled = true
+        bookMarkView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func didTappedOnBookMarkView() {
+        toggleBookmark()
     }
 }
