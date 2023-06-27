@@ -32,6 +32,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.title
         let expectedTitle = "Steak with Tomatoes"
         let testErrorMessage = "Recipe title is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedTitle, testErrorMessage)
     }
@@ -40,6 +41,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.recipeImageUrl
         let expectedImageUrl = "https://example.com/steak-with-tomatoes.jpg"
         let testErrorMessage = "Recipe image URL is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedImageUrl, testErrorMessage)
     }
@@ -48,6 +50,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.rating
         let expectedRating = 4
         let testErrorMessage = "Recipe star rating is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedRating, testErrorMessage)
     }
@@ -56,6 +59,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.userImageUrl
         let userImageUrl = "https://example.com/user-avatar.jpg"
         let testErrorMessage = "User image URL is incorrect."
+
         // Assert
         XCTAssertEqual(actual, userImageUrl, testErrorMessage)
     }
@@ -64,6 +68,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.userName
         let userName = "John Doe"
         let testErrorMessage = "User name is incorrect."
+
         // Assert
         XCTAssertEqual(actual, userName, testErrorMessage)
     }
@@ -72,6 +77,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.preparationTime
         let expectedPreparationTime = 450
         let testErrorMessage = "Recipe preparation time is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedPreparationTime, testErrorMessage)
     }
@@ -86,6 +92,7 @@ final class RecipeTest: XCTestCase {
         let actual = emptyTitleRecipe.title
         let expectedTitle = ""
         let testErrorMessage = "Recipe title with empty value is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedTitle, testErrorMessage)
     }
@@ -104,6 +111,7 @@ final class RecipeTest: XCTestCase {
         let actual = zeroPreparationTimeRecipe.formattedPreparationTime()
         let expectedFormattedPreparationTime = "00:00"
         let testErrorMessage = "Formatted preparation time with zero seconds is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedFormattedPreparationTime, testErrorMessage)
     }
@@ -118,6 +126,7 @@ final class RecipeTest: XCTestCase {
         let actual = minutesOnlyPreparationTimeRecipe.formattedPreparationTime()
         let expectedFormattedPreparationTime = "05:00"
         let testErrorMessage = "Formatted preparation time with only minutes is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedFormattedPreparationTime, testErrorMessage)
     }
@@ -126,6 +135,7 @@ final class RecipeTest: XCTestCase {
         let actual = sut.formattedPreparationTime()
         let expectedFormattedPreparationTime = "07:30"
         let testErrorMessage = "Formatted preparation time is incorrect."
+
         // Assert
         XCTAssertEqual(actual, expectedFormattedPreparationTime, testErrorMessage)
     }
