@@ -35,7 +35,6 @@ final class SearchViewModelTests: XCTestCase {
         }
 
         // When
-        sut.dueDebounseTime = 0.0
         sut.updateSearchKeyword("")
 
         try await Task.sleep(for: .seconds(1))
