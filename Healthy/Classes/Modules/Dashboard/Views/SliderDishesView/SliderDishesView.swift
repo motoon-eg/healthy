@@ -48,7 +48,7 @@ extension SliderDishesView {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
         layout.itemSize = CGSize(
-            width: dishesSliderCollectionView.bounds.width * 0.3,
+            width: dishesSliderCollectionView.bounds.width * 0.4,
             height: dishesSliderCollectionView.bounds.height
         )
 

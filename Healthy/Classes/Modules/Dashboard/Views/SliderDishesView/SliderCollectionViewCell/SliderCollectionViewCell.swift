@@ -1,10 +1,8 @@
 import UIKit
 
-class SliderCollectionViewCell: UICollectionViewCell, Identifiable {
+class SliderCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Propperties
-
-    static let SliderIdentifier = "SliderCollectionview"
 
     // MARK: - Outlet
 
@@ -12,17 +10,26 @@ class SliderCollectionViewCell: UICollectionViewCell, Identifiable {
     @IBOutlet weak var disheName: UILabel!
     @IBOutlet weak var timeDuration: UILabel!
     @IBOutlet weak var disheView: UIView!
+    @IBOutlet weak var rateView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        configureCellView()
     }
 
     // MARK: - Configurations
 
+    func configureCellView() {
+        disheImage.roundedImage()
+        disheView.roundCorners(corners: [.topLeft, .topRight], radius: 20)
+        rateView.setRadius(radius: 10)
+    }
+
     func configureCellData(viewModel: SliderViewModel) {
 //        disheImage.image = viewModel.imageUrl
     }
+
 }
 
 // MARK: ViewModel
@@ -41,11 +48,20 @@ extension UIImageView {
         self.layer.cornerRadius = self.frame.size.width / 2
         self.clipsToBounds = true
     }
-
 }
 
 extension UIView {
-    func setRadius() {
-        self.layer.cornerRadius =  20
+
+    func setRadius(radius: Int) {
+        self.layer.cornerRadius = CGFloat(radius)
+    }
+
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
     }
 }
