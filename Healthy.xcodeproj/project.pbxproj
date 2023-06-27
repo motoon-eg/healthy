@@ -664,6 +664,8 @@
 				6DA25B532A446CF900DB5980 /* SearchDataSourceMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
 		209F93C82A40A31900B007BA /* Entities */ = {
 			isa = PBXGroup;
 			children = (
