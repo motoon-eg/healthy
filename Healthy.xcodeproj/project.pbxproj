@@ -684,11 +684,19 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		6D94975F2A4BB46A004A135C /* SkeletonViews */ = {
+		6D3B31722A4BC09B00BA0CA8 /* HomeHeaderSkeletonView */ = {
 			isa = PBXGroup;
 			children = (
 				6D94975C2A4BB456004A135C /* HomeHeaderSkeletonView.swift */,
 				6D94975E2A4BB45B004A135C /* HomeHeaderSkeletonView.xib */,
+			);
+			path = HomeHeaderSkeletonView;
+			sourceTree = "<group>";
+		};
+		6D94975F2A4BB46A004A135C /* SkeletonViews */ = {
+			isa = PBXGroup;
+			children = (
+				6D3B31722A4BC09B00BA0CA8 /* HomeHeaderSkeletonView */,
 			);
 			path = SkeletonViews;
 			sourceTree = "<group>";
