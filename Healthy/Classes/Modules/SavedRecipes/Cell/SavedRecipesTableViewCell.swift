@@ -38,13 +38,22 @@ final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Configure
 
-    func update(with viewModel: ViewModel) {
+    func update(with viewModel: SavedRecipe) {
         // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
-        titleLabel.text = viewModel.title
-        chefNameLabel.text = viewModel.chefName
-        timeLabel.text = viewModel.time
+
+        if let title = viewModel.title {
+            titleLabel.text = title
+        }
+
+        if let chefName = viewModel.chefName {
+            chefNameLabel.text = chefName
+        }
+
+        if let cookingTime = viewModel.cookingTime {
+            timeLabel.text = "\(cookingTime)"
+        }
         // TODO: Set rate count.
-        toggleBookmark = viewModel.toggleBookmark
+         toggleBookmark = viewModel.toggleBookmark
     }
 }
 
