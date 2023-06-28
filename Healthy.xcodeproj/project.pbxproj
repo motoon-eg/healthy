@@ -78,9 +78,10 @@
 		27C7C7F82A4341A300FECE25 /* FileSystemLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7F42A4341A300FECE25 /* FileSystemLogger.swift */; };
 		27C7C7F92A4341A300FECE25 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7F52A4341A300FECE25 /* LogLevel.swift */; };
 		27C7C7FB2A4341D100FECE25 /* NewRelicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */; };
+		6D3B31712A4BBC0000BA0CA8 /* HomeHeaderSkeletonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D94975E2A4BB45B004A135C /* HomeHeaderSkeletonView.xib */; };
 		6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9C2A299E3600A1FC65 /* GoogleSignIn */; };
 		6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */; };
-		6D9497552A4BACB9004A135C /* SkeletonViews in Resources */ = {isa = PBXBuildFile; fileRef = 6D9497542A4BACB9004A135C /* SkeletonViews */; };
+		6D94975D2A4BB456004A135C /* HomeHeaderSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D94975C2A4BB456004A135C /* HomeHeaderSkeletonView.swift */; };
 		6DB1366C2A36357000448722 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB1366B2A36357000448722 /* SkeletonView */; };
 		6DB1366E2A3635AC00448722 /* UIView+SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */; };
 		6DB5DC9B2A3270880064FBD3 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6DFC9F6A2A2AAD4200686E7C /* GoogleSignIn */; };
@@ -213,7 +214,8 @@
 		27C7C7F42A4341A300FECE25 /* FileSystemLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSystemLogger.swift; sourceTree = "<group>"; };
 		27C7C7F52A4341A300FECE25 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRelicLogger.swift; sourceTree = "<group>"; };
-		6D9497542A4BACB9004A135C /* SkeletonViews */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SkeletonViews; sourceTree = "<group>"; };
+		6D94975C2A4BB456004A135C /* HomeHeaderSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderSkeletonView.swift; sourceTree = "<group>"; };
+		6D94975E2A4BB45B004A135C /* HomeHeaderSkeletonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderSkeletonView.xib; sourceTree = "<group>"; };
 		6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SkeletonView.swift"; sourceTree = "<group>"; };
 		6DF525052A1E84C80027502C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6DF525072A1E84FD0027502C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -659,7 +661,7 @@
 		209F93CD2A40C0E900B007BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6D9497542A4BACB9004A135C /* SkeletonViews */,
+				6D94975F2A4BB46A004A135C /* SkeletonViews */,
 				209F93CE2A40C10000B007BA /* HomeNewRecipesView */,
 			);
 			path = Views;
@@ -680,6 +682,15 @@
 				209F93D02A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		6D94975F2A4BB46A004A135C /* SkeletonViews */ = {
+			isa = PBXGroup;
+			children = (
+				6D94975C2A4BB456004A135C /* HomeHeaderSkeletonView.swift */,
+				6D94975E2A4BB45B004A135C /* HomeHeaderSkeletonView.xib */,
+			);
+			path = SkeletonViews;
 			sourceTree = "<group>";
 		};
 		6DF525042A1E849F0027502C /* Login */ = {
@@ -1040,7 +1051,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D9497552A4BACB9004A135C /* SkeletonViews in Resources */,
 				025511922A3C394300295B91 /* Colors.xcassets in Resources */,
 				792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */,
 				6DF525062A1E84C80027502C /* LoginViewController.xib in Resources */,
@@ -1050,6 +1060,7 @@
 				025511D22A3D0A8B00295B91 /* SplashViewController.xib in Resources */,
 				027DDA2B2A0E6A680052818C /* (null) in Resources */,
 				209F93D22A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.xib in Resources */,
+				6D3B31712A4BBC0000BA0CA8 /* HomeHeaderSkeletonView.xib in Resources */,
 				025511AB2A3C5DAA00295B91 /* SavedRecipesViewController.xib in Resources */,
 				025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */,
 				207FF9002A167F9100E4BC76 /* Localizable.strings in Resources */,
@@ -1170,6 +1181,7 @@
 				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
 				C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */,
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
+				6D94975D2A4BB456004A135C /* HomeHeaderSkeletonView.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
 				025511CF2A3D0A8B00295B91 /* SplashViewController.swift in Sources */,
 				792D42E92A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift in Sources */,

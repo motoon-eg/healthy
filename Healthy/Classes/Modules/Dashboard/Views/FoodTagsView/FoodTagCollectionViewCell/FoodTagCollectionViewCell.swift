@@ -1,5 +1,6 @@
 import UIKit
 
+protocol FoodTagCollectionDelegate: AnyObject {}
 
 class FoodTagCollectionViewCell: UICollectionViewCell {
 
