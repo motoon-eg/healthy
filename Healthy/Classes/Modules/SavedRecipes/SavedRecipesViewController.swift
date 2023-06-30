@@ -9,6 +9,7 @@ final class SavedRecipesViewController: UIViewController {
 
     // MARK: Outlets
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
 
     // MARK: Properties
@@ -34,6 +35,7 @@ final class SavedRecipesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureNavigationBar()
         configureTableView()
         configureTableViewDataSource()
         setupBindings()
@@ -47,12 +49,18 @@ extension SavedRecipesViewController {}
 // MARK: - Configurations
 
 extension SavedRecipesViewController {
+    func configureNavigationBar() {
+        navigationBar.topItem?.title = "Saved recipes"
+        if let font = UIFont(name: "Poppins-Bold", size: 18) {
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: font]
+        }
+    }
+
     func configureTableView() {
        tableView.registerNib(cell: SavedRecipesTableViewCell.self)
     }
 
     func configureTableViewDataSource() {
-        // TODO:  - Add SavedRecipeCell
     dataSource = UITableViewDiffableDataSource<Section, SavedRecipe>(tableView: tableView) { tableView, _, viewModel in
         let cell = tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
             as? SavedRecipesTableViewCell

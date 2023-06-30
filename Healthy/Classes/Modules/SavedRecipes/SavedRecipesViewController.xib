@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavedRecipesViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
+                <outlet property="navigationBar" destination="0jb-U7-v7x" id="5va-hj-V1H"/>
                 <outlet property="tableView" destination="qG3-in-LuL" id="7zJ-HS-Ub4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,17 +20,27 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qG3-in-LuL">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jb-U7-v7x">
+                    <rect key="frame" x="0.0" y="60" width="393" height="44"/>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <items>
+                        <navigationItem leftItemsSupplementBackButton="YES" id="ucq-Vx-vcV"/>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qG3-in-LuL">
+                    <rect key="frame" x="0.0" y="100" width="393" height="752"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qG3-in-LuL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4zQ-tt-L0I"/>
-                <constraint firstItem="qG3-in-LuL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bxb-m1-Bh6"/>
-                <constraint firstAttribute="bottom" secondItem="qG3-in-LuL" secondAttribute="bottom" id="P9L-L5-5A2"/>
-                <constraint firstAttribute="trailing" secondItem="qG3-in-LuL" secondAttribute="trailing" id="cdb-U7-pu3"/>
+                <constraint firstItem="0jb-U7-v7x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="DGc-6R-R0I"/>
+                <constraint firstAttribute="bottom" secondItem="qG3-in-LuL" secondAttribute="bottom" id="KlP-NR-DWU"/>
+                <constraint firstItem="0jb-U7-v7x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SGq-3H-in1"/>
+                <constraint firstItem="qG3-in-LuL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wh5-1F-6fM"/>
+                <constraint firstItem="qG3-in-LuL" firstAttribute="top" secondItem="0jb-U7-v7x" secondAttribute="top" constant="40" id="bW0-5z-Shy"/>
+                <constraint firstAttribute="trailing" secondItem="0jb-U7-v7x" secondAttribute="trailing" id="dRk-p7-X74"/>
+                <constraint firstAttribute="trailing" secondItem="qG3-in-LuL" secondAttribute="trailing" id="yNp-eR-1qO"/>
             </constraints>
             <point key="canvasLocation" x="19" y="-17"/>
         </view>

@@ -8,15 +8,15 @@ final class SavedRecipesViewModel {
     // MARK: - Properties
 
     @Published private (set) var savedRecipes: [SavedRecipe] = [
-        SavedRecipe(title: "pizza",
-                    recipeImage: UIImage.iconNoData,
+        SavedRecipe(title: "Traditional spare ribs baked ",
+                    recipeImage: UIImage.iconFood,
                     rating: 4.5,
-                    chefName: "sara",
+                    chefName: "By Chef John",
                     cookingTime: 15, toggleBookmark: {}),
-        SavedRecipe(title: "shawrma",
-                    recipeImage: UIImage.iconNoData,
+        SavedRecipe(title: "spice roasted chicken with flavored rice",
+                    recipeImage: UIImage.iconFood,
                     rating: 5.0,
-                    chefName: "doaa",
+                    chefName: "By Mark Kelvin",
                     cookingTime: 20, toggleBookmark: {})
     ]
 }

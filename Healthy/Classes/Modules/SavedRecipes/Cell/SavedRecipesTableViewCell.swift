@@ -36,10 +36,19 @@ final class SavedRecipesTableViewCell: UITableViewCell {
         configureLayout()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
+
     // MARK: Configure
 
     func update(with viewModel: SavedRecipe) {
         // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
+        if let image = viewModel.recipeImage {
+            recipeImageView.image = image
+        }
 
         if let title = viewModel.title {
             titleLabel.text = title
@@ -50,7 +59,7 @@ final class SavedRecipesTableViewCell: UITableViewCell {
         }
 
         if let cookingTime = viewModel.cookingTime {
-            timeLabel.text = "\(cookingTime)"
+            timeLabel.text = "\(cookingTime) min"
         }
         // TODO: Set rate count.
          toggleBookmark = viewModel.toggleBookmark
