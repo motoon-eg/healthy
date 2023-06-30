@@ -66,9 +66,11 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertEqual(sut.searchFilter, filter)
     }
 
-    func test_isEmptyPublisher_hasTrueAsInitialValue() {
+    func test_isEmptyPublisher_hasTrueAsInitialValue() async {
         // Given
         let stateSpy = PublisherSpy(sut.isEmptyPublisher)
+
+        try? await Task.sleep(for: .seconds(1))
 
         // Then
         XCTAssertEqual(stateSpy.value, true)
