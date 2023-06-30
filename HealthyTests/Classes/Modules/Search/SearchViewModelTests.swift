@@ -1,3 +1,4 @@
+import Foundation
 import XCTest
 import Combine
 @testable import Healthy
@@ -65,7 +66,7 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertEqual(sut.searchFilter, filter)
     }
 
-    func test_isEmptyPublisher_hasTruAsInitialValue() {
+    func test_isEmptyPublisher_hasTrueAsInitialValue() {
         // Given
         let stateSpy = PublisherSpy(sut.isEmptyPublisher)
 

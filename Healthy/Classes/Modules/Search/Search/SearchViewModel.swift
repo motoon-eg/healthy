@@ -48,7 +48,7 @@ extension SearchViewModel: SearchViewModelInput {
  // MARK: SearchViewModelOutput
 
 extension SearchViewModel: SearchViewModelOutput {
-    var recipesPublisher: AnyPublisher<[Recipe], Never> {
+    var recipesPublisher: any Publisher<[Recipe], Never> {
         $recipes.eraseToAnyPublisher()
     }
 

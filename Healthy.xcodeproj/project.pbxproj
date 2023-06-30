@@ -690,13 +690,13 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		6D9D97A32A4B01BA00BB3589 /* Utilities */ = {
+		6D89E0582A4F43E700AF05D5 /* Publishers */ = {
 			isa = PBXGroup;
 			children = (
 				6D9D97A42A4B020F00BB3589 /* PublisherSpy.swift */,
 				6D9D97A62A4B188400BB3589 /* PublisherMultibleValueSpy.swift */,
 			);
-			path = Utilities;
+			path = Publishers;
 			sourceTree = "<group>";
 		};
 		6DA228F82A431F8C0011E43E /* Onboarding */ = {
@@ -744,7 +744,6 @@
 				B2D402E22A3BB2E200FDB941 /* Extensions */,
 				B85D26A42A3902A9000A463D /* Utilities */,
 				6DFEC6202A2E97FF0090B2E2 /* Modules */,
-				6D9D97A32A4B01BA00BB3589 /* Utilities */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -906,6 +905,7 @@
 		B85D26A42A3902A9000A463D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6D89E0582A4F43E700AF05D5 /* Publishers */,
 				B85D26A52A3902BB000A463D /* Validators */,
 			);
 			path = Utilities;
