@@ -14,10 +14,10 @@ protocol SearchViewModelInput {
 /// Search ViewModel Output
 ///
 protocol SearchViewModelOutput {
-    var recipesPublisher: AnyPublisher<[Recipe], Never> { get }
-    var errorPublisher: AnyPublisher<Error, Never> { get }
-    var isEmptyPublisher: AnyPublisher<Bool, Never> { get }
-    var isLoadingPublisher: AnyPublisher<Bool, Never> { get }
-    var isLoadingMorePublisher: AnyPublisher<Bool, Never> { get }
-    var isLoadedPublisher: AnyPublisher<Bool, Never> { get }
+    var recipesPublisher: any Publisher<[Recipe], Never> { get }
+    var errorPublisher: any Publisher<Error, Never> { get }
+    var isEmptyPublisher: any Publisher<Bool, Never> { get }
+    var isLoadingPublisher: any Publisher<Bool, Never> { get }
+    var isLoadingMorePublisher: any Publisher<Bool, Never> { get }
+    var isLoadedPublisher: any Publisher<Bool, Never> { get }
 }

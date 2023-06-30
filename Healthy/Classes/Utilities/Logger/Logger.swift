@@ -11,7 +11,7 @@ final class Logger {
             NewRelicLogger()
         ]
     }()
-    
+
     static func logDebug(_ message: String,
                          file: StaticString = #fileID,
                          function: StaticString = #function,
@@ -24,7 +24,7 @@ final class Logger {
                        line: line)
         }
     }
-    
+
     static func logInfo(_ message: String,
                         file: StaticString = #fileID,
                         function: StaticString = #function,
@@ -37,7 +37,7 @@ final class Logger {
                        line: line)
         }
     }
-    
+
     static func logWarn(_ message: String,
                         file: StaticString = #fileID,
                         function: StaticString = #function,
@@ -50,7 +50,7 @@ final class Logger {
                        line: line)
         }
     }
-    
+
     static func logVerbose(_ message: String,
                            file: StaticString = #fileID,
                            function: StaticString = #function,
@@ -63,7 +63,7 @@ final class Logger {
                        line: line)
         }
     }
-    
+
     static func logError(_ message: String,
                          file: StaticString = #fileID,
                          function: StaticString = #function,

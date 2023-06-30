@@ -9,6 +9,7 @@ protocol SearchDataSource {
 
 final class SearchViewModel {
     private var subscriptions = Set<AnyCancellable>()
+    private var ongoingTask: Task<Void, Never>?
     @Published private(set) var searchKeyword = ""
     @Published private(set) var searchFilter = SearchFilter()
     @Published private(set) var recipes: [Recipe] = []
@@ -21,6 +22,7 @@ final class SearchViewModel {
 
         Publishers.CombineLatest($searchKeyword, $searchFilter)
               .debounce(for: .seconds(0.5), scheduler: DispatchQueue.global())
+              .removeDuplicates(by: {$0.0 == $1.0})
               .sink { [weak self] searchKeyword, searchFilter in
                 self?.updateSearch(
                   keyword: searchKeyword,
@@ -35,7 +37,7 @@ final class SearchViewModel {
 
 extension SearchViewModel: SearchViewModelInput {
     func updateSearchKeyword(_ keyword: String) {
-        searchKeyword = keyword
+        searchKeyword = keyword.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     func updateSearchFilter(_ filter: SearchFilter) {
@@ -50,50 +52,47 @@ extension SearchViewModel: SearchViewModelOutput {
         $recipes.eraseToAnyPublisher()
     }
 
-    var errorPublisher: AnyPublisher<Error, Never> {
+    var errorPublisher: any Publisher<Error, Never> {
         $state
             .compactMap {
                 guard case let .failure(error) = $0 else { return nil }
                 return error
             }
-            .eraseToAnyPublisher()
     }
 
-    private var statePublisher: AnyPublisher<SearchState, Never> {
-        $state.eraseToAnyPublisher()
+    private var statePublisher: any Publisher<SearchState, Never> {
+        $state
     }
 
-    var isEmptyPublisher: AnyPublisher<Bool, Never> {
-        $recipes
-            .map { $0.isEmpty }
-            .eraseToAnyPublisher()
+    var isEmptyPublisher: any Publisher<Bool, Never> {
+        Publishers.CombineLatest($recipes, $state)
+            .map { recipes, state in
+                recipes.isEmpty && state.isLoaded
+            }
     }
 
-    var isLoadingPublisher: AnyPublisher<Bool, Never> {
+    var isLoadingPublisher: any Publisher<Bool, Never> {
         $state
             .map {
                 guard case .loading = $0 else { return false }
                 return true
             }
-            .eraseToAnyPublisher()
     }
 
-    var isLoadingMorePublisher: AnyPublisher<Bool, Never> {
+    var isLoadingMorePublisher: any Publisher<Bool, Never> {
         $state
             .map {
                 guard case .loadingMore = $0 else { return false }
                 return true
             }
-            .eraseToAnyPublisher()
     }
 
-    var isLoadedPublisher: AnyPublisher<Bool, Never> {
+    var isLoadedPublisher: any Publisher<Bool, Never> {
         $state
             .map {
                 guard case .loaded = $0 else { return false}
                 return true
             }
-            .eraseToAnyPublisher()
     }
 }
 
@@ -101,10 +100,12 @@ extension SearchViewModel: SearchViewModelOutput {
 
 private extension SearchViewModel {
     func updateSearch(keyword: String, filter: SearchFilter) {
-        Task {
+        ongoingTask = Task {
             do {
                 state = .loading
-                recipes = try await searchDataSource.loadRecipes()
+                let recipes = try await searchDataSource.loadRecipes()
+                guard !Task.isCancelled else { return }
+                self.recipes = recipes
                 state = .loaded
             } catch {
                 state = .failure(error)
@@ -116,19 +117,15 @@ private extension SearchViewModel {
 // MARK: Nested Types
 
 private extension SearchViewModel {
-    enum SearchState: Equatable {
+    enum SearchState {
         case initial, loading, loadingMore, loaded
         case failure(Error)
 
-        static func == (lhs: SearchViewModel.SearchState, rhs: SearchViewModel.SearchState) -> Bool {
-            switch (lhs, rhs) {
-            case (.initial, .initial): return true
-            case (.loading, .loading): return true
-            case (.loadingMore, .loadingMore): return true
-            case (.loaded, .loaded): return true
-            case (.failure, .failure): return true
-            default: return false
+        var isLoaded: Bool {
+            if case .loaded = self {
+                return true
             }
+            return false
         }
     }
 }
