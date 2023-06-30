@@ -28,7 +28,7 @@ final class SearchViewModelTests: XCTestCase {
 
     // MARK: Tests
 
-    func test_updateSearchKeywordAndFilter_fetchNewRecipesAndUpdateState() async throws {
+    func test_updateSearchKeywordAndFilter_fetchNewRecipesAndUpdateState() async {
         // Given
         let recipesSpy = PublisherSpy(sut.recipesPublisher)
         dataSourceMock.loadRecipesCallBack = {
@@ -38,10 +38,30 @@ final class SearchViewModelTests: XCTestCase {
         // When
         sut.updateSearchKeyword("")
 
-        try await Task.sleep(for: .seconds(1))
+        try? await Task.sleep(for: .seconds(1))
 
         // Then
         XCTAssertEqual(recipesSpy.value.count, 2)
+    }
+
+    func test_udateSearch_shouldUpdateIsLoadingStatefromFalseToTrueTofalse() async {
+        // Given
+        let isLoadingStateSpy = PublisherMultibleValueSpy(sut.isLoadingPublisher)
+
+        try? await Task.sleep(for: .seconds(1))
+
+        XCTAssertEqual(isLoadingStateSpy.values, [false, true, false],
+                       "The state should execute in the following sequence: initial -> loading -> loaded ")
+    }
+
+    func test_udateSearch_shouldUpdateIsLoadedStatefromFalseToFalseToTrue() async {
+        // Given
+        let isLoadedStateSpy = PublisherMultibleValueSpy(sut.isLoadedPublisher)
+
+        try? await Task.sleep(for: .seconds(1))
+
+        XCTAssertEqual(isLoadedStateSpy.values, [false, false, true],
+                       "The state should execute in the following sequence: initial -> loading -> loaded ")
     }
 
     func test_updateSearchKeyword_shouldUpdateSearchKeyworkAndfilterValues() {
@@ -100,7 +120,7 @@ final class SearchViewModelTests: XCTestCase {
         XCTAssertEqual(stateSpy.value, false)
     }
 
-    func test_loadRecipes_shouldUpdateStateToFailureCaseWhenThrowError() async throws {
+    func test_loadRecipes_shouldUpdateStateToFailureCaseWhenThrowError() async {
         // Given
         let searchStateSpy = PublisherSpy(sut.errorPublisher)
         dataSourceMock.loadRecipesCallBack = {
@@ -110,7 +130,7 @@ final class SearchViewModelTests: XCTestCase {
         // When
         sut.updateSearchKeyword("")
 
-        try await Task.sleep(for: .seconds(1))
+        try? await Task.sleep(for: .seconds(1))
 
         // Then
         XCTAssertNotNil(searchStateSpy.value)
