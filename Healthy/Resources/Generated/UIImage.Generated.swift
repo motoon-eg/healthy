@@ -49,4 +49,16 @@ extension UIImage {
     static var iconCheckboxSelected: UIImage {
       UIImage(named: "icon_checkbox_selected")! 
     }
+
+    static var previewDishes1: UIImage {
+      UIImage(named: "preview-dishes-1")! 
+    }
+
+    static var previewDishes2: UIImage {
+      UIImage(named: "preview-dishes-2")! 
+    }
+
+    static var star: UIImage {
+      UIImage(named: "star")! 
+    }
 }
