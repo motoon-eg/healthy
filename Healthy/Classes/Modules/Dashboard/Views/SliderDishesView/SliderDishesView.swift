@@ -56,7 +56,7 @@ private extension SliderDishesView {
         layout.minimumInteritemSpacing = 15
         layout.minimumLineSpacing = 15
         layout.scrollDirection = .horizontal
-        
+
         collectionView.collectionViewLayout = layout
     }
 }

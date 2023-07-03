@@ -24,7 +24,7 @@ class SliderCollectionViewCell: UICollectionViewCell {
 
         private func configureView() {
             dishImageView.roundImage()
-            dishView.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 12)
+//            dishView.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 12)
             rateView.setRadius(radius: 10)
         }
 

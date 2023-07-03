@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderDishesView" customModule="Healthy" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="1fP-La-V90" id="Pi6-Df-hUS"/>
+                <outlet property="sliderView" destination="iN0-l3-epB" id="3gt-yY-S78"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
