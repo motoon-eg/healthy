@@ -153,4 +153,3 @@ private extension UICollectionViewLayout {
         return UICollectionViewCompositionalLayout(section: section)
     }
 }
-
