@@ -10,6 +10,10 @@ extension UIImage {
       UIImage(named: "background-splash")! 
     }
 
+    static var iconBookmark: UIImage {
+      UIImage(named: "icon-bookmark")! 
+    }
+
     static var iconFacebook: UIImage {
       UIImage(named: "icon-facebook")! 
     }
@@ -38,6 +42,10 @@ extension UIImage {
       UIImage(named: "icon-splash")! 
     }
 
+    static var iconTimer: UIImage {
+      UIImage(named: "icon-timer")! 
+    }
+
     static var iconUnion: UIImage {
       UIImage(named: "icon-union")! 
     }
@@ -60,5 +68,20 @@ extension UIImage {
 
     static var star: UIImage {
       UIImage(named: "star")! 
+    }
+    static var imageRecipePlaceholder1: UIImage {
+      UIImage(named: "image-recipe-placeholder 1")! 
+    }
+
+    static var imageRecipePlaceholder: UIImage {
+      UIImage(named: "image-recipe-placeholder")! 
+    }
+
+    static var imageUserRecipePlaceholder: UIImage {
+      UIImage(named: "image-user-recipe-placeholder")! 
+    }
+
+    static var patternFood: UIImage {
+      UIImage(named: "pattern-food")! 
     }
 }
