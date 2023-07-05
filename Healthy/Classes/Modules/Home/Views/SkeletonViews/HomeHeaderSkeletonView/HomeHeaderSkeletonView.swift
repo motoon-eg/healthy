@@ -1,10 +1,9 @@
 import UIKit
 
-class HomeHeaderSkeletonView: UIView {
+private class HomeHeaderSkeletonView: UIView {
 
     // MARK: IBOutlets
 
-    @IBOutlet private(set) weak var contentView: UIView!
     @IBOutlet private(set) weak var titleLabel: UILabel!
     @IBOutlet private(set) weak var subtitleLabel: UILabel!
     @IBOutlet private(set) weak var userImageView: UIImageView!
@@ -28,5 +27,4 @@ class HomeHeaderSkeletonView: UIView {
         subtitleLabel.startSkeletonView()
         userImageView.startSkeletonView()
     }
-
 }
