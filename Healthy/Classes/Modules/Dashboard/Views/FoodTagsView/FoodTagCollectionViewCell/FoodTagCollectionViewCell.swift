@@ -6,8 +6,6 @@ class FoodTagCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var foodCategoryName: UILabel!
 
-  //  weak var delegate: FoodTagCollectionDelegate?
-
     // MARK: - Lifecycle Methods
 
     override func awakeFromNib() {
