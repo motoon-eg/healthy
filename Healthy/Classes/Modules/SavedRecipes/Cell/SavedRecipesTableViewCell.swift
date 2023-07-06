@@ -1,18 +1,5 @@
 import UIKit
 
-// MARK: View Model
-
-extension SavedRecipesTableViewCell {
-    struct ViewModel {
-        var recipeImageURL: URL
-        var title: String
-        var chefName: String
-        var rate: Double
-        var time: String
-        var toggleBookmark: () -> Void
-    }
-}
-
 final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
