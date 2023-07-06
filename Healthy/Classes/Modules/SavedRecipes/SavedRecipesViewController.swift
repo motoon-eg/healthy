@@ -1,12 +1,22 @@
 import UIKit
+import Combine
 
 final class SavedRecipesViewController: UIViewController {
 
+    enum Section {
+        case main
+    }
+
     // MARK: Outlets
+
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var tableView: UITableView!
 
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
+    private (set) var dataSource: UITableViewDiffableDataSource<Section, SavedRecipe>!
+    private var subscriptions: Set<AnyCancellable> = []
 
     // MARK: Init
 
@@ -24,6 +34,11 @@ final class SavedRecipesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureNavigationBar()
+        configureTableView()
+        configureTableViewDataSource()
+        setupBindings()
     }
 }
 
@@ -33,7 +48,40 @@ extension SavedRecipesViewController {}
 
 // MARK: - Configurations
 
-extension SavedRecipesViewController {}
+extension SavedRecipesViewController {
+    func configureNavigationBar() {
+        navigationBar.topItem?.title = "Saved recipes"
+    }
+
+    func configureTableView() {
+        tableView.registerNib(cell: SavedRecipesTableViewCell.self)
+    }
+
+    func configureTableViewDataSource() {
+        dataSource = UITableViewDiffableDataSource
+        <Section, SavedRecipe>(tableView: tableView) { tableView, _, viewModel in
+            let cell = tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
+            as? SavedRecipesTableViewCell
+            cell?.update(with: viewModel)
+            return cell
+        }
+    }
+
+    func updateTableData(viewModel: [SavedRecipe]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, SavedRecipe>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(viewModel)
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+
+    func setupBindings() {
+        viewModel.recipesPublisher
+            .sink { [weak self] viewModels in
+                self?.updateTableData(viewModel: viewModels)
+            }
+            .store(in: &subscriptions)
+    }
+}
 
 // MARK: - Private Handlers
 

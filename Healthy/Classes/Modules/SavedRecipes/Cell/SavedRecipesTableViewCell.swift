@@ -1,18 +1,5 @@
 import UIKit
 
-// MARK: View Model
-
-extension SavedRecipesTableViewCell {
-    struct ViewModel {
-        var recipeImageURL: URL
-        var title: String
-        var chefName: String
-        var rate: Double
-        var time: String
-        var toggleBookmark: () -> Void
-    }
-}
-
 final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
@@ -36,13 +23,25 @@ final class SavedRecipesTableViewCell: UITableViewCell {
         configureLayout()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
+
     // MARK: Configure
 
-    func update(with viewModel: ViewModel) {
+    func update(with viewModel: SavedRecipe) {
         // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
+        recipeImageView.image = viewModel.recipeImage
         titleLabel.text = viewModel.title
         chefNameLabel.text = viewModel.chefName
-        timeLabel.text = viewModel.time
+
+        if let cookingTime = viewModel.cookingTime {
+            timeLabel.text = "\(cookingTime) min"
+        } else {
+            timeLabel.text = nil
+        }
         // TODO: Set rate count.
         toggleBookmark = viewModel.toggleBookmark
     }
