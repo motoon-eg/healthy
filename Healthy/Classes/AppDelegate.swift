@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureGoogleSignIn()
         configureFacebookSignin(application: application, launchOptions: launchOptions)
         configureNewRelic()
+        UINavigationBar.applyDefaultAppearance()
         return true
     }
 

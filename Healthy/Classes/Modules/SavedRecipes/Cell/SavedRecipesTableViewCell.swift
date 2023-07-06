@@ -46,23 +46,17 @@ final class SavedRecipesTableViewCell: UITableViewCell {
 
     func update(with viewModel: SavedRecipe) {
         // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
-        if let image = viewModel.recipeImage {
-            recipeImageView.image = image
-        }
-
-        if let title = viewModel.title {
-            titleLabel.text = title
-        }
-
-        if let chefName = viewModel.chefName {
-            chefNameLabel.text = chefName
-        }
+        recipeImageView.image = viewModel.recipeImage
+        titleLabel.text = viewModel.title
+        chefNameLabel.text = viewModel.chefName
 
         if let cookingTime = viewModel.cookingTime {
             timeLabel.text = "\(cookingTime) min"
+        } else {
+            timeLabel.text = nil
         }
         // TODO: Set rate count.
-         toggleBookmark = viewModel.toggleBookmark
+        toggleBookmark = viewModel.toggleBookmark
     }
 }
 

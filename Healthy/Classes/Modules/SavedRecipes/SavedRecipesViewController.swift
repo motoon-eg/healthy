@@ -51,18 +51,16 @@ extension SavedRecipesViewController {}
 extension SavedRecipesViewController {
     func configureNavigationBar() {
         navigationBar.topItem?.title = "Saved recipes"
-        if let font = UIFont(name: "Poppins-Bold", size: 18) {
-            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: font]
-        }
     }
 
     func configureTableView() {
-       tableView.registerNib(cell: SavedRecipesTableViewCell.self)
+        tableView.registerNib(cell: SavedRecipesTableViewCell.self)
     }
 
     func configureTableViewDataSource() {
-    dataSource = UITableViewDiffableDataSource<Section, SavedRecipe>(tableView: tableView) { tableView, _, viewModel in
-        let cell = tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
+        dataSource = UITableViewDiffableDataSource
+        <Section, SavedRecipe>(tableView: tableView) { tableView, _, viewModel in
+            let cell = tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
             as? SavedRecipesTableViewCell
             cell?.update(with: viewModel)
             return cell

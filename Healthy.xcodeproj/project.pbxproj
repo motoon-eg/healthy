@@ -55,6 +55,7 @@
 		025A47812A337320008BF85A /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47782A337320008BF85A /* Authentication.swift */; };
 		025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A477A2A337320008BF85A /* GoogleLoginAuthenticator.swift */; };
 		025A47852A337337008BF85A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47842A337337008BF85A /* Constants.swift */; };
+		0266E7E62A56372500D5ABC4 /* UINavigationBar+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E7E52A56372500D5ABC4 /* UINavigationBar+Appearance.swift */; };
 		0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA1E2A0E6A660052818C /* AppDelegate.swift */; };
 		027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA202A0E6A660052818C /* SceneDelegate.swift */; };
 		027DDA282A0E6A680052818C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027DDA272A0E6A680052818C /* Assets.xcassets */; };
@@ -195,6 +196,7 @@
 		025A47782A337320008BF85A /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		025A477A2A337320008BF85A /* GoogleLoginAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLoginAuthenticator.swift; sourceTree = "<group>"; };
 		025A47842A337337008BF85A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0266E7E52A56372500D5ABC4 /* UINavigationBar+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Appearance.swift"; sourceTree = "<group>"; };
 		027DDA1B2A0E6A660052818C /* Healthy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Healthy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA1E2A0E6A660052818C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027DDA202A0E6A660052818C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -567,6 +569,7 @@
 				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
 				C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */,
 				C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */,
+				0266E7E52A56372500D5ABC4 /* UINavigationBar+Appearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1205,6 +1208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0266E7E62A56372500D5ABC4 /* UINavigationBar+Appearance.swift in Sources */,
 				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
 				209F93D12A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift in Sources */,
