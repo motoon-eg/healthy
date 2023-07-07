@@ -62,6 +62,7 @@
 		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		02892EC22A5835F8001A3DB4 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02892EC12A5835F8001A3DB4 /* NetworkDispatcher.swift */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
@@ -206,6 +207,7 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02892EC12A5835F8001A3DB4 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02EEC3FA2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
 		02EEC3FC2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
@@ -622,6 +624,7 @@
 		027DDA562A0E76E40052818C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				02892EC12A5835F8001A3DB4 /* NetworkDispatcher.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1235,6 +1238,7 @@
 				C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */,
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
 				025A477D2A337320008BF85A /* PasswordValidator.swift in Sources */,
+				02892EC22A5835F8001A3DB4 /* NetworkDispatcher.swift in Sources */,
 				025511CF2A3D0A8B00295B91 /* SplashViewController.swift in Sources */,
 				792D42E92A423ACF00EC2FE5 /* SavedRecipesTableViewCell.swift in Sources */,
 				0255119E2A3C5D7300295B91 /* SearchViewController.swift in Sources */,

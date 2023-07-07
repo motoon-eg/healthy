@@ -12,6 +12,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureFacebookSignin(application: application, launchOptions: launchOptions)
         configureNewRelic()
         UINavigationBar.applyDefaultAppearance()
+
+        Task {
+            do {
+                let dispatcher = DefaultNetworkDispatcher()
+                let request = LoginRequest()
+                let response = try await dispatcher.dispatch(request)
+                print(response)
+            } catch {
+                assertionFailure(error.localizedDescription)
+            }
+        }
+
         return true
     }
 
