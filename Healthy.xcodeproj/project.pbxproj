@@ -489,6 +489,7 @@
 		027DDA122A0E6A660052818C = {
 			isa = PBXGroup;
 			children = (
+				02892EC52A585558001A3DB4 /* Networking */,
 				027DDA1D2A0E6A660052818C /* Healthy */,
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
