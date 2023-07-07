@@ -19,6 +19,8 @@ extension UILabel {
         case cellHeaderTitle
         case cellHeaderSubTitle
         case cellTime
+        case rateLabel
+        case durationLabel
 
         var labelTextColor: UIColor {
             switch self {
@@ -29,7 +31,7 @@ extension UILabel {
                     .cellHeaderSubTitle,
                     .cellTime:
                 return .white
-            case .signinTitle, .signupTitle, .dishesNameLable:
+            case .signinTitle, .signupTitle, .dishesNameLable, .rateLabel, .durationLabel:
                 return .black
             case .signinSubtitle,
                     .signupSubtitle,
@@ -74,6 +76,11 @@ extension UILabel {
                 return LabelFont.cellHeaderSubTitleLabel
             case .cellTime:
                 return LabelFont.cellTimeLabel
+            case .rateLabel:
+                return LabelFont.rateLabel
+
+            case .durationLabel:
+                return LabelFont.durationLabel
             }
         }
     }
@@ -111,5 +118,7 @@ private enum LabelFont {
     static let dishesNameLable = UIFont.smallBold
     static let cellHeaderTitleLabel = UIFont.smallBold
     static let cellHeaderSubTitleLabel = UIFont.smallLabelRegular
+    static let rateLabel = UIFont.smallerRegular
     static let cellTimeLabel = UIFont.smallerRegular
+    static let durationLabel = UIFont.smallerBold
 }

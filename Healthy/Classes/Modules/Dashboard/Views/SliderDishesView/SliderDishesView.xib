@@ -23,7 +23,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" priority="750" constant="232" id="1sP-i2-jaO"/>
+                        <constraint firstAttribute="height" priority="750" constant="240" id="1sP-i2-jaO"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rLA-Ey-flh">
                         <size key="itemSize" width="128" height="128"/>
@@ -43,7 +43,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="171.75572519083968" y="-671.47887323943667"/>
+            <point key="canvasLocation" x="171.75572519083968" y="-671.83098591549299"/>
         </view>
     </objects>
     <resources>

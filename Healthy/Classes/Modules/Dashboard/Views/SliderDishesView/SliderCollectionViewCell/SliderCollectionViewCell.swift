@@ -10,39 +10,47 @@ class SliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet private (set) weak var dishView: UIView!
     @IBOutlet private (set) weak var rateView: UIView!
     @IBOutlet private (set) weak var rateLable: UILabel!
+    @IBOutlet private (set) weak var unionView: UIView!
+    @IBOutlet private (set) weak var timeLable: UILabel!
+
     // MARK: - Propperties
 
     // MARK: - Lifecycle
 
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            // Initialization code
-            configureView()
-        }
-
-        // MARK: - Configurations
-
-        private func configureView() {
-            dishImageView.roundImage()
-            dishView.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 12)
-            rateView.setRadius(radius: 10)
-        }
-
-        // MARK: Configure with ViewModel
-
-        func configure(with viewModel: ViewModel) {
-            dishName.text = viewModel.dishName
-            // ...
-        }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        configureView()
     }
 
-    // MARK: ViewModel
+    // MARK: - Configurations
 
-    extension SliderCollectionViewCell {
-        struct ViewModel {
-            let imageUrl: UIImage?
-            let dishName: String
-            let time: String
-            let duration: Int
-        }
+    private func configureView() {
+        dishImageView.roundView()
+        unionView.roundView()
+        dishView.setRadius(radius: 12)
+        rateView.setRadius(radius: 10)
+        rateLable.applyStyle(.rateLabel)
+        timeDuration.applyStyle(.durationLabel)
     }
+
+    // MARK: Configure with ViewModel
+
+    func configure(with viewModel: ViewModel) {
+        dishName.text = viewModel.dishName
+        timeDuration.text = viewModel.duration
+        // ...
+    }
+}
+
+// MARK: ViewModel
+
+extension SliderCollectionViewCell {
+    struct ViewModel {
+        let imageUrl: UIImage?
+        let dishName: String
+        let time: String
+        let duration: String
+        let rating: Double
+    }
+}

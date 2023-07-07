@@ -31,13 +31,13 @@ extension UIView {
         addSubview(contentView)
     }
 
-    func roundImage() {
+    func roundView() {
         self.layer.cornerRadius = self.frame.size.width / 2
         self.clipsToBounds = true
     }
 
     func setRadius(radius: Int) {
-        self.layer.cornerRadius = CGFloat(radius)
+        self.cornerRadius = CGFloat(radius)
     }
 
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
@@ -48,7 +48,7 @@ extension UIView {
         mask.path = path.cgPath
         layer.mask = mask
     }
-    
+
     // MARK: - Shadow
 
     /// Applies a default card-style shadow to a view with a specified corner radius.
