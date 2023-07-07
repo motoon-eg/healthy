@@ -160,10 +160,10 @@
                 <outlet property="dishImageView" destination="x52-1X-aTN" id="A9J-aA-d2F"/>
                 <outlet property="dishName" destination="4so-W6-wvm" id="rJy-CF-kfT"/>
                 <outlet property="dishView" destination="Ta3-59-bGq" id="SHd-EK-7XD"/>
-                <outlet property="rateLable" destination="XTF-2P-psf" id="mb7-uD-EC5"/>
+                <outlet property="rateLabel" destination="XTF-2P-psf" id="ZE2-Qm-uEE"/>
                 <outlet property="rateView" destination="tcQ-bI-vZR" id="7ps-KP-mQW"/>
                 <outlet property="timeDuration" destination="DVZ-6b-yh8" id="LWK-vs-WLv"/>
-                <outlet property="timeLable" destination="Odk-hS-0mY" id="2TM-g0-4WX"/>
+                <outlet property="timeLabel" destination="Odk-hS-0mY" id="hga-7c-qVS"/>
                 <outlet property="unionView" destination="qdB-tG-UcZ" id="e2Q-3P-pH3"/>
             </connections>
             <point key="canvasLocation" x="569.46564885496184" y="62.676056338028175"/>
