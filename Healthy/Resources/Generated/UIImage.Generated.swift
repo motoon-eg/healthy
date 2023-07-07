@@ -18,6 +18,10 @@ extension UIImage {
       UIImage(named: "icon-facebook")! 
     }
 
+    static var iconFood: UIImage {
+      UIImage(named: "icon-food")! 
+    }
+
     static var iconGoogle: UIImage {
       UIImage(named: "icon-google")! 
     }
