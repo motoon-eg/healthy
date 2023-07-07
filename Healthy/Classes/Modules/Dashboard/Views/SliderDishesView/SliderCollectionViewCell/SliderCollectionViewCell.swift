@@ -9,9 +9,9 @@ class SliderCollectionViewCell: UICollectionViewCell {
     @IBOutlet private (set) weak var timeDuration: UILabel!
     @IBOutlet private (set) weak var dishView: UIView!
     @IBOutlet private (set) weak var rateView: UIView!
-    @IBOutlet private (set) weak var rateLable: UILabel!
+    @IBOutlet private (set) weak var rateLabel: UILabel!
     @IBOutlet private (set) weak var unionView: UIView!
-    @IBOutlet private (set) weak var timeLable: UILabel!
+    @IBOutlet private (set) weak var timeLabel: UILabel!
 
     // MARK: - Propperties
 
