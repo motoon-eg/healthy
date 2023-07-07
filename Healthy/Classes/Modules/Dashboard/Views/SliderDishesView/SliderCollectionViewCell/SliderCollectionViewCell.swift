@@ -30,7 +30,7 @@ class SliderCollectionViewCell: UICollectionViewCell {
         unionView.roundView()
         dishView.setRadius(radius: 12)
         rateView.setRadius(radius: 10)
-        rateLable.applyStyle(.rateLabel)
+        rateLabel.applyStyle(.rateLabel)
         timeDuration.applyStyle(.durationLabel)
     }
 
