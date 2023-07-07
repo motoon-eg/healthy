@@ -26,7 +26,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myy-Gg-R6D">
                         <rect key="frame" x="0.0" y="0.0" width="278" height="336"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-59-bGq">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-59-bGq">
                                 <rect key="frame" x="0.0" y="55" width="278" height="281"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="O03-Mv-FJD">
@@ -34,6 +34,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classic Greek Salad" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4so-W6-wvm">
                                                 <rect key="frame" x="12" y="8.0000000000000018" width="254" height="19.666666666666671"/>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                 <color key="textColor" red="0.28235294117647058" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -84,20 +85,32 @@
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="6jb-jf-QqN"/>
-                                <color key="backgroundColor" red="0.85098046059999999" green="0.85098046059999999" blue="0.85098046059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.85098046059999999" green="0.85098046059999999" blue="0.85098046059999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="O03-Mv-FJD" firstAttribute="leading" secondItem="6jb-jf-QqN" secondAttribute="leading" id="0LZ-a8-muA"/>
                                     <constraint firstItem="6jb-jf-QqN" firstAttribute="trailing" secondItem="O03-Mv-FJD" secondAttribute="trailing" id="Cmj-id-lax"/>
                                     <constraint firstItem="6jb-jf-QqN" firstAttribute="bottom" secondItem="O03-Mv-FJD" secondAttribute="bottom" id="WuH-Xw-SUr"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preview-dishes-1" translatesAutoresizingMaskIntoConstraints="NO" id="x52-1X-aTN">
+                                <rect key="frame" x="84.666666666666686" y="0.0" width="109" height="110"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cell"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="9h6-c0-ncg"/>
+                                    <constraint firstAttribute="height" constant="110" id="oOH-wx-O7S"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcQ-bI-vZR">
                                 <rect key="frame" x="237.33333333333334" y="30" width="40.666666666666657" height="24"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cnf-56-ySb">
                                         <rect key="frame" x="4" y="4" width="32.666666666666664" height="16"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wix-Jg-fYn">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="wix-Jg-fYn">
                                                 <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wix-Jg-fYn" secondAttribute="height" multiplier="1:1" id="H80-BE-L7h"/>
@@ -121,18 +134,6 @@
                                     <constraint firstItem="Cnf-56-ySb" firstAttribute="top" secondItem="tcQ-bI-vZR" secondAttribute="top" constant="4" id="e1U-Vf-oxV"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preview-dishes-1" translatesAutoresizingMaskIntoConstraints="NO" id="x52-1X-aTN">
-                                <rect key="frame" x="84.666666666666686" y="0.0" width="109" height="110"/>
-                                <accessibility key="accessibilityConfiguration" identifier="cell"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="109" id="9h6-c0-ncg"/>
-                                    <constraint firstAttribute="height" constant="110" id="oOH-wx-O7S"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHiddenWhenSkeletonIsActive" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -172,6 +173,7 @@
     <resources>
         <image name="icon-bookmark" width="12" height="14"/>
         <image name="preview-dishes-1" width="109" height="110"/>
+        <image name="star" width="10" height="11"/>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

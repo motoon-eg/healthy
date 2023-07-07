@@ -44,8 +44,9 @@ extension DashboardViewController {}
 
 extension DashboardViewController {
     func configureView() {
-        stackView.addArrangedSubview(headerView)
         stackView.addArrangedSubview(sliderDishesView)
+        stackView.addArrangedSubview(headerView)
+
     }
 }
 
