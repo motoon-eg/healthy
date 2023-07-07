@@ -15,9 +15,12 @@ extension UILabel {
         case textFieldTitleLabel
         case titleLabelStyle
         case messageLabel
+        case dishesNameLable
         case cellHeaderTitle
         case cellHeaderSubTitle
         case cellTime
+        case rateLabel
+        case durationLabel
 
         var labelTextColor: UIColor {
             switch self {
@@ -28,8 +31,7 @@ extension UILabel {
                     .cellHeaderSubTitle,
                     .cellTime:
                 return .white
-            case .signinTitle,
-                    .signupTitle:
+            case .signinTitle, .signupTitle, .dishesNameLable, .rateLabel, .durationLabel:
                 return .black
             case .signinSubtitle,
                     .signupSubtitle,
@@ -65,12 +67,20 @@ extension UILabel {
                 return LabelFont.titleLabelStyle
             case .messageLabel:
                 return LabelFont.messageLabel
+            case .dishesNameLable:
+                return LabelFont.dishesNameLable
+
             case .cellHeaderTitle:
                 return LabelFont.cellHeaderTitleLabel
             case .cellHeaderSubTitle:
                 return LabelFont.cellHeaderSubTitleLabel
             case .cellTime:
                 return LabelFont.cellTimeLabel
+            case .rateLabel:
+                return LabelFont.rateLabel
+
+            case .durationLabel:
+                return LabelFont.durationLabel
             }
         }
     }
@@ -105,7 +115,10 @@ private enum LabelFont {
     static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
     static let titleLabelStyle = UIFont.systemFont(ofSize: 40, weight: .semibold)
     static let messageLabel = UIFont.systemFont(ofSize: 20, weight: .semibold)
+    static let dishesNameLable = UIFont.smallBold
     static let cellHeaderTitleLabel = UIFont.smallBold
     static let cellHeaderSubTitleLabel = UIFont.smallLabelRegular
+    static let rateLabel = UIFont.smallerRegular
     static let cellTimeLabel = UIFont.smallerRegular
+    static let durationLabel = UIFont.smallerBold
 }

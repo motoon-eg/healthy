@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ybj-Bt-kbT">
-                    <rect key="frame" x="20" y="223.33333333333334" width="388" height="492.33333333333314"/>
+                    <rect key="frame" x="20" y="223.33333333333334" width="388" height="492.33333333333326"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-no-data" translatesAutoresizingMaskIntoConstraints="NO" id="mgo-Fz-duC">
                             <rect key="frame" x="0.0" y="0.0" width="388" height="388"/>
@@ -25,8 +25,8 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Archived Projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm7-bI-ZH3">
-                            <rect key="frame" x="114.33333333333336" y="428" width="159.66666666666663" height="15.666666666666686"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="114" y="428" width="160" height="15.666666666666686"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

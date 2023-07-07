@@ -77,4 +77,16 @@ extension UIImage {
     static var patternFood: UIImage {
       UIImage(named: "pattern-food")! 
     }
+
+    static var previewDishes1: UIImage {
+      UIImage(named: "preview-dishes-1")! 
+    }
+
+    static var previewDishes2: UIImage {
+      UIImage(named: "preview-dishes-2")! 
+    }
+
+    static var star: UIImage {
+      UIImage(named: "star")! 
+    }
 }
