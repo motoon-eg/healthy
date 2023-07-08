@@ -1,7 +1,7 @@
 import Foundation
 
 /// A protocol representing a network request.
-public protocol TargetType {
+public protocol TargetType: URLRequestConvertible {
     /// The base URL of the request.
     var baseUrl: URL { get }
 
