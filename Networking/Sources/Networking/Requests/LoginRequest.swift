@@ -25,9 +25,9 @@ public struct LoginRequest: RequestType {
         self.password = password
     }
 
-    public let baseUrl: URL = Constants.mockyBaseUrl
-    public let path: String = "ba2feb33-cc78-4f94-908e-a85fb1a1d262"
-    public let method: String = "GET"
+    public var baseUrl: URL { Constants.mockyBaseUrl }
+    public var path: String { "ba2feb33-cc78-4f94-908e-a85fb1a1d262" }
+    public var method: String = "GET"
     public var parameters: [String: String] {
         [
             "email": email,
