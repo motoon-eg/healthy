@@ -2,12 +2,12 @@ import Foundation
 
 /// The default implementation of the NetworkDispatcher protocol.
 public final class DefaultNetworkDispatcher: NetworkDispatcher {
-    private let session: URLSession
+    private let session: URLSessionProtocol
 
     /// Initializes the DefaultNetworkDispatcher with an optional URLSession instance.
     /// - Parameter session: The URLSession instance to use for network requests. If not provided,
     /// a shared URLSession will be used.
-    public init(session: URLSession = .shared) {
+    public init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
 
