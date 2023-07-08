@@ -62,6 +62,7 @@
 		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		02892EC82A58575C001A3DB4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 02892EC72A58575C001A3DB4 /* Networking */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
@@ -216,6 +217,7 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02892EC52A585558001A3DB4 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02EEC3FA2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
 		02EEC3FC2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			files = (
 				6DB1366C2A36357000448722 /* SkeletonView in Frameworks */,
 				0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */,
+				02892EC82A58575C001A3DB4 /* Networking in Frameworks */,
 				6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */,
 				025511B72A3C623000295B91 /* NewRelic in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
@@ -494,6 +497,7 @@
 				027DDA342A0E6A680052818C /* HealthyTests */,
 				027DDA3E2A0E6A680052818C /* HealthyUITests */,
 				027DDA1C2A0E6A660052818C /* Products */,
+				02892EC62A58575C001A3DB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -627,16 +631,8 @@
 			isa = PBXGroup;
 			children = (
 				027DDA572A0E76E90052818C /* Storage */,
-				027DDA562A0E76E40052818C /* Network */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		027DDA562A0E76E40052818C /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		027DDA572A0E76E90052818C /* Storage */ = {
@@ -644,6 +640,13 @@
 			children = (
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		02892EC62A58575C001A3DB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		02EEC3F92A4C22B70007DA0C /* Mocks */ = {
@@ -1036,6 +1039,7 @@
 				025511B62A3C623000295B91 /* NewRelic */,
 				0296F7922A4342B500DBC86A /* FacebookCore */,
 				0296F7942A4342B500DBC86A /* FacebookLogin */,
+				02892EC72A58575C001A3DB4 /* Networking */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -1719,6 +1723,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
 			productName = NewRelic;
+		};
+		02892EC72A58575C001A3DB4 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
 		};
 		0296F7922A4342B500DBC86A /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
