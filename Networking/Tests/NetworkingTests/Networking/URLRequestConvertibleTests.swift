@@ -74,3 +74,4 @@ final class URLRequestConvertibleTests: XCTestCase {
         XCTAssertEqual(urlRequest?.httpBody, expectedBodyData)
     }
 }
+// swiftlint:enable force_unwrapping

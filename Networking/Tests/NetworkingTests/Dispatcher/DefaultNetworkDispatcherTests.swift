@@ -102,3 +102,4 @@ final class DefaultNetworkDispatcherTests: XCTestCase {
         }
     }
 }
+// swiftlint:enable force_unwrapping
