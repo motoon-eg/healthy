@@ -13,7 +13,7 @@ public protocol TargetType {
 
     /// The query parameters of the request.
     var queryParameters: [String: String] { get }
-    
+
     /// The body parameters of the request.
     var bodyParameters: [String: Any] { get }
 
@@ -24,10 +24,10 @@ public protocol TargetType {
 extension TargetType {
     /// Default implementation of headers.
     public var headers: [String: String] { [:] }
-    
+
     /// Default implementation of query parameters.
     public var queryParameters: [String: String] { [:] }
-    
+
     /// Default implementation of body parameters.
     public var bodyParameters: [String: Any] { [:] }
 }

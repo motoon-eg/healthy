@@ -28,7 +28,7 @@ public struct LoginRequest: RequestType {
     public var baseUrl: URL { Constants.mockyBaseUrl }
     public var path: String { "ba2feb33-cc78-4f94-908e-a85fb1a1d262" }
     public var method: String = "GET"
-    public var parameters: [String: String] {
+    public var queryParameters: [String: String] {
         [
             "email": email,
             "password": password
