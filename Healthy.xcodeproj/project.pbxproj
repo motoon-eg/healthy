@@ -63,6 +63,7 @@
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
 		02892EC82A58575C001A3DB4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 02892EC72A58575C001A3DB4 /* Networking */; };
+		02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02892EC92A599CBC001A3DB4 /* Container+Networking.swift */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
@@ -210,6 +211,7 @@
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02892EC52A585558001A3DB4 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
+		02892EC92A599CBC001A3DB4 /* Container+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Networking.swift"; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		02EEC3FA2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
 		02EEC3FC2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
@@ -623,6 +625,7 @@
 			isa = PBXGroup;
 			children = (
 				027DDA572A0E76E90052818C /* Storage */,
+				02892EC92A599CBC001A3DB4 /* Container+Networking.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1272,6 +1275,7 @@
 				B241608B2A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift in Sources */,
 				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
+				02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
 				0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */,
 				025511B12A3C5F8900295B91 /* FilterSearchViewModelType.swift in Sources */,

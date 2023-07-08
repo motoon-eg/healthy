@@ -1,8 +1,10 @@
-//
-//  Container+Networking.swift
-//  Healthy
-//
-//  Created by Ahmed M. Hassan on 08/07/2023.
-//
+import Factory
+import Networking
 
-import Foundation
+extension Container {
+    var networking: Factory<NetworkDispatcher> {
+        Factory(self) {
+            DefaultNetworkDispatcher()
+        }
+    }
+}
