@@ -24,7 +24,8 @@ extension SavedRecipesTableViewCell {
         /// The cooking Time of The recipe
         let cookingTime: Int?
 
-        var toggleBookmark: () -> Void
+        /// On bookmark action
+        let toggleBookmark: () -> Void
 
         func hash(into hasher: inout Hasher) {
             hasher.combine(id)
