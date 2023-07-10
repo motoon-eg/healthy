@@ -25,3 +25,15 @@ enum Constants {
         return url
     }()
 }
+
+// MARK: Categories List URL
+
+extension Constants {
+    static let CategoriesBaseURL: URL = {
+        guard let url = URL(string: "www.themealdb.com/api/json/v1/1/") else {
+            preconditionFailure("Invalid URL")
+        }
+
+        return url
+    }()
+}
