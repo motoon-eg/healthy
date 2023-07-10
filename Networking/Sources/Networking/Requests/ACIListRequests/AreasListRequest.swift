@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - AreaListRequest
+// MARK: - AreaListResponse
 public struct AreaListResponse: Codable {
     let meals: [AreaMeal]
 }
@@ -14,13 +14,13 @@ struct AreaMeal: Codable {
     }
 }
 
-// MARK: - CategoriesListRequest
+// MARK: - AreaListRequest
 public struct AreaListRequest: RequestType {
     public typealias ResponseType = AreaListResponse
 
     public init() {}
 
-    public var baseUrl: URL { Constants.CategoriesBaseURL }
+    public var baseUrl: URL { Constants.aciBaseURL }
     public var path: String { "list.php" }
     public var method: String { "Get" }
     public var queryParameters: [String: String] {

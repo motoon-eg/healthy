@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - CategoriesListRequest
+// MARK: - CategoriesListResponse
 public struct CategoriesListResponse: Codable {
     let meals: [CategoryMeal]
 }
@@ -20,7 +20,7 @@ public struct CategoriesListRequest: RequestType {
 
     public init() {}
 
-    public var baseUrl: URL { Constants.CategoriesBaseURL }
+    public var baseUrl: URL { Constants.aciBaseURL }
     public var path: String { "list.php" }
     public var method: String { "Get" }
     public var queryParameters: [String: String] {
