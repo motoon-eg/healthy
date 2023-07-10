@@ -1,7 +1,7 @@
 import Foundation
 
-// MARK: - CategoriesRequest
-public struct CategoriesResponse: Codable {
+// MARK: - CategoriesListRequest
+public struct CategoriesListResponse: Codable {
     let meals: [Meal]
 }
 
@@ -14,20 +14,20 @@ struct Meal: Codable {
     }
 }
 
-// MARK: - CategoriesRequest
-public struct CategoriesRequest: RequestType {
-    public typealias ResponseType = CategoriesResponse
+// MARK: - CategoriesListRequest
+public struct CategoriesListRequest: RequestType {
+    public typealias ResponseType = CategoriesListResponse
 
     public init() {}
 
     public var baseUrl: URL { Constants.CategoriesBaseURL }
     public var path: String { "list.php" }
-    public var method: String { "GET" }
+    public var method: String { "Get" }
     public var queryParameters: [String: String] {
         ["c": "list"]
     }
 
-    public let responseDecoder: (Data) throws -> CategoriesResponse = { data in
+    public let responseDecoder: (Data) throws -> CategoriesListResponse = { data in
         try JSONDecoder().decode(ResponseType.self, from: data)
     }
 }
