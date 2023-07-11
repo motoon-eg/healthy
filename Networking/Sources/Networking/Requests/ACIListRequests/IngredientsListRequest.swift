@@ -28,7 +28,7 @@ public struct IngrediantsListRequest: RequestType {
 
     public var baseUrl: URL { Constants.aciBaseURL }
     public var path: String { "list.php" }
-    public var method: String { "Get" }
+    public var method: String { "GET" }
     public var queryParameters: [String: String] {
         ["i": "list"]
     }
