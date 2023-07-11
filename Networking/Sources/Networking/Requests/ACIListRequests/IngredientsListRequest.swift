@@ -26,7 +26,7 @@ public struct IngrediantsListRequest: RequestType {
 
     public init() {}
 
-    public var baseUrl: URL { Constants.aciBaseURL }
+    public var baseUrl: URL { Constants.theMealDB }
     public var path: String { "list.php" }
     public var method: String { "GET" }
     public var queryParameters: [String: String] {
