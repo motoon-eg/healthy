@@ -17,7 +17,7 @@ final class IngrediantsListRequestTests: XCTestCase {
 
     func testCategoriesListRequestProperties() {
         // Then
-        XCTAssertEqual(sut.baseUrl, Constants.aciBaseURL)
+        XCTAssertEqual(sut.baseUrl, Constants.theMealDB)
         XCTAssertEqual(sut.path, "list.php")
         XCTAssertEqual(sut.method, "GET")
         XCTAssertEqual(sut.queryParameters, ["i": "list"])
