@@ -107,6 +107,7 @@
 		792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
+		798B59B22A5D15E600E4DCFF /* MealCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B59B12A5D15E600E4DCFF /* MealCategories.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */; };
 		A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* UITableViewMock.swift */; };
@@ -129,13 +130,13 @@
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
+		C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */; };
+		C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */; };
+		C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE12112A412904001A7BE3 /* AnimatableView.swift */; };
 		C9057FE62A48AC78002E4459 /* SliderDishesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9057FE42A48AC78002E4459 /* SliderDishesView.xib */; };
 		C9057FE72A48AC78002E4459 /* SliderDishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9057FE52A48AC78002E4459 /* SliderDishesView.swift */; };
 		C9057FEB2A48AC8F002E4459 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */; };
 		C9057FEC2A48AC8F002E4459 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */; };
-		C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */; };
-		C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */; };
-		C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE12112A412904001A7BE3 /* AnimatableView.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -254,6 +255,7 @@
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
+		798B59B12A5D15E600E4DCFF /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCellTests.swift; sourceTree = "<group>"; };
 		A21C51FA2A43036A00850B15 /* UITableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewMock.swift; sourceTree = "<group>"; };
@@ -277,13 +279,13 @@
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
 		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
+		C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
+		C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatableView.swift"; sourceTree = "<group>"; };
+		C2FE12112A412904001A7BE3 /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		C9057FE42A48AC78002E4459 /* SliderDishesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderDishesView.xib; sourceTree = "<group>"; };
 		C9057FE52A48AC78002E4459 /* SliderDishesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDishesView.swift; sourceTree = "<group>"; };
 		C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
-		C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
-		C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatableView.swift"; sourceTree = "<group>"; };
-		C2FE12112A412904001A7BE3 /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 			children = (
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
+				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -977,6 +980,14 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		C2FE120E2A4128BA001A7BE3 /* AnimatableView */ = {
+			isa = PBXGroup;
+			children = (
+				C2FE12112A412904001A7BE3 /* AnimatableView.swift */,
+			);
+			path = AnimatableView;
+			sourceTree = "<group>";
+		};
 		C9057FE32A48AC68002E4459 /* SliderDishesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -994,14 +1005,6 @@
 				C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */,
 			);
 			path = SliderCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		C2FE120E2A4128BA001A7BE3 /* AnimatableView */ = {
-			isa = PBXGroup;
-			children = (
-				C2FE12112A412904001A7BE3 /* AnimatableView.swift */,
-			);
-			path = AnimatableView;
 			sourceTree = "<group>";
 		};
 		C96520C82A2B72B800FACCC0 /* Logger */ = {
@@ -1315,6 +1318,7 @@
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				27C7C7F72A4341A300FECE25 /* Logging.swift in Sources */,
 				0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */,
+				798B59B22A5D15E600E4DCFF /* MealCategories.swift in Sources */,
 				A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
