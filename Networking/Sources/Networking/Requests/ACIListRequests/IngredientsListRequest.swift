@@ -1,12 +1,12 @@
 import Foundation
 
 // MARK: - IngrediantsListResponse
-public struct IngrediantsListResponse: Codable {
+public struct IngrediantsListResponse: Decodable {
     let meals: [Meal]
 }
 
 // MARK: - Meal
-public struct Meal: Codable {
+public struct Meal: Decodable {
     let id: String
     let ingrediant: String
     let description: String?

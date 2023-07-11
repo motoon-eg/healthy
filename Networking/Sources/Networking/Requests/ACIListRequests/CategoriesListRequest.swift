@@ -1,12 +1,12 @@
 import Foundation
 
 // MARK: - CategoriesListResponse
-public struct CategoriesListResponse: Codable {
+public struct CategoriesListResponse: Decodable {
     let meals: [CategoryMeal]
 }
 
 // MARK: - Meal
-struct CategoryMeal: Codable {
+struct CategoryMeal: Decodable {
     let category: String
 
     enum CodingKeys: String, CodingKey {
