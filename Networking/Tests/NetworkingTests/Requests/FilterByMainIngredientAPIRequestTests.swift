@@ -4,12 +4,12 @@ import XCTest
 final class FilterByMainIngredientAPI: XCTestCase {
     // MARK: Properties
     private var sample: FilterByMainIngredientAPIRequest!
-    
+
     // MARK: Life cycle
     override func setUp() {
         sample = FilterByMainIngredientAPIRequest()
     }
-    
+
     // MARK: Tests
     func testFilterByIngredientRequestProperties() {
         // Then
@@ -19,7 +19,7 @@ final class FilterByMainIngredientAPI: XCTestCase {
         XCTAssertEqual(sample.queryParameters,
                        ["i": "chicken_breast"])
     }
-    
+
     func testFilterByIngredientRequestResponseDecoder() throws {
         // Given
         let filterByIngredientResponseAsString = #"""
@@ -31,11 +31,11 @@ final class FilterByMainIngredientAPI: XCTestCase {
                         "idMeal": "53016"
                     }
             """#
-        
+
         // When
         let filterByIngredientResponseData = try XCTUnwrap(filterByIngredientResponseAsString.data(using: .utf8))
         let filterByIngredientResponse = try? sample.responseDecoder(filterByIngredientResponseData)
-        
+
         // Then
         XCTAssertNotNil(filterByIngredientResponse)
         XCTAssertEqual(filterByIngredientResponse?.meals.count, 1)
