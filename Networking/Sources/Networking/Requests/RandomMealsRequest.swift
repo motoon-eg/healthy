@@ -2,27 +2,27 @@ import Foundation
 
 // MARK: - RandomMealsResponse
 public struct RandomMealsResponse: Codable {
-    let meals: [RandomMeal]
+    public let meals: [RandomMeal]
 }
 
 // MARK: - RandomMeal
 public struct RandomMeal: Codable {
-    let idMeal: String
-    let strMeal: String
-    let strCategory: String
-    let strArea: String
-    let strMealThumb: String
-    let strTags: String
-    let strYoutube: String
+    public let mealId: String
+    public let mealName: String
+    public let mealCategory: String
+    public let mealArea: String
+    public let mealThumb: String
+    public let mealTags: String
+    public let mealYoutube: String
 
-    enum CodingKeys: String, CodingKey {
-        case idMeal
-        case strMeal
-        case strCategory
-        case strArea
-        case strMealThumb
-        case strTags
-        case strYoutube
+    private enum CodingKeys: String, CodingKey {
+        case mealId = "idMeal"
+        case mealName = "strMeal"
+        case mealCategory = "strCategory"
+        case mealArea = "strArea"
+        case mealThumb = "strMealThumb"
+        case mealTags = "strTags"
+        case mealYoutube = "strYoutube"
     }
 }
 
@@ -35,5 +35,4 @@ public struct RandomMealsRequest: RequestType {
     public var baseUrl: URL { Constants.theMealDB }
     public var path: String { "random.php" }
     public var method: String { "GET" }
-
 }
