@@ -15,14 +15,14 @@ struct Meal: Codable {
 // MARK: - FilterByMainIngredientAPIRequest
 public struct FilterByMainIngredientAPIRequest: RequestType {
     public typealias ResponseType = FilterByMainIngredientAPIResponse
-    
+
     public init() {}
 
     public var baseUrl: URL { Constants.theMealDB }
     public var path: String { "filter.php" }
     public var method: String = "GET"
     public var queryParameters: [String: String] {
-        ["i":"chicken_breast,garlic,salt"]
+        ["i": "chicken_breast,garlic,salt"]
     }
 
     public let responseDecoder: (Data) throws -> FilterByMainIngredientAPIResponse = { data in
