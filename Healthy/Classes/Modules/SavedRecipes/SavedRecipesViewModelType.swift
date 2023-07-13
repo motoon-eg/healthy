@@ -6,11 +6,11 @@ typealias SavedRecipesViewModelType = SavedRecipesViewModelInput & SavedRecipesV
 /// SavedRecipes ViewModel Input
 ///
 protocol SavedRecipesViewModelInput {
-    func removeSavedRecipe(_ recipe: SavedRecipe)
+    func removeSavedRecipe(_ recipe: SavedRecipesTableViewCell.ViewModel)
 }
 
 /// SavedRecipes ViewModel Output
 ///
 protocol SavedRecipesViewModelOutput {
-    var recipesPublisher: any Publisher<[SavedRecipe], Never> { get }
+    var recipesPublisher: any Publisher<[SavedRecipesTableViewCell.ViewModel], Never> { get }
 }
