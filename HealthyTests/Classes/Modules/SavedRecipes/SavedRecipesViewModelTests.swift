@@ -20,20 +20,20 @@ final class SavedRecipesViewModelTests: XCTestCase {
     func testRecipesPublisher() {
         // Given
         let expectedRecipes = [
-            SavedRecipe(title: "Traditional spare ribs baked ",
-                        recipeImage: UIImage.iconFood,
-                        rating: 4.5,
-                        chefName: "By Chef John",
-                        cookingTime: 15, toggleBookmark: {}),
-            SavedRecipe(title: "spice roasted chicken with flavored rice",
-                        recipeImage: UIImage.iconFood,
-                        rating: 5.0,
-                        chefName: "By Mark Kelvin",
-                        cookingTime: 20, toggleBookmark: {})
+            SavedRecipesTableViewCell.ViewModel(title: "Traditional spare ribs baked ",
+                                                recipeImage: UIImage.iconFood,
+                                                rating: 4.5,
+                                                chefName: "By Chef John",
+                                                cookingTime: 15, toggleBookmark: {}),
+            SavedRecipesTableViewCell.ViewModel(title: "spice roasted chicken with flavored rice",
+                                                recipeImage: UIImage.iconFood,
+                                                rating: 5.0,
+                                                chefName: "By Mark Kelvin",
+                                                cookingTime: 20, toggleBookmark: {})
         ]
         // When
         let recipesExpectation = expectation(description: "recipes")
-        var receivedRecipes: [SavedRecipe] = []
+        var receivedRecipes: [SavedRecipesTableViewCell.ViewModel] = []
 
         viewModel.recipesPublisher
             .sink(receiveValue: { recipes in
@@ -49,11 +49,11 @@ final class SavedRecipesViewModelTests: XCTestCase {
 
     func testRemoveSavedRecipe() {
         // Given
-        let recipeToRemove = SavedRecipe(title: "Traditional spare ribs baked ",
-                                         recipeImage: UIImage.iconFood,
-                                         rating: 4.5,
-                                         chefName: "By Chef John",
-                                         cookingTime: 15, toggleBookmark: {})
+        let recipeToRemove = SavedRecipesTableViewCell.ViewModel(title: "Traditional spare ribs baked ",
+                                                                 recipeImage: UIImage.iconFood,
+                                                                 rating: 4.5,
+                                                                 chefName: "By Chef John",
+                                                                 cookingTime: 15, toggleBookmark: {})
         // When
         viewModel.removeSavedRecipe(recipeToRemove)
 

@@ -15,7 +15,7 @@ final class SavedRecipesViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: SavedRecipesViewModelType
-    private (set) var dataSource: UITableViewDiffableDataSource<Section, SavedRecipe>!
+    private (set) var dataSource: UITableViewDiffableDataSource<Section, SavedRecipesTableViewCell.ViewModel>!
     private var subscriptions: Set<AnyCancellable> = []
 
     // MARK: Init
@@ -59,7 +59,7 @@ extension SavedRecipesViewController {
 
     func configureTableViewDataSource() {
         dataSource = UITableViewDiffableDataSource
-        <Section, SavedRecipe>(tableView: tableView) { tableView, _, viewModel in
+        <Section, SavedRecipesTableViewCell.ViewModel>(tableView: tableView) { tableView, _, viewModel in
             let cell = tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
             as? SavedRecipesTableViewCell
             cell?.update(with: viewModel)
@@ -67,8 +67,8 @@ extension SavedRecipesViewController {
         }
     }
 
-    func updateTableData(viewModel: [SavedRecipe]) {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, SavedRecipe>()
+    func updateTableData(viewModel: [SavedRecipesTableViewCell.ViewModel]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, SavedRecipesTableViewCell.ViewModel>()
         snapshot.appendSections([.main])
         snapshot.appendItems(viewModel)
         dataSource.apply(snapshot, animatingDifferences: true)
