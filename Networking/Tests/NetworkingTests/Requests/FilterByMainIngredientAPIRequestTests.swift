@@ -7,7 +7,7 @@ final class FilterByMainIngredientAPI: XCTestCase {
 
     // MARK: Life cycle
     override func setUp() {
-        sample = FilterByMainIngredientAPIRequest()
+        sample = FilterByMainIngredientAPIRequest(ingredient: "chicken_breast")
     }
 
     // MARK: Tests
@@ -17,7 +17,7 @@ final class FilterByMainIngredientAPI: XCTestCase {
         XCTAssertEqual(sample.path, "filter.php")
         XCTAssertEqual(sample.method, "GET")
         XCTAssertEqual(sample.queryParameters,
-                       ["i": "chicken_breast"])
+                       ["ingredient": "chicken_breast"])
     }
 
     func testFilterByIngredientRequestResponseDecoder() throws {
@@ -39,9 +39,10 @@ final class FilterByMainIngredientAPI: XCTestCase {
         // Then
         XCTAssertNotNil(filterByIngredientResponse)
         XCTAssertEqual(filterByIngredientResponse?.meals.count, 1)
-        XCTAssertEqual(filterByIngredientResponse?.meals[0].idMeal, "53016")
-        XCTAssertEqual(filterByIngredientResponse?.meals[0].strMeal, "Chick-Fil-A Sandwich")
+        XCTAssertEqual(filterByIngredientResponse?.meals[0].meal, "Chick-Fil-A Sandwich")
         XCTAssertEqual(filterByIngredientResponse?
-            .meals[0].strMealThumb, "https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg")
+            .meals[0].thumbnailImageUrl, "https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg")
+        XCTAssertEqual(filterByIngredientResponse?
+            .meals[0].id, "53016")
     }
 }

@@ -1,5 +1,46 @@
 import UIKit
 
+// MARK: View Model
+
+extension SavedRecipesTableViewCell {
+    struct ViewModel: Hashable, Equatable {
+
+        // MARK: - Properties
+
+        let id = UUID()
+
+        /// The title of the recipe
+        let title: String?
+
+        /// The  image of the recipe
+        let recipeImage: UIImage?
+
+        /// The rating of the recipe
+        let rating: Double?
+
+        /// The chef  who posted the recipe
+        let chefName: String?
+
+        /// The cooking Time of The recipe
+        let cookingTime: Int?
+
+        /// On bookmark action
+        let toggleBookmark: () -> Void
+
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+        static func == (lhs: SavedRecipesTableViewCell.ViewModel, rhs: SavedRecipesTableViewCell.ViewModel) -> Bool {
+            return  lhs.title == rhs.title &&
+            lhs.rating == rhs.rating &&
+            lhs.chefName == rhs.chefName &&
+            lhs.cookingTime == rhs.cookingTime &&
+            lhs.recipeImage == rhs.recipeImage
+        }
+    }
+}
+
 final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Outlets
@@ -31,7 +72,7 @@ final class SavedRecipesTableViewCell: UITableViewCell {
 
     // MARK: Configure
 
-    func update(with viewModel: SavedRecipe) {
+    func update(with viewModel: SavedRecipesTableViewCell.ViewModel) {
         // TODO: Set recipe imageView using kingfisher and set (patternFood) as placeholder.
         recipeImageView.image = viewModel.recipeImage
         titleLabel.text = viewModel.title

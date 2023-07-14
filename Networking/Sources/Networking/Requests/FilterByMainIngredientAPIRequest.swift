@@ -19,15 +19,15 @@ private enum CodingKeys: String, CodingKey {
 // MARK: - FilterByMainIngredientAPIRequest
 public struct FilterByMainIngredientAPIRequest: RequestType {
     public typealias ResponseType = FilterByMainIngredientAPIResponse
-    private let Ingredient:String
-    
-    public init(Ingredient: String) {self.Ingredient = Ingredient}
-    
+    private var ingredient: String
+
+    public init(ingredient: String) {self.ingredient = ingredient}
+
     public var baseUrl: URL { Constants.theMealDB }
     public var path: String { "filter.php" }
     public var method: String = "GET"
     public var queryParameters: [String: String] {
-        ["Ingredient": Ingredient]
+        ["ingredient": ingredient]
     }
 
     public let responseDecoder: (Data) throws -> FilterByMainIngredientAPIResponse = { data in
