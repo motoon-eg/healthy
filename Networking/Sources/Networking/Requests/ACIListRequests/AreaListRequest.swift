@@ -2,14 +2,14 @@ import Foundation
 
 // MARK: - AreaListResponse
 public struct AreaListResponse: Decodable {
-    let meals: [AreaMeal]
+    let meals: [MealArea]
 }
 
-// MARK: - Meal
-struct AreaMeal: Decodable {
+// MARK: - MealArea
+struct MealArea: Decodable {
     let area: String
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case area = "strArea"
     }
 }

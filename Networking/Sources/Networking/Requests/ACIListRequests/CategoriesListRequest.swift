@@ -2,11 +2,11 @@ import Foundation
 
 // MARK: - CategoriesListResponse
 public struct CategoriesListResponse: Decodable {
-    let meals: [CategoryMeal]
+    let meals: [MealCategory]
 }
 
-// MARK: - Meal
-struct CategoryMeal: Decodable {
+// MARK: - MealCategory
+struct MealCategory: Decodable {
     let category: String
 
     enum CodingKeys: String, CodingKey {
@@ -16,7 +16,6 @@ struct CategoryMeal: Decodable {
 
 // MARK: - CategoriesListRequest
 public struct CategoriesListRequest: RequestType {
-    public typealias ResponseType = CategoriesListResponse
 
     public init() {}
 
