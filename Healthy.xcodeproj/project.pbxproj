@@ -62,6 +62,7 @@
 		027DDA2B2A0E6A680052818C /* (null) in Resources */ = {isa = PBXBuildFile; };
 		027DDA402A0E6A680052818C /* HealthyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA3F2A0E6A680052818C /* HealthyUITests.swift */; };
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
+		0286F2862A5EEB1800F20478 /* RandomMealEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */; };
 		02892EC82A58575C001A3DB4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 02892EC72A58575C001A3DB4 /* Networking */; };
 		02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02892EC92A599CBC001A3DB4 /* Container+Networking.swift */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
@@ -214,6 +215,7 @@
 		027DDA3B2A0E6A680052818C /* HealthyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		027DDA3F2A0E6A680052818C /* HealthyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITests.swift; sourceTree = "<group>"; };
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMealEntity.swift; sourceTree = "<group>"; };
 		02892EC52A585558001A3DB4 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		02892EC92A599CBC001A3DB4 /* Container+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Networking.swift"; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
 				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
+        0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1272,6 +1275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0286F2862A5EEB1800F20478 /* RandomMealEntity.swift in Sources */,
 				0266E7E62A56372500D5ABC4 /* UINavigationBar+Appearance.swift in Sources */,
 				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
