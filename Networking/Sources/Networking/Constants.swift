@@ -10,7 +10,7 @@ enum Constants {
     }()
 
     static let theMealDB: URL = {
-        guard let url = URL(string: "www.themealdb.com/api/json/v1/1/") else {
+        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/") else {
             preconditionFailure("Invalid URL")
         }
 
