@@ -2,11 +2,11 @@ import Foundation
 
 // MARK: - IngrediantsListResponse
 public struct IngrediantsListResponse: Decodable {
-    let meals: [Meal]
+    let meals: [MealIngreidiant]
 }
 
 // MARK: - Meal
-public struct Meal: Decodable {
+public struct MealIngreidiant: Decodable {
     let id: String
     let ingrediant: String
     let description: String?

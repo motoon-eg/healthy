@@ -1,5 +1,5 @@
 // MARK: - Meal
-public struct Meal {
+public struct MealIngrediant {
     let id: String
     let ingrediant: String
     let description: String?
