@@ -2,16 +2,16 @@ import Foundation
 
 // MARK: - FilterByAreaResponse
 public struct FilterByAreaResponse: Decodable {
-    let meals: [Meal]
+    public let meals: [Meal]
 }
 
 // MARK: - Meal
 public struct Meal: Decodable {
-    let id: String
-    let meal: String
-    let mealThumb: String
+    public let id: String
+    public let meal: String
+    public let mealThumb: String
 
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case meal = "strMeal"
         case mealThumb = "strMealThumb"
