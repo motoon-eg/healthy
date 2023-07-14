@@ -7,22 +7,22 @@ public struct RandomMealsResponse: Codable {
 
 // MARK: - RandomMeal
 public struct RandomMeal: Codable {
-    public let mealId: String
-    public let mealName: String
-    public let mealCategory: String
-    public let mealArea: String
-    public let mealThumb: String
-    public let mealTags: String
-    public let mealYoutube: String
+    public let id: String
+    public let name: String
+    public let category: String
+    public let area: String
+    public let thumbnailImageUrl: String
+    public let tags: String
+    public let youtubeLink: String
 
     private enum CodingKeys: String, CodingKey {
-        case mealId = "idMeal"
-        case mealName = "strMeal"
-        case mealCategory = "strCategory"
-        case mealArea = "strArea"
-        case mealThumb = "strMealThumb"
-        case mealTags = "strTags"
-        case mealYoutube = "strYoutube"
+        case id = "idMeal"
+        case name = "strMeal"
+        case category = "strCategory"
+        case area = "strArea"
+        case thumbnailImageUrl = "strMealThumb"
+        case tags = "strTags"
+        case youtubeLink = "strYoutube"
     }
 }
 
