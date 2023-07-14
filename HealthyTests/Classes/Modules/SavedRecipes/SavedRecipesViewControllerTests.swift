@@ -62,12 +62,12 @@ final class SavedRecipesViewControllerTests: XCTestCase {
     func testTableDataIsUpdatedWhenRecipesPublisherEmitsNewValues() {
         // Given
         let expectedRecipes = [
-            SavedRecipe(title: "Traditional spare ribs baked ",
+            SavedRecipesTableViewCell.ViewModel(title: "Traditional spare ribs baked ",
                         recipeImage: UIImage.iconFood,
                         rating: 4.5,
                         chefName: "By Chef John",
                         cookingTime: 15, toggleBookmark: {}),
-            SavedRecipe(title: "spice roasted chicken with flavored rice",
+            SavedRecipesTableViewCell.ViewModel(title: "spice roasted chicken with flavored rice",
                         recipeImage: UIImage.iconFood,
                         rating: 5.0,
                         chefName: "By Mark Kelvin",
