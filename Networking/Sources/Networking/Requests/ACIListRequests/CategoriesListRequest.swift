@@ -16,6 +16,7 @@ struct MealCategory: Decodable {
 
 // MARK: - CategoriesListRequest
 public struct CategoriesListRequest: RequestType {
+    public typealias ResponseType = CategoriesListResponse
 
     public init() {}
 

@@ -16,7 +16,6 @@ struct MealArea: Decodable {
 
 // MARK: - AreaListRequest
 public struct AreaListRequest: RequestType {
-    public typealias ResponseType = AreaListResponse
 
     public init() {}
 
