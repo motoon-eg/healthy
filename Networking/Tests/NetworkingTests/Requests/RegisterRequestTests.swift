@@ -3,13 +3,6 @@ import XCTest
 
 final class RegisterRequestTests: XCTestCase {
 
-    
-    // MARK: - Lifecycle
-    
-    override func setUp() {
-        
-    }
-    
     // MARK: - Tests
     
     func testRegisterRequestProperties() {

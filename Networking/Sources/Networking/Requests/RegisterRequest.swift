@@ -2,11 +2,12 @@ import Foundation
 
 // MARK: - RegisterResponse
 public struct RegisterResponse: Codable {
-    let idToken, email, refreshToken, expiresIn: String
-    let localID: String
+    public let tokenId, email, refreshToken, expiresIn: String
+    public let localID: String
 
     enum CodingKeys: String, CodingKey {
-        case idToken, email, refreshToken, expiresIn
+        case tokenId = "idToken"
+        case email, refreshToken, expiresIn
         case localID = "localId"
     }
 }
