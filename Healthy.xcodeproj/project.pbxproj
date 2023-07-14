@@ -92,6 +92,7 @@
 		6D42077F2A5CD21500DAB9A5 /* Ingrediant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42077E2A5CD21500DAB9A5 /* Ingrediant.swift */; };
 		6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9C2A299E3600A1FC65 /* GoogleSignIn */; };
 		6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6D611B9E2A299E3600A1FC65 /* GoogleSignInSwift */; };
+		6D6B89AD2A5DE99F00E52F4C /* FilterByArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */; };
 		6D94975D2A4BB456004A135C /* HomeHeaderSkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D94975C2A4BB456004A135C /* HomeHeaderSkeletonView.swift */; };
 		6D9D97A52A4B020F00BB3589 /* PublisherSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D97A42A4B020F00BB3589 /* PublisherSpy.swift */; };
 		6D9D97A72A4B188400BB3589 /* PublisherMultibleValueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D97A62A4B188400BB3589 /* PublisherMultibleValueSpy.swift */; };
@@ -240,6 +241,7 @@
 		27C7C7F52A4341A300FECE25 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRelicLogger.swift; sourceTree = "<group>"; };
 		6D2145462A44C9EB0085C519 /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
+		6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterByArea.swift; sourceTree = "<group>"; };
 		6D42077A2A5CD14400DAB9A5 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		6D42077C2A5CD20A00DAB9A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6D42077E2A5CD21500DAB9A5 /* Ingrediant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingrediant.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			children = (
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
+				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
 				0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 				6D42077A2A5CD14400DAB9A5 /* Area.swift */,
 				6D42077C2A5CD20A00DAB9A5 /* Category.swift */,
@@ -1286,6 +1289,7 @@
 				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
 				209F93D12A40C1E700B007BA /* HomeNewRecipeCollectionViewCell.swift in Sources */,
+				6D6B89AD2A5DE99F00E52F4C /* FilterByArea.swift in Sources */,
 				0274F97A2A37D9040035A56F /* AppDelegate.swift in Sources */,
 				025A47822A337320008BF85A /* GoogleLoginAuthenticator.swift in Sources */,
 				C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */,
