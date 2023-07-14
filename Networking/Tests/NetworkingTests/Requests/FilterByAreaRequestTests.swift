@@ -10,7 +10,7 @@ final class FilterByAreaRequestTests: XCTestCase {
     // MARK: Life cycle
 
     override func setUp() {
-        sut = FilterByAreaRequest()
+        sut = FilterByAreaRequest("Canadian")
     }
 
     // MARK: Tests

@@ -22,12 +22,16 @@ public struct Meal: Decodable {
 public struct FilterByAreaRequest: RequestType {
     public typealias ResponseType = FilterByAreaResponse
 
-    public init() {}
+    private let area: String
+
+    public init(_ area: String) {
+        self.area = area
+    }
 
     public var baseUrl: URL { Constants.theMealDB }
     public var path: String { "filter.php" }
     public var method: String = "GET"
-    public var queryParameters: [String: String] {  [ "a": "Canadian" ] }
+    public var queryParameters: [String: String] {  [ "a": area ] }
 
     public let responseDecoder: (Data) throws -> FilterByAreaResponse = { data in
         try JSONDecoder().decode(ResponseType.self, from: data)
