@@ -7,9 +7,16 @@ public struct MealCategoriesResponse: Decodable {
 
 // MARK: - Category
 public struct Category: Decodable {
-    let idCategory, strCategory: String
-    let strCategoryThumb: String
-    let strCategoryDescription: String
+    let categoryId, categoryTitle: String
+    let categoryThumb: String
+    let categoryDescription: String
+    
+    enum CodingKeys: String, CodingKey {
+        case categoryId = "idCategory"
+        case categoryTitle = "strCategory"
+        case categoryThumb = "strCategoryThumb"
+        case categoryDescription = "strCategoryDescription"
+    }
 }
 
 // MARK: - MealCategoriesRequest
