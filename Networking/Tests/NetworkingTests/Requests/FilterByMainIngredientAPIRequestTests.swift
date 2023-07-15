@@ -22,7 +22,8 @@ final class FilterByMainIngredientAPI: XCTestCase {
 
     func testFilterByIngredientRequestResponseDecoder() throws {
         // Given
-        let filterByIngredientResponseAsString = #"""
+        let filterByIngredientResponseAsString =
+            """
             {
                 "meals": [
                     {
@@ -30,14 +31,20 @@ final class FilterByMainIngredientAPI: XCTestCase {
                         "strMealThumb": "https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg",
                         "idMeal": "53016"
                     }
-            """#
+                         ]
+
+            }
+            """
 
         // When
         let filterByIngredientResponseData = try XCTUnwrap(filterByIngredientResponseAsString.data(using: .utf8))
+        print("****************************", filterByIngredientResponseAsString
+            .data(using: .utf8), "****************************")
         let filterByIngredientResponse = try? sample.responseDecoder(filterByIngredientResponseData)
 
         // Then
         XCTAssertNotNil(filterByIngredientResponse)
+        print("#############################", filterByIngredientResponse, "#############################")
         XCTAssertEqual(filterByIngredientResponse?.meals.count, 1)
         XCTAssertEqual(filterByIngredientResponse?.meals[0].meal, "Chick-Fil-A Sandwich")
         XCTAssertEqual(filterByIngredientResponse?

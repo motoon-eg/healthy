@@ -1,12 +1,12 @@
 import Foundation
 
 // MARK: - FilterByAreaResponse
-public struct FilterByAreaResponse: Decodable {
+public struct FilterByAreaResponse: Codable {
     public let meals: [Meal]
 }
 
 // MARK: - Meal
-public struct Meal: Decodable {
+public struct Meal: Codable {
     public let id: String
     public let meal: String
     public let mealThumb: String

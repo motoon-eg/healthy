@@ -1,12 +1,13 @@
 import Foundation
 
 // MARK: - FilterByMainIngredientAPIResponse
+// private enum CodingKeys: String, CodingKey {}
 public struct FilterByMainIngredientAPIResponse: Codable {
-     let meals: [Meal]
+    public let meals: [MealIng]
 }
 
 // MARK: - Meal
-struct Meal: Codable {
+public struct MealIng: Codable {
     public let id: String
     public let meal: String
     public let thumbnailImageUrl: String
@@ -14,7 +15,7 @@ struct Meal: Codable {
 private enum CodingKeys: String, CodingKey {
     case id = "idMeal"
     case meal = "strMeal"
-    case humbnailImageUrl = "strMealThumb"
+    case thumbnailImageUrl = "strMealThumb"
 }
 // MARK: - FilterByMainIngredientAPIRequest
 public struct FilterByMainIngredientAPIRequest: RequestType {
