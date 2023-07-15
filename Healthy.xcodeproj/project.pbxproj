@@ -138,6 +138,7 @@
 		C9057FE72A48AC78002E4459 /* SliderDishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9057FE52A48AC78002E4459 /* SliderDishesView.swift */; };
 		C9057FEB2A48AC8F002E4459 /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */; };
 		C9057FEC2A48AC8F002E4459 /* SliderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */; };
+		C972DB2F2A5F6F91000041D1 /* FilterByMainIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */; };
 		C9E6BBE92A38D7EA0073E51A /* SplashViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */; };
 		C9EF41102A34656800E859AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9EF410E2A34656800E859AD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -288,6 +289,7 @@
 		C9057FE52A48AC78002E4459 /* SliderDishesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderDishesView.swift; sourceTree = "<group>"; };
 		C9057FE92A48AC8F002E4459 /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		C9057FEA2A48AC8F002E4459 /* SliderCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderCollectionViewCell.xib; sourceTree = "<group>"; };
+		C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterByMainIngredient.swift; sourceTree = "<group>"; };
 		C9D16A452A3C64A5008C7732 /* UIImage.Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.Generated.swift; sourceTree = "<group>"; };
 		C9E6BBE82A38D7EA0073E51A /* SplashViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTest.swift; sourceTree = "<group>"; };
 		C9EF410F2A34656800E859AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 			children = (
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
+				C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */,
 				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
 				0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 			);
@@ -1348,6 +1351,7 @@
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
+				C972DB2F2A5F6F91000041D1 /* FilterByMainIngredient.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
