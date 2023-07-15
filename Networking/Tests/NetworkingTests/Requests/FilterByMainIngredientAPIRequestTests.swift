@@ -2,6 +2,7 @@ import XCTest
 @testable import Networking
 
 final class FilterByMainIngredientAPI: XCTestCase {
+
     // MARK: Properties
     private var sample: FilterByMainIngredientAPIRequest!
 
@@ -38,13 +39,13 @@ final class FilterByMainIngredientAPI: XCTestCase {
 
         // When
         let filterByIngredientResponseData = try XCTUnwrap(filterByIngredientResponseAsString.data(using: .utf8))
-        print("****************************", filterByIngredientResponseAsString
-            .data(using: .utf8), "****************************")
+        print(filterByIngredientResponseAsString
+            .data(using: .utf8))
         let filterByIngredientResponse = try? sample.responseDecoder(filterByIngredientResponseData)
 
         // Then
         XCTAssertNotNil(filterByIngredientResponse)
-        print("#############################", filterByIngredientResponse, "#############################")
+        print(filterByIngredientResponse)
         XCTAssertEqual(filterByIngredientResponse?.meals.count, 1)
         XCTAssertEqual(filterByIngredientResponse?.meals[0].meal, "Chick-Fil-A Sandwich")
         XCTAssertEqual(filterByIngredientResponse?

@@ -11,12 +11,14 @@ public struct MealIng: Codable {
     public let id: String
     public let meal: String
     public let thumbnailImageUrl: String
+
+    enum CodingKeys: String, CodingKey {
+        case id = "idMeal"
+        case meal = "strMeal"
+        case thumbnailImageUrl = "strMealThumb"
+    }
 }
-private enum CodingKeys: String, CodingKey {
-    case id = "idMeal"
-    case meal = "strMeal"
-    case thumbnailImageUrl = "strMealThumb"
-}
+
 // MARK: - FilterByMainIngredientAPIRequest
 public struct FilterByMainIngredientAPIRequest: RequestType {
     public typealias ResponseType = FilterByMainIngredientAPIResponse
