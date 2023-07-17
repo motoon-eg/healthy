@@ -109,6 +109,7 @@
 		792D42EA2A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792D42E82A423ACF00EC2FE5 /* SavedRecipesTableViewCell.xib */; };
 		79311FD02A191D3700764707 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FCF2A191D3700764707 /* FormTextField.swift */; };
 		79311FD82A19214700764707 /* UITextField+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79311FD72A19214700764707 /* UITextField+Style.swift */; };
+		798B59B22A5D15E600E4DCFF /* MealCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798B59B12A5D15E600E4DCFF /* MealCategories.swift */; };
 		79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B65D272A0FB4310042CC46 /* UIButton+Style.swift */; };
 		A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */; };
 		A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C51FA2A43036A00850B15 /* UITableViewMock.swift */; };
@@ -259,6 +260,7 @@
 		79311FCD2A191D2D00764707 /* FormTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTextField.xib; sourceTree = "<group>"; };
 		79311FCF2A191D3700764707 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		79311FD72A19214700764707 /* UITextField+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Style.swift"; sourceTree = "<group>"; };
+		798B59B12A5D15E600E4DCFF /* MealCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategories.swift; sourceTree = "<group>"; };
 		79B65D272A0FB4310042CC46 /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
 		A21C51F82A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesTableViewCellTests.swift; sourceTree = "<group>"; };
 		A21C51FA2A43036A00850B15 /* UITableViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewMock.swift; sourceTree = "<group>"; };
@@ -397,6 +399,8 @@
 			children = (
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
+				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
+        0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 				C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */,
 				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
 				0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
@@ -1326,6 +1330,7 @@
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				27C7C7F72A4341A300FECE25 /* Logging.swift in Sources */,
 				0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */,
+				798B59B22A5D15E600E4DCFF /* MealCategories.swift in Sources */,
 				A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
