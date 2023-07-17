@@ -399,6 +399,8 @@
 			children = (
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
+				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
+        0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 				C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */,
 				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
 				0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
