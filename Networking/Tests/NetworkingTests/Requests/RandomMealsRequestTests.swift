@@ -47,7 +47,7 @@ final class RandomMealsRequestTests: XCTestCase {
         // Then
         XCTAssertNotNil(randomMealsResponse)
         XCTAssertEqual(randomMealsResponse?.meals.count, 1)
-        XCTAssertEqual(randomMealsResponse?.meals[0].mealId, "52793")
+        XCTAssertEqual(randomMealsResponse?.meals[0].id, "52793")
     }
 
 }
