@@ -2,11 +2,11 @@ import Foundation
 
 // MARK: - RandomMealEntity
 struct RandomMealEntity {
-    let mealId: String
-    let mealName: String
-    let mealCategory: String
-    let mealArea: String
-    let mealThumb: String
-    let mealTags: String
-    let mealYoutube: String
+    let id: String
+    let name: String
+    let category: String
+    let area: String
+    let thumbnailImageUrl: String
+    let tags: String
+    let youtubeLink: String
 }
