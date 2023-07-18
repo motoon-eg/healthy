@@ -1,21 +1,23 @@
 import Foundation
 
 // MARK: - SearchMealResponse
-public struct SearchMealResponse: Codable {
+public struct SearchMealResponse: Decodable {
     let meals: [SearchMeal]
 }
 
 // MARK: - SearchMeal
-public struct SearchMeal: Codable {
+public struct SearchMeal: Decodable {
     let id: String
     let name: String
     let category: String
+    let area: String
     let thumbnailURL: URL?
 
     private enum CodingKeys: String, CodingKey {
         case id = "idMeal"
         case name = "strMeal"
         case category = "strCategory"
+        case area = "strArea"
         case thumbnailURL = "strMealThumb"
     }
 }
