@@ -47,7 +47,7 @@ final class MealDetailsRequestTests: XCTestCase {
 
     // MARK: - Tests
 
-    func testRandomMealsRequestProperties() {
+    func testMealDetailsRequestProperties() {
         // Then
         XCTAssertEqual(sut.baseUrl, Constants.theMealDB)
         XCTAssertEqual(sut.path, "lookup.php")
