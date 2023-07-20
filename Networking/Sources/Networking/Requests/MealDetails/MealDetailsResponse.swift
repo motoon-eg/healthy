@@ -5,14 +5,7 @@ public struct MealDetailsResponse: Decodable {
 
 // MARK: - Meal Details
 public struct MealDetails: Decodable {
-    let id: String
-    let name: String
-    let drinkAlternate: String?
-    let category: String
-    let area: String
-    let instructions: String
-    let thumbnail: String
-    let tags: String
+    let id, name, drinkAlternate, category, area, instructions, thumbnail, tags: String?
 
     var ingredients: [String] = []
     var measures: [String] = []
