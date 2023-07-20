@@ -133,6 +133,7 @@
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
 		B85D26A92A390331000A463D /* PasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A82A390331000A463D /* PasswordValidatorTests.swift */; };
 		C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */; };
+		C2926D4D2A69442F00BD1F7B /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2926D4C2A69442F00BD1F7B /* MealDetails.swift */; };
 		C2FE12102A4128D8001A7BE3 /* UIButton+AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */; };
 		C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FE12112A412904001A7BE3 /* AnimatableView.swift */; };
 		C9057FE62A48AC78002E4459 /* SliderDishesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9057FE42A48AC78002E4459 /* SliderDishesView.xib */; };
@@ -285,6 +286,7 @@
 		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
 		B85D26A82A390331000A463D /* PasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidatorTests.swift; sourceTree = "<group>"; };
 		C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Helpers.swift"; sourceTree = "<group>"; };
+		C2926D4C2A69442F00BD1F7B /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
 		C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AnimatableView.swift"; sourceTree = "<group>"; };
 		C2FE12112A412904001A7BE3 /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		C9057FE42A48AC78002E4459 /* SliderDishesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderDishesView.xib; sourceTree = "<group>"; };
@@ -400,10 +402,10 @@
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
 				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
-        0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 				C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */,
 				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
 				0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
+				C2926D4C2A69442F00BD1F7B /* MealDetails.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1343,6 +1345,7 @@
 				025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */,
 				B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */,
 				022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */,
+				C2926D4D2A69442F00BD1F7B /* MealDetails.swift in Sources */,
 				B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */,
 				025511D62A3D0A8B00295B91 /* CreateAccountViewController.swift in Sources */,
 				025511B32A3C5F8900295B91 /* FilterSearchViewModel.swift in Sources */,
