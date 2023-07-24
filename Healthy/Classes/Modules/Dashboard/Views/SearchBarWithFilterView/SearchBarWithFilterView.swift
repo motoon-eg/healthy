@@ -1,5 +1,7 @@
 import UIKit
 
+// TODO: - [HT-48] Waiting for adding Home Search bar with filter view.
+
 final class SearchBarWithFilterView: UIView {
 
     // MARK: Init

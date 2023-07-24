@@ -65,34 +65,15 @@
                                         <constraint firstAttribute="height" constant="250" id="hA8-m1-d8w"/>
                                     </constraints>
                                 </view>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zdl-bR-ezZ">
-                                    <rect key="frame" x="0.0" y="515" width="393" height="30"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-7F-jeE">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="gcx-7F-jeE" secondAttribute="bottom" id="EdO-kb-FrJ"/>
-                                        <constraint firstItem="gcx-7F-jeE" firstAttribute="leading" secondItem="Zdl-bR-ezZ" secondAttribute="leading" constant="20" id="N3r-C7-uCU"/>
-                                        <constraint firstItem="gcx-7F-jeE" firstAttribute="top" secondItem="Zdl-bR-ezZ" secondAttribute="top" id="PiH-yl-rbS"/>
-                                        <constraint firstItem="gcx-7F-jeE" firstAttribute="leading" secondItem="Zdl-bR-ezZ" secondAttribute="leading" constant="20" id="T6B-ey-Pfl"/>
-                                        <constraint firstAttribute="height" constant="30" id="XtK-pv-YI7"/>
-                                        <constraint firstAttribute="trailing" secondItem="gcx-7F-jeE" secondAttribute="trailing" constant="20" id="dWA-2e-zC8"/>
-                                    </constraints>
-                                </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsM-g6-LQf" customClass="NewRecipesView" customModule="Healthy" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="550" width="393" height="150"/>
+                                    <rect key="frame" x="0.0" y="515" width="393" height="150"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="150" id="ToJ-HF-T4I"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-0W-1Tk">
-                                    <rect key="frame" x="0.0" y="705" width="393" height="147"/>
+                                    <rect key="frame" x="0.0" y="670" width="393" height="182"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                             </subviews>

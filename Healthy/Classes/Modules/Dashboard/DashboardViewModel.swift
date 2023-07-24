@@ -65,7 +65,9 @@ extension DashboardViewModel: DashboardViewModelOutput {
                   recipeImageUrl: "google.com",
                   rating: 2,
                   userImageUrl: "google.com")
-        ])
+        ]) { model in
+            print(model)
+        }
     }
 
 }

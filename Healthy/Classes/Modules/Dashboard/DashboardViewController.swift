@@ -7,12 +7,9 @@ final class DashboardViewController: UIViewController {
     @IBOutlet private weak var stackView: UIStackView!
 
     // MARK: Subviews
-//    private let headerView = HomeHeaderView()
-//    private let foodTagsView = FoodTagsView()
-//    private let sliderDishesView = SliderDishesView()
-//    private let newRecipesView = NewRecipesView()
 
     @IBOutlet weak var headerView: HomeHeaderView!
+    // TODO: - [HT-48] Waiting for adding Home Search bar with filter view.
     @IBOutlet weak var searchView: SearchBarWithFilterView!
     @IBOutlet weak var foodTagsView: FoodTagsView!
     @IBOutlet weak var sliderDishesView: SliderDishesView!
@@ -38,8 +35,6 @@ final class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        configureView()
         refreshView()
     }
 }
@@ -47,17 +42,6 @@ final class DashboardViewController: UIViewController {
 // MARK: - Actions
 
 extension DashboardViewController {}
-
-// MARK: - Configurations
-
-extension DashboardViewController {
-    func configureView() {
-//        stackView.addArrangedSubview(headerView)
-//        stackView.addArrangedSubview(foodTagsView)
-//        stackView.addArrangedSubview(sliderDishesView)
-//        stackView.addArrangedSubview(newRecipesView)
-    }
-}
 
 // MARK: - Header Creation
 

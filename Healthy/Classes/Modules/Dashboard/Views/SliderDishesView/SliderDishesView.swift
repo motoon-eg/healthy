@@ -83,4 +83,9 @@ extension SliderDishesView: UICollectionViewDelegate, UICollectionViewDataSource
         cell.configure(with: viewModel.dishes[indexPath.row])
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.onSelect(viewModel.dishes[indexPath.row])
+    }
+
 }
