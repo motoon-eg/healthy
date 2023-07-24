@@ -400,7 +400,6 @@
 				025511BC2A3C656300295B91 /* Recipe.swift */,
 				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
 				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
-        0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
 				C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */,
 				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
 				0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */,
@@ -459,8 +458,7 @@
 			children = (
 				C9057FE32A48AC68002E4459 /* SliderDishesView */,
 				B24160832A45B4DA000DF5BA /* FoodTagsView */,
-				025A47582A336C2D008BF85A /* HomeHeaderView.swift */,
-				A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */,
+				B2163C6E2A6EA35A003021B8 /* HomeHeaderView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -895,6 +893,15 @@
 			path = SignButtonWithSocialMediaView;
 			sourceTree = "<group>";
 		};
+		B2163C6E2A6EA35A003021B8 /* HomeHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				025A47582A336C2D008BF85A /* HomeHeaderView.swift */,
+				A29B4FAA2A38DB9D00965154 /* HomeHeaderView.xib */,
+			);
+			path = HomeHeaderView;
+			sourceTree = "<group>";
+		};
 		B24160832A45B4DA000DF5BA /* FoodTagsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1001,9 +1008,9 @@
 		C9057FE32A48AC68002E4459 /* SliderDishesView */ = {
 			isa = PBXGroup;
 			children = (
-				C9057FE82A48AC81002E4459 /* SliderCollectionViewCell */,
 				C9057FE52A48AC78002E4459 /* SliderDishesView.swift */,
 				C9057FE42A48AC78002E4459 /* SliderDishesView.xib */,
+				C9057FE82A48AC81002E4459 /* SliderCollectionViewCell */,
 			);
 			path = SliderDishesView;
 			sourceTree = "<group>";

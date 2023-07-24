@@ -16,11 +16,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="laz-OU-YyB">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="79"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hoi-d6-w7R">
                         <size key="itemSize" width="128" height="128"/>
@@ -32,13 +32,13 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="laz-OU-YyB" secondAttribute="bottom" id="I4T-sK-Kwi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="laz-OU-YyB" secondAttribute="trailing" id="rAN-Q0-Unh"/>
                 <constraint firstItem="laz-OU-YyB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ryB-uY-mTg"/>
+                <constraint firstItem="laz-OU-YyB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="wJq-e3-Q8B"/>
                 <constraint firstItem="laz-OU-YyB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zPY-st-1fB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-68" y="-107"/>
+            <point key="canvasLocation" x="-69.465648854961827" y="-114.08450704225352"/>
         </view>
     </objects>
     <resources>

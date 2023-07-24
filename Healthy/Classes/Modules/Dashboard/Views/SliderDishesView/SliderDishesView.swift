@@ -1,5 +1,12 @@
 import UIKit
 
+extension SliderDishesView {
+    struct ViewModel {
+        var dishes: [SliderCollectionViewCell.ViewModel] = []
+        var onSelect: (SliderCollectionViewCell.ViewModel) -> Void = { _ in }
+    }
+}
+
 final class SliderDishesView: UIView {
 
     // MARK: - Outlet
@@ -8,16 +15,7 @@ final class SliderDishesView: UIView {
     @IBOutlet private(set) weak var collectionView: UICollectionView!
 
     // MARK: - Properties
-    private var viewModel: [SliderCollectionViewCell.ViewModel] = [
-        // TODO: To be removed when real data are integrated
-        .init(imageUrl: UIImage.previewDishes1,
-              dishName: "Crunchy Nut Coleslaw", time: "",
-              duration: "\(13) Mins", rating: 4.3),
-        .init(imageUrl: UIImage.previewDishes2, dishName: "Crunchy Nut Coleslaw", time: "6:00",
-              duration: "\(15) Mins", rating: 4.3 ),
-        .init(imageUrl: nil, dishName: "Test", time: "", duration: "\(13) Mins", rating: 4.3),
-        .init(imageUrl: nil, dishName: "Tes", time: "", duration: "\(15) Mins", rating: 4.3)
-    ]
+    private var viewModel: ViewModel = .init()
 
     // MARK: - initializer
 
@@ -30,6 +28,15 @@ final class SliderDishesView: UIView {
         super.init(coder: coder)
         loadViewFromNib()
         configureCollectionView()
+    }
+}
+
+// MARK: Update UI with ViewModle
+
+extension SliderDishesView {
+    func update(with viewModel: ViewModel) {
+        self.viewModel = viewModel
+        collectionView.reloadData()
     }
 }
 
@@ -67,14 +74,14 @@ private extension SliderDishesView {
 extension SliderDishesView: UICollectionViewDelegate, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.count
+        viewModel.dishes.count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) ->
     UICollectionViewCell {
         let cell: SliderCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: viewModel[indexPath.row])
+        cell.configure(with: viewModel.dishes[indexPath.row])
         return cell
     }
 }

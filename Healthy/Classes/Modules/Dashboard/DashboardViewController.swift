@@ -7,8 +7,8 @@ final class DashboardViewController: UIViewController {
     @IBOutlet private weak var stackView: UIStackView!
 
     // MARK: Subviews
-
     private let headerView = HomeHeaderView()
+    private let foodTagsView = FoodTagsView()
     private let sliderDishesView = SliderDishesView()
 
     // MARK: Properties
@@ -33,6 +33,7 @@ final class DashboardViewController: UIViewController {
         super.viewDidLoad()
 
         configureView()
+        refreshView()
     }
 }
 
@@ -44,9 +45,9 @@ extension DashboardViewController {}
 
 extension DashboardViewController {
     func configureView() {
-        stackView.addArrangedSubview(sliderDishesView)
         stackView.addArrangedSubview(headerView)
-
+        stackView.addArrangedSubview(foodTagsView)
+        stackView.addArrangedSubview(sliderDishesView)
     }
 }
 
@@ -72,5 +73,7 @@ private extension DashboardViewController {
 private extension DashboardViewController {
     func refreshView() {
         headerView.configure(with: viewModel.header)
+        foodTagsView.update(with: viewModel.foodTags)
+        sliderDishesView.update(with: viewModel.dishes)
     }
 }
