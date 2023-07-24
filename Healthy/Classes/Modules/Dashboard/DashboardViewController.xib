@@ -4,11 +4,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashboardViewController" customModule="Healthy" customModuleProvider="target">
             <connections>
+                <outlet property="foodTagsView" destination="Nje-wD-RU8" id="bJ2-5E-J5y"/>
+                <outlet property="headerView" destination="m4C-MG-HNC" id="4kC-0p-j1N"/>
+                <outlet property="newRecipesView" destination="ZsM-g6-LQf" id="NWP-e0-Au9"/>
+                <outlet property="searchView" destination="Aqc-oF-Gyz" id="I2L-0A-DSv"/>
+                <outlet property="sliderDishesView" destination="3m8-jv-CvE" id="0cN-Ss-7Lo"/>
                 <outlet property="stackView" destination="CHB-e5-dio" id="eWV-QF-ynI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,8 +27,75 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVo-6R-ftw">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-e5-dio">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-e5-dio">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-lG-Ol3">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Wow-9w-z8K"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4C-MG-HNC" customClass="HomeHeaderView" customModule="Healthy" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="55" width="393" height="80"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="80" id="xXa-jF-6Te"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqc-oF-Gyz" customClass="SearchBarWithFilterView" customModule="Healthy" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="140" width="393" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="LOF-K2-G6X"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nje-wD-RU8" customClass="FoodTagsView" customModule="Healthy" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="195" width="393" height="60"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="ltw-Zl-Ph4"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m8-jv-CvE" customClass="SliderDishesView" customModule="Healthy" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="260" width="393" height="250"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="250" id="hA8-m1-d8w"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zdl-bR-ezZ">
+                                    <rect key="frame" x="0.0" y="515" width="393" height="30"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-7F-jeE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="gcx-7F-jeE" secondAttribute="bottom" id="EdO-kb-FrJ"/>
+                                        <constraint firstItem="gcx-7F-jeE" firstAttribute="leading" secondItem="Zdl-bR-ezZ" secondAttribute="leading" constant="20" id="N3r-C7-uCU"/>
+                                        <constraint firstItem="gcx-7F-jeE" firstAttribute="top" secondItem="Zdl-bR-ezZ" secondAttribute="top" id="PiH-yl-rbS"/>
+                                        <constraint firstItem="gcx-7F-jeE" firstAttribute="leading" secondItem="Zdl-bR-ezZ" secondAttribute="leading" constant="20" id="T6B-ey-Pfl"/>
+                                        <constraint firstAttribute="height" constant="30" id="XtK-pv-YI7"/>
+                                        <constraint firstAttribute="trailing" secondItem="gcx-7F-jeE" secondAttribute="trailing" constant="20" id="dWA-2e-zC8"/>
+                                    </constraints>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsM-g6-LQf" customClass="NewRecipesView" customModule="Healthy" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="550" width="393" height="150"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="ToJ-HF-T4I"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-0W-1Tk">
+                                    <rect key="frame" x="0.0" y="705" width="393" height="147"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
                         </stackView>
                     </subviews>
                     <constraints>
@@ -47,4 +120,9 @@
             <point key="canvasLocation" x="18" y="-17"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

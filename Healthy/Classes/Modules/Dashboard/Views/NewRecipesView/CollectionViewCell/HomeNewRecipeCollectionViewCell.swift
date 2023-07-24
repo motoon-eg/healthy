@@ -39,7 +39,7 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
     /// Configures the cell view and binds the data from the provided view model.
     /// - Parameter with: The view model containing the data to be displayed in the cell view.
     ///
-    private func configure(with: ViewModel) {
+    func configure(with: ViewModel) {
         recipeNameLabel.text = with.recipeName
         userNameLabel.text = with.userName
         preparationTimeInMinutesLabel.text = with.preparationTimeInMinutes
@@ -61,7 +61,7 @@ private extension HomeNewRecipeCollectionViewCell {
 /// Contains the necessary data for displaying the recipe information.
 /// - SeeAlso: `Recipe`
 ///
-private extension HomeNewRecipeCollectionViewCell {
+extension HomeNewRecipeCollectionViewCell {
 
     /// The view model used to configure the `HomeNewRecipeCollectionViewCell`.
     struct ViewModel {

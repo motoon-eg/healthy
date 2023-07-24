@@ -4,28 +4,25 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderDishesView" customModule="Healthy" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewRecipesView" customModule="Healthy" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="1fP-La-V90" id="Pi6-Df-hUS"/>
-                <outlet property="sliderView" destination="iN0-l3-epB" id="3gt-yY-S78"/>
+                <outlet property="newRecipesCollectionView" destination="BCq-2b-mwa" id="3Nm-lC-D1o"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="171"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-La-V90">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="232"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BCq-2b-mwa">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="171"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" priority="750" constant="240" id="1sP-i2-jaO"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rLA-Ey-flh">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xy6-nw-4oe">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -33,16 +30,15 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
-                <constraint firstItem="1fP-La-V90" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9a8-HJ-mbi"/>
-                <constraint firstAttribute="bottom" secondItem="1fP-La-V90" secondAttribute="bottom" id="GDL-xZ-wCW"/>
-                <constraint firstItem="1fP-La-V90" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gNP-S9-dn2"/>
-                <constraint firstAttribute="trailing" secondItem="1fP-La-V90" secondAttribute="trailing" id="hLM-hd-Qk1"/>
+                <constraint firstItem="BCq-2b-mwa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Bq-NT-QlI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BCq-2b-mwa" secondAttribute="trailing" id="3Yb-BY-k0i"/>
+                <constraint firstItem="BCq-2b-mwa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="F4r-Hs-MnH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BCq-2b-mwa" secondAttribute="bottom" id="vsL-dd-tsF"/>
             </constraints>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="171.75572519083968" y="-671.83098591549299"/>
+            <point key="canvasLocation" x="20.610687022900763" y="-251.05633802816902"/>
         </view>
     </objects>
     <resources>

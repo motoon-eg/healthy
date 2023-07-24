@@ -42,7 +42,6 @@
 		025511D52A3D0A8B00295B91 /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511CD2A3D0A8B00295B91 /* CreateAccountviewModelType.swift */; };
 		025511D62A3D0A8B00295B91 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511CE2A3D0A8B00295B91 /* CreateAccountViewController.swift */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
-		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
 		025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47512A336B05008BF85A /* DashboardViewModel.swift */; };
 		025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025A47522A336B05008BF85A /* DashboardViewController.xib */; };
 		025A47592A336C2D008BF85A /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47582A336C2D008BF85A /* HomeHeaderView.swift */; };
@@ -124,10 +123,15 @@
 		B241608B2A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24160872A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift */; };
 		B241608C2A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
+		B2CA7C8B2A6F026D005C5993 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA7C8A2A6F026D005C5993 /* DashboardViewController.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
+		B2F0CF132A6EEFFA0015CBF5 /* SearchBarWithFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F0CF122A6EEFFA0015CBF5 /* SearchBarWithFilterView.swift */; };
+		B2F0CF172A6EF0310015CBF5 /* SearchBarWithFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F0CF162A6EF0310015CBF5 /* SearchBarWithFilterView.xib */; };
+		B2F0CF192A6EF15F0015CBF5 /* NewRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F0CF182A6EF15F0015CBF5 /* NewRecipesView.swift */; };
+		B2F0CF1B2A6EF16E0015CBF5 /* NewRecipesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2F0CF1A2A6EF16E0015CBF5 /* NewRecipesView.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
 		B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E82A344B9A002F1894 /* MainTabBarController.swift */; };
 		B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */; };
@@ -194,7 +198,6 @@
 		025511CD2A3D0A8B00295B91 /* CreateAccountviewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountviewModelType.swift; sourceTree = "<group>"; };
 		025511CE2A3D0A8B00295B91 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		025A474F2A336B05008BF85A /* DashboardViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelType.swift; sourceTree = "<group>"; };
-		025A47502A336B05008BF85A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		025A47512A336B05008BF85A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		025A47522A336B05008BF85A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		025A47582A336C2D008BF85A /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
@@ -275,11 +278,16 @@
 		B24160872A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
+		B2CA7C8A2A6F026D005C5993 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
 		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		B2F0CF122A6EEFFA0015CBF5 /* SearchBarWithFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarWithFilterView.swift; sourceTree = "<group>"; };
+		B2F0CF162A6EF0310015CBF5 /* SearchBarWithFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarWithFilterView.xib; sourceTree = "<group>"; };
+		B2F0CF182A6EF15F0015CBF5 /* NewRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesView.swift; sourceTree = "<group>"; };
+		B2F0CF1A2A6EF16E0015CBF5 /* NewRecipesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecipesView.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		B2F799E82A344B9A002F1894 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B85D26A62A3902DF000A463D /* EmailValidatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorsTests.swift; sourceTree = "<group>"; };
@@ -445,7 +453,7 @@
 			children = (
 				B2E577482A40DECF00FEFD05 /* SearchReceipes  */,
 				025A47572A336C04008BF85A /* Views */,
-				025A47502A336B05008BF85A /* DashboardViewController.swift */,
+				B2CA7C8A2A6F026D005C5993 /* DashboardViewController.swift */,
 				025A47522A336B05008BF85A /* DashboardViewController.xib */,
 				025A47512A336B05008BF85A /* DashboardViewModel.swift */,
 				025A474F2A336B05008BF85A /* DashboardViewModelType.swift */,
@@ -456,9 +464,11 @@
 		025A47572A336C04008BF85A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C9057FE32A48AC68002E4459 /* SliderDishesView */,
-				B24160832A45B4DA000DF5BA /* FoodTagsView */,
 				B2163C6E2A6EA35A003021B8 /* HomeHeaderView */,
+				B2F0CF112A6EEE200015CBF5 /* SearchBarWithFilterView */,
+				B24160832A45B4DA000DF5BA /* FoodTagsView */,
+				C9057FE32A48AC68002E4459 /* SliderDishesView */,
+				209F93CE2A40C10000B007BA /* NewRecipesView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -716,17 +726,18 @@
 			isa = PBXGroup;
 			children = (
 				6D94975F2A4BB46A004A135C /* SkeletonViews */,
-				209F93CE2A40C10000B007BA /* HomeNewRecipesView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		209F93CE2A40C10000B007BA /* HomeNewRecipesView */ = {
+		209F93CE2A40C10000B007BA /* NewRecipesView */ = {
 			isa = PBXGroup;
 			children = (
+				B2F0CF182A6EF15F0015CBF5 /* NewRecipesView.swift */,
+				B2F0CF1A2A6EF16E0015CBF5 /* NewRecipesView.xib */,
 				209F93D32A40C22900B007BA /* CollectionViewCell */,
 			);
-			path = HomeNewRecipesView;
+			path = NewRecipesView;
 			sourceTree = "<group>";
 		};
 		209F93D32A40C22900B007BA /* CollectionViewCell */ = {
@@ -970,6 +981,15 @@
 			path = "SearchReceipes ";
 			sourceTree = "<group>";
 		};
+		B2F0CF112A6EEE200015CBF5 /* SearchBarWithFilterView */ = {
+			isa = PBXGroup;
+			children = (
+				B2F0CF122A6EEFFA0015CBF5 /* SearchBarWithFilterView.swift */,
+				B2F0CF162A6EF0310015CBF5 /* SearchBarWithFilterView.xib */,
+			);
+			path = SearchBarWithFilterView;
+			sourceTree = "<group>";
+		};
 		B2F799E72A344B6C002F1894 /* MainTabBarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1198,11 +1218,13 @@
 				A29B4FAB2A38DB9D00965154 /* HomeHeaderView.xib in Resources */,
 				027DDA282A0E6A680052818C /* Assets.xcassets in Resources */,
 				B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */,
+				B2F0CF172A6EF0310015CBF5 /* SearchBarWithFilterView.xib in Resources */,
 				025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */,
 				02FDBC332A3A66780012AF87 /* PlaceholderView.xib in Resources */,
 				025A47562A336B05008BF85A /* DashboardViewController.xib in Resources */,
 				025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */,
 				C9057FEC2A48AC8F002E4459 /* SliderCollectionViewCell.xib in Resources */,
+				B2F0CF1B2A6EF16E0015CBF5 /* NewRecipesView.xib in Resources */,
 				025511A02A3C5D7300295B91 /* SearchViewController.xib in Resources */,
 				B241608C2A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib in Resources */,
 			);
@@ -1290,6 +1312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0286F2862A5EEB1800F20478 /* RandomMealEntity.swift in Sources */,
+				B2F0CF192A6EF15F0015CBF5 /* NewRecipesView.swift in Sources */,
 				0266E7E62A56372500D5ABC4 /* UINavigationBar+Appearance.swift in Sources */,
 				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
@@ -1328,6 +1351,7 @@
 				B241608B2A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift in Sources */,
 				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
+				B2CA7C8B2A6F026D005C5993 /* DashboardViewController.swift in Sources */,
 				02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
 				0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */,
@@ -1359,6 +1383,7 @@
 				27C7C7F62A4341A300FECE25 /* Logger.swift in Sources */,
 				025A47812A337320008BF85A /* Authentication.swift in Sources */,
 				025511D12A3D0A8B00295B91 /* SplashViewModelType.swift in Sources */,
+				B2F0CF132A6EEFFA0015CBF5 /* SearchBarWithFilterView.swift in Sources */,
 				C9057FEB2A48AC8F002E4459 /* SliderCollectionViewCell.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
@@ -1368,7 +1393,6 @@
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
 				B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */,
-				025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,13 +53,12 @@ private extension SliderDishesView {
 
     func configureCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
 
         layout.itemSize = CGSize(
             width: collectionView.bounds.width * 0.4,
             height: collectionView.bounds.height
         )
-
         layout.minimumInteritemSpacing = 15
         layout.minimumLineSpacing = 15
         layout.scrollDirection = .horizontal

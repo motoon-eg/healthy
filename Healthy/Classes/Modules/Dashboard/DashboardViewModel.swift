@@ -14,14 +14,14 @@ extension DashboardViewModel: DashboardViewModelInput {}
 extension DashboardViewModel: DashboardViewModelOutput {
 
     var header: HomeHeaderView.ViewModel {
-        .init(title: "Name", subtitle: "", imageUrl: URL(string: "www.google.com"))
+        .init(title: "Name", subtitle: "subtitle", imageUrl: URL(string: "www.google.com"))
     }
 
     var foodTags: FoodTagsView.ViewModel {
         .init(foodCategories: [.init(foodCategoryName: "category1"),
                                .init(foodCategoryName: "category2"),
                                .init(foodCategoryName: "category3")],
-              selected: .init(foodCategoryName: "category2")) { model in
+              selected: .init(foodCategoryName: "category1")) { model in
             print(model)
         }
     }
@@ -43,6 +43,29 @@ extension DashboardViewModel: DashboardViewModelOutput {
         ]) { model in
             print(model)
         }
+    }
+
+    var newRecipes: NewRecipesView.ViewModel {
+        .init(newRecipes: [
+            .init(recipeName: "Steak with tomato sauce and bulgur rice.",
+                  userName: "By James Milner",
+                  preparationTimeInMinutes: "20 mins",
+                  recipeImageUrl: "google.com",
+                  rating: 4,
+                  userImageUrl: "google.com"),
+            .init(recipeName: "Pilaf sweet with lamb-and-raisins",
+                  userName: "By Laura wilson",
+                  preparationTimeInMinutes: "20 mins",
+                  recipeImageUrl: "google.com",
+                  rating: 3,
+                  userImageUrl: "google.com"),
+            .init(recipeName: "Rice Pilaf, Broccoli and Chicken",
+                  userName: "By Lucas Moura",
+                  preparationTimeInMinutes: "10 mins",
+                  recipeImageUrl: "google.com",
+                  rating: 2,
+                  userImageUrl: "google.com")
+        ])
     }
 
 }
