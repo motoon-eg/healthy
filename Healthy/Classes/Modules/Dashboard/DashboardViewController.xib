@@ -66,14 +66,14 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsM-g6-LQf" customClass="NewRecipesView" customModule="Healthy" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="515" width="393" height="150"/>
+                                    <rect key="frame" x="0.0" y="515" width="393" height="160"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="ToJ-HF-T4I"/>
+                                        <constraint firstAttribute="height" constant="160" id="ToJ-HF-T4I"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2EQ-0W-1Tk">
-                                    <rect key="frame" x="0.0" y="670" width="393" height="182"/>
+                                    <rect key="frame" x="0.0" y="680" width="393" height="172"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </view>
                             </subviews>

@@ -123,6 +123,7 @@
 		B241608B2A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24160872A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift */; };
 		B241608C2A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
+		B2AE66652A6F283B00937D29 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE66632A6F283B00937D29 /* HeaderView.swift */; };
 		B2CA7C8B2A6F026D005C5993 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA7C8A2A6F026D005C5993 /* DashboardViewController.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
 		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
@@ -278,6 +279,7 @@
 		B24160872A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
+		B2AE66632A6F283B00937D29 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		B2CA7C8A2A6F026D005C5993 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
 		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 				B2F0CF182A6EF15F0015CBF5 /* NewRecipesView.swift */,
 				B2F0CF1A2A6EF16E0015CBF5 /* NewRecipesView.xib */,
 				209F93D32A40C22900B007BA /* CollectionViewCell */,
+				B2AE66622A6F27E600937D29 /* HeaderView */,
 			);
 			path = NewRecipesView;
 			sourceTree = "<group>";
@@ -930,6 +933,14 @@
 				B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */,
 			);
 			path = FoodTagCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		B2AE66622A6F27E600937D29 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE66632A6F283B00937D29 /* HeaderView.swift */,
+			);
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 		B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */ = {
@@ -1354,6 +1365,7 @@
 				B2CA7C8B2A6F026D005C5993 /* DashboardViewController.swift in Sources */,
 				02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
+				B2AE66652A6F283B00937D29 /* HeaderView.swift in Sources */,
 				0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */,
 				025511B12A3C5F8900295B91 /* FilterSearchViewModelType.swift in Sources */,
 				025511BD2A3C656300295B91 /* Recipe.swift in Sources */,

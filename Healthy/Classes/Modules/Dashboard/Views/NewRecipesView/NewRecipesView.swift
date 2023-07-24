@@ -52,6 +52,9 @@ private extension NewRecipesView {
     private func configureTagsCollectionView() {
         newRecipesCollectionView.collectionViewLayout = .createTagsLayout()
         newRecipesCollectionView.register(HomeNewRecipeCollectionViewCell.self)
+        newRecipesCollectionView.register(HeaderView.self,
+                                          forSupplementaryViewOfKind: "header",
+                                          withReuseIdentifier: HeaderView.reuseIdentifier)
         newRecipesCollectionView.dataSource = self
         newRecipesCollectionView.delegate = self
     }
@@ -76,6 +79,18 @@ extension NewRecipesView: UICollectionViewDataSource, UICollectionViewDelegate {
         viewModel.onSelect(viewModel.newRecipes[indexPath.row])
     }
 
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let view = collectionView.dequeueReusableSupplementaryView(
+            ofKind: "header",
+            withReuseIdentifier: HeaderView.reuseIdentifier,
+            for: indexPath) as? HeaderView else {
+            assertionFailure("Could not dequeue Reusable Supplementar View")
+            return UICollectionReusableView()}
+        return view
+    }
+
 }
 
 // MARK: Layout
@@ -98,6 +113,12 @@ private extension UICollectionViewLayout {
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
         section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20)
         section.interGroupSpacing = 15
+
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                 elementKind: "header",
+                                                                 alignment: .top)
+        section.boundarySupplementaryItems = [header]
 
         return UICollectionViewCompositionalLayout(section: section)
     }
