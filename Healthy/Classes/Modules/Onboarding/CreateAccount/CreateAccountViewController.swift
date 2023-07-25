@@ -69,7 +69,6 @@ private extension CreateAccountViewController {
         bindLoadingIndicator()
         bindErrorMessage()
         bindButtonState()
-        bindRegisterStatus()
     }
 }
 
@@ -93,7 +92,7 @@ private extension CreateAccountViewController {
     }
 
     @objc private func didTapSignUp(_ sender: Any) {
-
+        viewModel.performSignUp()
     }
 }
 
@@ -124,12 +123,6 @@ private extension CreateAccountViewController {
     func bindButtonState() {
         viewModel.registerButtonEnabledPublisher
             .assign(to: \.isEnabled, on: signUpButton)
-            .store(in: &subscriptions)
-    }
-
-    func bindRegisterStatus() {
-        viewModel.registerStatusPublisher
-            .sink { _ in }
             .store(in: &subscriptions)
     }
 }

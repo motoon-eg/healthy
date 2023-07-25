@@ -1,8 +1,10 @@
 import Foundation
 import Combine
+import Factory
 
 // MARK: CreateAccountViewModel
 final class CreateAccountViewModel {
+    @Injected(\.registerUseCase) private var registerUseCase
     private unowned let coordinator: OnboardingCoordinator
     private var subscriptions = Set<AnyCancellable>()
     
@@ -15,7 +17,6 @@ final class CreateAccountViewModel {
     @Published private var loadingState: Bool = false
     @Published private var errorSubject = PassthroughSubject<Error, Never>()
     @Published private var registerButtonEnabled: Bool = true
-    @Published private var registerStatus: Bool = false
  
     init(coordinator: OnboardingCoordinator) {
         self.coordinator = coordinator
@@ -44,6 +45,28 @@ extension CreateAccountViewModel: CreateAccountViewModelInput {
     func updateAcceptTermsAndConditions(_ isChecked: Bool) {
         self.isChecked = isChecked
     }
+    
+    func performSignUp() {
+        Task {
+            // show loading
+            loadingState = true
+            
+            defer {
+                // dismiss loading
+                loadingState = false
+            }
+            
+            do {
+                _ = try await registerUseCase.register(
+                    email: email,
+                    password: password)
+                coordinator.didFinishSignIn()
+            } catch let error {
+                // handle error
+                errorSubject.send(error)
+            }
+        }
+    }
 }
 
 // MARK: LoginViewModelOutput
@@ -58,9 +81,5 @@ extension CreateAccountViewModel: CreateAccountViewModelOutput {
     
     var registerButtonEnabledPublisher: AnyPublisher<Bool, Never> {
         $registerButtonEnabled.eraseToAnyPublisher()
-    }
-    
-    var registerStatusPublisher: AnyPublisher<Bool, Never> {
-        $registerStatus.eraseToAnyPublisher()
     }
 }
