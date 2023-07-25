@@ -31,10 +31,6 @@ extension UIFont {
     static var smallerRegular: UIFont {
         poppins(ofSize: 11, weight: .regular)
     }
-
-    static var smallLabelRegular: UIFont {
-        poppins(ofSize: 8, weight: .regular)
-    }
 }
 
 // MARK: - Bold Fonts

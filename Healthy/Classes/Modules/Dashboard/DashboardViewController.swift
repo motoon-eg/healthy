@@ -53,7 +53,7 @@ private extension DashboardViewController {
     private func makeSection(title: String, content: UIView) -> UIView {
         let titleLabel = UILabel()
         titleLabel.text = title
-        titleLabel.applyStyle(.titleLabelStyle)
+        titleLabel.applyHeaderBoldStyle()
 
         let stackView = UIStackView(arrangedSubviews: [titleLabel, content])
         stackView.axis = .horizontal

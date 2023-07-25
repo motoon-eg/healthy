@@ -111,15 +111,13 @@
 		A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FA41102A44412500C9C9A0 /* UIView+Style.swift */; };
 		B21F81BC2A419EC400905E50 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */; };
 		B21F81C02A41A05C00905E50 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */; };
-		B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22218472A10C08D0036B9A8 /* UILabel+Style.swift */; };
 		B24160892A45B4DA000DF5BA /* FoodTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24160842A45B4DA000DF5BA /* FoodTagsView.swift */; };
 		B241608A2A45B4DA000DF5BA /* FoodTagsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24160852A45B4DA000DF5BA /* FoodTagsView.xib */; };
 		B241608B2A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24160872A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift */; };
 		B241608C2A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */; };
 		B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */; };
 		B2D402D82A3BA9F600FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */; };
-		B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */; };
-		B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */; };
+		B2D402DF2A3BB1D700FDB941 /* UILabel+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402DE2A3BB1D700FDB941 /* UILabel+Style.swift */; };
 		B2D402E52A3BB30B00FDB941 /* UILabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */; };
 		B2E577432A40A52900FEFD05 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */; };
 		B2F799E42A34459B002F1894 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F799E32A34459B002F1894 /* MainTabBar.swift */; };
@@ -251,15 +249,13 @@
 		A2FA41102A44412500C9C9A0 /* UIView+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Style.swift"; sourceTree = "<group>"; };
 		B21F81BB2A419EC400905E50 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
-		B22218472A10C08D0036B9A8 /* UILabel+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B24160842A45B4DA000DF5BA /* FoodTagsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTagsView.swift; sourceTree = "<group>"; };
 		B24160852A45B4DA000DF5BA /* FoodTagsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTagsView.xib; sourceTree = "<group>"; };
 		B24160872A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTagCollectionViewCell.swift; sourceTree = "<group>"; };
 		B24160882A45B4DA000DF5BA /* FoodTagCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTapBarControllerTest.swift; sourceTree = "<group>"; };
 		B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Style.swift"; sourceTree = "<group>"; };
-		B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyle.swift; sourceTree = "<group>"; };
-		B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFont+Style.swift"; path = "Healthy/Classes/Extensions/UIFont+Style.swift"; sourceTree = SOURCE_ROOT; };
+		B2D402DE2A3BB1D700FDB941 /* UILabel+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Style.swift"; sourceTree = "<group>"; };
 		B2D402E42A3BB30B00FDB941 /* UILabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelStyleTests.swift; sourceTree = "<group>"; };
 		B2E577412A40A52900FEFD05 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2F799E32A34459B002F1894 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
@@ -555,21 +551,19 @@
 		027DDA502A0E75E60052818C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B2D402DD2A3BB1D700FDB941 /* UILabel+Style */,
-				B2D402E02A3BB1F000FDB941 /* UIFont+Style.swift */,
+				C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */,
+				C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */,
 				79B65D272A0FB4310042CC46 /* UIButton+Style.swift */,
-				B22218472A10C08D0036B9A8 /* UILabel+Style.swift */,
-				79311FD72A19214700764707 /* UITextField+Style.swift */,
+				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
 				B2D402D72A3BA9F600FDB941 /* UIFont+Style.swift */,
+				B2D402DE2A3BB1D700FDB941 /* UILabel+Style.swift */,
+				0266E7E52A56372500D5ABC4 /* UINavigationBar+Appearance.swift */,
+				A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */,
+				79311FD72A19214700764707 /* UITextField+Style.swift */,
 				022924292A33A137009290A8 /* UIView+Helpers.swift */,
 				7918F03D2A1F6448000F36A5 /* UIView+ReusableIdentifier.swift */,
 				6DB1366D2A3635AC00448722 /* UIView+SkeletonView.swift */,
 				A2FA41102A44412500C9C9A0 /* UIView+Style.swift */,
-				A27861142A445E8E00BA7018 /* UITableView+RegisterNib.swift */,
-				B21F81BF2A41A05C00905E50 /* UICollectionView+Helpers.swift */,
-				C21F76E32A4AFBF700E0609C /* Collection+Helpers.swift */,
-				C2FE120F2A4128D8001A7BE3 /* UIButton+AnimatableView.swift */,
-				0266E7E52A56372500D5ABC4 /* UINavigationBar+Appearance.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -870,14 +864,6 @@
 				B29ABA5B2A3469CA00171A0C /* MainTapBarControllerTest.swift */,
 			);
 			path = MainTabBarController;
-			sourceTree = "<group>";
-		};
-		B2D402DD2A3BB1D700FDB941 /* UILabel+Style */ = {
-			isa = PBXGroup;
-			children = (
-				B2D402DE2A3BB1D700FDB941 /* UILabelStyle.swift */,
-			);
-			path = "UILabel+Style";
 			sourceTree = "<group>";
 		};
 		B2D402E22A3BB2E200FDB941 /* Extensions */ = {
@@ -1254,10 +1240,9 @@
 				A27861152A445E8E00BA7018 /* UITableView+RegisterNib.swift in Sources */,
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
-				B2D402DF2A3BB1D700FDB941 /* UILabelStyle.swift in Sources */,
+				B2D402DF2A3BB1D700FDB941 /* UILabel+Style.swift in Sources */,
 				A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */,
 				6D2145472A44C9EB0085C519 /* SearchFilter.swift in Sources */,
-				B2D402E12A3BB1F000FDB941 /* UIFont+Style.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
 				27C7C7F92A4341A300FECE25 /* LogLevel.swift in Sources */,
 				79B65D282A0FB4310042CC46 /* UIButton+Style.swift in Sources */,
@@ -1275,7 +1260,6 @@
 				025511D12A3D0A8B00295B91 /* SplashViewModelType.swift in Sources */,
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
-				B22218482A10C08D0036B9A8 /* UILabel+Style.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,

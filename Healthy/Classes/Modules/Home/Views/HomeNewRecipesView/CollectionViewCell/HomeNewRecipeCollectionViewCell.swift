@@ -22,9 +22,9 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
     // MARK: - Private Methods
 
     private func configureAppearance() {
-        recipeNameLabel.applyStyle(.textFieldTitleLabel)
-        userNameLabel.applyStyle(.signupSubtitle)
-        preparationTimeInMinutesLabel.applyStyle(.signupSubtitle)
+        recipeNameLabel.applyBodyStyle()
+        userNameLabel.applySubtitleLabelStyle()
+        preparationTimeInMinutesLabel.applySubtitleLabelStyle()
         cardView.applyDefaultCardShadow(cornerRadius: Constants.cornerRadius)
     }
 
