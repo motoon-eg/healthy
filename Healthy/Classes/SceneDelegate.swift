@@ -1,6 +1,6 @@
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     private var appCoordinator: AppCoordinator?
@@ -56,5 +56,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // scene-specific state information
         // to restore the scene back to its current state.
     }
-
 }
