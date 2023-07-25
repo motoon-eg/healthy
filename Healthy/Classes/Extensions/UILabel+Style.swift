@@ -94,7 +94,7 @@ private struct InvertedBodyStyle: LabelStyling {
     }
 }
 
-// MARK: Caption Label Style
+// MARK: CaptionLabelStyle
 
 private struct CaptionLabelStyle: LabelStyling {
     var inverted: Bool = false
@@ -106,7 +106,7 @@ private struct CaptionLabelStyle: LabelStyling {
     }
 }
 
-// MARK: Subtitle Label Style
+// MARK: SubtitleLabelStyle
 
 private struct SubtitleLabelStyle: LabelStyling {
     var inverted: Bool = false
