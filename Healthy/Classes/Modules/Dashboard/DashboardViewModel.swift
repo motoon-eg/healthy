@@ -20,7 +20,10 @@ extension DashboardViewModel: DashboardViewModelOutput {
     var foodTags: FoodTagsView.ViewModel {
         .init(foodCategories: [.init(foodCategoryName: "category1"),
                                .init(foodCategoryName: "category2"),
-                               .init(foodCategoryName: "category3")],
+                               .init(foodCategoryName: "category3"),
+                               .init(foodCategoryName: "category4"),
+                               .init(foodCategoryName: "category5"),
+                               .init(foodCategoryName: "category6")],
               selected: .init(foodCategoryName: "category1")) { model in
             print(model)
         }
