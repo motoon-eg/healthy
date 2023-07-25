@@ -1,3 +1,5 @@
+import Combine
+
 typealias CreateAccountViewModelType = CreateAccountViewModelInput & CreateAccountViewModelOutput
 
 // MARK: CreateAccountViewModelInput
@@ -11,5 +13,8 @@ protocol CreateAccountViewModelInput {
 
 // MARK: CreateAccountViewModelOutput
 protocol CreateAccountViewModelOutput {
-    func configureButtonEnabled(onEnabled: @escaping (Bool) -> Void)
+    var loadingIndicatorPublisher: AnyPublisher<Bool, Never> { get }
+    var errorPublisher: AnyPublisher<Error, Never> { get }
+    var registerButtonEnabledPublisher: AnyPublisher<Bool, Never> { get }
+    var registerStatusPublisher: AnyPublisher<Bool, Never> { get }
 }

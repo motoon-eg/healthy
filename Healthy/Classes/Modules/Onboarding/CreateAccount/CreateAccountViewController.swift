@@ -63,9 +63,7 @@ private extension CreateAccountViewController {
     }
 
     func configureViewModel() {
-        viewModel.configureButtonEnabled { [weak self] isEnabled in
-            self?.signUpButton.isEnabled = isEnabled
-        }
+        
     }
 }
 
