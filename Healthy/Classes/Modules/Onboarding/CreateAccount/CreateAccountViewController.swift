@@ -1,4 +1,6 @@
 import UIKit
+import Combine
+
 // MARK: - CreateAccountViewController
 final class CreateAccountViewController: UIViewController {
 
@@ -19,7 +21,8 @@ final class CreateAccountViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: CreateAccountViewModelType
-
+    private var subscriptions: Set<AnyCancellable> = []
+    
     // MARK: Init
 
     init(viewModel: CreateAccountViewModelType) {
@@ -63,7 +66,10 @@ private extension CreateAccountViewController {
     }
 
     func configureViewModel() {
-        
+        bindLoadingIndicator()
+        bindErrorMessage()
+        bindButtonState()
+        bindRegisterStatus()
     }
 }
 
@@ -88,5 +94,42 @@ private extension CreateAccountViewController {
 
     @objc private func didTapSignUp(_ sender: Any) {
 
+    }
+}
+
+// MARK: - Configure ViewModel
+
+private extension CreateAccountViewController {
+    func bindLoadingIndicator() {
+        viewModel.loadingIndicatorPublisher
+            .sink { _ in
+                // TODO: Show loading indicator.
+            }
+            .store(in: &subscriptions)
+    }
+
+    func bindErrorMessage() {
+        viewModel.errorPublisher
+            .sink { error in
+                let alertController = UIAlertController(
+                    title: "Error!!",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+
+                self.present(alertController, animated: true)
+            }
+            .store(in: &subscriptions)
+    }
+
+    func bindButtonState() {
+        viewModel.registerButtonEnabledPublisher
+            .assign(to: \.isEnabled, on: signUpButton)
+            .store(in: &subscriptions)
+    }
+
+    func bindRegisterStatus() {
+        viewModel.registerStatusPublisher
+            .sink { _ in }
+            .store(in: &subscriptions)
     }
 }
