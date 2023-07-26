@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
+final class NewRecipeCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Outlets
 
@@ -14,8 +14,13 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
 
     // MARK: - Lifecycle
 
-    override func layoutSubviews() {
+    override func awakeFromNib() {
+        super.awakeFromNib()
         configureAppearance()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
         setPlaceholderImages()
     }
 
@@ -37,34 +42,34 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
     }
 
     /// Configures the cell view and binds the data from the provided view model.
-    /// - Parameter with: The view model containing the data to be displayed in the cell view.
     ///
-    private func configure(with: ViewModel) {
-        recipeNameLabel.text = with.recipeName
-        userNameLabel.text = with.userName
-        preparationTimeInMinutesLabel.text = with.preparationTimeInMinutes
+    /// - Parameter viewModel: The view model containing the data to be displayed in the cell view.
+    func configure(with viewModel: ViewModel) {
+        recipeNameLabel.text = viewModel.recipeName
+        userNameLabel.text = viewModel.userName
+        preparationTimeInMinutesLabel.text = viewModel.preparationTimeInMinutes
 
         // TODO: [HL-52] To be Implemented after implementing binding imageUrl To UIImageView
     }
 }
 
-private extension HomeNewRecipeCollectionViewCell {
-    /// A collection of constants used within the `HomeNewRecipeCollectionViewCell` class.
+private extension NewRecipeCollectionViewCell {
+    /// A collection of constants used within the `NewRecipeCollectionViewCell` class.
     enum Constants {
         /// The corner radius value for the `cardView` in the collection view cell.
         static let cornerRadius: CGFloat = 8.0
     }
 }
 
-/// The `ViewModel` struct represents the view model used to configure the `HomeNewRecipeCollectionViewCell`.
+/// The `ViewModel` struct represents the view model used to configure the `NewRecipeCollectionViewCell`.
 ///
 /// Contains the necessary data for displaying the recipe information.
 /// - SeeAlso: `Recipe`
 ///
-private extension HomeNewRecipeCollectionViewCell {
+extension NewRecipeCollectionViewCell {
 
-    /// The view model used to configure the `HomeNewRecipeCollectionViewCell`.
-    struct ViewModel {
+    /// The view model used to configure the `NewRecipeCollectionViewCell`.
+    struct ViewModel: Equatable {
 
         /// The name of the recipe.
         let recipeName: String
