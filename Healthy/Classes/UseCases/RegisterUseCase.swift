@@ -21,7 +21,6 @@ final class DefaultRegisterUseCase: RegisterUseCase {
         do {
             let response = try await networking.dispatch(request)
             return User(email: response.email, tokenID: response.tokenId)
-            
         } catch {
             throw NSError(domain: "we have error !!!", code: -1)
         }
