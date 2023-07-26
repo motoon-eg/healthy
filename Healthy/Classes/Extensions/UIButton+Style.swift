@@ -5,7 +5,7 @@ import UIKit
 extension UIButton {
     enum ButtonStyle {
         case primary
-        case plainGold
+        case secondary
     }
 }
 
@@ -30,34 +30,34 @@ private extension UIButton.ButtonStyle {
     var backgroundColor: UIColor? {
         switch self {
         case .primary: return .primary100
-        case .plainGold return .white
+        case .secondary: return .white
         }
     }
-    
+
     var textColor: UIColor? {
         switch self {
         case .primary: return .white
-        case .plainGold: return ButtonColors.gold
+        case .secondary: return .secondary100
         }
     }
-    
+
     var buttonFont: UIFont? {
         switch self {
         case .primary: return .mediumBold
-        case .plainGold: return .mediumBold
+        case .secondary: return .mediumBold
         }
     }
-    
+
     var defaultHeight: CGFloat {
         switch self {
-        case .primary, .plainGold:
+        case .primary, .secondary:
             return 40.0
         }
     }
-    
+
     var cornerRadius: CGFloat {
         switch self {
-        case .primary, .plainGold:
+        case .primary, .secondary:
             return 12.0
         }
     }

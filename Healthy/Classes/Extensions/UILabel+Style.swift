@@ -4,35 +4,35 @@ extension UILabel {
     func applyTitleBoldStyle() {
         applyStyle(TitleBoldStyle())
     }
-    
+
     func applyInvertedTitleBoldStyle() {
         applyStyle(TitleBoldStyle(inverted: true))
     }
-    
+
     func applyHeaderBoldStyle() {
         applyStyle(HeaderBoldStyle())
     }
-    
+
     func applyBodyStyle() {
         applyStyle(InvertedBodyStyle())
     }
-    
+
     func applyInvertedBodyStyle() {
         applyStyle(InvertedBodyStyle(inverted: true))
     }
-    
+
     func applySubtitleLabelStyle() {
         applyStyle(SubtitleLabelStyle())
     }
-    
+
     func applyInvertedSubtitleLabelStyle() {
         applyStyle(SubtitleLabelStyle(inverted: true))
     }
-    
+
     func applyCaptionStyle() {
         applyStyle(CaptionLabelStyle())
     }
-    
+
     func applyInvertedCaptionStyle() {
         applyStyle(CaptionLabelStyle(inverted: true))
     }
@@ -110,7 +110,7 @@ private struct CaptionLabelStyle: LabelStyling {
 
 private struct SubtitleLabelStyle: LabelStyling {
     var inverted: Bool = false
-    
+
     func applyStyle(for label: UILabel) {
         label.textColor = inverted ? .white : .black20
         label.font = .mediumRegular

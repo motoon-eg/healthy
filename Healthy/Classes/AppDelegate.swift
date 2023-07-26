@@ -41,7 +41,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func application(_ app: UIApplication,
                      open url: URL,
-                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         let facebookResult: () -> Bool = {
             ApplicationDelegate.shared.application(
                 app,

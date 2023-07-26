@@ -38,11 +38,11 @@ final class SavedRecipesViewControllerTests: XCTestCase {
         let expectedCellClass = SavedRecipesTableViewCell.self
         
         // When
-        let cell = sut.tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
+        let cell = sut.tableView.dequeueReusableCell(for: IndexPath(item: .zero, section: .zero))
         
         // Then
         XCTAssertTrue(cell is SavedRecipesTableViewCell)
-        XCTAssertEqual(cell?.reuseIdentifier, "SavedRecipesTableViewCell")
+        XCTAssertEqual(cell.reuseIdentifier, "SavedRecipesTableViewCell")
     }
     
     func testRegisterNibFile() {

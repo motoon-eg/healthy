@@ -59,10 +59,9 @@ extension SavedRecipesViewController {
 
     func configureTableViewDataSource() {
         dataSource = UITableViewDiffableDataSource
-        <Section, SavedRecipe>(tableView: tableView) { tableView, _, viewModel in
-            let cell = tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
-            as? SavedRecipesTableViewCell
-            cell?.update(with: viewModel)
+        <Section, SavedRecipe>(tableView: tableView) { tableView, indexPath, viewModel in
+            let cell: SavedRecipesTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.update(with: viewModel)
             return cell
         }
     }

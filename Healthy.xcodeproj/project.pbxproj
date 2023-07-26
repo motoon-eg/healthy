@@ -65,6 +65,7 @@
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
+		02C3F8402A71CB3A000E62B2 /* UIView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F03D2A1F6448000F36A5 /* UIView+ReuseIdentifier.swift */; };
 		02EEC3FB2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEC3FA2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift */; };
 		02EEC3FD2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEC3FC2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift */; };
 		02EEC3FF2A4C244A0007DA0C /* SavedRecipesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEC3FE2A4C244A0007DA0C /* SavedRecipesViewModelTests.swift */; };
@@ -1212,6 +1213,7 @@
 				025A47802A337320008BF85A /* AuthenticatedUser.swift in Sources */,
 				025A47852A337337008BF85A /* Constants.swift in Sources */,
 				0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */,
+				02C3F8402A71CB3A000E62B2 /* UIView+ReuseIdentifier.swift in Sources */,
 				6DB1366E2A3635AC00448722 /* UIView+SkeletonView.swift in Sources */,
 				025511A92A3C5DAA00295B91 /* SavedRecipesViewController.swift in Sources */,
 				27C7C7F82A4341A300FECE25 /* FileSystemLogger.swift in Sources */,

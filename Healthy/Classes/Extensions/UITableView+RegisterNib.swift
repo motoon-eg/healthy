@@ -15,10 +15,10 @@ extension UITableView {
     ///
     /// - Usage:
     ///   - let cell = tableview.dequeue() as 'your cell'
-    func dequeue<Cell: UITableViewCell>() -> Cell {
+    func dequeueReusableCell<Cell: UITableViewCell>(for indexPath: IndexPath) -> Cell {
         let identifier = String(describing: Cell.self)
 
-        guard let cell = self.dequeueReusableCell(withIdentifier: identifier) as? Cell else {
+        guard let cell = self.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? Cell else {
             fatalError("Not found cell")
         }
 

@@ -75,7 +75,7 @@ private extension LoginViewController {
         emailTextFieldLabel.applyBodyStyle()
         passwordTextFieldLabel.applyBodyStyle()
         signInButton.applyButtonStyle(.primary)
-        signInWithFacebookButton.applyButtonStyle(.plainGold)
+        signInWithFacebookButton.applyButtonStyle(.secondary)
     }
 }
 
