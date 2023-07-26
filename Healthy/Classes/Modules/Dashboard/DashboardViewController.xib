@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22113.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVo-6R-ftw">
-                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-e5-dio">
-                            <rect key="frame" x="0.0" y="8" width="393" height="777"/>
+                            <rect key="frame" x="0.0" y="8" width="393" height="743"/>
                         </stackView>
                     </subviews>
                     <constraints>
@@ -37,7 +36,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fVo-6R-ftw" secondAttribute="bottom" id="7Ad-fK-Jk7"/>
+                <constraint firstAttribute="bottomMargin" secondItem="fVo-6R-ftw" secondAttribute="bottom" id="7Ad-fK-Jk7"/>
                 <constraint firstAttribute="trailing" secondItem="fVo-6R-ftw" secondAttribute="trailing" id="9yK-Lw-1gz"/>
                 <constraint firstItem="CHB-e5-dio" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" priority="250" id="CD3-5b-zJg"/>
                 <constraint firstItem="fVo-6R-ftw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="PpF-8Q-6b9"/>

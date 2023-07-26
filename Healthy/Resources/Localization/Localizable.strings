@@ -5,3 +5,6 @@
 // MARK: Common Localizations
 "common.email" = "Email";
 "common.password" = "Password";
+
+// MARK: Home
+"home.new_recipes.header" = "New Recipes";
