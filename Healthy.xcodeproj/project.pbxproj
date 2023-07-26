@@ -1148,7 +1148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\nif [ -z \"${SCRIPT}\"]; then\n\nARTIFACT_DIR=\"${BUILD_DIR%Build/*}SourcePackages/artifacts\"\n\nSCRIPT=`/usr/bin/find \"${ARTIFACT_DIR}\" -name newrelic_postbuild.sh | head -n 1`\n\nfi\n\n/bin/sh \"${SCRIPT}\" \"eu01xxd1e0131edfbcd7bb48440b03c791a96c5a7b-NRMA\"\n";
+			shellScript = "# Skip symbol upload during debugging.\nif [ ${CONFIGURATION} = \"Debug\" ]; then\n    echo \"Skipping DSYM upload CONFIGURATION: ${CONFIGURATION}\"\n    exit 0\nfi\n\n# Upload DSYMs\nARTIFACT_DIR=\"${BUILD_DIR%Build/*}\"\nSCRIPT=`/usr/bin/find \"${SRCROOT}\" \"${ARTIFACT_DIR}\" -type f -name run-symbol-tool | head -n 1`\n/bin/sh \"${SCRIPT}\" \"eu01xxd1e0131edfbcd7bb48440b03c791a96c5a7b-NRMA\"\n";
 		};
 		0296C1152A0FC69E005E3DC8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
