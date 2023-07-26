@@ -44,6 +44,9 @@ extension DashboardViewController {}
 extension DashboardViewController {
     func configureView() {
         stackView.addArrangedSubview(headerView)
+        // Workaround to push the content to the top if the content height is
+        // less than the available bounds height.
+        stackView.addArrangedSubview(UIView())
     }
 }
 
