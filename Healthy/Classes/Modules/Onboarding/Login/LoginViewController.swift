@@ -35,6 +35,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureAppearance()
         configureViewModelInputs()
         configureViewModelOutputs()
@@ -115,20 +116,20 @@ private extension LoginViewController {
         viewModel.isLoadingIndicatorPublisher
             .sink { _ in
                 // TODO: Show loading indicator.
-                
+
             }
             .store(in: &subscriptions)
     }
 
     func bindErrorMessage() {
         viewModel.errorPublisher
-            .sink { error in
+            .sink { [weak self] error in
                 let alertController = UIAlertController(
                     title: "Error!!",
                     message: error.localizedDescription,
                     preferredStyle: .alert)
 
-                self.present(alertController, animated: true)
+                self?.present(alertController, animated: true)
             }
             .store(in: &subscriptions)
     }

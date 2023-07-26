@@ -545,9 +545,6 @@
 			isa = PBXGroup;
 			children = (
 				027DDA4F2A0E745F0052818C /* Classes */,
-				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
-				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
-				025511C32A3D058800295B91 /* AppCoordinator.swift */,
 				027DDA4E2A0E74490052818C /* Resources */,
 			);
 			path = Healthy;
@@ -594,8 +591,11 @@
 				027DDA542A0E76C50052818C /* ReusableViews */,
 				027DDA552A0E76DC0052818C /* Services */,
 				025A47832A337337008BF85A /* System */,
-				02557D6F2A697D8E0022756A /* UseCases */,
 				027DDA532A0E76A00052818C /* Utilities */,
+				025511C32A3D058800295B91 /* AppCoordinator.swift */,
+				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
+				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
+				02557D6F2A697D8E0022756A /* UseCases */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
