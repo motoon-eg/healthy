@@ -39,9 +39,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Authentication Handler
 
 extension AppDelegate {
-    func applicatxion(_ app: UIApplication,
-                      open url: URL,
-                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         let facebookResult: () -> Bool = {
             ApplicationDelegate.shared.application(
                 app,
