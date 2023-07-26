@@ -101,8 +101,14 @@ private extension CreateAccountViewController {
 private extension CreateAccountViewController {
     func bindLoadingIndicator() {
         viewModel.loadingIndicatorPublisher
-            .sink { _ in
-                // TODO: Show loading indicator.
+            .sink { [weak self] isLoading in
+                guard let self = self else { return }
+                switch isLoading {
+                case true:
+                    self.signUpButton.startAnimating()
+                case false:
+                    self.signUpButton.stopAnimating()
+                }
             }
             .store(in: &subscriptions)
     }
