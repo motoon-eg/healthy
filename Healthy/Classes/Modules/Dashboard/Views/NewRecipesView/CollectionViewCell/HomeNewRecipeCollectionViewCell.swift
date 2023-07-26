@@ -9,7 +9,6 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private(set) var userNameLabel: UILabel!
     @IBOutlet weak private(set) var preparationTimeInMinutesLabel: UILabel!
     @IBOutlet weak private(set) var recipeImage: UIImageView!
-    @IBOutlet weak private(set) var preparationTimeHorizontalStackView: UIStackView!
     @IBOutlet weak private(set) var cardView: UIView!
 
     // MARK: - Lifecycle
@@ -22,9 +21,6 @@ class HomeNewRecipeCollectionViewCell: UICollectionViewCell {
     // MARK: - Private Methods
 
     private func configureAppearance() {
-        recipeNameLabel.applyStyle(.textFieldTitleLabel)
-        userNameLabel.applyStyle(.signupSubtitle)
-        preparationTimeInMinutesLabel.applyStyle(.signupSubtitle)
         cardView.applyDefaultCardShadow(cornerRadius: Constants.cornerRadius)
     }
 
