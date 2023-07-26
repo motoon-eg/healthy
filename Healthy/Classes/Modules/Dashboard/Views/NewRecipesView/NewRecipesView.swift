@@ -100,13 +100,13 @@ private extension UICollectionViewLayout {
     static func createTagsLayout() -> UICollectionViewCompositionalLayout {
 
         let itemSize = NSCollectionLayoutSize(
-            widthDimension: .estimated(100),
+            widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
         let groupSize = NSCollectionLayoutSize(
-            widthDimension: .estimated(100),
-            heightDimension: .fractionalHeight(1.0))
+            widthDimension: .absolute(250),
+            heightDimension: .fractionalHeight(0.8))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
 
         let section = NSCollectionLayoutSection(group: group)
