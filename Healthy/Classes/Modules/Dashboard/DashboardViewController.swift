@@ -10,6 +10,7 @@ final class DashboardViewController: UIViewController {
     // MARK: Subviews
 
     private let headerView = HomeHeaderView()
+    private let sliderDishesView = SliderDishesView()
     private let tagsView = FoodTagsView()
     private let newRecipesView = NewRecipesView()
 
@@ -54,6 +55,9 @@ extension DashboardViewController {
 
         // Meal Categories
         stackView.addArrangedSubview(tagsView)
+
+		// Dishes Slider
+        stackView.addArrangedSubview(sliderDishesView)
 
         // New Recipes
         stackView.addArrangedSubview(makeSection(

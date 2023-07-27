@@ -82,6 +82,7 @@ private struct HeaderBoldStyle: LabelStyling {
     }
 }
 
+// MARK: - Fonts
 // MARK: InvertedBodyStyle
 
 private struct InvertedBodyStyle: LabelStyling {
