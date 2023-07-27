@@ -12,4 +12,7 @@ protocol DashboardViewModelInput {}
 ///
 protocol DashboardViewModelOutput {
     var header: HomeHeaderView.ViewModel { get }
+    var foodTags: FoodTagsView.ViewModel { get }
+    var dishes: SliderDishesView.ViewModel { get }
+    var newRecipes: NewRecipesView.ViewModel { get }
 }

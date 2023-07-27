@@ -33,7 +33,6 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="1fP-La-V90" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9a8-HJ-mbi"/>
                 <constraint firstAttribute="bottom" secondItem="1fP-La-V90" secondAttribute="bottom" id="GDL-xZ-wCW"/>

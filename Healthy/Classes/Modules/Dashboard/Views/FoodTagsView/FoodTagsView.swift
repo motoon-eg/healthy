@@ -72,6 +72,9 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.updateView(viewModel: element)
         let isSelected = viewModel.selected == element
         cell.setSelection(isSelected)
+        if isSelected { selectedIndex = indexPath
+            viewModel.onSelect(element)
+        }
         return cell
     }
 
@@ -79,7 +82,6 @@ extension FoodTagsView: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let element = viewModel.foodCategories[indexPath.row]
-        viewModel.onSelect(element)
         viewModel.selected = element
         if let selectedIndex {
             collectionView.reloadItems(at: [indexPath, selectedIndex])
@@ -147,7 +149,7 @@ private extension UICollectionViewLayout {
 
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 20, bottom: 8, trailing: 20)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 15, bottom: 8, trailing: 15)
         section.interGroupSpacing = 15
 
         return UICollectionViewCompositionalLayout(section: section)

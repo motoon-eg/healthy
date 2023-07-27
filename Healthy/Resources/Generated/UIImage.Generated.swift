@@ -86,6 +86,10 @@ extension UIImage {
       UIImage(named: "preview-dishes-2")! 
     }
 
+    static var recipesDishes1: UIImage {
+      UIImage(named: "recipes-dishes-1")! 
+    }
+
     static var star: UIImage {
       UIImage(named: "star")! 
     }
