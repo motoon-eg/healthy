@@ -10,7 +10,7 @@ enum Constants {
     }()
 
     static let theMealDB: URL = {
-        guard let url = URL(string: "www.themealdb.com/api/json/v1/1/") else {
+        guard let url = URL(string: "https://www.themealdb.com/api/json/v1/1/") else {
             preconditionFailure("Invalid URL")
         }
 
@@ -25,5 +25,7 @@ enum Constants {
         return url
     }()
 
-    static let fireBaseAuthKey: String = "AIzaSyB0UczrurqM1STyI8tvx4QZVTyQVw4UJ7Q"
+    static let firebaseKey: String = {
+        return "AIzaSyB0UczrurqM1STyI8tvx4QZVTyQVw4UJ7Q"
+    }()
 }
