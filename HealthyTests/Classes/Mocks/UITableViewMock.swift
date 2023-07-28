@@ -10,7 +10,6 @@ final class UITableViewMock<Cell: UITableViewCell>: UITableView, UITableViewDele
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableViewCell: Cell = tableView.dequeue()
-        return tableViewCell
+        tableView.dequeueReusableCell(for: indexPath) as Cell
     }
 }
