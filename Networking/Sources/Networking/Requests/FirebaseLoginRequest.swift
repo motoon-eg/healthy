@@ -26,7 +26,7 @@ public struct FirebaseLoginRequest: RequestType {
 
     public var queryParameters: [String: String] {
         [
-            "key": Constants.fireBaseAuthKey
+            "key": Constants.firebaseKey
         ]
     }
 

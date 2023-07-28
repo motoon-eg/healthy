@@ -4,7 +4,7 @@ import XCTest
 final class RegisterRequestTests: XCTestCase {
 
     // MARK: - Tests
-    
+
     func testRegisterRequestProperties() {
         // Given
         let email = "test@example.com"
@@ -16,7 +16,7 @@ final class RegisterRequestTests: XCTestCase {
         XCTAssertEqual(registerRequest.path, "/accounts:signInWithPassword?key=\(Constants.firebaseKey)")
         XCTAssertEqual(registerRequest.method, "POST")
     }
-    
+
     func testRegisterRequestResponseDecoder() throws {
         // Given
         let registerResponseAsString = """
