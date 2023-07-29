@@ -1,4 +1,6 @@
 import UIKit
+import Combine
+
 // MARK: - CreateAccountViewController
 final class CreateAccountViewController: UIViewController {
 
@@ -19,7 +21,8 @@ final class CreateAccountViewController: UIViewController {
     // MARK: Properties
 
     private let viewModel: CreateAccountViewModelType
-
+    private var subscriptions: Set<AnyCancellable> = []
+    
     // MARK: Init
 
     init(viewModel: CreateAccountViewModelType) {
@@ -63,9 +66,9 @@ private extension CreateAccountViewController {
     }
 
     func configureViewModel() {
-        viewModel.configureButtonEnabled { [weak self] isEnabled in
-            self?.signUpButton.isEnabled = isEnabled
-        }
+        bindLoadingIndicator()
+        bindErrorMessage()
+        bindButtonState()
     }
 }
 
@@ -89,6 +92,43 @@ private extension CreateAccountViewController {
     }
 
     @objc private func didTapSignUp(_ sender: Any) {
+        viewModel.performSignUp()
+    }
+}
 
+// MARK: - Configure ViewModel
+
+private extension CreateAccountViewController {
+    func bindLoadingIndicator() {
+        viewModel.loadingIndicatorPublisher
+            .sink { [weak self] isLoading in
+                guard let self = self else { return }
+                switch isLoading {
+                case true:
+                    self.signUpButton.startAnimating()
+                case false:
+                    self.signUpButton.stopAnimating()
+                }
+            }
+            .store(in: &subscriptions)
+    }
+
+    func bindErrorMessage() {
+        viewModel.errorPublisher
+            .sink { error in
+                let alertController = UIAlertController(
+                    title: "Error!!",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert)
+
+                self.present(alertController, animated: true)
+            }
+            .store(in: &subscriptions)
+    }
+
+    func bindButtonState() {
+        viewModel.registerButtonEnabledPublisher
+            .assign(to: \.isEnabled, on: signUpButton)
+            .store(in: &subscriptions)
     }
 }
