@@ -16,6 +16,7 @@
 		0246FE842A7D1A640092B237 /* FavoriteRecipeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE832A7D1A640092B237 /* FavoriteRecipeUseCase.swift */; };
 		0246FE872A7D1AF80092B237 /* UseCase+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE862A7D1AF80092B237 /* UseCase+Container.swift */; };
 		0246FE8A2A7D1BFF0092B237 /* Storage+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE892A7D1BFF0092B237 /* Storage+Container.swift */; };
+		0246FE8C2A7D26470092B237 /* KeyValueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE8B2A7D26470092B237 /* KeyValueWrapper.swift */; };
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511942A3C3F6400295B91 /* Poppins-Regular.ttf */; };
 		025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511952A3C3F6400295B91 /* Poppins-Bold.ttf */; };
@@ -181,6 +182,7 @@
 		0246FE832A7D1A640092B237 /* FavoriteRecipeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeUseCase.swift; sourceTree = "<group>"; };
 		0246FE862A7D1AF80092B237 /* UseCase+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UseCase+Container.swift"; sourceTree = "<group>"; };
 		0246FE892A7D1BFF0092B237 /* Storage+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage+Container.swift"; sourceTree = "<group>"; };
+		0246FE8B2A7D26470092B237 /* KeyValueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueWrapper.swift; sourceTree = "<group>"; };
 		025511942A3C3F6400295B91 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		025511952A3C3F6400295B91 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		025511992A3C5D7300295B91 /* SearchViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelType.swift; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 				C96520C82A2B72B800FACCC0 /* Logger */,
 				025A47702A337320008BF85A /* Validators */,
 				025511C12A3D049500295B91 /* Coordinator.swift */,
+				0246FE8B2A7D26470092B237 /* KeyValueWrapper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1379,6 +1382,7 @@
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				C972DB2F2A5F6F91000041D1 /* FilterByMainIngredient.swift in Sources */,
+				0246FE8C2A7D26470092B237 /* KeyValueWrapper.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,

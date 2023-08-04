@@ -1,4 +1,5 @@
 import Factory
+import Foundation
 import Storage
 import Networking
 
@@ -11,5 +12,9 @@ extension Container {
 
     var coreDataWrapper: Factory<CoreDataWrapping> {
         Factory(self) { CoreDataWrapper(modelName: "CoreDataModel") }
+    }
+    
+    var keyValueWrapper: Factory<KeyValueWrapper> {
+        Factory(self) { UserDefaults.standard }
     }
 }
