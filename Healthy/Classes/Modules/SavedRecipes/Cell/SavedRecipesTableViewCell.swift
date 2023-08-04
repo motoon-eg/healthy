@@ -32,11 +32,7 @@ extension SavedRecipesTableViewCell {
         }
 
         static func == (lhs: SavedRecipesTableViewCell.ViewModel, rhs: SavedRecipesTableViewCell.ViewModel) -> Bool {
-            return  lhs.title == rhs.title &&
-            lhs.rating == rhs.rating &&
-            lhs.chefName == rhs.chefName &&
-            lhs.cookingTime == rhs.cookingTime &&
-            lhs.recipeImage == rhs.recipeImage
+            return lhs.id == rhs.id
         }
     }
 }

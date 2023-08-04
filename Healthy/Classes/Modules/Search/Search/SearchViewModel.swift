@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import Domain
 
 protocol SearchDataSource {
     func loadRecipes() async throws -> [Recipe]
@@ -127,5 +128,17 @@ private extension SearchViewModel {
             }
             return false
         }
+    }
+}
+
+// MARK: - Recipe Helpers
+private extension Recipe {
+    /// Formats the preparation time as a string in the "Minutes:Seconds" format.
+    ///
+    /// - Returns: A string representing the preparation time formatted as "Minutes:Seconds".
+    func formattedPreparationTime() -> String {
+        let minutes = (preparationTime ?? 0) / 60
+        let seconds = (preparationTime ?? 0) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }
