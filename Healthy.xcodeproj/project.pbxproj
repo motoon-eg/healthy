@@ -41,6 +41,8 @@
 		025511D42A3D0A8B00295B91 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511CC2A3D0A8B00295B91 /* CreateAccountViewModel.swift */; };
 		025511D52A3D0A8B00295B91 /* CreateAccountviewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511CD2A3D0A8B00295B91 /* CreateAccountviewModelType.swift */; };
 		025511D62A3D0A8B00295B91 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511CE2A3D0A8B00295B91 /* CreateAccountViewController.swift */; };
+		02557D712A697DF90022756A /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02557D702A697DF90022756A /* LoginUseCase.swift */; };
+		02557D732A697E8E0022756A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 02557D722A697E8E0022756A /* Domain */; };
 		025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A474F2A336B05008BF85A /* DashboardViewModelType.swift */; };
 		025A47542A336B05008BF85A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47502A336B05008BF85A /* DashboardViewController.swift */; };
 		025A47552A336B05008BF85A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025A47512A336B05008BF85A /* DashboardViewModel.swift */; };
@@ -72,6 +74,7 @@
 		029C89142A71E79A00AF380B /* NewRecipesCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C89132A71E79A00AF380B /* NewRecipesCollectionViewLayout.swift */; };
 		02C37B862A71CF5600FD58E5 /* NewRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C37B852A71CF5600FD58E5 /* NewRecipesView.swift */; };
 		02C3F8402A71CB3A000E62B2 /* UIView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918F03D2A1F6448000F36A5 /* UIView+ReuseIdentifier.swift */; };
+		02CB9B642A6ADE4E00C1E765 /* DefaultLoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB9B632A6ADE4E00C1E765 /* DefaultLoginUseCaseTests.swift */; };
 		02EEC3FB2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEC3FA2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift */; };
 		02EEC3FD2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEC3FC2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift */; };
 		02EEC3FF2A4C244A0007DA0C /* SavedRecipesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EEC3FE2A4C244A0007DA0C /* SavedRecipesViewModelTests.swift */; };
@@ -200,6 +203,8 @@
 		025511CC2A3D0A8B00295B91 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		025511CD2A3D0A8B00295B91 /* CreateAccountviewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountviewModelType.swift; sourceTree = "<group>"; };
 		025511CE2A3D0A8B00295B91 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		02557D6E2A697C3D0022756A /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		02557D702A697DF90022756A /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		025A474F2A336B05008BF85A /* DashboardViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelType.swift; sourceTree = "<group>"; };
 		025A47502A336B05008BF85A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		025A47512A336B05008BF85A /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -231,6 +236,7 @@
 		029C89112A71E78000AF380B /* NSLayoutConstraint+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Helpers.swift"; sourceTree = "<group>"; };
 		029C89132A71E79A00AF380B /* NewRecipesCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesCollectionViewLayout.swift; sourceTree = "<group>"; };
 		02C37B852A71CF5600FD58E5 /* NewRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesView.swift; sourceTree = "<group>"; };
+		02CB9B632A6ADE4E00C1E765 /* DefaultLoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginUseCaseTests.swift; sourceTree = "<group>"; };
 		02EEC3FA2A4C22C90007DA0C /* SavedRecipesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelMock.swift; sourceTree = "<group>"; };
 		02EEC3FC2A4C23090007DA0C /* SavedRecipesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewControllerTests.swift; sourceTree = "<group>"; };
 		02EEC3FE2A4C244A0007DA0C /* SavedRecipesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipesViewModelTests.swift; sourceTree = "<group>"; };
@@ -321,6 +327,7 @@
 				6D611B9F2A299E3600A1FC65 /* GoogleSignInSwift in Frameworks */,
 				025511B72A3C623000295B91 /* NewRelic in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
+				02557D732A697E8E0022756A /* Domain in Frameworks */,
 				0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */,
 				6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */,
 			);
@@ -457,6 +464,14 @@
 			path = CreateAccount;
 			sourceTree = "<group>";
 		};
+		02557D6F2A697D8E0022756A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				02557D702A697DF90022756A /* LoginUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		025A474E2A336AE3008BF85A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +538,7 @@
 		027DDA122A0E6A660052818C = {
 			isa = PBXGroup;
 			children = (
+				02557D6E2A697C3D0022756A /* Domain */,
 				02892EC52A585558001A3DB4 /* Networking */,
 				027DDA1D2A0E6A660052818C /* Healthy */,
 				027DDA342A0E6A680052818C /* HealthyTests */,
@@ -597,6 +613,7 @@
 				025511C32A3D058800295B91 /* AppCoordinator.swift */,
 				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
 				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
+				02557D6F2A697D8E0022756A /* UseCases */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -678,6 +695,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02CB9B5F2A6AD5DD00C1E765 /* LoginUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				02CB9B632A6ADE4E00C1E765 /* DefaultLoginUseCaseTests.swift */,
+			);
+			path = LoginUseCase;
 			sourceTree = "<group>";
 		};
 		02EEC3F92A4C22B70007DA0C /* Mocks */ = {
@@ -826,6 +851,7 @@
 		6DFEC6202A2E97FF0090B2E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				02CB9B5F2A6AD5DD00C1E765 /* LoginUseCase */,
 				6DA228F92A431FC60011E43E /* Search */,
 				B2B7AEE22A3B4CE500AF04F5 /* MainTabBarController */,
 				A21C51F62A42FF6400850B15 /* SavedRecipes */,
@@ -1067,6 +1093,7 @@
 				0296F7922A4342B500DBC86A /* FacebookCore */,
 				0296F7942A4342B500DBC86A /* FacebookLogin */,
 				02892EC72A58575C001A3DB4 /* Networking */,
+				02557D722A697E8E0022756A /* Domain */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -1213,7 +1240,7 @@
 		025511B82A3C624E00295B91 /* NewRelic */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -1330,6 +1357,7 @@
 				79311FD82A19214700764707 /* UITextField+Style.swift in Sources */,
 				0255119F2A3C5D7300295B91 /* SearchViewModel.swift in Sources */,
 				B2D402DF2A3BB1D700FDB941 /* UILabel+Style.swift in Sources */,
+				02557D712A697DF90022756A /* LoginUseCase.swift in Sources */,
 				A2FA41112A44412500C9C9A0 /* UIView+Style.swift in Sources */,
 				6D2145472A44C9EB0085C519 /* SearchFilter.swift in Sources */,
 				79311FD02A191D3700764707 /* FormTextField.swift in Sources */,
@@ -1376,6 +1404,7 @@
 				6DFEC6232A2E982C0090B2E2 /* LoginViewControllerTests.swift in Sources */,
 				B85D26A72A3902DF000A463D /* EmailValidatorsTests.swift in Sources */,
 				6DFEC6252A2EA5770090B2E2 /* LoginViewModelMock.swift in Sources */,
+				02CB9B642A6ADE4E00C1E765 /* DefaultLoginUseCaseTests.swift in Sources */,
 				B29ABA5C2A3469CA00171A0C /* MainTapBarControllerTest.swift in Sources */,
 				A21C51FB2A43036A00850B15 /* UITableViewMock.swift in Sources */,
 				A21C51F92A42FF8D00850B15 /* SavedRecipesTableViewCellTests.swift in Sources */,
@@ -1765,6 +1794,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
 			productName = NewRelic;
+		};
+		02557D722A697E8E0022756A /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
 		};
 		02892EC72A58575C001A3DB4 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;

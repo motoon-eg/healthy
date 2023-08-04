@@ -24,19 +24,20 @@ final class MealCategoriesRequestTests: XCTestCase {
 
     func testMealCategoriesResponseDecoder() throws {
         // Given
-        // swiftlint:disable line_length
         let mealCategoriesResponseAsString = """
-            {
-                "categories": [
-                    {
-                        "idCategory": "1",
-                        "strCategory": "Beef",
-                        "strCategoryThumb": "https://www.themealdb.com/images/category/beef.png",
-                        "strCategoryDescription": "Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]"
-                    }
-                ]
-            }
-            """
+             {
+            "categories": [
+                {
+                    "idCategory": "1",
+                    "strCategory": "Beef",
+                    "strCategoryThumb": "https://www.themealdb.com/images/category/beef.png",
+                    "strCategoryDescription": "Beef is the culinary name for meat from cattle, \
+        particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] \
+        Beef is a source of high-quality protein and essential nutrients.[2]"
+                }
+            ]
+        }
+        """
 
         // When
         let mealCategoriesResponseData = try XCTUnwrap(mealCategoriesResponseAsString.data(using: .utf8))

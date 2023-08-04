@@ -2,13 +2,14 @@ import Combine
 @testable import Healthy
 
 final class LoginViewModelMock: LoginViewModelType {
+    private let errorSubject = PassthroughSubject<Error, Never>()
+
+    var errorPublisher: AnyPublisher<Error, Never> {
+        errorSubject.eraseToAnyPublisher()
+    }
 
     var isLoadingIndicatorPublisher: AnyPublisher<Bool, Never> {
         Just(false).eraseToAnyPublisher()
-    }
-
-    var isShowErrorMessagePublisher: AnyPublisher<String, Never> {
-        Just("").eraseToAnyPublisher()
     }
 
     var isLoginEnabledPublisher: AnyPublisher<Bool, Never> {
