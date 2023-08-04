@@ -4,14 +4,14 @@ import FBSDKCoreKit
 import NewRelic
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureGoogleSignIn()
         configureFacebookSignin(application: application, launchOptions: launchOptions)
         configureNewRelic()
-        UINavigationBar.applyDefaultAppearance()
+        configureAppearance()
         return true
     }
 
@@ -39,9 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Authentication Handler
 
 extension AppDelegate {
-    func applicatxion(_ app: UIApplication,
-                      open url: URL,
-                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         let facebookResult: () -> Bool = {
             ApplicationDelegate.shared.application(
                 app,
@@ -78,4 +78,7 @@ private extension AppDelegate {
         NewRelic.start(withApplicationToken: Constants.newRelicAPIKey)
     }
 
+    func configureAppearance() {
+        UINavigationBar.applyDefaultAppearance()
+    }
 }

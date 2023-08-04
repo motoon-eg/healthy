@@ -90,7 +90,7 @@ extension FormTextField {
 
 extension FormTextField {
     private func configureLayout() {
-        titleLabel.applyStyle(.textFieldTitleLabel)
+        titleLabel.applyBodyStyle()
         inputTextField.applyTextFieldStyle(.primary)
         errorLabel.isHidden = true
         errorLabel.textColor = .warning

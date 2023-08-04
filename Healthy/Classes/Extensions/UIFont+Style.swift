@@ -5,35 +5,31 @@ import UIKit
 extension UIFont {
 
     static var titleRegular: UIFont {
-        poppins(ofSize: 50, weight: .regular)
-    }
-
-    static var headerRegular: UIFont {
         poppins(ofSize: 30, weight: .regular)
     }
 
-    static var largeRegular: UIFont {
+    static var headerRegular: UIFont {
         poppins(ofSize: 20, weight: .regular)
     }
 
-    static var mediumRegular: UIFont {
+    static var largeRegular: UIFont {
         poppins(ofSize: 18, weight: .regular)
     }
 
-    static var normalRegular: UIFont {
+    static var mediumRegular: UIFont {
         poppins(ofSize: 16, weight: .regular)
     }
 
-    static var smallRegular: UIFont {
+    static var normalRegular: UIFont {
         poppins(ofSize: 14, weight: .regular)
     }
 
-    static var smallerRegular: UIFont {
+    static var smallRegular: UIFont {
         poppins(ofSize: 11, weight: .regular)
     }
 
-    static var smallLabelRegular: UIFont {
-        poppins(ofSize: 8, weight: .regular)
+    static var smallerRegular: UIFont {
+        poppins(ofSize: 9, weight: .regular)
     }
 }
 
@@ -42,31 +38,31 @@ extension UIFont {
 extension UIFont {
 
     static var titleBold: UIFont {
-        poppins(ofSize: 50, weight: .bold)
-    }
-
-    static var headerBold: UIFont {
         poppins(ofSize: 30, weight: .bold)
     }
 
-    static var largeBold: UIFont {
+    static var headerBold: UIFont {
         poppins(ofSize: 20, weight: .bold)
     }
 
-    static var mediumBold: UIFont {
+    static var largeBold: UIFont {
         poppins(ofSize: 18, weight: .bold)
     }
 
-    static var normalBold: UIFont {
+    static var mediumBold: UIFont {
         poppins(ofSize: 16, weight: .bold)
     }
 
-    static var smallBold: UIFont {
+    static var normalBold: UIFont {
         poppins(ofSize: 14, weight: .bold)
     }
 
-    static var smallerBold: UIFont {
+    static var smallBold: UIFont {
         poppins(ofSize: 11, weight: .bold)
+    }
+
+    static var smallerBold: UIFont {
+        poppins(ofSize: 9, weight: .bold)
     }
 }
 

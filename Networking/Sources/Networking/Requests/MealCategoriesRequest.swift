@@ -10,7 +10,7 @@ public struct Category: Decodable {
     let categoryId, categoryTitle: String
     let categoryThumb: String
     let categoryDescription: String
-    
+
     enum CodingKeys: String, CodingKey {
         case categoryId = "idCategory"
         case categoryTitle = "strCategory"
@@ -21,7 +21,7 @@ public struct Category: Decodable {
 
 // MARK: - MealCategoriesRequest
 public struct MealCategoriesRequest: RequestType {
-    
+
     public typealias ResponseType = MealCategoriesResponse
 
     public init() {}

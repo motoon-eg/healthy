@@ -94,11 +94,11 @@ private extension SavedRecipesTableViewCell {
     func configureLayout() {
         contentView.layer.cornerRadius = 10
         recipeImageView.applyPrimaryGradient()
-        titleLabel.applyStyle(.cellHeaderTitle)
-        chefNameLabel.applyStyle(.cellHeaderSubTitle)
+        titleLabel.applyCaptionStyle()
+        chefNameLabel.applyInvertedCaptionStyle()
         rateView.layer.cornerRadius = 8
         rateView.backgroundColor = UIColor.secondary20
-        timeLabel.applyStyle(.cellTime)
+        timeLabel.applyInvertedSubtitleLabelStyle()
         bookMarkView.layer.cornerRadius = 12
         addActionToBookMarkView()
     }

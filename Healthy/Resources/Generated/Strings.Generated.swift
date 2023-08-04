@@ -20,6 +20,12 @@ internal enum L10n {
     /// Password
     internal static let password = L10n.tr("Localizable", "common.password", fallback: "Password")
   }
+  internal enum Home {
+    internal enum NewRecipes {
+      /// New Recipes
+      internal static let header = L10n.tr("Localizable", "home.new_recipes.header", fallback: "New Recipes")
+    }
+  }
   internal enum Signin {
     /// Sign In
     internal static let buttonTitle = L10n.tr("Localizable", "signin.buttonTitle", fallback: "Sign In")

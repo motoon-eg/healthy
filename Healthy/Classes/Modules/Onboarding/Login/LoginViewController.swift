@@ -72,10 +72,10 @@ extension LoginViewController {
 
 private extension LoginViewController {
     func configureAppearance() {
-        emailTextFieldLabel.applyStyle(.textFieldTitleLabel)
-        passwordTextFieldLabel.applyStyle(.textFieldTitleLabel)
+        emailTextFieldLabel.applyBodyStyle()
+        passwordTextFieldLabel.applyBodyStyle()
         signInButton.applyButtonStyle(.primary)
-        signInWithFacebookButton.applyButtonStyle(.plainGold)
+        signInWithFacebookButton.applyButtonStyle(.secondary)
     }
 }
 

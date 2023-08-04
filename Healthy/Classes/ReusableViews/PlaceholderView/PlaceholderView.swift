@@ -103,7 +103,7 @@ extension PlaceholderView {
 
 private extension PlaceholderView {
     func configureLayout() {
-        messageLabel.applyStyle(.messageLabel)
+        messageLabel.applyBodyStyle()
         actionButton.applyButtonStyle(.primary)
     }
 }

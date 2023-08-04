@@ -24,7 +24,7 @@ enum Constants {
 
         return url
     }()
-    
+
     static let firebaseKey: String = {
         return "AIzaSyB0UczrurqM1STyI8tvx4QZVTyQVw4UJ7Q"
     }()

@@ -19,7 +19,7 @@ public struct RegisterRequest: RequestType {
     private let email: String
     private let password: String
     private let returnSecureToken: Bool
-    
+
     public init(email: String, password: String, returnSecureToken: Bool = true) {
         self.email = email
         self.password = password
