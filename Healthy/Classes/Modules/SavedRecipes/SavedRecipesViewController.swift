@@ -43,6 +43,12 @@ final class SavedRecipesViewController: UIViewController {
         configureTableViewDataSource()
         setupBindings()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        viewModel.viewWillAppear()
+    }
 }
 
 // MARK: - Actions

@@ -7,6 +7,7 @@ typealias SavedRecipesViewModelType = SavedRecipesViewModelInput & SavedRecipesV
 ///
 protocol SavedRecipesViewModelInput {
     func removeSavedRecipe(_ recipe: SavedRecipesTableViewCell.ViewModel)
+    func viewWillAppear()
 }
 
 /// SavedRecipes ViewModel Output

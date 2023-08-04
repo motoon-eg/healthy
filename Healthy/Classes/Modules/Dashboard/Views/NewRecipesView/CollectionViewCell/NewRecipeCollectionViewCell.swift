@@ -12,11 +12,16 @@ final class NewRecipeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak private(set) var preparationTimeHorizontalStackView: UIStackView!
     @IBOutlet weak private(set) var cardView: UIView!
 
+    // MARK: - Properties
+
+    private var onTap: () -> Void = { }
+
     // MARK: - Lifecycle
 
     override func awakeFromNib() {
         super.awakeFromNib()
         configureAppearance()
+        configureOnTapGesture()
     }
 
     override func prepareForReuse() {
@@ -33,12 +38,23 @@ final class NewRecipeCollectionViewCell: UICollectionViewCell {
         cardView.applyDefaultCardShadow(cornerRadius: Constants.cornerRadius)
     }
 
+    private func configureOnTapGesture() {
+        addGestureRecognizer(
+            UITapGestureRecognizer(target: self, action: #selector(viewWasTapped))
+        )
+    }
+
     /// Sets placeholder images for testing purposes
     ///
     /// Use this till a `ViewModel` is passed and configures the view properly
     private func setPlaceholderImages() {
         userImage.image = UIImage.imageUserRecipePlaceholder
         recipeImage.image = UIImage.imageRecipePlaceholder
+    }
+
+    /// Called when the cell is tapped
+    @objc private func viewWasTapped() {
+        onTap()
     }
 
     /// Configures the cell view and binds the data from the provided view model.
@@ -49,6 +65,7 @@ final class NewRecipeCollectionViewCell: UICollectionViewCell {
         userNameLabel.text = viewModel.userName
         preparationTimeInMinutesLabel.text = viewModel.preparationTimeInMinutes
 
+        onTap = viewModel.onTap
         // TODO: [HL-52] To be Implemented after implementing binding imageUrl To UIImageView
     }
 }
@@ -70,7 +87,6 @@ extension NewRecipeCollectionViewCell {
 
     /// The view model used to configure the `NewRecipeCollectionViewCell`.
     struct ViewModel: Equatable {
-
         /// The name of the recipe.
         let recipeName: String
 
@@ -88,5 +104,13 @@ extension NewRecipeCollectionViewCell {
 
         /// The image urlrepresenting the user photo.
         let userImageUrl: String?
+
+        /// On cell tap action
+        let onTap: () -> Void
+
+        static func == (lhs: Self, rhs: Self) -> Bool {
+            lhs.recipeName == rhs.recipeName
+            && lhs.userName == rhs.userName
+        }
     }
 }

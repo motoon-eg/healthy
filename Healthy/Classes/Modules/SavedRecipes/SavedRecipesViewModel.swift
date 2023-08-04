@@ -1,24 +1,18 @@
 import Combine
 import UIKit
+import Factory
 
 // MARK: SavedRecipesViewModel
 
 final class SavedRecipesViewModel {
 
+    typealias CellViewModel = SavedRecipesTableViewCell.ViewModel
+
+    @Injected(\.favoriteRecipeUseCase) private var favoriteRecipeUseCase
+
     // MARK: - Properties
 
-    @Published private (set) var savedRecipes: [SavedRecipesTableViewCell.ViewModel] = [
-        SavedRecipesTableViewCell.ViewModel(title: "Traditional spare ribs baked ",
-                                            recipeImage: UIImage.iconFood,
-                                            rating: 4.5,
-                                            chefName: "By Chef John",
-                                            cookingTime: 15, toggleBookmark: {}),
-        SavedRecipesTableViewCell.ViewModel(title: "spice roasted chicken with flavored rice",
-                                            recipeImage: UIImage.iconFood,
-                                            rating: 5.0,
-                                            chefName: "By Mark Kelvin",
-                                            cookingTime: 20, toggleBookmark: {})
-    ]
+    @Published private(set) var savedRecipes: [CellViewModel] = []
 }
 
 // MARK: SavedRecipesViewModel
@@ -28,6 +22,10 @@ extension SavedRecipesViewModel: SavedRecipesViewModelInput {
         if let index = savedRecipes.firstIndex(of: recipe) {
             savedRecipes.remove(at: index)
         }
+    }
+
+    func viewWillAppear() {
+        reloadSavedRecipes()
     }
 }
 
@@ -41,4 +39,18 @@ extension SavedRecipesViewModel: SavedRecipesViewModelOutput {
 
 // MARK: Private Handlers
 
-private extension SavedRecipesViewModel {}
+private extension SavedRecipesViewModel {
+    private func reloadSavedRecipes() {
+        let recipes = favoriteRecipeUseCase.allFavoriteRecipes()
+        savedRecipes = recipes.map { recipe in
+            CellViewModel(title: recipe.title,
+                          recipeImage: UIImage.iconFood,
+                          rating: Double(recipe.rating ?? .zero),
+                          chefName: recipe.userName,
+                          cookingTime: recipe.preparationTime) { [weak self] in
+                self?.favoriteRecipeUseCase.unfavoriteRecipe(recipe)
+                self?.reloadSavedRecipes()
+            }
+        }
+    }
+}

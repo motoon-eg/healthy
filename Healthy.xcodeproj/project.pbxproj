@@ -12,6 +12,11 @@
 		0229242A2A33A137009290A8 /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924292A33A137009290A8 /* UIView+Helpers.swift */; };
 		0229242F2A33A170009290A8 /* Strings.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242C2A33A170009290A8 /* Strings.Generated.swift */; };
 		022924302A33A170009290A8 /* UIColors.Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0229242D2A33A170009290A8 /* UIColors.Generated.swift */; };
+		02373E5B2A7CED3F0095DD03 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 02373E5A2A7CED3F0095DD03 /* Storage */; };
+		0246FE842A7D1A640092B237 /* FavoriteRecipeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE832A7D1A640092B237 /* FavoriteRecipeUseCase.swift */; };
+		0246FE872A7D1AF80092B237 /* UseCase+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE862A7D1AF80092B237 /* UseCase+Container.swift */; };
+		0246FE8A2A7D1BFF0092B237 /* Storage+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE892A7D1BFF0092B237 /* Storage+Container.swift */; };
+		0246FE8C2A7D26470092B237 /* KeyValueWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0246FE8B2A7D26470092B237 /* KeyValueWrapper.swift */; };
 		025511922A3C394300295B91 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20376AA82A2663F8004BF0BF /* Colors.xcassets */; };
 		025511962A3C3F6400295B91 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511942A3C3F6400295B91 /* Poppins-Regular.ttf */; };
 		025511972A3C3F6400295B91 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 025511952A3C3F6400295B91 /* Poppins-Bold.ttf */; };
@@ -28,8 +33,6 @@
 		025511B32A3C5F8900295B91 /* FilterSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511AF2A3C5F8900295B91 /* FilterSearchViewModel.swift */; };
 		025511B42A3C5F8900295B91 /* FilterSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025511B02A3C5F8900295B91 /* FilterSearchViewController.xib */; };
 		025511B72A3C623000295B91 /* NewRelic in Frameworks */ = {isa = PBXBuildFile; productRef = 025511B62A3C623000295B91 /* NewRelic */; };
-		025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BA2A3C655200295B91 /* SavedRecipe.swift */; };
-		025511BD2A3C656300295B91 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BC2A3C656300295B91 /* Recipe.swift */; };
 		025511BF2A3C8E9300295B91 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511BE2A3C8E9300295B91 /* OnboardingCoordinator.swift */; };
 		025511C22A3D049500295B91 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511C12A3D049500295B91 /* Coordinator.swift */; };
 		025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025511C32A3D058800295B91 /* AppCoordinator.swift */; };
@@ -66,7 +69,7 @@
 		027DDA422A0E6A680052818C /* HealthyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */; };
 		0286F2862A5EEB1800F20478 /* RandomMealEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */; };
 		02892EC82A58575C001A3DB4 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 02892EC72A58575C001A3DB4 /* Networking */; };
-		02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02892EC92A599CBC001A3DB4 /* Container+Networking.swift */; };
+		02892ECA2A599CBC001A3DB4 /* Services+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02892EC92A599CBC001A3DB4 /* Services+Container.swift */; };
 		0296F7932A4342B500DBC86A /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7922A4342B500DBC86A /* FacebookCore */; };
 		0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 0296F7942A4342B500DBC86A /* FacebookLogin */; };
 		0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */; };
@@ -95,7 +98,6 @@
 		27C7C7F92A4341A300FECE25 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7F52A4341A300FECE25 /* LogLevel.swift */; };
 		27C7C7FB2A4341D100FECE25 /* NewRelicLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */; };
 		6D2145472A44C9EB0085C519 /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2145462A44C9EB0085C519 /* SearchFilter.swift */; };
-		6D3B31712A4BBC0000BA0CA8 /* HomeHeaderSkeletonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D94975E2A4BB45B004A135C /* HomeHeaderSkeletonView.xib */; };
 		6D42077B2A5CD14400DAB9A5 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42077A2A5CD14400DAB9A5 /* Area.swift */; };
 		6D42077D2A5CD20A00DAB9A5 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42077C2A5CD20A00DAB9A5 /* Category.swift */; };
 		6D42077F2A5CD21500DAB9A5 /* Ingrediant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D42077E2A5CD21500DAB9A5 /* Ingrediant.swift */; };
@@ -176,6 +178,11 @@
 		022924292A33A137009290A8 /* UIView+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
 		0229242C2A33A170009290A8 /* Strings.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.Generated.swift; sourceTree = "<group>"; };
 		0229242D2A33A170009290A8 /* UIColors.Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.Generated.swift; sourceTree = "<group>"; };
+		02373E592A7CE6560095DD03 /* Storage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Storage; sourceTree = "<group>"; };
+		0246FE832A7D1A640092B237 /* FavoriteRecipeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeUseCase.swift; sourceTree = "<group>"; };
+		0246FE862A7D1AF80092B237 /* UseCase+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UseCase+Container.swift"; sourceTree = "<group>"; };
+		0246FE892A7D1BFF0092B237 /* Storage+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storage+Container.swift"; sourceTree = "<group>"; };
+		0246FE8B2A7D26470092B237 /* KeyValueWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueWrapper.swift; sourceTree = "<group>"; };
 		025511942A3C3F6400295B91 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		025511952A3C3F6400295B91 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		025511992A3C5D7300295B91 /* SearchViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelType.swift; sourceTree = "<group>"; };
@@ -190,8 +197,6 @@
 		025511AE2A3C5F8900295B91 /* FilterSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchViewController.swift; sourceTree = "<group>"; };
 		025511AF2A3C5F8900295B91 /* FilterSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSearchViewModel.swift; sourceTree = "<group>"; };
 		025511B02A3C5F8900295B91 /* FilterSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterSearchViewController.xib; sourceTree = "<group>"; };
-		025511BA2A3C655200295B91 /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
-		025511BC2A3C656300295B91 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		025511BE2A3C8E9300295B91 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		025511C12A3D049500295B91 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		025511C32A3D058800295B91 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -231,7 +236,7 @@
 		027DDA412A0E6A680052818C /* HealthyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0286F2852A5EEB1800F20478 /* RandomMealEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMealEntity.swift; sourceTree = "<group>"; };
 		02892EC52A585558001A3DB4 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
-		02892EC92A599CBC001A3DB4 /* Container+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Networking.swift"; sourceTree = "<group>"; };
+		02892EC92A599CBC001A3DB4 /* Services+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Services+Container.swift"; sourceTree = "<group>"; };
 		0296F7962A43491B00DBC86A /* FacebookAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthenticator.swift; sourceTree = "<group>"; };
 		029C89112A71E78000AF380B /* NSLayoutConstraint+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Helpers.swift"; sourceTree = "<group>"; };
 		029C89132A71E79A00AF380B /* NewRecipesCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipesCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -258,12 +263,10 @@
 		27C7C7F52A4341A300FECE25 /* LogLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
 		27C7C7FA2A4341D100FECE25 /* NewRelicLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRelicLogger.swift; sourceTree = "<group>"; };
 		6D2145462A44C9EB0085C519 /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
-		6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterByArea.swift; sourceTree = "<group>"; };
 		6D42077A2A5CD14400DAB9A5 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		6D42077C2A5CD20A00DAB9A5 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		6D42077E2A5CD21500DAB9A5 /* Ingrediant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingrediant.swift; sourceTree = "<group>"; };
-		6D94975C2A4BB456004A135C /* HomeHeaderSkeletonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderSkeletonView.swift; sourceTree = "<group>"; };
-		6D94975E2A4BB45B004A135C /* HomeHeaderSkeletonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderSkeletonView.xib; sourceTree = "<group>"; };
+		6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterByArea.swift; sourceTree = "<group>"; };
 		6D9D97A42A4B020F00BB3589 /* PublisherSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherSpy.swift; sourceTree = "<group>"; };
 		6D9D97A62A4B188400BB3589 /* PublisherMultibleValueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherMultibleValueSpy.swift; sourceTree = "<group>"; };
 		6DA228FA2A431FF30011E43E /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 				025511B72A3C623000295B91 /* NewRelic in Frameworks */,
 				6DDA138D2A1109E8004390D4 /* Factory in Frameworks */,
 				02557D732A697E8E0022756A /* Domain in Frameworks */,
+				02373E5B2A7CED3F0095DD03 /* Storage in Frameworks */,
 				0296F7952A4342B500DBC86A /* FacebookLogin in Frameworks */,
 				6D611B9D2A299E3600A1FC65 /* GoogleSignIn in Frameworks */,
 			);
@@ -418,8 +422,6 @@
 		025511B92A3C654700295B91 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				025511BC2A3C656300295B91 /* Recipe.swift */,
-				025511BA2A3C655200295B91 /* SavedRecipe.swift */,
 				798B59B12A5D15E600E4DCFF /* MealCategories.swift */,
 				C972DB2E2A5F6F91000041D1 /* FilterByMainIngredient.swift */,
 				6D6B89AC2A5DE99F00E52F4C /* FilterByArea.swift */,
@@ -467,7 +469,9 @@
 		02557D6F2A697D8E0022756A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				0246FE832A7D1A640092B237 /* FavoriteRecipeUseCase.swift */,
 				02557D702A697DF90022756A /* LoginUseCase.swift */,
+				0246FE862A7D1AF80092B237 /* UseCase+Container.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -539,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				02557D6E2A697C3D0022756A /* Domain */,
+				02373E592A7CE6560095DD03 /* Storage */,
 				02892EC52A585558001A3DB4 /* Networking */,
 				027DDA1D2A0E6A660052818C /* Healthy */,
 				027DDA342A0E6A680052818C /* HealthyTests */,
@@ -609,11 +614,11 @@
 				027DDA542A0E76C50052818C /* ReusableViews */,
 				027DDA552A0E76DC0052818C /* Services */,
 				025A47832A337337008BF85A /* System */,
+				02557D6F2A697D8E0022756A /* UseCases */,
 				027DDA532A0E76A00052818C /* Utilities */,
 				025511C32A3D058800295B91 /* AppCoordinator.swift */,
 				027DDA1E2A0E6A660052818C /* AppDelegate.swift */,
 				027DDA202A0E6A660052818C /* SceneDelegate.swift */,
-				02557D6F2A697D8E0022756A /* UseCases */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				C96520C82A2B72B800FACCC0 /* Logger */,
 				025A47702A337320008BF85A /* Validators */,
 				025511C12A3D049500295B91 /* Coordinator.swift */,
+				0246FE8B2A7D26470092B237 /* KeyValueWrapper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -677,17 +683,10 @@
 		027DDA552A0E76DC0052818C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				027DDA572A0E76E90052818C /* Storage */,
-				02892EC92A599CBC001A3DB4 /* Container+Networking.swift */,
+				02892EC92A599CBC001A3DB4 /* Services+Container.swift */,
+				0246FE892A7D1BFF0092B237 /* Storage+Container.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		027DDA572A0E76E90052818C /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storage;
 			sourceTree = "<group>";
 		};
 		02892EC62A58575C001A3DB4 /* Frameworks */ = {
@@ -1094,6 +1093,7 @@
 				0296F7942A4342B500DBC86A /* FacebookLogin */,
 				02892EC72A58575C001A3DB4 /* Networking */,
 				02557D722A697E8E0022756A /* Domain */,
+				02373E5A2A7CED3F0095DD03 /* Storage */,
 			);
 			productName = Healthy;
 			productReference = 027DDA1B2A0E6A660052818C /* Healthy.app */;
@@ -1304,6 +1304,7 @@
 				0286F2862A5EEB1800F20478 /* RandomMealEntity.swift in Sources */,
 				0266E7E62A56372500D5ABC4 /* UINavigationBar+Appearance.swift in Sources */,
 				C2FE12122A412904001A7BE3 /* AnimatableView.swift in Sources */,
+				0246FE872A7D1AF80092B237 /* UseCase+Container.swift in Sources */,
 				025511C42A3D058800295B91 /* AppCoordinator.swift in Sources */,
 				209F93D12A40C1E700B007BA /* NewRecipeCollectionViewCell.swift in Sources */,
 				6D6B89AD2A5DE99F00E52F4C /* FilterByArea.swift in Sources */,
@@ -1329,7 +1330,9 @@
 				025511A92A3C5DAA00295B91 /* SavedRecipesViewController.swift in Sources */,
 				27C7C7F82A4341A300FECE25 /* FileSystemLogger.swift in Sources */,
 				025A477F2A337320008BF85A /* ValidationRule.swift in Sources */,
+				0246FE8A2A7D1BFF0092B237 /* Storage+Container.swift in Sources */,
 				B24160892A45B4DA000DF5BA /* FoodTagsView.swift in Sources */,
+				0246FE842A7D1A640092B237 /* FavoriteRecipeUseCase.swift in Sources */,
 				B2F799E92A344B9A002F1894 /* MainTabBarController.swift in Sources */,
 				C21F76E42A4AFBF700E0609C /* Collection+Helpers.swift in Sources */,
 				025511B22A3C5F8900295B91 /* FilterSearchViewController.swift in Sources */,
@@ -1341,13 +1344,11 @@
 				025511AA2A3C5DAA00295B91 /* SavedRecipesViewModel.swift in Sources */,
 				B241608B2A45B4DA000DF5BA /* FoodTagCollectionViewCell.swift in Sources */,
 				6D42077D2A5CD20A00DAB9A5 /* Category.swift in Sources */,
-				025511BB2A3C655200295B91 /* SavedRecipe.swift in Sources */,
 				025511A82A3C5DAA00295B91 /* SavedRecipesViewModelType.swift in Sources */,
-				02892ECA2A599CBC001A3DB4 /* Container+Networking.swift in Sources */,
+				02892ECA2A599CBC001A3DB4 /* Services+Container.swift in Sources */,
 				025511D02A3D0A8B00295B91 /* SplashViewModel.swift in Sources */,
 				0296F7972A43491B00DBC86A /* FacebookAuthenticator.swift in Sources */,
 				025511B12A3C5F8900295B91 /* FilterSearchViewModelType.swift in Sources */,
-				025511BD2A3C656300295B91 /* Recipe.swift in Sources */,
 				0255119D2A3C5D7300295B91 /* SearchViewModelType.swift in Sources */,
 				6DF5250C2A1E855F0027502C /* LoginViewModelType.swift in Sources */,
 				27C7C7F72A4341A300FECE25 /* Logging.swift in Sources */,
@@ -1381,6 +1382,7 @@
 				027DDA212A0E6A660052818C /* SceneDelegate.swift in Sources */,
 				025A47532A336B05008BF85A /* DashboardViewModelType.swift in Sources */,
 				C972DB2F2A5F6F91000041D1 /* FilterByMainIngredient.swift in Sources */,
+				0246FE8C2A7D26470092B237 /* KeyValueWrapper.swift in Sources */,
 				6DF5250A2A1E854B0027502C /* LoginViewModel.swift in Sources */,
 				025A477B2A337320008BF85A /* EmailValidator.swift in Sources */,
 				020CF0B72A3FA8F600D81BC8 /* UIImage.Generated.swift in Sources */,
@@ -1790,6 +1792,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		02373E5A2A7CED3F0095DD03 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
+		};
 		025511B62A3C623000295B91 /* NewRelic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 025511B52A3C623000295B91 /* XCRemoteSwiftPackageReference "newrelic-ios-agent-spm" */;
