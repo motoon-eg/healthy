@@ -62,6 +62,14 @@ extension UIImage {
       UIImage(named: "icon_checkbox_selected")! 
     }
 
+    static var imageChefPlaceholder: UIImage {
+      UIImage(named: "image-chef-placeholder")! 
+    }
+
+    static var imageLocation: UIImage {
+      UIImage(named: "image-location")! 
+    }
+
     static var imageRecipePlaceholder1: UIImage {
       UIImage(named: "image-recipe-placeholder 1")! 
     }
@@ -76,6 +84,10 @@ extension UIImage {
 
     static var patternFood: UIImage {
       UIImage(named: "pattern-food")! 
+    }
+
+    static var placeholderRecipeImage: UIImage {
+      UIImage(named: "placeholder-recipe-image")! 
     }
 
     static var previewDishes1: UIImage {
