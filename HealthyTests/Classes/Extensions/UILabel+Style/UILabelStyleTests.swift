@@ -8,32 +8,30 @@ final class UILabelStyleTests: XCTestCase {
 
     func test_applyStyle_onTitleLabelStyle() {
         // Given
-        let style = TitleLabelStyle()
-        let sut = UILabel()
+        let label = UILabel()
 
         // When
-        style.applyStyle(for: sut)
+        label.applyTitleBoldStyle()
 
         // Then
-        XCTAssertEqual(sut.textColor, .black20)
-        XCTAssertEqual(sut.font, .largeRegular)
-        XCTAssertEqual(sut.numberOfLines, 0)
+        XCTAssertEqual(label.textColor, .black100)
+        XCTAssertEqual(label.font, .titleBold)
+        XCTAssertEqual(label.numberOfLines, 0)
     }
 
     // MARK: - Test Subtyle style
 
     func test_applyStyle_onSubtitleLabelStyle() {
         // Given
-        let style = SubtitleLabelStyle()
-        let sut = UILabel()
+        let label = UILabel()
 
         // When
-        style.applyStyle(for: sut)
+        label.applySubtitleLabelStyle()
 
         // Then
-        XCTAssertEqual(sut.textColor, .black20)
-        XCTAssertEqual(sut.font, UIFont.mediumRegular)
-        XCTAssertEqual(sut.numberOfLines, 0)
+        XCTAssertEqual(label.textColor, .black20)
+        XCTAssertEqual(label.font, UIFont.mediumRegular)
+        XCTAssertEqual(label.numberOfLines, 0)
     }
 
 }

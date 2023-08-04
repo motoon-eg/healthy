@@ -16,7 +16,7 @@ final class SavedRecipesViewControllerTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         viewModel = SavedRecipesViewModelMock()
-        sut = SavedRecipesViewController(viewModel: viewModel )
+        sut = SavedRecipesViewController(viewModel: viewModel)
         sut.loadViewIfNeeded()
     }
     
@@ -34,15 +34,12 @@ final class SavedRecipesViewControllerTests: XCTestCase {
     }
     
     func testRegisterTableViewCell() {
-        // Given
-        let expectedCellClass = SavedRecipesTableViewCell.self
-        
         // When
-        let cell = sut.tableView.dequeueReusableCell(withIdentifier: SavedRecipesTableViewCell.reuseIdentifier)
+        let cell: SavedRecipesTableViewCell = sut.tableView
+            .dequeueReusableCell(for: IndexPath(item: .zero, section: .zero))
         
         // Then
-        XCTAssertTrue(cell is SavedRecipesTableViewCell)
-        XCTAssertEqual(cell?.reuseIdentifier, "SavedRecipesTableViewCell")
+        XCTAssertEqual(cell.reuseIdentifier, "SavedRecipesTableViewCell")
     }
     
     func testRegisterNibFile() {

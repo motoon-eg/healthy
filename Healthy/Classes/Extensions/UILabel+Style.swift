@@ -1,124 +1,120 @@
 import UIKit
 
 extension UILabel {
+    func applyTitleBoldStyle() {
+        applyStyle(TitleBoldStyle())
+    }
 
-    // MARK: Style
+    func applyInvertedTitleBoldStyle() {
+        applyStyle(TitleBoldStyle(inverted: true))
+    }
 
-    enum Style {
-        case splashHeaderLabel
-        case splashTitle
-        case splashSubtitle
-        case signinTitle
-        case signinSubtitle
-        case signupTitle
-        case signupSubtitle
-        case textFieldTitleLabel
-        case titleLabelStyle
-        case messageLabel
-        case dishesNameLable
-        case cellHeaderTitle
-        case cellHeaderSubTitle
-        case cellTime
-        case rateLabel
-        case durationLabel
+    func applyHeaderBoldStyle() {
+        applyStyle(HeaderBoldStyle())
+    }
 
-        var labelTextColor: UIColor {
-            switch self {
-            case .splashHeaderLabel,
-                    .splashTitle,
-                    .splashSubtitle,
-                    .cellHeaderTitle,
-                    .cellHeaderSubTitle,
-                    .cellTime:
-                return .white
-            case .signinTitle, .signupTitle, .dishesNameLable, .rateLabel, .durationLabel:
-                return .black
-            case .signinSubtitle,
-                    .signupSubtitle,
-                    .textFieldTitleLabel,
-                    .titleLabelStyle:
-                // TODO: [HL-4] Add global Color
-                return LabelColor.slateGray
-            case .messageLabel:
-                return .white
-            }
-        }
+    func applyBodyStyle() {
+        applyStyle(InvertedBodyStyle())
+    }
 
-        // TODO: [HL-4] Add global fonts
-        var labelFont: UIFont {
-            switch self {
-            case .splashHeaderLabel:
-                return LabelFont.splashHeaderLabel
-            case .splashTitle:
-                return LabelFont.splashTitle
-            case .splashSubtitle:
-                return LabelFont.splashSubtitle
-            case .signinTitle:
-                return LabelFont.signinTitle
-            case .signinSubtitle:
-                return LabelFont.signinSubtitle
-            case .signupTitle:
-                return LabelFont.signupTitle
-            case .signupSubtitle:
-                return LabelFont.signupSubtitle
-            case .textFieldTitleLabel:
-                return LabelFont.textFieldTitleLabel
-            case .titleLabelStyle:
-                return LabelFont.titleLabelStyle
-            case .messageLabel:
-                return LabelFont.messageLabel
-            case .dishesNameLable:
-                return LabelFont.dishesNameLable
+    func applyInvertedBodyStyle() {
+        applyStyle(InvertedBodyStyle(inverted: true))
+    }
 
-            case .cellHeaderTitle:
-                return LabelFont.cellHeaderTitleLabel
-            case .cellHeaderSubTitle:
-                return LabelFont.cellHeaderSubTitleLabel
-            case .cellTime:
-                return LabelFont.cellTimeLabel
-            case .rateLabel:
-                return LabelFont.rateLabel
+    func applySubtitleLabelStyle() {
+        applyStyle(SubtitleLabelStyle())
+    }
 
-            case .durationLabel:
-                return LabelFont.durationLabel
-            }
-        }
+    func applyInvertedSubtitleLabelStyle() {
+        applyStyle(SubtitleLabelStyle(inverted: true))
+    }
+
+    func applyCaptionStyle() {
+        applyStyle(CaptionLabelStyle())
+    }
+
+    func applyInvertedCaptionStyle() {
+        applyStyle(CaptionLabelStyle(inverted: true))
     }
 }
 
-// MARK: Style Attributes
+/// The LabelStyling protocol defines a single method called applyStyle(for label: UILabel) that takes
+/// a UILabel as input and applies some styling to it. This protocol can be used to create objects or
+/// functions that can apply styling to a UILabel in a standardized way.
+///
+/// Example:
+/// ```
+/// class BoldLabelStyling: LabelStyling {
+///     func applyStyle(for label: UILabel) {
+///         label.font = UIFont.boldSystemFont(ofSize: label.font.pointSize)
+///      }
+/// }
+/// ```
+protocol LabelStyling {
+    func applyStyle(for label: UILabel)
+}
+
 extension UILabel {
-    func applyStyle(_ style: Style) {
-        textColor = style.labelTextColor
-        // TODO: [HL-4] Add global fonts
-        font = style.labelFont
-
+    func applyStyle(_ style: LabelStyling) {
+        style.applyStyle(for: self)
     }
 }
 
-// MARK: - Colors
+// MARK: TitleBoldStyle
 
-private enum LabelColor {
-    static let slateGray = UIColor(red: 0.071, green: 0.071, blue: 0.071, alpha: 1)
+private struct TitleBoldStyle: LabelStyling {
+    var inverted: Bool = false
+
+    func applyStyle(for label: UILabel) {
+        label.textColor = inverted ? .white : .black100
+        label.font = .titleBold
+        label.numberOfLines = .zero
+    }
+}
+
+// MARK: HeaderBoldStyle
+
+private struct HeaderBoldStyle: LabelStyling {
+    func applyStyle(for label: UILabel) {
+        label.textColor = .black100
+        label.font = .headerBold
+        label.numberOfLines = .zero
+    }
 }
 
 // MARK: - Fonts
+// MARK: InvertedBodyStyle
 
-private enum LabelFont {
-    static let splashHeaderLabel = UIFont.systemFont(ofSize: 18, weight: .semibold)
-    static let splashTitle = UIFont.systemFont(ofSize: 50, weight: .semibold)
-    static let splashSubtitle = UIFont.systemFont(ofSize: 16, weight: .regular)
-    static let signinTitle = UIFont.systemFont(ofSize: 30, weight: .semibold)
-    static let signinSubtitle = UIFont.systemFont(ofSize: 20, weight: .regular)
-    static let signupTitle = UIFont.systemFont(ofSize: 20, weight: .semibold)
-    static let signupSubtitle = UIFont.systemFont(ofSize: 11, weight: .regular)
-    static let textFieldTitleLabel = UIFont.systemFont(ofSize: 14, weight: .regular)
-    static let titleLabelStyle = UIFont.systemFont(ofSize: 40, weight: .semibold)
-    static let messageLabel = UIFont.systemFont(ofSize: 20, weight: .semibold)
-    static let dishesNameLable = UIFont.smallBold
-    static let cellHeaderTitleLabel = UIFont.smallBold
-    static let cellHeaderSubTitleLabel = UIFont.smallLabelRegular
-    static let rateLabel = UIFont.smallerRegular
-    static let cellTimeLabel = UIFont.smallerRegular
-    static let durationLabel = UIFont.smallerBold
+private struct InvertedBodyStyle: LabelStyling {
+    var inverted: Bool = false
+
+    func applyStyle(for label: UILabel) {
+        label.textColor = inverted ? .white : .black80
+        label.font = .normalRegular
+        label.numberOfLines = .zero
+    }
+}
+
+// MARK: CaptionLabelStyle
+
+private struct CaptionLabelStyle: LabelStyling {
+    var inverted: Bool = false
+
+    func applyStyle(for label: UILabel) {
+        label.textColor = inverted ? .white : .black20
+        label.font = .smallerRegular
+        label.numberOfLines = .zero
+    }
+}
+
+// MARK: SubtitleLabelStyle
+
+private struct SubtitleLabelStyle: LabelStyling {
+    var inverted: Bool = false
+
+    func applyStyle(for label: UILabel) {
+        label.textColor = inverted ? .white : .black20
+        label.font = .mediumRegular
+        label.numberOfLines = .zero
+    }
 }

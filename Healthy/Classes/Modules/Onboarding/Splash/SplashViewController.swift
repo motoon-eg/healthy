@@ -45,8 +45,8 @@ extension SplashViewController {
 
 private extension SplashViewController {
     func configureAppearance() {
-        headerTitleLabel.applyStyle(.splashTitle)
-        logoCaptionLabel.applyStyle(.splashSubtitle)
+        headerTitleLabel.applyInvertedTitleBoldStyle()
+        logoCaptionLabel.applyInvertedBodyStyle()
         startCookingButton.applyButtonStyle(.primary)
     }
 }
