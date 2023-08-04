@@ -24,7 +24,6 @@ final class MealCategoriesRequestTests: XCTestCase {
 
     func testMealCategoriesResponseDecoder() throws {
         // Given
-        // swiftlint:disable line_length
         let mealCategoriesResponseAsString = """
              {
             "categories": [
