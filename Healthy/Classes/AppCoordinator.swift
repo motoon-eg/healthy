@@ -4,7 +4,7 @@ import UIKit
 final class AppCoordinator {
     private let window: UIWindow
     private var children: [Coordinator] = []
-    private var isLoggedIn = false // TODO: [HL-74] Replace with actual implentation
+    private var isLoggedIn = true // TODO: [HL-74] Replace with actual implentation
 
     /// Initializes a new `AppCoordinator` object with the specified window.
     ///

@@ -3,14 +3,6 @@ import Networking
 import Factory
 import Foundation
 
-extension Container {
-    var loginUseCase: Factory<LoginUseCase> {
-        Factory(self) {
-            DefaultLoginUseCase()
-        }
-    }
-}
-
 final class DefaultLoginUseCase: LoginUseCase {
 
     @Injected(\.networking) private var networking
