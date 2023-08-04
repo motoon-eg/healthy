@@ -33,6 +33,9 @@ disabled_rules: # rule identifiers turned on by default to exclude from running
   # TODOs and FIXMEs should be resolved.
   - todo
 
+  # swiftlint:disable commands should be re-enabled before the end of the file
+  - blanket_disable_command
+
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
 force_cast: warning
