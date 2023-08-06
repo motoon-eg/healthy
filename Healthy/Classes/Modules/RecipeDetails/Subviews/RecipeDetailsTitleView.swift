@@ -10,19 +10,20 @@ extension RecipeDetailsTitleView {
 
 struct RecipeDetailsTitleView: View {
     let viewModel: ViewModel
+    
     var body: some View {
         HStack {
             Image(viewModel.dishImage)
                 .frame(width: 17.0, height: 17.0)
-
+            
             Text("\(viewModel.serveCount) serve")
                 .titleTextStyle()
-
+            
             Spacer()
-
+            
             Text("\(viewModel.itemsCount) Items")
                 .titleTextStyle()
-
+            
         }.padding()
     }
 }

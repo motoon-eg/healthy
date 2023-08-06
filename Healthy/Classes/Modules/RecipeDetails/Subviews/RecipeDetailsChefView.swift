@@ -9,12 +9,13 @@ extension RecipeDetailsChefView {
 
 struct RecipeDetailsChefView: View {
     let viewModel: ViewModel
+    
     var body: some View {
         HStack {
             Image("image-chef-placeholder")
                 .resizable()
                 .frame(width: 40.0, height: 40.0)
-
+            
             VStack(alignment: .leading, spacing: 2.0) {
                 Text(viewModel.chefName)
                     .bodyTextStyle()
@@ -23,11 +24,11 @@ struct RecipeDetailsChefView: View {
                     Text(viewModel.location)
                 }
             }
-
+            
             Spacer()
-
+            
             Button("Follow", action: {})
-            .buttonStyle(PrimaryButtonStyle())
+                .buttonStyle(PrimaryButtonStyle())
         }
     }
 }

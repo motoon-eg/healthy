@@ -7,30 +7,33 @@ final class RecipeDetailsHostingController: UIHostingController<RecipeDetailsVie
         let view = RecipeDetailsView(viewModel: viewModel)
         super.init(rootView: view)
     }
-
-     @available(*, unavailable)
-     required dynamic init?(coder aDecoder: NSCoder) {
+    
+    @available(*, unavailable)
+    required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 struct RecipeDetailsView: View {
     @ObservedObject var viewModel: RecipeDetailsViewModel
-
+    
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-    RecipeDetailsHeaderView(viewModel: viewModel.headerViewModel)
-    RecipeDetailsChefView(viewModel: viewModel.chefViewModel)
+                RecipeDetailsHeaderView(viewModel: viewModel.headerViewModel)
+                
+                RecipeDetailsChefView(viewModel: viewModel.chefViewModel)
+                
                 RecipeDetailsSelectionView(viewModel: viewModel.selectionViewModel)
+                
                 RecipeDetailsTitleView(viewModel: viewModel.recipesTitleViewModel)
-    IngredientListView(items: viewModel.ingredientViewModel)
-
-                }
-                .padding()
+                
+                IngredientListView(items: viewModel.ingredientViewModel)
             }
+            .padding()
         }
     }
+}
 
 struct RecipeDetailsView_Previews: PreviewProvider {
     static var previews: some View {

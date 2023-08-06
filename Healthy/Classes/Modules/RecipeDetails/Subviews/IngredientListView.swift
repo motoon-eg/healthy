@@ -17,20 +17,20 @@ extension IngredientListView.ViewModel: Hashable {
 }
 
 struct IngredientListView: View {
-
     let items: [ViewModel]
+    
     var body: some View {
         ForEach(items, id: \.self) { item in
             HStack {
                 Image(item.ingredientImage)
                     .resizable()
                     .frame(width: 52.0, height: 52.0)
-
+                
                 Text(item.ingredientName)
                     .foregroundColor(.black)
-
+                
                 Spacer()
-
+                
                 Text("\(item.ingredientQuantity) gm")
                     .foregroundColor(.gray)
             }
