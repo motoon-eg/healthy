@@ -14,3 +14,18 @@ extension View {
         self.modifier(BodyTextViewModifier())
     }
 }
+
+private struct TitleTextViewModifier: ViewModifier {
+
+    func body(content: Content) -> some View {
+        content
+            .font(Font(UIFont.smallRegular))
+            .foregroundColor(Color(.black20))
+    }
+}
+
+extension View {
+    func titleTextStyle() -> some View {
+        self.modifier(TitleTextViewModifier())
+    }
+}

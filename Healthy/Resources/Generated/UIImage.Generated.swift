@@ -14,6 +14,10 @@ extension UIImage {
       UIImage(named: "icon-bookmark")! 
     }
 
+    static var iconDish: UIImage {
+      UIImage(named: "icon-dish")! 
+    }
+
     static var iconFacebook: UIImage {
       UIImage(named: "icon-facebook")! 
     }
@@ -86,8 +90,24 @@ extension UIImage {
       UIImage(named: "pattern-food")! 
     }
 
+    static var placeholderCabbageImage: UIImage {
+      UIImage(named: "placeholder-cabbage-image")! 
+    }
+
     static var placeholderRecipeImage: UIImage {
       UIImage(named: "placeholder-recipe-image")! 
+    }
+
+    static var placeholderSliceImage: UIImage {
+      UIImage(named: "placeholder-slice-image")! 
+    }
+
+    static var placeholderTacoImage: UIImage {
+      UIImage(named: "placeholder-taco-image")! 
+    }
+
+    static var placeholderTomatosImage: UIImage {
+      UIImage(named: "placeholder-tomatos-image")! 
     }
 
     static var previewDishes1: UIImage {

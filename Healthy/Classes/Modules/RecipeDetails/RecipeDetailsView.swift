@@ -20,14 +20,17 @@ struct RecipeDetailsView: View {
     var body: some View {
         ScrollView(.vertical) {
             VStack {
-                RecipeDetailsHeaderView(viewModel: viewModel.headerViewModel)
-                RecipeDetailsChefView(viewModel: viewModel.chefViewModel)
-            }
-            .padding()
-        }
+    RecipeDetailsHeaderView(viewModel: viewModel.headerViewModel)
+    RecipeDetailsChefView(viewModel: viewModel.chefViewModel)
+                RecipeDetailsSelectionView(viewModel: viewModel.selectionViewModel)
+                RecipeDetailsTitleView(viewModel: viewModel.recipesTitleViewModel)
+    IngredientListView(items: viewModel.ingredientViewModel)
 
+                }
+                .padding()
+            }
+        }
     }
-}
 
 struct RecipeDetailsView_Previews: PreviewProvider {
     static var previews: some View {
